@@ -17,3 +17,5 @@ macOS universal CLI 的 codesign --verify --strict 成功，实际 Developer ID/
 插件受管六技能仍来自公开 v0.1.0-dev.1，108 文件未改变；该快照仍只有 macOS arm64 安装锁。本目录的 Linux 结果属于技能源候选，不是当前插件 Linux 安装/任务入口或宿主验收。Windows 未适配，其他平台真实验收及技能源不可变发行配套继续开放，当前综合任务不勾选、不归档、不公开发行。
 
 本地回归：Python 3.12/3.13 各 99 项通过；结构、受管来源/生成资源一致性、OpenSpec strict 均通过。当前指纹见 local-report.json，原生目标 CI 推送后单独核验。
+
+四目标原生 CI 已通过：[native-platforms 37797644902](https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902)，代码提交 `44503e24a7d312992e2f63cc3f2a525a6d110602`。ci-native/ 保存实际报告、计划、逐进程日志和产物；ci-artifact-verification.json 逐一复核目标架构、当前 CLI/锁/驱动及 22 个运行资源摘要、五会话完整步骤/日志、两原片和六个产物摘要及实际解码。四目标均通过。后续仅保存验证记录的提交没有改变这些运行资源；Windows 与插件受管来源配套仍保持 OPEN，不能关闭全平台任务。

@@ -1,0 +1,2 @@
+{"command": "library.import", "params": {"paths": ["/Users/runner/work/_temp/native-darwin-x86_64/originals/gradient.png", "/Users/runner/work/_temp/native-darwin-x86_64/originals/gradient.jpg"], "mode": "add"}}
+{"command": "catalog.query", "params": {"limit": 100}}

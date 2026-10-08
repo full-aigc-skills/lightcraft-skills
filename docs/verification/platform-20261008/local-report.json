@@ -21,9 +21,9 @@
       "status": "PASS",
       "evidence": [
         "linux-aarch64/native-evidence.json",
-        "archived-artifacts.json"
+        "ci-artifact-verification.json"
       ],
-      "scope": "Linux arm64 recorded container only; not all targets or host acceptance"
+      "scope": "four native CLI functional targets with exact current resource identity; Windows, host and visual still open"
     },
     "host": {
       "status": "NOT_RUN",
@@ -38,8 +38,11 @@
       "evidence": []
     },
     "remoteCI": {
-      "status": "NOT_RUN",
-      "evidence": []
+      "status": "PASS",
+      "evidence": [
+        "offline-ci.json"
+      ],
+      "scope": "exact recorded commit; subsequent evidence-only commit does not change runtime/test resources"
     }
   },
   "scope": "partial platform extension; full target matrix and paired immutable source remain OPEN",

@@ -1,0 +1,596 @@
+{
+  "status": "PASS",
+  "run": {
+    "conclusion": "success",
+    "headSha": "44503e24a7d312992e2f63cc3f2a525a6d110602",
+    "jobs": [
+      {
+        "completedAt": "2026-10-08T15:04:44Z",
+        "conclusion": "success",
+        "databaseId": 113381168867,
+        "name": "native (macos-15-intel, darwin-x86_64)",
+        "startedAt": "2026-10-08T15:04:13Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-08T15:04:15Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-08T15:04:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:17Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 2,
+            "startedAt": "2026-10-08T15:04:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:18Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 3,
+            "startedAt": "2026-10-08T15:04:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:21Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt",
+            "number": 4,
+            "startedAt": "2026-10-08T15:04:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:21Z",
+            "conclusion": "success",
+            "name": "Run python -I -B scripts/validate_package.py",
+            "number": 5,
+            "startedAt": "2026-10-08T15:04:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:37Z",
+            "conclusion": "success",
+            "name": "Execute fixed native photo workflow",
+            "number": 6,
+            "startedAt": "2026-10-08T15:04:21Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:37Z",
+            "conclusion": "success",
+            "name": "Check actual runner identity",
+            "number": 7,
+            "startedAt": "2026-10-08T15:04:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:39Z",
+            "conclusion": "success",
+            "name": "Preserve exact native evidence",
+            "number": 8,
+            "startedAt": "2026-10-08T15:04:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:39Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 15,
+            "startedAt": "2026-10-08T15:04:39Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:41Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 16,
+            "startedAt": "2026-10-08T15:04:39Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:42Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-08T15:04:41Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902/job/113381168867"
+      },
+      {
+        "completedAt": "2026-10-08T15:04:22Z",
+        "conclusion": "success",
+        "databaseId": 113381169140,
+        "name": "native (ubuntu-24.04, linux-x86_64)",
+        "startedAt": "2026-10-08T15:04:11Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-08T15:04:12Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-08T15:04:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:13Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 2,
+            "startedAt": "2026-10-08T15:04:12Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:13Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 3,
+            "startedAt": "2026-10-08T15:04:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:15Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt",
+            "number": 4,
+            "startedAt": "2026-10-08T15:04:13Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:15Z",
+            "conclusion": "success",
+            "name": "Run python -I -B scripts/validate_package.py",
+            "number": 5,
+            "startedAt": "2026-10-08T15:04:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:19Z",
+            "conclusion": "success",
+            "name": "Execute fixed native photo workflow",
+            "number": 6,
+            "startedAt": "2026-10-08T15:04:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:19Z",
+            "conclusion": "success",
+            "name": "Check actual runner identity",
+            "number": 7,
+            "startedAt": "2026-10-08T15:04:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:20Z",
+            "conclusion": "success",
+            "name": "Preserve exact native evidence",
+            "number": 8,
+            "startedAt": "2026-10-08T15:04:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:20Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 15,
+            "startedAt": "2026-10-08T15:04:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:21Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 16,
+            "startedAt": "2026-10-08T15:04:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:21Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-08T15:04:21Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902/job/113381169140"
+      },
+      {
+        "completedAt": "2026-10-08T15:04:30Z",
+        "conclusion": "success",
+        "databaseId": 113381169352,
+        "name": "native (ubuntu-24.04-arm, linux-aarch64)",
+        "startedAt": "2026-10-08T15:04:13Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-08T15:04:15Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-08T15:04:14Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:17Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 2,
+            "startedAt": "2026-10-08T15:04:15Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:17Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 3,
+            "startedAt": "2026-10-08T15:04:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:20Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt",
+            "number": 4,
+            "startedAt": "2026-10-08T15:04:17Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:20Z",
+            "conclusion": "success",
+            "name": "Run python -I -B scripts/validate_package.py",
+            "number": 5,
+            "startedAt": "2026-10-08T15:04:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:25Z",
+            "conclusion": "success",
+            "name": "Execute fixed native photo workflow",
+            "number": 6,
+            "startedAt": "2026-10-08T15:04:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:25Z",
+            "conclusion": "success",
+            "name": "Check actual runner identity",
+            "number": 7,
+            "startedAt": "2026-10-08T15:04:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:26Z",
+            "conclusion": "success",
+            "name": "Preserve exact native evidence",
+            "number": 8,
+            "startedAt": "2026-10-08T15:04:25Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:26Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 15,
+            "startedAt": "2026-10-08T15:04:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:27Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 16,
+            "startedAt": "2026-10-08T15:04:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:27Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-08T15:04:27Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902/job/113381169352"
+      },
+      {
+        "completedAt": "2026-10-08T15:04:43Z",
+        "conclusion": "success",
+        "databaseId": 113381169446,
+        "name": "native (macos-15, darwin-arm64)",
+        "startedAt": "2026-10-08T15:04:18Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-10-08T15:04:20Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-10-08T15:04:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:23Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 2,
+            "startedAt": "2026-10-08T15:04:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:23Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 3,
+            "startedAt": "2026-10-08T15:04:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:26Z",
+            "conclusion": "success",
+            "name": "Run python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt",
+            "number": 4,
+            "startedAt": "2026-10-08T15:04:23Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:27Z",
+            "conclusion": "success",
+            "name": "Run python -I -B scripts/validate_package.py",
+            "number": 5,
+            "startedAt": "2026-10-08T15:04:26Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:36Z",
+            "conclusion": "success",
+            "name": "Execute fixed native photo workflow",
+            "number": 6,
+            "startedAt": "2026-10-08T15:04:27Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:36Z",
+            "conclusion": "success",
+            "name": "Check actual runner identity",
+            "number": 7,
+            "startedAt": "2026-10-08T15:04:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:38Z",
+            "conclusion": "success",
+            "name": "Preserve exact native evidence",
+            "number": 8,
+            "startedAt": "2026-10-08T15:04:36Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:38Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+            "number": 15,
+            "startedAt": "2026-10-08T15:04:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:39Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+            "number": 16,
+            "startedAt": "2026-10-08T15:04:38Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-10-08T15:04:40Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 17,
+            "startedAt": "2026-10-08T15:04:39Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902/job/113381169446"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/full-aigc-skills/lightcraft-skills/actions/runs/37797644902"
+  },
+  "runtimeLockSha256": "48ca9cebe2ce826519890ce138e8fea4bde113f11f2ff332dc3498f47bc92577",
+  "driverSha256": "97b3d6b8ebeabbb07cb8d78da208ae48f23ddca1a18f8f1638b3053200a340f8",
+  "currentSkillResourcesSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "batch_scope.py": "3406c48a10874a89830c2c41377682ac6d2f250d3f2ddd2484bfcfc13375d228",
+    "bootstrap.py": "b247edab0b49828090a36dbe91903a22e1988e23edb0aee21c6b8e229b571cd5",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "d75c7b3373ce478daa0fe40beb568f067f23c6221b4256ec4b4083e1ff5be856",
+    "command_gateway.py": "3d0b466b7cc3d30a446bf952208fab3a26e4f5fc591d58df8ddab0af5f9a1bd4",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "d9f81ba73c26710584a947d158bd826406c80ec74303654d90e3ffbd9dbc0989",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "86fc25b4dc54622b98fe55be476922dea2d65c33484545a28f9e4771822d41cf",
+    "runtime.lock.json": "48ca9cebe2ce826519890ce138e8fea4bde113f11f2ff332dc3498f47bc92577",
+    "sam_contract.py": "ca49b9f36c20a8cdd4e26cb90ce64333b61a19632a65ecb00401d59a52739327",
+    "session_probe.py": "484dbce8842f329d43739f207d70a45667ef95ec08130ea4f922b58a5ef70a2b"
+  },
+  "targets": [
+    {
+      "platform": "linux-aarch64",
+      "status": "PASS",
+      "reportSha256": "2dde535045a3026eb9f7ca3edd53351f75ee783b52afb467f3c105d57f1fa78d",
+      "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+      "receiptCount": 5,
+      "receipts": [
+        {
+          "name": "import",
+          "receiptSha256": "44692719cf3bbcc12a9761cc081ecf215a6cebdf0e789782b3c2d21337eaeb10",
+          "planSha256": "ff77de13b71bd315ce98a574b7e5c34cfd60d67c3b0c674eb81bb2053abec506",
+          "stepCount": 2
+        },
+        {
+          "name": "photo-1-edit-export",
+          "receiptSha256": "5bde55fad42c8155728829d82dc460f771ca09ed318b4e68bb5c0d9ae33c3ce2",
+          "planSha256": "83261c4ab32a3e63932fb953463ea9c0b0034a86dbd3b194981c7b6f036107de",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-1-reopen",
+          "receiptSha256": "a4cc4058180cbdac577aedb8e2311b8eef783c5b4f27a14126856c9ebfb348d0",
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6",
+          "stepCount": 4
+        },
+        {
+          "name": "photo-2-edit-export",
+          "receiptSha256": "03a1b6a796e0c43c06b3a41a948c60047d60feca1faab0cb185c8bfd9ecbc095",
+          "planSha256": "95e54ad0fa1c5ea9672cd10dba6e3323f7252f4d47b828066246a854bef4a770",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-2-reopen",
+          "receiptSha256": "f3e1718b4b84306d21ef3874eaf82bbcfcd9a83ad06f5356f8d2f73cb519f84e",
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+          "stepCount": 4
+        }
+      ],
+      "artifactCount": 6
+    },
+    {
+      "platform": "linux-x86_64",
+      "status": "PASS",
+      "reportSha256": "0a9b9eac7302d4ee61b39bb3b66245b862aff05a1840fcce614edc0e25634c16",
+      "binarySha256": "b008a5b86ca2a0a727714aa5d30ddcde59cd578ff0bfbda6bee76c7bf1507ab0",
+      "receiptCount": 5,
+      "receipts": [
+        {
+          "name": "import",
+          "receiptSha256": "27fd4363755dd2fab03bebc8a20007e9c167439e6cdb83b8c5a144c699b3e1f9",
+          "planSha256": "4bafa76d0c58daf019a399c09243ba17e68e1614f776f3b9283033cdcb830a35",
+          "stepCount": 2
+        },
+        {
+          "name": "photo-1-edit-export",
+          "receiptSha256": "6aa39fbf529f15fe07150a07534cfaae1b1cfb5d37d2bd6fbe56274e46526249",
+          "planSha256": "4053b707a420334755c40e19e4533c1aee2036ff397deded92a950d9767d186a",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-1-reopen",
+          "receiptSha256": "e798a7172ef9beecbf4ba36e37c424a7063ba04707f6304f980f9dee18d4c447",
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6",
+          "stepCount": 4
+        },
+        {
+          "name": "photo-2-edit-export",
+          "receiptSha256": "17d569c93e8779b0e4f44adecdd2cace5eaf935c96777bea70c3f689115b2680",
+          "planSha256": "763163bf5c049a3fd3ad93369fd0bea5d3162de484c4aafac8c9348f09dd3e30",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-2-reopen",
+          "receiptSha256": "6a465a986054d632df8f9f7e9c8b593961c8797a26aca1cf18ae0dc7cbc4037f",
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+          "stepCount": 4
+        }
+      ],
+      "artifactCount": 6
+    },
+    {
+      "platform": "darwin-arm64",
+      "status": "PASS",
+      "reportSha256": "590bb955bfd489fc26bc8cf0791d4f937f07e88c4b1087a1e81f4a54c2dbb352",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "receiptCount": 5,
+      "receipts": [
+        {
+          "name": "import",
+          "receiptSha256": "ff8311a26bf5b54e78868b9d8dc419853513eaaa601b426b7770bc9b54621c4c",
+          "planSha256": "95dcf1840c4dd63248050afac2753b54dec8d6f32665d9d2e402e6c7d7e041e5",
+          "stepCount": 2
+        },
+        {
+          "name": "photo-1-edit-export",
+          "receiptSha256": "c441397277b5400fceff46719558d488b08f403e14088f487b00cf3f45f652a1",
+          "planSha256": "375b91ac52b7d6a1a4d3186f841e4e07bb19bbc7b8d314c88d40b1c30fd1af8d",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-1-reopen",
+          "receiptSha256": "cc87fc85be476ce401fbc62ca12a8b79a30f214311a130582db2069a6b321d92",
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6",
+          "stepCount": 4
+        },
+        {
+          "name": "photo-2-edit-export",
+          "receiptSha256": "e754bdf70a6278e111c15eaaef76e1687cfc1abbb1d99ade31788cde4f26eb1d",
+          "planSha256": "0dae46658d58561d1ee658f8248c1a839bfcaf82772934943be99ebe71ed8a10",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-2-reopen",
+          "receiptSha256": "ad17d5681c54b1d1f8ebb9df7e9a55d61a3a1a718e94cf9399a4ad3589146ed4",
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+          "stepCount": 4
+        }
+      ],
+      "artifactCount": 6
+    },
+    {
+      "platform": "darwin-x86_64",
+      "status": "PASS",
+      "reportSha256": "3f7d0ad2df3a46efcc63bbb514a9aa7883d33fae3d86a9e55313259f0fd0a071",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "receiptCount": 5,
+      "receipts": [
+        {
+          "name": "import",
+          "receiptSha256": "d00feb46b0460d9d1f0cc36d70b8532d5abf635141597a340c91a4b365283fc3",
+          "planSha256": "6865aee1a8a3d7dc0b19898a775624a23c333251a422434aecd78abec9d61000",
+          "stepCount": 2
+        },
+        {
+          "name": "photo-1-edit-export",
+          "receiptSha256": "3b5c11b9fdc9bb6cecaf1e4e0d7f6acb377f754faeb1002a4d7eab0f4a6effbc",
+          "planSha256": "eee4953fe12440db04cecc113409011c23990c52b4b67c0d7d4dc3c9b60ce8d0",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-1-reopen",
+          "receiptSha256": "2d565b85087a9cb4b02776372e986d95eeccb70893c95a61b1f19feb7e32bd0c",
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6",
+          "stepCount": 4
+        },
+        {
+          "name": "photo-2-edit-export",
+          "receiptSha256": "8f3d8dde23806a97bfced84ac4c59c9c64f69702f77812921a9475e06214bf80",
+          "planSha256": "4b0bdfcedf6823eb45554344a2757fa449d0822fac041c49f84e6266c91bec34",
+          "stepCount": 8
+        },
+        {
+          "name": "photo-2-reopen",
+          "receiptSha256": "49e786447b0059420e98594f6c51322c9d6b6f2cbbd533bc126f8ef14db5a5ff",
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+          "stepCount": 4
+        }
+      ],
+      "artifactCount": 6
+    }
+  ],
+  "scope": "four native functional CLI targets, exact current runtime resources; Windows, paired plugin source, host and visual gates remain OPEN"
+}
