@@ -50,8 +50,9 @@ jobs:
             ${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*-plan.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*/receipt.json
-            ${{ runner.temp }}/native-${{ matrix.target }}/*/stdout.log
-            ${{ runner.temp }}/native-${{ matrix.target }}/*/stderr.log
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/logs/*.log
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/logs/*.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/native-plan.json
             ${{ runner.temp }}/native-${{ matrix.target }}/exports/*
             ${{ runner.temp }}/native-${{ matrix.target }}/originals/*
           if-no-files-found: error
