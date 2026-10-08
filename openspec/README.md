@@ -1,22 +1,19 @@
-# Lightcraft 技能库 OpenSpec
+# Lightcraft OpenSpec
 
-当前优化变更为 **harden-lightcraft-skill-workflows**。本轮已实施并验证本地代码；固定 CLI 原生与合成图视觉验收已完成，六技能隔离宿主验收已通过，发行验收仍待完成；以下产物是本项目本次变更的唯一规格事实源。
+基础优化主变更 **harden-lightcraft-skill-workflows** 已完成 29/29 项任务，并于 2026-10-08 同步主规格和归档。
 
-- [变更提案与范围](changes/harden-lightcraft-skill-workflows/proposal.md)
-- [架构设计、兼容性与依赖](changes/harden-lightcraft-skill-workflows/design.md)
-- [能力要求与验收场景](changes/harden-lightcraft-skill-workflows/specs/)
-- [唯一实施任务清单](changes/harden-lightcraft-skill-workflows/tasks.md)
-- [配套项目规格入口](https://github.com/full-aigc-plugins/lightcraft-plugin/blob/main/openspec/README.md)
+- [归档提案](changes/archive/2026-10-08-harden-lightcraft-skill-workflows/proposal.md)
+- [归档设计](changes/archive/2026-10-08-harden-lightcraft-skill-workflows/design.md)
+- [完成的任务清单](changes/archive/2026-10-08-harden-lightcraft-skill-workflows/tasks.md)
+- [当前主规格](specs/)
+- [分层验收与限制](../docs/verification/implementation-evidence.md)
+- [同步归档执行回执](../docs/verification/openspec-archive.json)
 
-任务按 P0–P3 排序，跨项目依赖使用 S-X.Y（技能库）与 P-X.Y（插件）编号。当前主变更任务为 27/29 完成，详见 [实施证据](../docs/verification/implementation-evidence.md)；验收绑定当次源码、输入和产物身份。
-
-`changes/.../specs/` 是当前变更的增量规格；`openspec/specs/` 暂不填入已实现声明。实现、验证和规格同步完成后才能归档，不能用本次文档校验代替原生运行、宿主加载或视觉验收。
-
-在本项目根目录检查产物状态和格式：
+三个独立扩展变更仍在 `changes/`，每个四项实现任务保持 OPEN：Connect/MCP、扩展照片/SAM、跨平台/ArtCraft/移动交付。基础闭环验收不关闭这些范围。
 
 ```bash
-openspec status --change harden-lightcraft-skill-workflows
-openspec validate harden-lightcraft-skill-workflows --strict --no-interactive
+openspec list
+openspec validate --all --strict --no-interactive
 ```
 
-OpenSpec 产物状态完成仅表示 proposal/design/specs/tasks 已准备，不表示实施任务完成。
+任务使用 S-X.Y（技能库）和 P-X.Y（插件）编号。技能库公开来源版本为 v0.1.0-dev.1，插件公开开发版本为 v0.1.0-dev.2；原生 CLI 独立固定为 0.2.1 / macOS arm64。宿主模型验收仅覆盖六技能隔离环境，全量技能列表的上下文预算限制仍保留。

@@ -1,0 +1,18 @@
+{
+  "archive": {
+    "change": "harden-lightcraft-skill-workflows",
+    "archivedAs": "2026-10-08-harden-lightcraft-skill-workflows",
+    "path": "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/openspec/changes/archive/2026-10-08-harden-lightcraft-skill-workflows",
+    "specsUpdated": true,
+    "totals": {
+      "added": 17,
+      "modified": 0,
+      "removed": 0,
+      "renamed": 0
+    }
+  },
+  "root": {
+    "path": "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills",
+    "source": "nearest"
+  }
+}

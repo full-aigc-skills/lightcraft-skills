@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "hostVersion": "codex-cli 0.161.0",
+  "previousInstall": {
+    "pluginId": "lightcraft@lightcraft-release-acceptance",
+    "name": "lightcraft",
+    "marketplaceName": "lightcraft-release-acceptance",
+    "version": "0.1.0-dev.1",
+    "installedPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.1",
+    "authPolicy": "ON_INSTALL"
+  },
+  "updatedInstall": {
+    "pluginId": "lightcraft@lightcraft-release-acceptance",
+    "name": "lightcraft",
+    "marketplaceName": "lightcraft-release-acceptance",
+    "version": "0.1.0-dev.2",
+    "installedPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2",
+    "authPolicy": "ON_INSTALL"
+  },
+  "sourceCommit": "87fe7cebab2bc687ef7b819eb355e4e28132e6e9",
+  "sourceTag": "v0.1.0-dev.1",
+  "sourceLockSha256": "a78475da32cadae7603378b540f6387a8e0d746aaa6334990aa3dccdd889cf36",
+  "previousCacheRetained": false,
+  "cacheRetentionControlledByHost": true,
+  "sixSkillsReload": "PASS",
+  "skills": [
+    {
+      "name": "lightcraft:lightcraft-cli",
+      "description": "用户显式要求查询 Lightcraft 命令与控件、检查 JSON 计划或直接调用 CLI 时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-cli/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-develop",
+      "description": "用户显式要求使用 Lightcraft 调整曝光、白平衡、局部参数或按明确范围同步显影时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-cli-develop/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-export",
+      "description": "用户显式要求使用 Lightcraft 导出照片、检查格式尺寸色彩或核对实际交付文件时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-cli-export/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-library",
+      "description": "用户显式要求导入、选择、组织照片或排查 Lightcraft 照片库及重复导入时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-cli-library/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-setup",
+      "description": "用户要求检查或安装 Lightcraft CLI、核对固定版本、排查安装失败时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-cli-setup/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-use",
+      "description": "用户以自然语言要求使用 Lightcraft 管理、显影或导出照片，或需要衔接多个照片处理阶段时使用。",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-host-20261008/宿主 升级验收 home/plugins/cache/lightcraft-release-acceptance/lightcraft/0.1.0-dev.2/skills/lightcraft-use/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-release-acceptance"
+    }
+  ],
+  "archivedTaskAndReceipts": "UNCHANGED",
+  "taskFilesSha256": {
+    "state.json": "bbfb0574d59e731abb604c2c350bf7e1b743ff4540d87c557f50f264fab22ba6",
+    "delivery.json": "c9260907a035dd8bc0dafbefab5b81740456c98cc5949f189427a1e5bb1209d0",
+    "runs/79e0b2c2-5e49-41f4-91bb-64c13050d14b/receipt.json": "aaacd931c24ccb2b25a74ce3903a06041d87d8cb90f38ce708c32c72c5801f12"
+  },
+  "scope": "Actual CLI install 0.1.0-dev.1 -> 0.1.0-dev.2 and app-server reload in persistent Chinese/space cache; historical task copied from archived native evidence because original temporary directory was externally removed; no native editing replay"
+}

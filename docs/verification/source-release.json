@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/full-aigc-skills/lightcraft-skills/releases/assets/621823711",
+      "contentType": "application/zip",
+      "createdAt": "2026-10-08T12:50:12Z",
+      "digest": "sha256:4ba805bf8ed6ff4dc19a91bfbb77c2c87fe41b36337d346bd1493ed604b9dea3",
+      "downloadCount": 0,
+      "id": "RA_kwDOVA2Dgc4lEEbf",
+      "label": "",
+      "name": "lightcraft-skills-0.1.0-dev.1.zip",
+      "size": 656167,
+      "state": "uploaded",
+      "updatedAt": "2026-10-08T12:50:14Z",
+      "url": "https://github.com/full-aigc-skills/lightcraft-skills/releases/download/v0.1.0-dev.1/lightcraft-skills-0.1.0-dev.1.zip"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/full-aigc-skills/lightcraft-skills/releases/assets/621823713",
+      "contentType": "text/plain; charset=utf-8",
+      "createdAt": "2026-10-08T12:50:12Z",
+      "digest": "sha256:48b88ef743785e4d6649642202947a5edee5c4ef3ef52b1ae425855c56258dd5",
+      "downloadCount": 0,
+      "id": "RA_kwDOVA2Dgc4lEEbh",
+      "label": "",
+      "name": "lightcraft-skills-SHA256SUMS.txt",
+      "size": 100,
+      "state": "uploaded",
+      "updatedAt": "2026-10-08T12:50:12Z",
+      "url": "https://github.com/full-aigc-skills/lightcraft-skills/releases/download/v0.1.0-dev.1/lightcraft-skills-SHA256SUMS.txt"
+    }
+  ],
+  "isDraft": false,
+  "isPrerelease": true,
+  "tagName": "v0.1.0-dev.1",
+  "targetCommitish": "87fe7cebab2bc687ef7b819eb355e4e28132e6e9",
+  "url": "https://github.com/full-aigc-skills/lightcraft-skills/releases/tag/v0.1.0-dev.1"
+}

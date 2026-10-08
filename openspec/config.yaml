@@ -5,7 +5,7 @@ context: |
   All artifacts must be written in zh-CN.
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
   本项目是已有实现的 Lightcraft 技能库；本次按已批准优化规格实施，不能把文档完成当成实现完成。
-  当前变更为 harden-lightcraft-skill-workflows，proposal、design、specs 与 tasks 是本次变更的唯一规格事实源。
+  基础变更 harden-lightcraft-skill-workflows 已完成并同步归档；openspec/specs 为当前基础规格，各独立扩展的 proposal、design、specs 与 tasks 是对应变更的唯一事实源。
   技能库负责六项独立技能、运行时与执行回执；插件消费不可变来源快照，负责宿主、任务恢复和审阅。
   原生运行时基线为 Lightcraft CLI 0.2.1、darwin-arm64；Python 离线测试不能证明其他原生平台支持。
   保持既有接口和用户修改；实施任务未经对应实现与验证不得勾选，不得提前 sync 或 archive。

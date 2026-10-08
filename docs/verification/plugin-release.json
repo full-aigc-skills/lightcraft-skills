@@ -1,0 +1,37 @@
+{
+  "assets": [
+    {
+      "apiUrl": "https://api.github.com/repos/full-aigc-plugins/lightcraft-plugin/releases/assets/621839557",
+      "contentType": "application/zip",
+      "createdAt": "2026-10-08T12:56:49Z",
+      "digest": "sha256:5ec372b5ec66054cd9bf93646cef1ea3ffe413d54d217d88465165ae1a3f4625",
+      "downloadCount": 0,
+      "id": "RA_kwDOVA2Dms4lEITF",
+      "label": "",
+      "name": "lightcraft-plugin-0.1.0-dev.2.zip",
+      "size": 621978,
+      "state": "uploaded",
+      "updatedAt": "2026-10-08T12:56:50Z",
+      "url": "https://github.com/full-aigc-plugins/lightcraft-plugin/releases/download/v0.1.0-dev.2/lightcraft-plugin-0.1.0-dev.2.zip"
+    },
+    {
+      "apiUrl": "https://api.github.com/repos/full-aigc-plugins/lightcraft-plugin/releases/assets/621839570",
+      "contentType": "text/plain; charset=utf-8",
+      "createdAt": "2026-10-08T12:56:50Z",
+      "digest": "sha256:239f79a7a09bf48a23377efbe086c0840cea13e29a34b556ca3c340a4e2ce023",
+      "downloadCount": 0,
+      "id": "RA_kwDOVA2Dms4lEITS",
+      "label": "",
+      "name": "lightcraft-plugin-SHA256SUMS.txt",
+      "size": 100,
+      "state": "uploaded",
+      "updatedAt": "2026-10-08T12:56:50Z",
+      "url": "https://github.com/full-aigc-plugins/lightcraft-plugin/releases/download/v0.1.0-dev.2/lightcraft-plugin-SHA256SUMS.txt"
+    }
+  ],
+  "isDraft": false,
+  "isPrerelease": true,
+  "tagName": "v0.1.0-dev.2",
+  "targetCommitish": "7b3bfe2463ed2c6dfe2003b8dcf6a4e0467df680",
+  "url": "https://github.com/full-aigc-plugins/lightcraft-plugin/releases/tag/v0.1.0-dev.2"
+}

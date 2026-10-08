@@ -29,6 +29,6 @@ LightCraft 六项技能已有固定运行时安装与计划执行能力，但专
 
 影响 `skills/*/SKILL.md`、各技能 references/examples、五份 Python 运行资源、校验器、测试和验证资料。本变更是技能知识与运行资源的唯一规格事实源；插件消费这些资源，不维护另一份执行参数实现。
 
-配套变更：[lightcraft-plugin / harden-lightcraft-plugin-delivery](https://github.com/full-aigc-plugins/lightcraft-plugin/blob/main/openspec/changes/harden-lightcraft-plugin-delivery/proposal.md)。任务 ID 以 `S-` 标识本项目，以 `P-` 标识插件项目。
+配套变更：[lightcraft-plugin / harden-lightcraft-plugin-delivery](https://github.com/full-aigc-plugins/lightcraft-plugin/blob/main/openspec/changes/archive/2026-10-08-harden-lightcraft-plugin-delivery/proposal.md)。任务 ID 以 `S-` 标识本项目，以 `P-` 标识插件项目。
 
 本次只写规格与任务，不实施代码、不安装原生程序、不创建 Git/远端、不发布。规格校验通过不改变原生、宿主、模型或创作验收状态。
