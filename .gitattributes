@@ -6,3 +6,6 @@
 *.yml text eol=lf
 *.yaml text eol=lf
 *.txt text eol=lf
+
+# 原生回执与 CI 证据保留原始字节，不转换目标平台换行。
+docs/verification/** -text
