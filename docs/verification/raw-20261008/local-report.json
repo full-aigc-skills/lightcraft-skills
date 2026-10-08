@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "ff9d7962a7f9d7efafba6281d7d73f0cb88cea7c5b5e37d598cb038c5206e157",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "../../../scripts/validate_package.py",
+        "README.md"
+      ]
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log"
+      ]
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "matrix-contract.json",
+        "native/raw-evidence.json"
+      ],
+      "scope": "four bound sample classifications: 1 runtime-reported full RAW, 1 preview fallback, 2 explicitly unsupported; not four RAW passes"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "SEXT2-2/PEXT2-2 per-sample RAW contract only",
+  "completeAcceptance": false
+}

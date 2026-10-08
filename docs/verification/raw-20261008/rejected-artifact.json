@@ -1,0 +1,486 @@
+{
+  "schemaVersion": 1,
+  "reportKind": "raw-samples",
+  "manifest": {
+    "schemaVersion": 1,
+    "samples": [
+      {
+        "make": "Blackmagic",
+        "model": "Micro Cinema Camera",
+        "variant": "12bit (16:9)",
+        "sha256": "4c65b8cda205087cfb94d8931811e53e15eb4df538ad67c1b4a3e76c1185b277",
+        "bytes": 1228096,
+        "sourceUrl": "https://raw.pixls.us/getfile.php/7317/nice/Blackmagic - Micro Cinema Camera - 12bit (16:9).dng",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+        "sampleId": "blackmagic-micro-cinema-camera-0",
+        "catalogEntrySha256": "d72bb4cadeab4b18ffe3ba71c6f772d58548193711e40e3269019a8567e824ff",
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/blackmagic-micro-cinema-camera-0.dng",
+        "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/blackmagic-micro-cinema-camera-0-catalog-entry.json"
+      },
+      {
+        "make": "Nikon",
+        "model": "D2H",
+        "variant": "12bit 12bit compressed (Lossy (type 1)) (3:2)",
+        "sha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+        "bytes": 3236017,
+        "sourceUrl": "https://raw.pixls.us/getfile.php/5227/nice/Nikon - D2H - 12bit 12bit compressed (Lossy (type 1)) (3:2).NEF",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+        "sampleId": "nikon-d2h-1",
+        "catalogEntrySha256": "949ab6a9ca48267b51c6daac86c717513f65e60de9e14bc52fd74d263b404499",
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef",
+        "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/nikon-d2h-1-catalog-entry.json"
+      },
+      {
+        "make": "Canon",
+        "model": "EOS D30",
+        "variant": "RAW (3:2)",
+        "sha256": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e",
+        "bytes": 2993260,
+        "sourceUrl": "https://raw.pixls.us/getfile.php/1307/nice/Canon - EOS D30 - RAW (3:2).CRW",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+        "sampleId": "canon-eos-d30-2",
+        "catalogEntrySha256": "129e45e51c9b13af694edf8c59a0ff48e59efb38c9d4a15d03c0bf396e6755a9",
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-d30-2.crw",
+        "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/canon-eos-d30-2-catalog-entry.json"
+      },
+      {
+        "make": "Canon",
+        "model": "EOS 7D",
+        "variant": "sRAW2 (sRAW) (3:2)",
+        "sha256": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e",
+        "bytes": 11062629,
+        "sourceUrl": "https://raw.pixls.us/getfile.php/129/nice/Canon - EOS 7D - sRAW2 (sRAW) (3:2).CR2",
+        "license": "CC0-1.0",
+        "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+        "sampleId": "canon-eos-7d-3",
+        "catalogEntrySha256": "a849fa081477ef7c4bb386012de029c9a7c6e2c1b6e7f8d7d37b47837d037125",
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2",
+        "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/canon-eos-7d-3-catalog-entry.json"
+      }
+    ]
+  },
+  "manifestSha256": "751faae2c1815d89f750d5a20d6c69b3d7f4e252c5db91328982a7245494ccee",
+  "runtimeIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "executionScriptsRoot": "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-plugins-repositories/lightcraft-plugin/skills/lightcraft-use/scripts",
+  "executionResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "policySha256": "86fc25b4dc54622b98fe55be476922dea2d65c33484545a28f9e4771822d41cf",
+  "samples": [
+    {
+      "make": "Blackmagic",
+      "model": "Micro Cinema Camera",
+      "variant": "12bit (16:9)",
+      "sha256": "4c65b8cda205087cfb94d8931811e53e15eb4df538ad67c1b4a3e76c1185b277",
+      "bytes": 1228096,
+      "sourceUrl": "https://raw.pixls.us/getfile.php/7317/nice/Blackmagic - Micro Cinema Camera - 12bit (16:9).dng",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "sampleId": "blackmagic-micro-cinema-camera-0",
+      "catalogEntrySha256": "d72bb4cadeab4b18ffe3ba71c6f772d58548193711e40e3269019a8567e824ff",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/blackmagic-micro-cinema-camera-0.dng",
+      "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/blackmagic-micro-cinema-camera-0-catalog-entry.json",
+      "nativeAcceptance": "UNSUPPORTED",
+      "decodeMode": "UNKNOWN",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "visual": "NOT_RUN",
+      "cameraIdentity": "NOT_OBSERVED",
+      "receipts": {
+        "import": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/0/import/receipt.json"
+      },
+      "plans": {
+        "import": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.import",
+              "params": {
+                "paths": [
+                  "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/blackmagic-micro-cinema-camera-0.dng"
+                ],
+                "mode": "add"
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            }
+          ]
+        }
+      },
+      "error": "unsupported raw (JPEG process SOF1 (not lossless Huffman)) without an embedded preview"
+    },
+    {
+      "make": "Nikon",
+      "model": "D2H",
+      "variant": "12bit 12bit compressed (Lossy (type 1)) (3:2)",
+      "sha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+      "bytes": 3236017,
+      "sourceUrl": "https://raw.pixls.us/getfile.php/5227/nice/Nikon - D2H - 12bit 12bit compressed (Lossy (type 1)) (3:2).NEF",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "sampleId": "nikon-d2h-1",
+      "catalogEntrySha256": "949ab6a9ca48267b51c6daac86c717513f65e60de9e14bc52fd74d263b404499",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef",
+      "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/nikon-d2h-1-catalog-entry.json",
+      "nativeAcceptance": "PASS",
+      "decodeMode": "FULL_RAW_REPORTED",
+      "fullRawAcceptance": "REPORTED_BY_RUNTIME",
+      "visual": "NOT_RUN",
+      "cameraIdentity": "MATCH",
+      "receipts": {
+        "import": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/1/import/receipt.json",
+        "edit-export": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/1/edit-export/receipt.json",
+        "reopen": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/1/reopen/receipt.json"
+      },
+      "plans": {
+        "import": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.import",
+              "params": {
+                "paths": [
+                  "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef"
+                ],
+                "mode": "add"
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            }
+          ]
+        },
+        "edit-export": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.select",
+              "params": {
+                "ids": [
+                  1
+                ],
+                "active": 1
+              }
+            },
+            {
+              "command": "develop.set",
+              "params": {
+                "control": "light.exposure",
+                "value": 0.25
+              }
+            },
+            {
+              "command": "develop.get",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "app.export",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/1/exports/raw-preview.png",
+                "format": "png",
+                "width": 256
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            },
+            {
+              "command": "photo.inspect",
+              "params": {
+                "id": 1
+              }
+            }
+          ]
+        },
+        "reopen": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.select",
+              "params": {
+                "ids": [
+                  1
+                ],
+                "active": 1
+              }
+            },
+            {
+              "command": "photo.inspect",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "develop.get",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "library.info",
+              "params": {}
+            }
+          ]
+        }
+      },
+      "previewOnlyReason": null,
+      "observedCamera": "NIKON CORPORATION NIKON D2H",
+      "artifact": {
+        "schemaVersion": 1,
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/1/exports/raw-preview.png",
+        "bytes": 74426,
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "format": "png",
+        "width": 256,
+        "height": 169,
+        "bitDepth": 8,
+        "colorProfile": "sRGB",
+        "iccSha256": null,
+        "decoder": "macOS sips",
+        "decodable": true,
+        "technicalStatus": "PASS",
+        "differences": {},
+        "visualAcceptance": "NOT_RUN"
+      },
+      "photoId": 1
+    },
+    {
+      "make": "Canon",
+      "model": "EOS D30",
+      "variant": "RAW (3:2)",
+      "sha256": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e",
+      "bytes": 2993260,
+      "sourceUrl": "https://raw.pixls.us/getfile.php/1307/nice/Canon - EOS D30 - RAW (3:2).CRW",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "sampleId": "canon-eos-d30-2",
+      "catalogEntrySha256": "129e45e51c9b13af694edf8c59a0ff48e59efb38c9d4a15d03c0bf396e6755a9",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-d30-2.crw",
+      "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/canon-eos-d30-2-catalog-entry.json",
+      "nativeAcceptance": "UNSUPPORTED",
+      "decodeMode": "UNKNOWN",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "visual": "NOT_RUN",
+      "cameraIdentity": "NOT_OBSERVED",
+      "receipts": {
+        "import": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/2/import/receipt.json"
+      },
+      "plans": {
+        "import": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.import",
+              "params": {
+                "paths": [
+                  "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-d30-2.crw"
+                ],
+                "mode": "add"
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            }
+          ]
+        }
+      },
+      "error": "RawOther files are not supported yet"
+    },
+    {
+      "make": "Canon",
+      "model": "EOS 7D",
+      "variant": "sRAW2 (sRAW) (3:2)",
+      "sha256": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e",
+      "bytes": 11062629,
+      "sourceUrl": "https://raw.pixls.us/getfile.php/129/nice/Canon - EOS 7D - sRAW2 (sRAW) (3:2).CR2",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "sampleId": "canon-eos-7d-3",
+      "catalogEntrySha256": "a849fa081477ef7c4bb386012de029c9a7c6e2c1b6e7f8d7d37b47837d037125",
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2",
+      "catalogEntryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/canon-eos-7d-3-catalog-entry.json",
+      "nativeAcceptance": "PASS_WITH_PREVIEW_FALLBACK",
+      "decodeMode": "PREVIEW_FALLBACK",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "visual": "NOT_RUN",
+      "cameraIdentity": "MATCH",
+      "receipts": {
+        "import": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/3/import/receipt.json",
+        "edit-export": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/3/edit-export/receipt.json",
+        "reopen": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/3/reopen/receipt.json"
+      },
+      "plans": {
+        "import": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.import",
+              "params": {
+                "paths": [
+                  "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2"
+                ],
+                "mode": "add"
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            }
+          ]
+        },
+        "edit-export": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.select",
+              "params": {
+                "ids": [
+                  1
+                ],
+                "active": 1
+              }
+            },
+            {
+              "command": "develop.set",
+              "params": {
+                "control": "light.exposure",
+                "value": 0.25
+              }
+            },
+            {
+              "command": "develop.get",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "app.export",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/3/exports/raw-preview.png",
+                "format": "png",
+                "width": 256
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            },
+            {
+              "command": "photo.inspect",
+              "params": {
+                "id": 1
+              }
+            }
+          ]
+        },
+        "reopen": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.select",
+              "params": {
+                "ids": [
+                  1
+                ],
+                "active": 1
+              }
+            },
+            {
+              "command": "photo.inspect",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "develop.get",
+              "params": {
+                "id": 1
+              }
+            },
+            {
+              "command": "library.info",
+              "params": {}
+            }
+          ]
+        }
+      },
+      "previewOnlyReason": "Canon sRAW/mRAW",
+      "observedCamera": "Canon Canon EOS 7D",
+      "artifact": {
+        "schemaVersion": 1,
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/plugin-final/3/exports/raw-preview.png",
+        "bytes": 86727,
+        "sha256": "ac7b306682f0c190ffb7f8bde6d3fa51bf23157f7a2700bab7885a938980d7f9",
+        "format": "png",
+        "width": 256,
+        "height": 171,
+        "bitDepth": 8,
+        "colorProfile": "sRGB",
+        "iccSha256": null,
+        "decoder": "macOS sips",
+        "decodable": true,
+        "technicalStatus": "PASS",
+        "differences": {},
+        "visualAcceptance": "NOT_RUN"
+      },
+      "photoId": 1
+    }
+  ],
+  "scope": "仅记录所测相机和变体，不代表全部 RAW",
+  "visual": "NOT_RUN",
+  "automaticReplay": false,
+  "completeAcceptance": false
+}

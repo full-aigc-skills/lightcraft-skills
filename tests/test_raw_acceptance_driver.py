@@ -19,7 +19,7 @@ class RawAcceptanceDriver(unittest.TestCase):
             self.assertEqual(m.decode_mode(photo),'UNKNOWN')
 
     def test_unconfirmed_reopen_and_protocol_never_pass(self):
-        for fault in ('persistence','identity','wrong_source','receipt_status','none','preview_fallback'):
+        for fault in ('persistence','identity','wrong_source','receipt_status','none','preview_fallback','camera'):
             with self.subTest(fault=fault),tempfile.TemporaryDirectory() as temporary:
                 root=Path(temporary).resolve();source=root/'mock.nef';source.write_bytes(b'mock RAW bytes')
                 m=driver();settings={'light':{'exposure':.25}}
@@ -29,26 +29,34 @@ class RawAcceptanceDriver(unittest.TestCase):
                 def receipt(path):
                     name=path.parent.name
                     if name=='import':results=[{'imported':[1],'duplicates':[],'failed':[]},{}]
-                    elif name=='edit-export':results=[{}, {}, settings,{}, {'photos':[{'id':1,'kind':'raw','previewOnly':'unsupported compression' if fault=='preview_fallback' else None}]},photo]
+                    elif name=='edit-export':results=[{}, {}, settings,{}, {'photos':[{'id':1,'kind':'raw','previewOnly':'unsupported compression' if fault=='preview_fallback' else None,'camera':'Canon EOS 7D' if fault=='camera' else 'NIKON CORPORATION NIKON D2H'}]},photo]
                     else:results=[{},photo,settings,{'persistent':fault!='persistence','unsavedOps':0}]
                     commands={'import':['library.import','catalog.query'], 'edit-export':['library.select','develop.set','develop.get','app.export','catalog.query','photo.inspect'], 'reopen':['library.select','photo.inspect','develop.get','library.info']}[name]
                     plan=json.loads((path.parent.parent/(name+'-plan.json')).read_text())
                     return {'compatible':True,'receipt':{'schemaVersion':1,'domain':'lightcraft','runId':name,'status':'UNKNOWN' if fault=='receipt_status' else 'NATIVE_EXIT_ZERO_REVIEW_REQUIRED','protocolComplete':True,
                         'planSha256':hashlib.sha256(json.dumps(plan,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),
-                        'libraryPath':str(path.parent.parent/'library'),'skillResourceSha256':{'test':'fixture'},
+                        'libraryPath':str(path.parent.parent/'library'),'skillResourceSha256':{'test':'fixture','runtime.lock.json':'unit'},'skillResourceAfterSha256':{'test':'fixture','runtime.lock.json':'unit'},'runtimeLockSha256':'unit','process':{'status':'EXITED','exitCode':0,'logComplete':True},
                         'inputSha256':{str(source):hashlib.sha256(source.read_bytes()).hexdigest()},'inputAfterSha256':{str(source):hashlib.sha256(source.read_bytes()).hexdigest()},
                         'steps':[{'index':i,'command':cmd,'status':'SUCCEEDED','native':{'result':r}} for i,(cmd,r) in enumerate(zip(commands,results))]}}
                 artifacts=SimpleNamespace(sha=lambda path:hashlib.sha256(Path(path).read_bytes()).hexdigest(),verify=lambda *a,**k:{'technicalStatus':'PASS'})
-                gateway=SimpleNamespace(read_receipt=receipt,capture_inputs=lambda paths:{str(source):artifacts.sha(source)},capture_resources=lambda path:{'test':'fixture'})
+                gateway=SimpleNamespace(read_receipt=receipt,capture_inputs=lambda paths:{str(source):artifacts.sha(source)},capture_resources=lambda path:{'test':'fixture','runtime.lock.json':'unit'})
                 bootstrap=SimpleNamespace(doctor=lambda *a:{'status':'READY'})
                 with patch.object(m,'load',side_effect=lambda name:{'bootstrap':bootstrap,'artifacts':artifacts,'command_gateway':gateway}[name]),patch.object(m.subprocess,'run',return_value=subprocess.CompletedProcess([],0,'','')):
-                    result=m.validate({'samples':[{'path':str(source),'sha256':artifacts.sha(source)}]},root/'mock-runtime',root/'work')
+                    result=m.validate({'schemaVersion':1,'samples':[{'sampleId':'unit-raw','make':'Nikon','model':'D2H','variant':'12bit compressed','license':'CC0-1.0','licenseUrl':'https://creativecommons.org/publicdomain/zero/1.0/','sourceUrl':'https://raw.pixls.us/sample.nef','catalogUrl':'https://raw.pixls.us/','path':str(source),'sha256':artifacts.sha(source),'bytes':source.stat().st_size}]},root/'mock-runtime',root/'work')
                 record=result['samples'][0]
                 if fault in ('none','preview_fallback'):
                     self.assertEqual(record['nativeAcceptance'],'PASS' if fault=='none' else 'PASS_WITH_PREVIEW_FALLBACK')
                     if fault=='preview_fallback':self.assertEqual(record['fullRawAcceptance'],'NOT_PROVEN')
                 else:
-                    self.assertEqual(record['nativeAcceptance'],'FAIL_OR_UNSUPPORTED')
-                    self.assertIn({'persistence':'persistence_unconfirmed','identity':'photo_mismatch','wrong_source':'photo_mismatch','receipt_status':'execution_unconfirmed'}[fault],record['error'])
+                    self.assertEqual(record['nativeAcceptance'],'UNCONFIRMED' if fault=='receipt_status' else 'FAILED')
+                    self.assertIn({'persistence':'persistence_unconfirmed','identity':'photo_mismatch','wrong_source':'photo_mismatch','receipt_status':'execution_not_success','camera':'camera_identity_mismatch'}[fault],record['error'])
+
+    def test_manifest_rejected_before_doctor_or_output_creation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);m=driver()
+            with patch.object(m,'load',side_effect=AssertionError('must not load native')):
+                with self.assertRaises(ValueError):m.validate({'samples':[]},root/'runtime',root/'output')
+            self.assertFalse((root/'output').exists())
+
 
 if __name__=='__main__':unittest.main()

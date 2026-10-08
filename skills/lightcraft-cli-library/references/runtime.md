@@ -59,3 +59,9 @@ python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/ru
 使用当前技能的 `scripts/batch_scope.py prepare request.json --output contract.json` 生成合同（输入含 scope/changes/controls，可选 parent）；scope 明确 targetIds、observedIds、allowedFields，changes 每项含明确 ids 和局部 values。controls 必须取当前原生发现结果，不能假定未列出的字段可用。合同的 plan 另存 JSON 后通过本技能 commands.py run 执行；修改只在已授权范围内发生。
 
 执行后用 `scripts/batch_scope.py verify contract.json --receipt /absolute/run/receipt.json --output facts.json` 核对完整前后设置、原片和当前资源身份。修订 prepare 必须带上前次完整合同 parent，保持同一 scope，只提交需要修订的 ID/字段。缺失观测、越界、未知执行或未落盘不能产生通过结论。settings 核对不等于视觉或最终照片交付。
+
+### RAW 样本身份
+
+原生执行前用 `python3 -I -B "$SKILL_DIR/scripts/raw_contract.py" /absolute/manifest.json` 检查版本化样本清单。清单字段为 schemaVersion=1、samples；每项明确 sampleId、make、model、variant、license/licenseUrl、sourceUrl/catalogUrl、path、bytes、sha256，可附 catalogEntryPath/catalogEntrySha256。检查只读，不下载、安装或启动原生程序；缺失、漂移或重复样本在执行前拒绝。
+
+通过后仍须用本技能 commands.py 对明确照片 ID 执行已授权计划，登记原片并保存逐步骤回执。RAW 变体从绑定来源条目记录，不能从文件扩展名推断。catalog.query 的 kind=raw、previewOnly=null 只表示运行时报告完整 RAW；非空原因字符串表示预览回退；缺失或布尔值保持未知。必须核对实际 camera、照片源身份、导出解码和独立会话设置重开；技术通过不等于视觉通过，也不外推其他相机变体。

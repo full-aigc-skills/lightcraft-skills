@@ -1,0 +1,2 @@
+{"command":"library.import","ms":1.0,"ok":true,"result":{"duplicates":[],"failed":[["/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/blackmagic-micro-cinema-camera-0.dng","unsupported raw (JPEG process SOF1 (not lossless Huffman)) without an embedded preview"]],"imported":[],"scanned":1,"sidecars":0}}
+{"command":"catalog.query","ms":0.0,"ok":true,"result":{"photos":[],"total":0}}

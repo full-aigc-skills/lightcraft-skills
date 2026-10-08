@@ -1,0 +1,192 @@
+{
+  "domain": "lightcraft",
+  "status": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/import/native-plan.json",
+    "--library",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "46afcc71b0e99eb309f16b05bd3aee6ea1da5e432df3291a29960e0f15591785",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e"
+  },
+  "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "batch_scope.py": "3406c48a10874a89830c2c41377682ac6d2f250d3f2ddd2484bfcfc13375d228",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "d75c7b3373ce478daa0fe40beb568f067f23c6221b4256ec4b4083e1ff5be856",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "d9f81ba73c26710584a947d158bd826406c80ec74303654d90e3ffbd9dbc0989",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "86fc25b4dc54622b98fe55be476922dea2d65c33484545a28f9e4771822d41cf",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "session_probe.py": "484dbce8842f329d43739f207d70a45667ef95ec08130ea4f922b58a5ef70a2b"
+  },
+  "schemaVersion": 1,
+  "runId": "c280693c-8ab5-4a74-a0a2-583652bd2282",
+  "startedAt": "2026-10-08T13:59:10.851090+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.import",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.import",
+        "ms": 54.8,
+        "ok": true,
+        "result": {
+          "duplicates": [],
+          "failed": [],
+          "imported": [
+            1
+          ],
+          "scanned": 1,
+          "sidecars": 1
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "catalog.query",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "catalog.query",
+        "ms": 0.1,
+        "ok": true,
+        "result": {
+          "photos": [
+            {
+              "camera": "Canon Canon EOS 7D",
+              "captured": "2016-12-22T20:02:04",
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": false,
+              "fileName": "canon-eos-7d-3.cr2",
+              "flag": "none",
+              "format": "CR2",
+              "height": 3456,
+              "id": 1,
+              "keywords": [],
+              "kind": "raw",
+              "label": null,
+              "previewOnly": "Canon sRAW/mRAW",
+              "rating": 0,
+              "title": "",
+              "width": 5184
+            }
+          ],
+          "total": 1
+        }
+      }
+    }
+  ],
+  "libraryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library",
+  "outputRoot": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/exports",
+  "libraryBeforeSha256": null,
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.import\",\"ms\":54.8,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[],\"imported\":[1],\"scanned\":1,\"sidecars\":1}}\n{\"command\":\"catalog.query\",\"ms\":0.1,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"Canon Canon EOS 7D\",\"captured\":\"2016-12-22T20:02:04\",\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"canon-eos-7d-3.cr2\",\"flag\":\"none\",\"format\":\"CR2\",\"height\":3456,\"id\":1,\"keywords\":[],\"kind\":\"raw\",\"label\":null,\"previewOnly\":\"Canon sRAW/mRAW\",\"rating\":0,\"title\":\"\",\"width\":5184}],\"total\":1}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T13:59:10.944874+00:00",
+    "argv": [
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/import/native-plan.json",
+      "--library",
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 26186,
+    "processStartedAt": "2026-10-08T13:59:10.947014+00:00",
+    "processIdentity": "Thu Oct  8 21:59:10 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli run --script /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/import/native-plan.json --library /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T13:59:11.093524+00:00",
+    "stdout": "{\"command\":\"library.import\",\"ms\":54.8,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[],\"imported\":[1],\"scanned\":1,\"sidecars\":1}}\n{\"command\":\"catalog.query\",\"ms\":0.1,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"Canon Canon EOS 7D\",\"captured\":\"2016-12-22T20:02:04\",\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"canon-eos-7d-3.cr2\",\"flag\":\"none\",\"format\":\"CR2\",\"height\":3456,\"id\":1,\"keywords\":[],\"kind\":\"raw\",\"label\":null,\"previewOnly\":\"Canon sRAW/mRAW\",\"rating\":0,\"title\":\"\",\"width\":5184}],\"total\":1}}\n",
+    "stderr": "",
+    "stdoutBytes": 522,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/import/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless",
+      "transport": "jsonl-run",
+      "connectAddress": null,
+      "readOnly": false,
+      "nativeMayRetryReads": false,
+      "scriptSha256": null
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless",
+    "transport": "jsonl-run",
+    "connectAddress": null,
+    "readOnly": false,
+    "nativeMayRetryReads": false,
+    "scriptSha256": null
+  },
+  "inputAfterSha256": {
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "batch_scope.py": "3406c48a10874a89830c2c41377682ac6d2f250d3f2ddd2484bfcfc13375d228",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "d75c7b3373ce478daa0fe40beb568f067f23c6221b4256ec4b4083e1ff5be856",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "d9f81ba73c26710584a947d158bd826406c80ec74303654d90e3ffbd9dbc0989",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "86fc25b4dc54622b98fe55be476922dea2d65c33484545a28f9e4771822d41cf",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "session_probe.py": "484dbce8842f329d43739f207d70a45667ef95ec08130ea4f922b58a5ef70a2b"
+  },
+  "libraryAfterSha256": {
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library/catalog.snap": "90b797c80a2ac805e03f9ba7e7da424d207c005416ee1b4f71930dcae19a9cfe",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/source-final/3/library/view.json": "e60209308f0f097fef43a8bc61111a7a87050f26307a93314ca5e132bb682d90"
+  },
+  "endedAt": "2026-10-08T13:59:11.107821+00:00"
+}

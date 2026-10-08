@@ -1,0 +1,2 @@
+{"command":"library.import","ms":35.2,"ok":true,"result":{"duplicates":[],"failed":[],"imported":[1],"scanned":1,"sidecars":0}}
+{"command":"catalog.query","ms":0.1,"ok":true,"result":{"photos":[{"camera":"NIKON CORPORATION NIKON D2H","captured":"2005-09-24T13:23:28.210","copyName":null,"copyOf":null,"deleted":false,"edited":false,"fileName":"nikon-d2h-1.nef","flag":"none","format":"NEF","height":1648,"id":1,"keywords":[],"kind":"raw","label":null,"previewOnly":null,"rating":0,"title":"","width":2496}],"total":1}}

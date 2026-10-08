@@ -1,0 +1,2 @@
+{"command": "library.import", "params": {"paths": ["/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/canon-eos-7d-3.cr2"], "mode": "add"}}
+{"command": "catalog.query", "params": {"limit": 10}}

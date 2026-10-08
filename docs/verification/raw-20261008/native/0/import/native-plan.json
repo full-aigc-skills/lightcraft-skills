@@ -1,0 +1,2 @@
+{"command": "library.import", "params": {"paths": ["/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/blackmagic-micro-cinema-camera-0.dng"], "mode": "add"}}
+{"command": "catalog.query", "params": {"limit": 10}}

@@ -1,0 +1,80 @@
+{
+  "readOnly": true,
+  "taskExecutionAllowed": false,
+  "deliveryAllowed": false,
+  "automaticReplay": false,
+  "compatible": true,
+  "sourceSnapshotMatches": false,
+  "runtimeIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "samples": [
+    {
+      "sampleId": "blackmagic-micro-cinema-camera-0",
+      "make": "Blackmagic",
+      "model": "Micro Cinema Camera",
+      "variant": "12bit (16:9)",
+      "sha256": "4c65b8cda205087cfb94d8931811e53e15eb4df538ad67c1b4a3e76c1185b277",
+      "nativeAcceptance": "UNSUPPORTED",
+      "decodeMode": "UNKNOWN",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "cameraIdentity": "NOT_OBSERVED",
+      "observedCamera": null,
+      "previewOnlyReason": null,
+      "error": "unsupported raw (JPEG process SOF1 (not lossless Huffman)) without an embedded preview"
+    },
+    {
+      "sampleId": "nikon-d2h-1",
+      "make": "Nikon",
+      "model": "D2H",
+      "variant": "12bit 12bit compressed (Lossy (type 1)) (3:2)",
+      "sha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+      "nativeAcceptance": "PASS",
+      "decodeMode": "FULL_RAW_REPORTED",
+      "fullRawAcceptance": "REPORTED_BY_RUNTIME",
+      "cameraIdentity": "MATCH",
+      "observedCamera": "NIKON CORPORATION NIKON D2H",
+      "previewOnlyReason": null,
+      "error": null
+    },
+    {
+      "sampleId": "canon-eos-d30-2",
+      "make": "Canon",
+      "model": "EOS D30",
+      "variant": "RAW (3:2)",
+      "sha256": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e",
+      "nativeAcceptance": "UNSUPPORTED",
+      "decodeMode": "UNKNOWN",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "cameraIdentity": "NOT_OBSERVED",
+      "observedCamera": null,
+      "previewOnlyReason": null,
+      "error": "RawOther files are not supported yet"
+    },
+    {
+      "sampleId": "canon-eos-7d-3",
+      "make": "Canon",
+      "model": "EOS 7D",
+      "variant": "sRAW2 (sRAW) (3:2)",
+      "sha256": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e",
+      "nativeAcceptance": "PASS_WITH_PREVIEW_FALLBACK",
+      "decodeMode": "PREVIEW_FALLBACK",
+      "fullRawAcceptance": "NOT_PROVEN",
+      "cameraIdentity": "MATCH",
+      "observedCamera": "Canon Canon EOS 7D",
+      "previewOnlyReason": "Canon sRAW/mRAW",
+      "error": null
+    }
+  ],
+  "scope": "sample-bound runtime reports only; no all-camera support or visual acceptance"
+}

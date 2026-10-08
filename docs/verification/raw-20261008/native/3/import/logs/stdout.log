@@ -1,0 +1,2 @@
+{"command":"library.import","ms":54.8,"ok":true,"result":{"duplicates":[],"failed":[],"imported":[1],"scanned":1,"sidecars":1}}
+{"command":"catalog.query","ms":0.1,"ok":true,"result":{"photos":[{"camera":"Canon Canon EOS 7D","captured":"2016-12-22T20:02:04","copyName":null,"copyOf":null,"deleted":false,"edited":false,"fileName":"canon-eos-7d-3.cr2","flag":"none","format":"CR2","height":3456,"id":1,"keywords":[],"kind":"raw","label":null,"previewOnly":"Canon sRAW/mRAW","rating":0,"title":"","width":5184}],"total":1}}

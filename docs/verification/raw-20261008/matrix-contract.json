@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "matrixContract": "PASS",
+  "scope": "four SHA256-bound sample classifications, not all-camera support",
+  "observations": {
+    "source-final": {
+      "reportSha256": "60d48a77432b74becf9c3a7e23d05e96644bf473aecf8e1dbfd470bc2c0b307f",
+      "sourceSnapshotMatches": false,
+      "counts": {
+        "UNSUPPORTED": 2,
+        "PASS": 1,
+        "PASS_WITH_PREVIEW_FALLBACK": 1
+      }
+    },
+    "plugin-final": {
+      "reportSha256": "83f15daf26a06950f32f2679fcce7aec81123ca6155df609dd7d8c5ae356a735",
+      "sourceSnapshotMatches": true,
+      "counts": {
+        "UNSUPPORTED": 2,
+        "PASS": 1,
+        "PASS_WITH_PREVIEW_FALLBACK": 1
+      }
+    }
+  },
+  "negativeChecks": [
+    {
+      "case": "promote-preview",
+      "status": "PASS_REJECTED",
+      "error": "raw_decode_claim_inconsistent"
+    },
+    {
+      "case": "variant",
+      "status": "PASS_REJECTED",
+      "error": "raw_catalog_metadata_mismatch"
+    },
+    {
+      "case": "artifact",
+      "status": "PASS_REJECTED",
+      "error": "raw_export_identity_mismatch"
+    },
+    {
+      "case": "runtime",
+      "status": "PASS_REJECTED",
+      "error": "raw_native_identity_mismatch"
+    },
+    {
+      "case": "manifest-input",
+      "status": "PASS_REJECTED",
+      "error": "raw_original_changed_or_missing"
+    }
+  ],
+  "fullRawSamples": 1,
+  "previewFallbackSamples": 1,
+  "unsupportedSamples": 2,
+  "visual": "NOT_RUN",
+  "host": "NOT_RUN",
+  "automaticReplay": false,
+  "completeAcceptance": false
+}
