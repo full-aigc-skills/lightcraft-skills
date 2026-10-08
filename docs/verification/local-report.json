@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T10:59:58.445646+00:00",
-  "sourceFingerprint": "441974fda0d6af65adcbceb4d867d3e9a8bced7b3e7f838be5ecf7ce5a641237",
+  "generatedAt": "2026-10-08T11:01:52.452931+00:00",
+  "sourceFingerprint": "5b61ba4cd42d05a2db3ffcea5d99505ec5688ae382ea83571975cf682c654929",
   "project": "lightcraft-skills",
   "developmentVersion": "0.1.0-dev.1",
   "pinnedNativeVersion": "0.2.1",
@@ -97,12 +97,16 @@
       "reason": "Python host tests do not establish pinned CLI/platform acceptance"
     },
     "remoteCI": {
-      "status": "NOT_RUN",
-      "reason": "workflow configured; no repository/publication/CI run"
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/remote-ci.json"
+      ],
+      "testedCommit": "d3faac86680dca77fa6757d3b303a47bd9623b40",
+      "scope": "macOS offline package validation and Python 3.11/3.12/3.13 contracts; no native/host/visual acceptance"
     }
   },
   "python311": "NOT_RUN_UNAVAILABLE_LOCALLY",
-  "git": "INITIALIZED",
+  "git": "MAIN_PUSHED",
   "published": false,
   "automaticReplay": false,
   "specSyncArchive": "NOT_RUN_ACCEPTANCE_OPEN",
@@ -137,5 +141,6 @@
   },
   "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
   "managedSkillFiles": 108,
-  "releaseStatus": "DEVELOPMENT_DRAFT_PREPARING"
+  "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
+  "documentationUpdate": "CI result and Git status only; executable source and tests unchanged since tested commit"
 }

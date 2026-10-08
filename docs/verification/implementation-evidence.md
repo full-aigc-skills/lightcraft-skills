@@ -2,7 +2,7 @@
 
 2026-10-08。本变更完成 **21/29** 项任务；勾选表示对应本地实现/契约验证完成，不表示 Lightcraft 原生、宿主或整体发行验收。原生安装授权问题已发出，尚未收到回复。
 
-当前测试与身份见 [分层报告](local-report.json)。所有 Python 原生进程测试使用测试替身或普通 Python 子进程；实际图像解码使用现有 macOS sips。未安装 Lightcraft CLI、插件、Python 包，未初始化 Git 或发布。
+当前测试与身份见 [分层报告](local-report.json)。所有 Python 原生进程测试使用测试替身或普通 Python 子进程；实际图像解码使用现有 macOS sips。未安装 Lightcraft CLI、插件、Python 包，Git main 已提交推送，开发版发行为草稿；未公开发布。
 
 ## 任务映射
 
@@ -64,7 +64,7 @@
 
 ## 验证边界
 
-- Python 3.12/3.13 本地完整回归：PASS；Python 3.11 本地不可用，远端 CI 尚未运行。
+- Python 3.12/3.13 本地完整回归：PASS；Python 3.11 本地不可用；远端 Python 3.11/3.12/3.13 离线矩阵全部 PASS，运行身份见 [远端 CI 证据](remote-ci.json)。
 - 六技能隔离、中文空格路径、来源快照和实际合成图像解码：本地检查；不构成固定原生制品的能力证明。
 - skill-creator 的 quick_validate.py 依赖 PyYAML，当前解释器不可用；使用标准库包校验覆盖 frontmatter、结构与引用，没有安装依赖。
 - TRACE 分数仅为静态内容基线，详见配套技能库 docs/verification/trace/，不是路由/模型/原生完成证明。

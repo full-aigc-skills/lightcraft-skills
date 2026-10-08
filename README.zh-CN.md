@@ -12,6 +12,6 @@ python3 -I -B -m unittest discover -s tests -v
 
 技能运行时的 `SKILL_DIR` 必须取宿主实际加载目录；纯检查用 `python3 -I -B "$SKILL_DIR/scripts/bootstrap.py" --no-install`。在线发现或运行可能安装锁定制品，只在相应授权内执行。离线 `--catalog` 不能用于执行。UNKNOWN 不自动重放，零退出仍待文件、重开与视觉验证。
 
-主 OpenSpec 任务 **21/29** 完成，剩余能力快照/照片原生流程、独立重开、PNG/JPEG/RAW 验收及发行门禁保持 OPEN。当前没有 Lightcraft 原生安装、宿主加载、模型分派、视觉或远端 CI 通过证据；Git 已初始化，正在交付开发候选；尚无公开发行。三个 P3 独立扩展变更保持 OPEN。
+主 OpenSpec 任务 **21/29** 完成，剩余能力快照/照片原生流程、独立重开、PNG/JPEG/RAW 验收及发行门禁保持 OPEN。当前没有 Lightcraft 原生安装、宿主加载、模型分派、视觉通过证据；Git main 已推送，Python 3.11/3.12/3.13 远端离线 CI 全部通过；开发版发行草稿已准备，尚无公开发行。三个 P3 独立扩展变更保持 OPEN。
 
 [任务与规格](openspec/README.md) · [当前证据及差距](docs/verification/implementation-evidence.md) · [分层报告](docs/verification/local-report.json) · [架构](docs/architecture.md) · [运行回执](docs/task-receipts.zh-CN.md)

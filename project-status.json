@@ -2,7 +2,7 @@
   "domain": "lightcraft",
   "version": "0.1.0-dev.1",
   "status": "LOCAL_IMPLEMENTATION_VERIFIED_ACCEPTANCE_OPEN",
-  "gitRepository": "INITIALIZED",
+  "gitRepository": "MAIN_PUSHED",
   "specification": "OPEN_SPEC_CHANGE_IMPLEMENTED_LOCALLY_ACCEPTANCE_OPEN",
   "specificationChange": "harden-lightcraft-skill-workflows",
   "specificationPath": "openspec/changes/harden-lightcraft-skill-workflows/",
@@ -26,8 +26,9 @@
     ]
   },
   "evidence": "docs/verification/local-report.json",
-  "remoteCI": "NOT_RUN",
+  "remoteCI": "PASS_OFFLINE_PYTHON_311_312_313",
   "repository": "https://github.com/full-aigc-skills/lightcraft-skills",
   "branch": "main",
-  "releaseStatus": "DEVELOPMENT_CANDIDATE_REVIEW_PENDING"
+  "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
+  "remoteCIEvidence": "docs/verification/remote-ci.json"
 }
