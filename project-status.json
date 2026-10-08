@@ -7,9 +7,9 @@
   "specificationChange": "three-independent-extensions",
   "specificationPath": "openspec/changes/",
   "nativeInstallation": "PASS_SIX_FIXED_CLI_TARGETS",
-  "hostDiscovery": "NOT_RUN_CURRENT_CANDIDATE",
-  "modelDispatch": "NOT_RUN_CURRENT_CANDIDATE",
-  "creativeAcceptance": "NOT_RUN_CURRENT_CANDIDATE",
+  "hostDiscovery": "PASS_CURRENT_ISOLATED_SIX_SKILLS",
+  "modelDispatch": "PASS_FIVE_READONLY_SCENARIOS_MCP_OPEN",
+  "creativeAcceptance": "FAIL_NIKON_RAW_COLOR_CAST",
   "published": false,
   "tasks": {
     "scope": "archived base plus three active extensions",
@@ -26,7 +26,7 @@
       "extend-lightcraft-portable-artcraft-delivery:1.4"
     ]
   },
-  "evidence": "docs/verification/windows-20261008/local-report.json",
+  "evidence": "docs/verification/current-host-20261008/local-report.json",
   "remoteCI": "PASS_OFFLINE_PYTHON_311_312_313",
   "repository": "https://github.com/full-aigc-skills/lightcraft-skills",
   "branch": "main",

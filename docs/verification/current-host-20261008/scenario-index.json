@@ -1,0 +1,140 @@
+[
+  {
+    "scenario": "source-natural",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true
+    },
+    "elapsedSeconds": 41
+  },
+  {
+    "scenario": "source-explicit",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true
+    },
+    "elapsedSeconds": 39
+  },
+  {
+    "scenario": "source-recovery",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true,
+      "noAutomaticReplayReported": true
+    },
+    "elapsedSeconds": 49
+  },
+  {
+    "scenario": "source-missing-dependency",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true,
+      "actualMissingDiagnostic": true,
+      "runtimeDirectoryNotCreated": true
+    },
+    "elapsedSeconds": 48
+  },
+  {
+    "scenario": "source-unrelated",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "noTools": true,
+      "correctAnswer": true
+    },
+    "elapsedSeconds": 12
+  },
+  {
+    "scenario": "plugin-natural",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true
+    },
+    "elapsedSeconds": 42
+  },
+  {
+    "scenario": "plugin-explicit",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true
+    },
+    "elapsedSeconds": 47
+  },
+  {
+    "scenario": "plugin-recovery",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true,
+      "noAutomaticReplayReported": true
+    },
+    "elapsedSeconds": 38
+  },
+  {
+    "scenario": "plugin-missing-dependency",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "actualInstalledEntryRead": true,
+      "actualMissingDiagnostic": true,
+      "runtimeDirectoryNotCreated": true
+    },
+    "elapsedSeconds": 47
+  },
+  {
+    "scenario": "plugin-unrelated",
+    "status": "PASS",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "installedSkillsUnchanged": true,
+      "globalConfigUnchanged": true,
+      "commandsExitedZero": true,
+      "noTools": true,
+      "correctAnswer": true
+    },
+    "elapsedSeconds": 12
+  }
+]

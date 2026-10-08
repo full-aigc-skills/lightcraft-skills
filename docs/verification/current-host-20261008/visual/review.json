@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "status": "FAIL",
+  "method": "human-visible image inspection by agent using view_image",
+  "syntheticSixTargets": "PASS_GLOBAL_BRIGHTNESS_ONLY",
+  "nikonD2H": "FAIL_OBVIOUS_CYAN_GREEN_CAST",
+  "comparison": "same NEF embedded camera JPEG has neutral wall and white chart patches; CLI output has strong cyan-green cast",
+  "reference": "camera rendering, not absolute colorimetric ground truth; no deltaE claim",
+  "settings": "requested exposure +0.25; recorded wb asShot temp 6502 tint -10; no corrective WB applied",
+  "canon7DsRAW": "PREVIEW_ONLY_COLOR_FIDELITY_NOT_CONFIRMED",
+  "rawClassificationTask": "technical decode/fallback classification remains distinct from visual fidelity",
+  "files": {
+    "nikon-cli-export.png": "ee91b07d1234030850d775fc8aaf3f294feed46c079071c5fb5a0ff88d3baadd",
+    "nikon-embedded-8256.jpg": "941b29e9171538a9485b1643d8c1137766a9f7446ac2b1808b589c047804153f",
+    "embedded-jpeg-extraction.json": "93f9508188f73b32b3ee39d1c16c7ed40f4b83bcd056e05b5dbfe09e27619d6c"
+  }
+}

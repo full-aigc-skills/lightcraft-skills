@@ -1,0 +1,9 @@
+{
+  "ready": false,
+  "missing": [
+    "host",
+    "visual"
+  ],
+  "published": false,
+  "automaticPublish": false
+}

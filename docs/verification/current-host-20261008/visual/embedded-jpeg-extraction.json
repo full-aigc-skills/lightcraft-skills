@@ -1,0 +1,14 @@
+{
+  "sourceSha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+  "sourceUnchanged": true,
+  "scope": "original JPEG byte streams extracted from NEF; JPEG segments/entropy parsed without resizing, reencoding or color changes",
+  "previews": [
+    {
+      "file": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-host-20261008/visual-reference/nikon-embedded-8256.jpg",
+      "offset": 8256,
+      "bytes": 108601,
+      "sha256": "941b29e9171538a9485b1643d8c1137766a9f7446ac2b1808b589c047804153f",
+      "properties": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-host-20261008/visual-reference/nikon-embedded-8256.jpg\n  pixelWidth: 570\n  pixelHeight: 375"
+    }
+  ]
+}

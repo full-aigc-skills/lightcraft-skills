@@ -27,3 +27,5 @@ SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam
 三领域协议消费与失效规则已验证，宿主自动调度仍未验收，见 [实际证据](docs/verification/exchange-20261008/README.md)。
 
 六目标平台任务已完成，当前扩展任务 4/12 完成、8 项 OPEN，见 [固定 CLI 平台证据](docs/verification/windows-20261008/README.md)。当前宿主、视觉和插件来源配套门禁仍未关闭，候选版本未公开发布。
+
+当前候选隔离宿主五类场景通过；Nikon RAW 视觉复核发现明显偏色，公开发布门禁保持开放，见 [当前宿主及视觉证据](docs/verification/current-host-20261008/README.md)。宿主 MCP 与桌面验收尚未完成。
