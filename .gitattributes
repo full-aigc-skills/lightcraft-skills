@@ -1,0 +1,8 @@
+# 固定跨平台运行资源与验收驱动的字节身份；二进制不转换。
+*.py text eol=lf
+*.json text eol=lf
+*.ts text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.txt text eol=lf

@@ -39,6 +39,18 @@ jobs:
         with:
           python-version: '3.12'
           architecture: ${{ matrix.python_arch }}
+      - name: Verify checkout bytes match committed runtime
+        run: |
+          python -I -B - <<'PYCODE'
+          import pathlib, subprocess
+          for path in [pathlib.Path('scripts/native_acceptance.py'), *pathlib.Path('runtime').iterdir(), *pathlib.Path('skills/lightcraft-use/scripts').iterdir()]:
+              if not path.is_file() or path.suffix not in ('.py', '.json', '.ts'):
+                  continue
+              relative=path.as_posix()
+              committed=subprocess.check_output(['git','rev-parse','HEAD:'+relative],text=True).strip()
+              observed=subprocess.check_output(['git','hash-object','--no-filters',relative],text=True).strip()
+              assert observed==committed, relative
+          PYCODE
       - name: Windows installer and process supervisor regression
         if: runner.os == 'Windows'
         run: |
