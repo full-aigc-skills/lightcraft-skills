@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:32:42.207112+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "--version"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 28167,
+  "processStartedAt": "2026-10-08T14:32:42.210171+00:00",
+  "processIdentity": "Thu Oct  8 22:32:42 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli --version",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:32:42.216000+00:00",
+  "stdout": "lightcraft-cli 0.2.1\n",
+  "stderr": "",
+  "stdoutBytes": 21,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/lightcraft-version-logs",
+  "logComplete": true
+}

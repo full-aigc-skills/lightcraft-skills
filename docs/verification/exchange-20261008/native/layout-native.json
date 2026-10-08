@@ -1,0 +1,5 @@
+{"command": "file.new", "params": {"width": 96, "height": 64, "pages": 1, "facingPages": false, "margins": 0}}
+{"command": "file.place", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png", "x": 0, "y": 0, "width": 96}}
+{"command": "file.saveAs", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/page.designcraft"}}
+{"command": "file.exportPdf", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout.pdf"}}
+{"command": "document.inspect", "params": {}}

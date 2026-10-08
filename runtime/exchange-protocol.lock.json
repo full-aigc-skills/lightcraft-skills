@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "repository": "https://github.com/full-aigc-plugins/artcraft-plugin",
+  "commit": "8e9a519cd2b34187f9dc74cd95ccf98570daeea0",
+  "producerVersion": "0.1.0-dev.126-runtime.1",
+  "protocols": [
+    "craft-task/v1",
+    "craft-artifact/v1"
+  ],
+  "schemaSha256": {
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+  },
+  "sourceStatus": "observed-clean-local-checkout-not-publication-proof"
+}

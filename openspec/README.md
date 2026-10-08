@@ -9,7 +9,7 @@
 - [分层验收与限制](../docs/verification/implementation-evidence.md)
 - [同步归档执行回执](../docs/verification/openspec-archive.json)
 
-三个独立扩展变更仍在 `changes/`，状态为：Connect/MCP 0/4、扩展照片/SAM 2/4、跨平台/ArtCraft/移动交付 0/4。批量范围、选择性修订与逐样本 RAW 任务已完成，其他 10 项继续 OPEN。基础闭环验收不关闭这些范围。
+三个独立扩展变更仍在 `changes/`，状态为：Connect/MCP 0/4、扩展照片/SAM 2/4、跨平台/ArtCraft/移动交付 1/4。批量范围、选择性修订、逐样本 RAW 与三领域公共协议任务已完成，其他 9 项继续 OPEN。基础闭环验收不关闭这些范围。
 
 ```bash
 openspec list

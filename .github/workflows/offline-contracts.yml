@@ -19,3 +19,12 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python -I -B scripts/validate_package.py
       - run: python -I -B -m unittest discover -s tests -v
+
+  exchange-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '24'
+      - run: node --test tests/exchange/*.test.ts

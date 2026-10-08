@@ -69,3 +69,7 @@ python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/ru
 ### SAM 只读评估
 
 用当前技能目录中的 `python3 "$SKILL_DIR/scripts/sam_contract.py" snapshot.json --model-dir /明确的现有模型目录` 检查发现快照和文件；可选 `--status status.json` 只记录报告值，不替代原生回执。无状态命令时编译标记 UNKNOWN。固定 SAM 3 revision/文件身份及未完成门禁见包内 `docs/verification/sam-20261008/README.md`。评估不会下载、接受许可或执行推理；下载和执行须另有明确授权及真实验收，文件匹配不能单独证明可用。
+
+### ArtCraft 公共协议消费
+
+可选接口 `node "$SKILL_DIR/scripts/craft_exchange.ts" bundle.json` 需要 Node 24+；只做任务/文件前检和依赖失效计算，不执行、安装或自动重放。协议 schema 与来源锁随当前技能自包含分发。task bundle 的兼容表由可信调用方提供；输入自身不能授权运行。三领域原生/协议范围及宿主缺口见包内 `docs/craft-exchange.zh-CN.md` 和 `docs/verification/exchange-20261008/README.md`。

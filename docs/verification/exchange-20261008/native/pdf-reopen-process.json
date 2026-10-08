@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:32:43.284624+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/printcraft-dev6-host/runtime/printcraft/0.2.1/printcraft-cli",
+    "info",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 28229,
+  "processStartedAt": "2026-10-08T14:32:43.287093+00:00",
+  "processIdentity": "Thu Oct  8 22:32:43 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/printcraft-dev6-host/runtime/printcraft/0.2.1/printcraft-cli info /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:32:43.292844+00:00",
+  "stdout": "{\n  \"annotations\": 0,\n  \"attachments\": 0,\n  \"author\": null,\n  \"bookmarks\": 0,\n  \"creator\": \"DesignCraft\",\n  \"encrypted\": false,\n  \"fields\": 0,\n  \"file\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf\",\n  \"file_size\": 14979,\n  \"first_page_pt\": [\n    96.0,\n    64.0\n  ],\n  \"javascript\": false,\n  \"layers\": 0,\n  \"links\": 0,\n  \"page_labels\": [\n    \"1\"\n  ],\n  \"pages\": 1,\n  \"pdf_version\": \"1.7\",\n  \"producer\": \"DesignCraft\",\n  \"tagged\": false,\n  \"title\": \"Untitled-2\",\n  \"warnings\": [],\n  \"xfa\": null\n}\n",
+  "stderr": "",
+  "stdoutBytes": 583,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/pdf-reopen-logs",
+  "logComplete": true
+}

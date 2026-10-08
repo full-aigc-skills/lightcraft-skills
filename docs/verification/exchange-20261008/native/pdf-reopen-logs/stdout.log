@@ -1,0 +1,28 @@
+{
+  "annotations": 0,
+  "attachments": 0,
+  "author": null,
+  "bookmarks": 0,
+  "creator": "DesignCraft",
+  "encrypted": false,
+  "fields": 0,
+  "file": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf",
+  "file_size": 14979,
+  "first_page_pt": [
+    96.0,
+    64.0
+  ],
+  "javascript": false,
+  "layers": 0,
+  "links": 0,
+  "page_labels": [
+    "1"
+  ],
+  "pages": 1,
+  "pdf_version": "1.7",
+  "producer": "DesignCraft",
+  "tagged": false,
+  "title": "Untitled-2",
+  "warnings": [],
+  "xfa": null
+}

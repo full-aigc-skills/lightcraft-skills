@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:32:42.647434+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "run",
+    "--script",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-import-native.json",
+    "--library",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 28198,
+  "processStartedAt": "2026-10-08T14:32:42.650332+00:00",
+  "processIdentity": "Thu Oct  8 22:32:42 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli run --script /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-import-native.json --library /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:32:42.756631+00:00",
+  "stdout": "{\"command\":\"library.import\",\"ms\":22.7,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[],\"imported\":[1],\"scanned\":1,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.1,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"original.png\",\"flag\":\"none\",\"format\":\"PNG\",\"height\":64,\"id\":1,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96}],\"total\":1}}\n",
+  "stderr": "",
+  "stdoutBytes": 466,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-import-logs",
+  "logComplete": true
+}

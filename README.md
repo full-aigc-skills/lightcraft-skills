@@ -23,3 +23,5 @@ Connect/MCP 增量正在验收，见 [当前增量证据](docs/verification/conn
 逐样本 RAW 身份与结果分层已完成当前原生验收，见 [RAW 证据](docs/verification/raw-20261008/README.md)。完整解码、预览回退和不支持分别记录，仅适用于所测摘要与相机变体。
 
 SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam-20261008/README.md)。
+
+三领域协议消费与失效规则已验证，宿主自动调度仍未验收，见 [实际证据](docs/verification/exchange-20261008/README.md)。

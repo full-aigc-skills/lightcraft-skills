@@ -1,0 +1,509 @@
+{
+  "status": "PASS",
+  "acceptanceFiles": {
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/scripts/craft_exchange_acceptance.py": "41423e27023e132a4ff54c52e6733be15c94469ccf2a967acadb47301e03c45f",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/native_process.py": "d9f81ba73c26710584a947d158bd826406c80ec74303654d90e3ffbd9dbc0989",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/command_gateway.py": "3d0b466b7cc3d30a446bf952208fab3a26e4f5fc591d58df8ddab0af5f9a1bd4"
+  },
+  "runtimeLocks": {
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/designcraft-skills/skills/designcraft-use/scripts/runtime.lock.json": "3bec92e2eaf7227ee265ec2817413859c709261c41f4eb5363c8915dc1dbbad8",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/printcraft-skills/skills/printcraft-use/scripts/runtime.lock.json": "7db3b75e565e2a4da83118875e1ada8652913f670c401b4f60173af3f1547462"
+  },
+  "scope": "three-domain native outputs and public protocol preflight only",
+  "runtimeIdentity": [
+    {
+      "pluginId": "lightcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "a24be4d0e37617fc45e1588d92ad656da1d289a3537b934353ceaf56de5fcec0"
+    },
+    {
+      "pluginId": "designcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "e18578b28f43d6c6854ded930065feed5c9ee8af6a2e51338aa675ba4a5723a8",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "9ec2b504a09975ae0a3fd530bc74afa52abfcac4e7c083e8cb88a86f3eb5dd12"
+    },
+    {
+      "pluginId": "printcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+    }
+  ],
+  "contractFiles": {
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da"
+  },
+  "originalSha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+  "records": [
+    {
+      "taskId": "photo-import",
+      "domain": "lightcraft",
+      "requestSha256": "cedd979c4fe03af1cb09ded405187dfc58c0cc6f6cd1592cf92d7a2bef9478c7",
+      "inputSha256": {
+        "original.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+      },
+      "nativeScriptSha256": "e91b71c405703f9b024c195766718864156bd33e03e5b98f5cce0b16a2790ff5",
+      "argv": [
+        "run",
+        "--script",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-import-native.json",
+        "--library",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library"
+      ],
+      "process": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-import-process.json"
+    },
+    {
+      "taskId": "photo",
+      "domain": "lightcraft",
+      "requestSha256": "96d8a58128912c378204411bd505888473b91855a6c75deb8be081ba89102bae",
+      "inputSha256": {
+        "original.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+      },
+      "nativeScriptSha256": "2095971a927a4bc7875d31a63f662ff00b2adf0e7f6887bc28ed1221d413455b",
+      "argv": [
+        "run",
+        "--script",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-native.json",
+        "--library",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library"
+      ],
+      "process": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-process.json"
+    },
+    {
+      "taskId": "layout",
+      "domain": "designcraft",
+      "requestSha256": "c4eeee4d7610e5ae7c34c8f7f0823a9af9a96d24fbf104e6a63b589d934f3472",
+      "inputSha256": {
+        "photo.png": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744"
+      },
+      "nativeScriptSha256": "c85d74f12072ed136b89541bb30b6ab53b2c46b1cff420d2a03c24527888ce6c",
+      "argv": [
+        "script",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout-native.json"
+      ],
+      "process": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout-process.json"
+    },
+    {
+      "taskId": "pdf",
+      "domain": "printcraft",
+      "requestSha256": "79612be94485207ecd9e933817604ede42640232e61af797cd6d7878ec90d1bc",
+      "inputSha256": {
+        "layout.pdf": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48"
+      },
+      "nativeScriptSha256": "3897d3af7c473796d54ce518ef2349de8687a8c37be0b5f2a1f0cc8ab1287e4c",
+      "argv": [
+        "run",
+        "--script",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/pdf-native.json"
+      ],
+      "process": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/pdf-process.json"
+    }
+  ],
+  "requests": [
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "photo-import",
+      "idempotencyKey": "photo-import",
+      "planHash": "84164f2eefd5a31129b07852c98a20d14c2f0b28700a24e731b10be979cabd44",
+      "inputRefs": [
+        {
+          "assetId": "original-photo",
+          "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        }
+      ],
+      "expectedRevision": null,
+      "runtimeIdentity": {
+        "pluginId": "lightcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "a24be4d0e37617fc45e1588d92ad656da1d289a3537b934353ceaf56de5fcec0"
+      },
+      "authorizationRef": "explicit-local-native-protocol-acceptance",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 2,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2099-01-01T00:00:00.000Z",
+      "payload": {
+        "schemaVersion": "craft-native-plan/v1",
+        "plan": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.import",
+              "params": {
+                "paths": [
+                  "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/original.png"
+                ],
+                "mode": "add"
+              }
+            },
+            {
+              "command": "catalog.query",
+              "params": {
+                "limit": 10
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "photo",
+      "idempotencyKey": "photo",
+      "planHash": "ddcbe1aed39010fc85801c4b26d7fac4c3e5a4e0a440a8610cb96b58221a6805",
+      "inputRefs": [
+        {
+          "assetId": "original-photo",
+          "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        }
+      ],
+      "expectedRevision": "501122d65be3db1587d8e58f5ef75aadab82a8c0549f44f64d6fb6977cabc729",
+      "runtimeIdentity": {
+        "pluginId": "lightcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "a24be4d0e37617fc45e1588d92ad656da1d289a3537b934353ceaf56de5fcec0"
+      },
+      "authorizationRef": "explicit-local-native-protocol-acceptance",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 2,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2099-01-01T00:00:00.000Z",
+      "payload": {
+        "schemaVersion": "craft-native-plan/v1",
+        "plan": {
+          "domain": "lightcraft",
+          "steps": [
+            {
+              "command": "library.select",
+              "params": {
+                "ids": [
+                  1
+                ],
+                "active": 1
+              }
+            },
+            {
+              "command": "develop.set",
+              "params": {
+                "control": "light.exposure",
+                "value": 1
+              }
+            },
+            {
+              "command": "app.export",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png",
+                "format": "png",
+                "width": 96
+              }
+            },
+            {
+              "command": "library.info",
+              "params": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "layout",
+      "idempotencyKey": "layout",
+      "planHash": "86101532fd808db83a81d8f4df248d67403cd41f63a83bd79082f7dbf924e9a1",
+      "inputRefs": [
+        {
+          "assetId": "developed-photo",
+          "version": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+          "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744"
+        }
+      ],
+      "expectedRevision": null,
+      "runtimeIdentity": {
+        "pluginId": "designcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "e18578b28f43d6c6854ded930065feed5c9ee8af6a2e51338aa675ba4a5723a8",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "9ec2b504a09975ae0a3fd530bc74afa52abfcac4e7c083e8cb88a86f3eb5dd12"
+      },
+      "authorizationRef": "explicit-local-native-protocol-acceptance",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 2,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2099-01-01T00:00:00.000Z",
+      "payload": {
+        "schemaVersion": "craft-native-plan/v1",
+        "plan": {
+          "domain": "designcraft",
+          "steps": [
+            {
+              "command": "file.new",
+              "params": {
+                "width": 96,
+                "height": 64,
+                "pages": 1,
+                "facingPages": false,
+                "margins": 0
+              }
+            },
+            {
+              "command": "file.place",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png",
+                "x": 0,
+                "y": 0,
+                "width": 96
+              }
+            },
+            {
+              "command": "file.saveAs",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/page.designcraft"
+              }
+            },
+            {
+              "command": "file.exportPdf",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout.pdf"
+              }
+            },
+            {
+              "command": "document.inspect",
+              "params": {}
+            }
+          ]
+        }
+      }
+    },
+    {
+      "protocolVersion": "craft-task/v1",
+      "taskId": "pdf",
+      "idempotencyKey": "pdf",
+      "planHash": "fb6139b98eeaaba51942504b5e860e246b321e59509d876a516b6285680db891",
+      "inputRefs": [
+        {
+          "assetId": "layout-pdf",
+          "version": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+          "sha256": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48"
+        }
+      ],
+      "expectedRevision": null,
+      "runtimeIdentity": {
+        "pluginId": "printcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+      },
+      "authorizationRef": "explicit-local-native-protocol-acceptance",
+      "budget": {
+        "currency": "USD",
+        "maxMinorUnits": 0,
+        "maxRevisions": 2,
+        "maxExternalCalls": 0
+      },
+      "deadline": "2099-01-01T00:00:00.000Z",
+      "payload": {
+        "schemaVersion": "craft-native-plan/v1",
+        "plan": {
+          "domain": "printcraft",
+          "steps": [
+            {
+              "command": "doc_open",
+              "params": {
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout.pdf"
+              }
+            },
+            {
+              "command": "doc_info",
+              "params": {
+                "doc": 1
+              }
+            },
+            {
+              "command": "doc_save",
+              "params": {
+                "doc": 1,
+                "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf",
+                "full": true
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "original-photo",
+      "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "bytes": 12703,
+      "mediaType": "image/png",
+      "producerTaskId": "fixture",
+      "sourceRefs": [],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "original.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "developed-photo",
+      "version": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+      "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+      "bytes": 2203,
+      "mediaType": "image/png",
+      "producerTaskId": "photo",
+      "sourceRefs": [
+        {
+          "assetId": "original-photo",
+          "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "photo.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "layout-pdf",
+      "version": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+      "sha256": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+      "bytes": 15071,
+      "mediaType": "application/pdf",
+      "producerTaskId": "layout",
+      "sourceRefs": [
+        {
+          "assetId": "developed-photo",
+          "version": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+          "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "layout-native",
+        "version": "95f03bb89155926535bc3814e4eb9d48183b2b77627e29299e468254b777464a",
+        "sha256": "95f03bb89155926535bc3814e4eb9d48183b2b77627e29299e468254b777464a",
+        "location": "page.designcraft"
+      },
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "layout.pdf"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "delivery-pdf",
+      "version": "b2cc05d0bfc9fee8308b28e3650fd4db67651f199ce1d6a3d983e96049ebfde4",
+      "sha256": "b2cc05d0bfc9fee8308b28e3650fd4db67651f199ce1d6a3d983e96049ebfde4",
+      "bytes": 14979,
+      "mediaType": "application/pdf",
+      "producerTaskId": "pdf",
+      "sourceRefs": [
+        {
+          "assetId": "layout-pdf",
+          "version": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+          "sha256": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "delivery.pdf"
+    }
+  ],
+  "root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2",
+  "photoFacts": {
+    "schemaVersion": 1,
+    "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png",
+    "bytes": 2203,
+    "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+    "format": "png",
+    "width": 96,
+    "height": 64,
+    "bitDepth": 8,
+    "colorProfile": "sRGB",
+    "iccSha256": null,
+    "decoder": "macOS sips",
+    "decodable": true,
+    "technicalStatus": "PASS",
+    "differences": {},
+    "visualAcceptance": "NOT_RUN"
+  },
+  "pdfReopen": {
+    "annotations": 0,
+    "attachments": 0,
+    "author": null,
+    "bookmarks": 0,
+    "creator": "DesignCraft",
+    "encrypted": false,
+    "fields": 0,
+    "file": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf",
+    "file_size": 14979,
+    "first_page_pt": [
+      96.0,
+      64.0
+    ],
+    "javascript": false,
+    "layers": 0,
+    "links": 0,
+    "page_labels": [
+      "1"
+    ],
+    "pages": 1,
+    "pdf_version": "1.7",
+    "producer": "DesignCraft",
+    "tagged": false,
+    "title": "Untitled-2",
+    "warnings": [],
+    "xfa": null
+  },
+  "artcraftHost": "NOT_RUN",
+  "artcraftScheduler": "NOT_RUN",
+  "visual": "NOT_RUN",
+  "mobile": "NOT_RUN",
+  "automaticReplay": false,
+  "completeAcceptance": false
+}

@@ -11,7 +11,7 @@ class EvidenceIdentity(unittest.TestCase):
         m=module()
         with tempfile.TemporaryDirectory() as temporary:
             root=Path(temporary)
-            for relative in ('schemas/task.json','.github/workflows/test.yml','README.md','licenses/Apache-2.0.txt','examples/receipts/success.json'):
+            for relative in ('schemas/task.json','.github/workflows/test.yml','README.md','licenses/Apache-2.0.txt','examples/receipts/success.json','scripts/craft_exchange.ts','tests/exchange/contract.test.ts'):
                 path=root/relative;path.parent.mkdir(parents=True,exist_ok=True);path.write_text('old')
                 report={'schemaVersion':1,'sourceFingerprint':m.fingerprint(root),'layers':{k:{'status':'NOT_RUN'} for k in ('structure','mock','native','host','visual','platform','remoteCI')}}
                 self.assertEqual(m.validate(root,report)['source'],'CURRENT')

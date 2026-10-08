@@ -9,7 +9,7 @@ def fingerprint(root):
     root=Path(root);files={}
     for directory in ('runtime','skills','scripts','tests','schemas','.codex-plugin','.github','licenses','examples'):
         for path in sorted((root/directory).rglob('*')):
-            if path.is_file() and '__pycache__' not in path.parts and path.suffix in ('.py','.json','.md','.yaml','.yml','.txt'):
+            if path.is_file() and '__pycache__' not in path.parts and path.suffix in ('.py','.json','.md','.yaml','.yml','.txt','.ts'):
                 files[str(path.relative_to(root))]=hashlib.sha256(path.read_bytes()).hexdigest()
     for name in ('plugin.json','skill-suite.json','source-suite.json','candidate-source.json','local-components.json','README.md','LICENSE','THIRD_PARTY_NOTICES.md'):
         path=root/name

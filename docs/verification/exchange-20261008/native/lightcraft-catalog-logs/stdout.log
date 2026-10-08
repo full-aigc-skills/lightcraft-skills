@@ -1,0 +1,1996 @@
+[
+  {
+    "disabled_reason": "nothing to undo",
+    "enabled": false,
+    "id": "edit.undo",
+    "label": "Undo",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{}",
+    "shortcut": "Cmd+Z"
+  },
+  {
+    "disabled_reason": "nothing to redo",
+    "enabled": false,
+    "id": "edit.redo",
+    "label": "Redo",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{}",
+    "shortcut": "Cmd+Shift+Z"
+  },
+  {
+    "enabled": true,
+    "id": "library.source",
+    "label": "Show Source",
+    "menu": [],
+    "params": "{kind: all|recentlyAdded|album|recentlyDeleted|picks|missing, id?: albumId}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.filter",
+    "label": "Filter",
+    "menu": [],
+    "params": "partial Filter: {text?, rating?, ratingOp?: atLeast|exactly|atMost, flag?: pick|reject|none|null, label?, kind?, merged?: hdr|panorama|hdrPanorama|any, edited?, date?, keyword?, camera?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.clearFilter",
+    "label": "Clear Filters",
+    "menu": [
+      "View"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.sort",
+    "label": "Sort",
+    "menu": [
+      "View",
+      "Sort"
+    ],
+    "params": "{key?: captureDate|importDate|editDate|fileName|rating|fileSize, ascending?: bool, group?: auto|none|day|month|year}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.groups",
+    "label": "Date Groups",
+    "menu": [],
+    "params": "{by?: day|month|year (default: the sort's grouping; auto = day)} → [{key, label, start, count}] date headers of the grid",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.select",
+    "label": "Select Photos",
+    "menu": [],
+    "params": "{ids: [id], active?: id, mode?: replace|add|toggle|range}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.selectAll",
+    "label": "Select All",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{}",
+    "shortcut": "Cmd+A"
+  },
+  {
+    "enabled": true,
+    "id": "library.devices",
+    "label": "Cameras and Cards",
+    "menu": [],
+    "params": "{} → [{name, path (its DCIM folder), root}] — mounted volumes with a DCIM folder",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.copyMetadata",
+    "label": "Copy Metadata",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{} — title, caption, copyright (notice, status, usage terms, info URL), creator, location and keywords of the active photo",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.pasteMetadata",
+    "label": "Paste Metadata",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?, fields?: [title|caption|copyright|copyrightStatus|usageTerms|copyrightUrl|creator|location|keywords] (default: all copied)}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.selectBy",
+    "label": "Select by Flag, Rating or Label",
+    "menu": [],
+    "params": "{flag?: pick|reject|none, rating?: 0..5, ratingOp?: gte|eq|lte (default gte), label?: red|…|none, add?: bool (extend the selection)} — among the photos in view",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.selectNone",
+    "label": "Deselect All",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{}",
+    "shortcut": "Cmd+Shift+A"
+  },
+  {
+    "enabled": true,
+    "id": "library.next",
+    "label": "Next Photo",
+    "menu": [],
+    "params": "{}",
+    "shortcut": "Right"
+  },
+  {
+    "enabled": true,
+    "id": "library.previous",
+    "label": "Previous Photo",
+    "menu": [],
+    "params": "{}",
+    "shortcut": "Left"
+  },
+  {
+    "enabled": true,
+    "id": "photo.rate",
+    "label": "Set Rating",
+    "menu": [
+      "Photo",
+      "Set Rating"
+    ],
+    "params": "{rating: 0..5, ids?, advance?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.flag",
+    "label": "Set Flag",
+    "menu": [
+      "Photo",
+      "Set Flag"
+    ],
+    "params": "{flag: pick|reject|none, ids?, advance?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.pick",
+    "label": "Flag as Pick",
+    "menu": [
+      "Photo",
+      "Set Flag"
+    ],
+    "params": "{ids?}",
+    "shortcut": "P"
+  },
+  {
+    "enabled": true,
+    "id": "photo.reject",
+    "label": "Flag as Reject",
+    "menu": [
+      "Photo",
+      "Set Flag"
+    ],
+    "params": "{ids?}",
+    "shortcut": "X"
+  },
+  {
+    "enabled": true,
+    "id": "photo.unflag",
+    "label": "Unflag",
+    "menu": [
+      "Photo",
+      "Set Flag"
+    ],
+    "params": "{ids?}",
+    "shortcut": "U"
+  },
+  {
+    "enabled": true,
+    "id": "photo.label",
+    "label": "Set Color Label",
+    "menu": [
+      "Photo",
+      "Set Color Label"
+    ],
+    "params": "{label: red|yellow|green|blue|purple|none, ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.rotateLeft",
+    "label": "Rotate Left",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?}",
+    "shortcut": "Cmd+["
+  },
+  {
+    "enabled": true,
+    "id": "photo.rotateRight",
+    "label": "Rotate Right",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?}",
+    "shortcut": "Cmd+]"
+  },
+  {
+    "enabled": true,
+    "id": "photo.flipHorizontal",
+    "label": "Flip Horizontal",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.flipVertical",
+    "label": "Flip Vertical",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.delete",
+    "label": "Delete Photo",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — moves to Recently Deleted",
+    "shortcut": "Delete"
+  },
+  {
+    "enabled": true,
+    "id": "photo.restore",
+    "label": "Restore",
+    "menu": [],
+    "params": "{ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.deletePermanently",
+    "label": "Delete Permanently",
+    "menu": [],
+    "params": "{ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.setMeta",
+    "label": "Edit Info",
+    "menu": [],
+    "params": "{ids?, title?, caption?, altText?, extendedDescription?, copyright?, copyrightStatus?: unknown|copyrighted|publicDomain, usageTerms?, copyrightUrl?, creator?, location?, city?, state?, country?, gps?: \"lat, lon\" | [lat, lon] | null, keywords?: [..], addKeywords?: [..], removeKeywords?: [..]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.create",
+    "label": "New Album",
+    "menu": [
+      "File"
+    ],
+    "params": "{name, parent?: folderId, folder?: bool, addSelected?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.createSmart",
+    "label": "New Smart Album…",
+    "menu": [],
+    "params": "{name, rules?: partial Filter (rating, ratingOp, flag, label, kind, edited, keyword, camera, lens, dateFrom, dateTo, date, text, album, ruleSet: {match: all|any|none, rules: [{field, op, value} | {group: ruleSet}]} — see album.ruleFields), parent?: folderId} — without `rules`, saves the current view (source + filter)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.ruleFields",
+    "label": "Smart Album Rule Fields",
+    "menu": [],
+    "params": "{} → [{field, label, kind, ops: [{op, label}], choices?}] for ruleSet rules",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.setRules",
+    "label": "Edit Smart Album",
+    "menu": [],
+    "params": "{id, rules?: partial Filter merged onto the current rules (null clears a field), replace?: bool, fromView?: bool (use the current view)}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.rename",
+    "label": "Rename Album",
+    "menu": [],
+    "params": "{id, name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.delete",
+    "label": "Delete Album",
+    "menu": [],
+    "params": "{id}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.move",
+    "label": "Move Album",
+    "menu": [],
+    "params": "{id, parent?: folderId|null}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.addPhotos",
+    "label": "Add to Album",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{id: albumId, ids?: [photoIds]} (default: selection)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.toggleTarget",
+    "label": "Add to Target Album",
+    "menu": [],
+    "params": "{ids?} — B: adds the photos to the target album (the Quick Collection unless one is set), or removes them when they're all in it → {album, added}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.setTarget",
+    "label": "Set as Target Album",
+    "menu": [],
+    "params": "{id: albumId | null} (null = the Quick Collection)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.clearQuick",
+    "label": "Clear Quick Collection",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.autoImport",
+    "label": "Auto Import Settings",
+    "menu": [],
+    "params": "{folder?: path | null (off), copy?: bool (copy into the library's Originals, else add in place), album?: name | null} — a watched folder whose new photos are added as they arrive (library.autoImportScan; the app scans every few seconds) → the settings",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.autoImportScan",
+    "label": "Auto Import Now",
+    "menu": [],
+    "params": "{listing?: [[path, size]] (the folder as listed by the caller, e.g. on a worker thread), start?: bool (false: return the `library.import` params as `import` instead of importing)} — add the watched folder's new photos (files the library doesn't have yet; partial / still-copying files wait for the next scan) → {imported, folder, import?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.removePhotos",
+    "label": "Remove from Album",
+    "menu": [],
+    "params": "{id: albumId, ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "album.setCover",
+    "label": "Set as Album Cover",
+    "menu": [],
+    "params": "{id: albumId, photo?: photoId}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.importPreview",
+    "label": "Review Import",
+    "menu": [],
+    "params": "{paths: [file or folder (recursive)]} → {candidates: [{path, name, format, kind, width, height, fileSize, captured, duplicate?: path|content, existing?, error?, previewOnly?: why a raw can only be shown from its embedded preview}], duplicates, scanned} — nothing is added",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.import",
+    "label": "Import Photos",
+    "menu": [
+      "File"
+    ],
+    "params": "{paths: [file or folder (recursive)], mode?: add|copy|move (add = reference the files in place; copy = into the library's Originals/YYYY/YYYY-MM-DD/; move = as copy, then each original and its XMP sidecars are removed from the source — only after the copy is verified (a hard link on the same volume, else copied, synced and compared byte for byte) and its catalog record is saved; failed, duplicate and unchecked files keep their sources; a taken name gets -1, -2…; undo removes the photos from the library but leaves the files at the destination), destination?: folder for copies / moves, organize?: date (YYYY/YYYY-MM-DD) | month (YYYY/YYYY-MM) | flat | a folder template, e.g. `{date:%Y}/{date:%Y%m%d}` → 2026/20260114 (the template's `/` make the folders, each level expanded with the rename tokens and made a safe folder name: never outside the destination; must be relative, no `..`; a level with missing metadata is `unknown`) — dated by capture time, else the import time, rename?: file-name template for copies, original extension added (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each; blank = keep names), renameStart?: 1, metadataPreset?: name, dng?: bool (copy raws as DNG; copy only), local?: bool (browsing: the photos stay out of the library, like library.browse; not with move), album?: albumId, albumName?: new album, preset?: presetId, keywords?: [..]} → {imported, duplicates, failed, moved?: [{from, to, sidecars?}], kept?: [{path, reason}] (move: sources left in place and why), album?}",
+    "shortcut": "Cmd+Shift+I"
+  },
+  {
+    "enabled": true,
+    "id": "library.info",
+    "label": "Library Info",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no library is open (in-memory session)",
+    "enabled": false,
+    "id": "library.compact",
+    "label": "Optimize Library",
+    "menu": [
+      "File"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.clearPreviews",
+    "label": "Clear Preview Cache",
+    "menu": [
+      "File"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.set",
+    "label": "Set Develop Values",
+    "menu": [],
+    "params": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} — see develop.controls",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.adjust",
+    "label": "Nudge Develop Value",
+    "menu": [],
+    "params": "{control, delta}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.merge",
+    "label": "Apply Settings JSON",
+    "menu": [],
+    "params": "{settings: partial DevelopSettings JSON, label?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.reset",
+    "label": "Reset Edits",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?}",
+    "shortcut": "Cmd+Shift+R"
+  },
+  {
+    "enabled": true,
+    "id": "develop.resetSection",
+    "label": "Reset Section",
+    "menu": [],
+    "params": "{section: light|curve|color|mixer|grading|effects|vignette|grain|detail|optics|geometry}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.resetControl",
+    "label": "Reset Control",
+    "menu": [],
+    "params": "{control}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.sectionEnabled",
+    "label": "Toggle Section",
+    "menu": [],
+    "params": "{section: string, enabled: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.autoBwMix",
+    "label": "Auto B&W Mix",
+    "menu": [],
+    "params": "{} — sets the black & white mix from the photo's colours (and switches to B&W)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.auto",
+    "label": "Auto Settings",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{}",
+    "shortcut": "Shift+A"
+  },
+  {
+    "enabled": true,
+    "id": "develop.wb",
+    "label": "White Balance",
+    "menu": [],
+    "params": "{mode: asShot|auto|daylight|cloudy|shade|tungsten|fluorescent|flash|custom, temp?, tint?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.wbPick",
+    "label": "White Balance Selector",
+    "menu": [],
+    "params": "{x, y} normalized image coords of a neutral point",
+    "shortcut": "W"
+  },
+  {
+    "enabled": true,
+    "id": "develop.treatment",
+    "label": "Black & White",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{bw?: bool} (toggles when omitted)",
+    "shortcut": "V"
+  },
+  {
+    "enabled": true,
+    "id": "develop.profile",
+    "label": "Set Profile",
+    "menu": [],
+    "params": "{id: profile id (see profiles.list), amount?: 0..200}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "profile.favorite",
+    "label": "Favorite Profile",
+    "menu": [],
+    "params": "{id, favorite?: bool} (toggles when omitted)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.curve",
+    "label": "Set Point Curve",
+    "menu": [],
+    "params": "{channel: master|red|green|blue, points: [[x,y],...] in 0..1}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "crop.set",
+    "label": "Set Crop",
+    "menu": [],
+    "params": "{rect?: [x0,y0,x1,y1] normalized in the straightened frame, angle?: degrees}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "crop.straighten",
+    "label": "Straighten",
+    "menu": [],
+    "params": "{angle: degrees -45..45} — keeps the largest crop of the current aspect",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "crop.autoStraighten",
+    "label": "Auto Straighten",
+    "menu": [],
+    "params": "{} — level the horizon (or plumb lines) with the crop angle",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "crop.aspect",
+    "label": "Crop Aspect",
+    "menu": [],
+    "params": "{aspect: \"original\"|\"free\"|\"current\" (lock the crop's present shape)|\"toggle\" (lock ↔ free)|\"1x1\"|\"4x5\"|\"8.5x11\"|\"5x7\"|\"2x3\"|\"4x3\"|\"16x9\"|\"16x10\"|[w,h]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "crop.rotateAspect",
+    "label": "Rotate Crop Aspect",
+    "menu": [],
+    "params": "{}",
+    "shortcut": "X"
+  },
+  {
+    "enabled": true,
+    "id": "crop.reset",
+    "label": "Reset Crop",
+    "menu": [],
+    "params": "{}",
+    "shortcut": "Cmd+Alt+R"
+  },
+  {
+    "enabled": true,
+    "id": "geometry.upright",
+    "label": "Upright",
+    "menu": [],
+    "params": "{mode: off|auto|guided|level|vertical|full} — analyses the photo (line segments → vanishing points) and stores the correction; run again to update after lens changes",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "geometry.guides",
+    "label": "Guided Upright Guides",
+    "menu": [],
+    "params": "{guides: [[x0,y0,x1,y1], …] (≤ 4, normalized coords of the lens-corrected image), add?: bool (append one guide, dropping the oldest beyond 4)} — switches Upright to Guided",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.copy",
+    "label": "Copy Edit Settings",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{groups?: [settingsGroup]} (default: all but crop, masks, remove)",
+    "shortcut": "Cmd+C"
+  },
+  {
+    "enabled": true,
+    "id": "develop.pastePrevious",
+    "label": "Paste Settings from Previous",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{ids?, groups?: [settingsGroup] (default: the copy groups)} — from the photo that was active before this one",
+    "shortcut": "Cmd+Alt+V"
+  },
+  {
+    "disabled_reason": "no settings copied",
+    "enabled": false,
+    "id": "develop.paste",
+    "label": "Paste Edit Settings",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{ids?, groups?: [settingsGroup] (paste only these of the copied groups)}",
+    "shortcut": "Cmd+V"
+  },
+  {
+    "enabled": true,
+    "id": "develop.sync",
+    "label": "Sync Settings",
+    "menu": [],
+    "params": "{groups?} — copy the active photo's settings to all selected photos",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.quickAdjust",
+    "label": "Quick Develop",
+    "menu": [],
+    "params": "{control: develop control id, delta, ids?} — add `delta` to the control on every target photo (each from its own value; Quick Develop) in one undo step → {changed}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.matchExposure",
+    "label": "Match Total Exposures",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — set each selected photo's Exposure so its total exposure (shutter × ISO ÷ aperture², plus the slider) equals the active photo's; photos without exposure data are skipped → {changed, skipped}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.autoSync",
+    "label": "Auto Sync",
+    "menu": [
+      "Edit"
+    ],
+    "params": "{on?: bool} (toggles when omitted) — edits to the active photo also change the other selected photos (only the settings that changed; not spot removal / red eye) → {on}",
+    "shortcut": "Cmd+Alt+Shift+A"
+  },
+  {
+    "enabled": true,
+    "id": "preset.apply",
+    "label": "Apply Preset",
+    "menu": [],
+    "params": "{id: presetId, amount?: 0..200 (percent), ids?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.create",
+    "label": "Create Preset",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{name, group?, groups?: [settingsGroup]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.delete",
+    "label": "Delete Preset",
+    "menu": [],
+    "params": "{id}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.favorite",
+    "label": "Favorite Preset",
+    "menu": [],
+    "params": "{id, favorite?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.rename",
+    "label": "Rename Preset",
+    "menu": [],
+    "params": "{id, name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.move",
+    "label": "Move Preset to Group",
+    "menu": [],
+    "params": "{id, group}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.update",
+    "label": "Update Preset with Current Settings",
+    "menu": [],
+    "params": "{id, groups?: [settingsGroup] (default: the groups the preset already sets)} — from the active photo",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "version.create",
+    "label": "Create Version",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{name?}",
+    "shortcut": "Cmd+Shift+S"
+  },
+  {
+    "enabled": true,
+    "id": "version.restore",
+    "label": "Restore Version",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "version.delete",
+    "label": "Delete Version",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "version.rename",
+    "label": "Rename Version",
+    "menu": [],
+    "params": "{index, name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "version.update",
+    "label": "Update Version with Current Settings",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "history.clear",
+    "label": "Clear History",
+    "menu": [],
+    "params": "{} — keeps the current settings as the only step",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "history.restore",
+    "label": "Go to History Step",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.beginInteraction",
+    "label": "Begin Interaction",
+    "menu": [],
+    "params": "{label}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.endInteraction",
+    "label": "End Interaction",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.cancelInteraction",
+    "label": "Cancel Interaction",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "pointColor.pick",
+    "label": "Add Point Color Sample",
+    "menu": [],
+    "params": "{x, y} normalized image coords — samples the colour there (max 8); returns {index, lum, chroma, hue}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.targeted",
+    "label": "Targeted Adjustment",
+    "menu": [],
+    "params": "{target: curve|hue|sat|lum, x, y (normalized image coords), delta (slider units; point curves: output levels 0..255), channel?: parametric|master|red|green|blue (curve)} — adjusts the curve region / colour-mixer bands under the point; returns the changed controls",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "pointColor.delete",
+    "label": "Delete Point Color Sample",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.reset",
+    "label": "Reset Tone Curve",
+    "menu": [],
+    "params": "{channel?: all|point|parametric|master|red|green|blue (default all)} — the active photo's tone curve (or one channel) back to linear",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.presets",
+    "label": "Point Curve Presets",
+    "menu": [],
+    "params": "{} → {presets: [{name, master, red, green, blue: [[x,y],...], builtin?}], current: name of the preset the active photo's point curves match, or null}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.applyPreset",
+    "label": "Apply Point Curve Preset",
+    "menu": [],
+    "params": "{name} — sets the active photo's point curves (all four channels; the parametric curve stays)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.savePreset",
+    "label": "Save Point Curve Preset",
+    "menu": [],
+    "params": "{name} — the active photo's point curves under a name (replaces a user preset of that name; built-in names are reserved), saved with the library",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.deletePreset",
+    "label": "Delete Point Curve Preset",
+    "menu": [],
+    "params": "{name} — a user preset (built-ins can't be deleted)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.importPresets",
+    "label": "Import Point Curve Presets",
+    "menu": [],
+    "params": "{path | paths: [file]} — .lccurve JSON files ({format, version, presets: [...]}, an array of presets, or one preset); same-named user presets are replaced → {imported: [name], failed: [[file, error]]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "curve.exportPresets",
+    "label": "Export Point Curve Presets",
+    "menu": [],
+    "params": "{path, names?: [name] (default: every user preset)} — writes a .lccurve JSON file → {path, count}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.add",
+    "label": "Create New Mask",
+    "menu": [],
+    "params": "{kind: brush|linear|radial|sky|subject|background|luminanceRange|colorRange, ...shape params (start/end, center/rx/ry/angle/feather, lo/hi…), name?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.addComponent",
+    "label": "Add/Subtract/Intersect Mask",
+    "menu": [],
+    "params": "{id?: maskId, op: add|subtract|intersect, kind, ...shape params}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.brushStroke",
+    "label": "Brush Stroke",
+    "menu": [],
+    "params": "{id?: maskId, points: [[x,y],…] normalized, size?: fraction of long edge (0.03), feather?, flow?, density?, erase?: bool, autoMask?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.update",
+    "label": "Update Mask Shape",
+    "menu": [],
+    "params": "{id?, component?: index (0), shape: MaskShape JSON}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.sampleColor",
+    "label": "Sample Mask Color",
+    "menu": [],
+    "params": "{x, y: normalized image point, add?: bool (⇧: add to the samples, max 5), id?, component?} — the colour range of the selected mask (its first colour-range component) samples the colour there → {samples}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.refine",
+    "label": "Refine Mask Edges",
+    "menu": [],
+    "params": "{id?, value: 0..100} — the mask's edges snap to the photo's (guided filter; rendered on the CPU)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.adjust",
+    "label": "Set Mask Adjustments",
+    "menu": [],
+    "params": "{id?, values: {exposure, contrast, highlights, shadows, whites, blacks, temp, tint, texture, clarity, dehaze, hue, saturation, sharpness, noise, moire, defringe, color_hue, color_sat, amount}}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.select",
+    "label": "Select Mask",
+    "menu": [],
+    "params": "{id|null}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.delete",
+    "label": "Delete Mask",
+    "menu": [],
+    "params": "{id?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.deleteAll",
+    "label": "Delete All Masks",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.rename",
+    "label": "Rename Mask",
+    "menu": [],
+    "params": "{id?, name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.invert",
+    "label": "Invert Mask",
+    "menu": [],
+    "params": "{id?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.visible",
+    "label": "Show/Hide Mask",
+    "menu": [],
+    "params": "{id?, visible?: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.duplicate",
+    "label": "Duplicate Mask",
+    "menu": [],
+    "params": "{id?, invert?: bool (Duplicate and Invert)} — the copy goes right after the original and is selected",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.component",
+    "label": "Edit Mask Component",
+    "menu": [],
+    "params": "{id?, component: index, action: invert|duplicate|delete|rename|op, name? (rename; empty clears), op?: add|subtract|intersect} — one component of a mask (deleting the last one deletes the mask)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "mask.move",
+    "label": "Move Mask",
+    "menu": [],
+    "params": "{id?, to?: index (0 = top), delta?: ±n} — reorder the masks list",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.findDust",
+    "label": "Find Dust Spots",
+    "menu": [],
+    "params": "{sensitivity?: 0..100 (50), add?: bool (true)} — find sensor-dust spots (small soft dark spots on smooth areas) and add a heal spot on each (one undo step) → {spots: [{x, y, size}], added}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.add",
+    "label": "Add Remove Spot",
+    "menu": [],
+    "params": "{mode?: remove|heal|clone, points: [[x,y],…], size?: fraction of long edge, feather?, opacity?, source?: [dx,dy] (default: the best match nearby)} — selects the new spot; returns {index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.select",
+    "label": "Select Spot",
+    "menu": [],
+    "params": "{index|null}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.update",
+    "label": "Edit Spot",
+    "menu": [],
+    "params": "{index? (the selected spot), move?: [dx,dy] (the target, normalized), source?: [dx,dy] (offset from the target), moveSource?: [dx,dy], size?, feather?, opacity?, mode?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.refreshSource",
+    "label": "Refresh Source",
+    "menu": [],
+    "params": "{index? (the selected spot)} — picks the next-best source away from the current one",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "spot.delete",
+    "label": "Delete Spot",
+    "menu": [],
+    "params": "{index? (the selected spot)}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "redeye.add",
+    "label": "Add Red Eye Correction",
+    "menu": [],
+    "params": "{center: [x,y] normalized, rx, ry: radii as fractions of the long edge, pet?: bool, pupilSize?: 0..100, darken?: 0..100} — the pupil inside is found automatically; returns {index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "redeye.catchlight",
+    "label": "Pet Eye Catchlight",
+    "menu": [],
+    "params": "{index, on?: bool (default true), offset?: [dx, dy] from the pupil centre in pupil radii (default [-0.35, -0.35])}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "redeye.delete",
+    "label": "Delete Red Eye Correction",
+    "menu": [],
+    "params": "{index}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.virtualCopy",
+    "label": "Create Virtual Copy",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?, name?} → {ids: [new photo ids]} — a new catalog entry sharing the original file, with independent settings; stacked with its original and named `name` or \"Copy N\"",
+    "shortcut": "Cmd+'"
+  },
+  {
+    "enabled": true,
+    "id": "stack.group",
+    "label": "Group into Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{ids?, top?: photoId (default: the active photo), collapsed?: bool (default true)} — stacks the photos are already in are merged",
+    "shortcut": "Cmd+G"
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.ungroup",
+    "label": "Ungroup Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{ids?}",
+    "shortcut": "Cmd+Shift+G"
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.remove",
+    "label": "Remove from Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{ids?}",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.setTop",
+    "label": "Set as Top of Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{id?} (default: the active photo)",
+    "shortcut": "Shift+S"
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.moveUp",
+    "label": "Move Up in Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{id?} — one place towards the top",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.moveDown",
+    "label": "Move Down in Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{id?} — one place away from the top",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.split",
+    "label": "Split Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{id?} — this photo and the ones after it become their own stack",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no stacked photo selected",
+    "enabled": false,
+    "id": "stack.toggle",
+    "label": "Expand/Collapse Stack",
+    "menu": [
+      "Photo",
+      "Stack"
+    ],
+    "params": "{ids?, collapsed?: bool}",
+    "shortcut": "S"
+  },
+  {
+    "disabled_reason": "no stacks",
+    "enabled": false,
+    "id": "stack.expandAll",
+    "label": "Expand All Stacks",
+    "menu": [
+      "View",
+      "Stacks"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "disabled_reason": "no stacks",
+    "enabled": false,
+    "id": "stack.collapseAll",
+    "label": "Collapse All Stacks",
+    "menu": [
+      "View",
+      "Stacks"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "stack.auto",
+    "label": "Auto-Stack by Capture Time",
+    "menu": [],
+    "params": "{gap?: seconds between consecutive captures (default 60), ids? (default: the selection if several photos, else the current view), preview?: bool} → {stacks, photos}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.sets",
+    "label": "Keyword Sets",
+    "menu": [],
+    "params": "{} → {sets: [{name, keywords}], current, keywords: the nine ⌥1–⌥9 apply}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.useSet",
+    "label": "Use Keyword Set",
+    "menu": [],
+    "params": "{name} (\"Recent Keywords\" = the recently added ones)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.saveSet",
+    "label": "Save Keyword Set",
+    "menu": [],
+    "params": "{name, keywords?: [up to 9] (default: the current nine)} — replaces a set of that name and makes it current",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.deleteSet",
+    "label": "Delete Keyword Set",
+    "menu": [],
+    "params": "{name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.toggleFromSet",
+    "label": "Toggle Keyword from Set",
+    "menu": [],
+    "params": "{index: 1..9, ids?} — the set's keyword N: added to the target photos, or removed when they all have it",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.list",
+    "label": "Keywords",
+    "menu": [],
+    "params": "{} → [{name, path, count, children}] keyword tree (`a|b|c` keywords are hierarchical)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.suggest",
+    "label": "Keyword Suggestions",
+    "menu": [],
+    "params": "{prefix?: typed text, ids?, limit?: 12} → keywords to suggest for the photos (co-occurring / most used, or matching the prefix)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.rename",
+    "label": "Rename Keyword",
+    "menu": [],
+    "params": "{from, to} — on every photo, children included (`a` → `b` renames `a|x` to `b|x`); renaming onto an existing keyword merges them",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.delete",
+    "label": "Delete Keyword",
+    "menu": [],
+    "params": "{keyword} — removes it (and the keywords below it) from every photo",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "keyword.merge",
+    "label": "Merge Keywords",
+    "menu": [],
+    "params": "{from: [keyword], into: keyword} — replaces each `from` keyword (children included) with `into` on every photo",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.renameTokens",
+    "label": "Rename Template Tags",
+    "menu": [],
+    "params": "{} → {tokens: [{tag, aliases, meaning, example}], dateDirectives: [{directive, meaning}], notes: [..], sample} — the file-name template tags shared by photo.rename, library.import (rename) and app.export (naming); examples are for a sample photo",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.renamePreview",
+    "label": "Rename Preview",
+    "menu": [],
+    "params": "{template: e.g. `{date}_{name}`, `Trip-{seq:3}` (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each), start?: first sequence number (1), ids?} — renames the files on disk (sidecars too, never overwriting: collisions get -1, -2…); undoable",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.rename",
+    "label": "Rename Photos",
+    "menu": [],
+    "params": "{template: e.g. `{date}_{name}`, `Trip-{seq:3}` (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each), start?: first sequence number (1), ids?} — renames the files on disk (sidecars too, never overwriting: collisions get -1, -2…); undoable",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.setCaptureTime",
+    "label": "Edit Capture Time",
+    "menu": [],
+    "params": "{ids?, time?: `2026-09-30T14:05:00` (the active photo gets it, the others shift by the same amount), each?: bool (every photo gets `time`), shift?: seconds, hours?: time-zone shift in hours} → {changed, captured: [..]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.autoTagTracklog",
+    "label": "Auto-Tag Photos from Tracklog",
+    "menu": [],
+    "params": "{path?: GPX file | gpx?: GPX text, ids?, offset?: camera clock's UTC offset for photos whose capture time has no zone (`+02:00`, or hours; default UTC), maxGap?: seconds (600), replace?: bool (also photos that already have GPS), dryRun?: bool} → {tagged, interpolated, nearest, skipped: {noTime, outside, hasGps}, assumedUtc, points, start, end, photos: [{id, gps, match}]} — positions from the track log by capture time; one undo step",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.names",
+    "label": "Color Label Names",
+    "menu": [],
+    "params": "{} → [{label, name, custom}]",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.setNames",
+    "label": "Edit Color Label Names",
+    "menu": [],
+    "params": "{names: {red?: name|null, yellow?, green?, blue?, purple?}} — null or empty restores the colour's name",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.sets",
+    "label": "Color Label Sets",
+    "menu": [],
+    "params": "{} → {sets: [{name, names: [red, yellow, green, blue, purple], builtin}], current: name|null}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.applySet",
+    "label": "Apply Color Label Set",
+    "menu": [],
+    "params": "{name} — use a set's label names (undoable)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.saveSet",
+    "label": "Save Color Label Set",
+    "menu": [],
+    "params": "{name} — save the current label names as a set (replaces a user set of that name)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "label.deleteSet",
+    "label": "Delete Color Label Set",
+    "menu": [],
+    "params": "{name} — user sets only",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.smartPreviews",
+    "label": "Build Smart Previews",
+    "menu": [],
+    "params": "{ids?, discard?: bool, background?: bool} — build (or discard) the smart previews of the selected photos (else all in view): compact proxies in the library that keep photos editable and exportable (at proxy size) while their originals are offline; a damaged proxy (cut short) is rebuilt → {built, repaired, removed, failed}; with background (the app's menu) the files are read and written on a worker thread → {total, done, failed, repaired, running, what} like library.buildPreviews (progress: library.previewProgress, stop: library.cancelPreviews)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.smartPreviewsLocation",
+    "label": "Smart Previews Location",
+    "menu": [],
+    "params": "{path?: absolute folder, reset?: bool, existing?: move|leave|discard} — without path/reset: where this library keeps its smart previews → {path, default, custom, available, count, bytes}. With path (or reset = back to `Smart Previews` in the library): use that folder instead (must exist or have an existing parent, and accept writes; never falls back to another drive). Smart previews already in the old folder need `existing`: move them, leave them (build again), or discard them → also {handled, failed}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.smartPreview",
+    "label": "Smart Preview Status",
+    "menu": [],
+    "params": "{id?} → {smartPreview: bool, originalOnline: bool}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.buildPreviews",
+    "label": "Build Previews",
+    "menu": [],
+    "params": "{size?: standard (2048 px, or `edge`) | full (1:1), ids?, wait?: bool} — render the grid thumbnail and loupe view of the selected photos (else all in view) into the preview cache, in the background unless `wait` → {total, done, failed, running}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.previewProgress",
+    "label": "Preview Build Progress",
+    "menu": [],
+    "params": "{} → {total, done, failed, repaired, running, cancelled, what, error} | null",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.cancelPreviews",
+    "label": "Cancel Preview Build",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "profile.import",
+    "label": "Import Profiles",
+    "menu": [],
+    "params": "{paths: [.cube file, folder or .zip]} — 3D LUTs become creative profiles (Amount 0–200 %; rendered on the CPU) in the profile browser's groups (folder / zip name, else Imported) → {imported: [{id, name, group}], failed}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "profile.deleteImported",
+    "label": "Delete Imported Profile",
+    "menu": [],
+    "params": "{id: lut:…}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.findSimilar",
+    "label": "Find Similar Photos",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{id?, similarity?: 0..1 (0.8), filter?: bool (true)} — photos that look like the active one (composition and tones), most similar first; filters the view to them (Clear Filters to go back) → {photos: [{id, similarity}]}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.analyze",
+    "label": "Assisted Culling",
+    "menu": [],
+    "params": "{ids?, rejectBelow?: sharpness 0..100, pickBest?: bool} — score the selected photos (else all in view) for focus (0..100) and clipping, group look-alike shots taken within 10 s and mark the sharpest of each; optionally reject blurry photos and pick each group's best; one undo step → {photos: [{id, sharpness, clipped, group, best}], groups, rejected, picked}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.convertToDng",
+    "label": "Convert to DNG",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — write each raw photo as a lossless DNG next to it (settings embedded) and relink the photo to it; originals are kept → {converted: [{id, path, original}], skipped}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.duplicate",
+    "label": "Duplicate",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — copy each photo's file next to it (`-copy`) and add it with the same settings, metadata and albums (a real file, unlike a virtual copy) → {ids}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.reload",
+    "label": "Reload from Disk",
+    "menu": [],
+    "params": "{ids?} — re-read photos whose files changed on disk (e.g. saved by an external editor), or raws shown from their embedded preview that can be decoded now → {reloaded}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.editExternal",
+    "label": "Edit Copy for External Editor",
+    "menu": [],
+    "params": "{colorSpace?: adobeRgb (default) | proPhoto | displayP3 | srgb, dir?} — render the active photo with its edits as a 16-bit TIFF `<name>-Edit.tif` next to it, add it stacked on the original and select it → {path, id, original} (the app then opens it in the external editor)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "merge.hdr",
+    "label": "HDR Merge",
+    "menu": [],
+    "params": "{ids?, align=true, deghost=none|low|medium|high, autoSettings=true, stack=false, preview=false, showOverlay=false, previewPath?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "merge.panorama",
+    "label": "Panorama Merge",
+    "menu": [],
+    "params": "{ids?, projection=auto|spherical|cylindrical|perspective, boundaryWarp=0..100, autoCrop=false, fillEdges=false, autoSettings=true, stack=false, maxMegapixels=40, preview=false, previewPath?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "merge.hdrPanorama",
+    "label": "HDR Panorama Merge",
+    "menu": [],
+    "params": "{ids?, bracket=0 (auto from EXIF), align, deghost, projection, boundaryWarp, autoCrop, fillEdges, autoSettings, stack, preview, previewPath?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "catalog.query",
+    "label": "Query Photos",
+    "menu": [],
+    "params": "{filter?: Filter, sort?: Sort, offset?, limit?} — omit filter to list the current view",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "catalog.stats",
+    "label": "Catalog Statistics",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.state",
+    "label": "Library State",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.allMetadata",
+    "label": "All Metadata",
+    "menu": [],
+    "params": "{id?} → {exif: [{group, tag, name, value}], xmp: [{name, value}]} — every EXIF / TIFF / GPS tag of the file and its XMP properties",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "albums.list",
+    "label": "List Albums",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.inspect",
+    "label": "Inspect Photo",
+    "menu": [],
+    "params": "{id?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.get",
+    "label": "Get Develop Settings",
+    "menu": [],
+    "params": "{id?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "develop.controls",
+    "label": "List Develop Controls",
+    "menu": [],
+    "params": "{section?} — every slider with range, default and current value",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "presets.list",
+    "label": "List Presets",
+    "menu": [],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "profiles.list",
+    "label": "List Profiles",
+    "menu": [],
+    "params": "{} — every profile with its group and favourite flag",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "profiles.menu",
+    "label": "Profile Menu",
+    "menu": [],
+    "params": "{} — favourites, recent (newest first) and groups",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "history.list",
+    "label": "List History",
+    "menu": [],
+    "params": "{id?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "app.gpu",
+    "label": "GPU Rendering",
+    "menu": [],
+    "params": "{enabled?: bool} — allow/forbid GPU rendering (CPU fallback; LIGHTCRAFT_GPU=0 forbids it for the process); returns {enabled, available, adapter, reason (why the GPU is off), lastFallback (latest render redone on the CPU, and why)}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.memory",
+    "label": "Memory Usage",
+    "menu": [],
+    "params": "{} — bytes held by each cache (decoded sources, rendered previews, GPU buffers; heap when instrumented)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "app.memoryBudget",
+    "label": "Memory Budget",
+    "menu": [],
+    "params": "{mb?: number} — set the memory budget shared by the caches (default: a quarter of RAM, at most 1536 MB); returns the report",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "journal.list",
+    "label": "Command Journal",
+    "menu": [],
+    "params": "{limit?}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.saveMetadataToFile",
+    "label": "Save Metadata to File",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — writes each photo's XMP sidecar (metadata + develop settings) next to the original, merged into an existing one (other apps' data kept; an unreadable one is backed up first) → {written: [path], merged: [path], backups: [{path, backup}], failed}",
+    "shortcut": "Cmd+S"
+  },
+  {
+    "enabled": true,
+    "id": "photo.readMetadataFromFile",
+    "label": "Read Metadata from File",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — reads each photo's XMP sidecar (or a raw/DNG's embedded XMP): metadata and develop settings, one undo step → {read, failed}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.xmpPreferences",
+    "label": "XMP Sidecar Preferences",
+    "menu": [],
+    "params": "{autoWrite?: bool, naming?: stem (IMG_1.xmp, default) | full (IMG_1.CR3.xmp)} → current preferences (saved with the library)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.toggleAutoWriteXmp",
+    "label": "Automatically Write Changes into XMP",
+    "menu": [
+      "File"
+    ],
+    "params": "{} → {autoWrite}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.import",
+    "label": "Import Presets",
+    "menu": [],
+    "params": "{paths: [file or folder], group?, dryRun?} — .lcpreset, XMP presets, .lrtemplate, photos carrying edits (DNG/JPEG/TIFF \"DNG presets\"), Luminar looks (.lmp, .mplumpack collections) and .zip bundles of these; folders give their name as group; crs: fields mapped per docs/xmp-interop.md → {imported: [{id,name,group,file,unmapped}], skipped, failed}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "preset.export",
+    "label": "Export Presets",
+    "menu": [],
+    "params": "{path, ids?: [presetId], group?: name} (default: all user presets) → {path, count}; writes a .lcpreset JSON file",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.preferences",
+    "label": "Library Preferences",
+    "menu": [],
+    "params": "{import?: {rawPreset?: presetId|\"default\", otherPreset?: presetId|\"default\", perCamera?: bool, cameras?: [{camera: \"Make Model\", preset: presetId|null}], copyright?: text, creator?: text (given to imported photos without one)}, camera?: {camera, preset?, remove?: bool}, cacheMb?: n (0 = default), forgetLocalDays?: n (forget untouched Local photos of folders not browsed for n days; 0 = never)} — develop defaults applied on import (raws / other images / per camera) and the thumbnail cache size, saved with the library → {xmp, import, cacheMb, forgetLocalDays, persistent}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "export.presets",
+    "label": "Export Presets",
+    "menu": [],
+    "params": "{} → [{name, builtin, params}] (use with app.export {preset: name, …overrides})",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "export.savePreset",
+    "label": "Save Export Preset",
+    "menu": [],
+    "params": "{name, params?: app.export params (default: the last export's)} — adds or replaces a user preset, saved with the library → presets",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "export.deletePreset",
+    "label": "Delete Export Preset",
+    "menu": [],
+    "params": "{name} — removes a user preset → presets",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "export.checkTarget",
+    "label": "Check Output Path",
+    "menu": [],
+    "params": "{path} — fails when writing `path` would replace a photo's original (or its XMP sidecar) in the library; front ends call it before saving a render or screenshot to a user-given path → {path}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "beforeAfter.setBefore",
+    "label": "Set Before",
+    "menu": [],
+    "params": "{source: import|current|history|version, index? (history step), name? (version)} — what the before side shows (this session)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "beforeAfter.copyAfterToBefore",
+    "label": "Copy After's Settings to Before",
+    "menu": [
+      "View",
+      "Before/After Settings"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "beforeAfter.copyBeforeToAfter",
+    "label": "Copy Before's Settings to After",
+    "menu": [
+      "View",
+      "Before/After Settings"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "beforeAfter.swap",
+    "label": "Swap Before and After Settings",
+    "menu": [
+      "View",
+      "Before/After Settings"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "beforeAfter.resetBefore",
+    "label": "Reset Before to Import State",
+    "menu": [
+      "View",
+      "Before/After Settings"
+    ],
+    "params": "{}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "folder.rename",
+    "label": "Rename Folder",
+    "menu": [],
+    "params": "{path, name} — rename a folder on disk (its files and sidecars go along) and relink the photos in it; one undo step (undo renames it back, refused if the old name is taken) → {path, relinked}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "folder.move",
+    "label": "Move Folder",
+    "menu": [],
+    "params": "{path, into: destination folder} — move a folder on disk into another and relink the photos in it; one undo step (undo moves it back, refused if the old place is taken) → {path, relinked}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.browse",
+    "label": "Browse Folder",
+    "menu": [],
+    "params": "{path, subfolders?: bool} — show a folder's photos without adding them to the library (they're read in place; edits go to XMP sidecars) → {path, photos, new}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.forgetLocal",
+    "label": "Forget Unchanged Local Photos",
+    "menu": [],
+    "params": "{dryRun?: bool, days?: n (default: the library preference, 0 = never)} — remove Local (browsed, not added) photos nobody changed, of folders not browsed for `days`, from the catalog; files and sidecars stay, browsing the folder again brings them back; not an undo step → {local, forgotten, keptRecent, keptTouched, keptInUse, foldersStamped, days, dryRun}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.addToLibrary",
+    "label": "Add to My Photos",
+    "menu": [
+      "Photo"
+    ],
+    "params": "{ids?} — browsed (Local) photos join the library",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.missing",
+    "label": "Missing Photos",
+    "menu": [],
+    "params": "{} → [{id, path}] — photos whose original file isn't where the library expects it",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "photo.relink",
+    "label": "Locate Photo",
+    "menu": [],
+    "params": "{id?, path} — point a photo at its file's new location (undo never moves files)",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "library.findMissing",
+    "label": "Find Missing Photos",
+    "menu": [],
+    "params": "{folder} — relink every missing photo whose file is somewhere in the folder: same name and size (and content, when the library knows its hash), or — renamed — same size and content; or {found, missing, ambiguous} — relink what a search already found (the app searches on a worker thread; photos relinked meanwhile and files now in use are skipped) → {found: [{id, from, to, by: name|content}], missing, ambiguous: [{id, from, candidates}] (several same-name candidates and no hash to tell them apart: skipped)}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "metadata.presets",
+    "label": "Metadata Presets",
+    "menu": [],
+    "params": "{} → [{name, fields}]",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "metadata.savePreset",
+    "label": "Save Metadata Preset",
+    "menu": [],
+    "params": "{name, fields?: {copyright?, copyrightStatus?: unknown|copyrighted|publicDomain, usageTerms?, copyrightUrl?, creator?, title?, caption?, location?, city?, state?, country?, keywords?: [..]}, only?: [field] (from the active photo when `fields` is absent; default the copyright fields, creator, place)} — adds or replaces",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "metadata.deletePreset",
+    "label": "Delete Metadata Preset",
+    "menu": [],
+    "params": "{name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "metadata.applyPreset",
+    "label": "Apply Metadata Preset",
+    "menu": [],
+    "params": "{name, ids?} — text fields replace, keywords are added; one undo step",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "filter.presets",
+    "label": "Filter Presets",
+    "menu": [],
+    "params": "{} → [{name, filter}]",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "filter.savePreset",
+    "label": "Save Filter Preset",
+    "menu": [],
+    "params": "{name} — the current filter (library.filter), saved with the library",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "filter.applyPreset",
+    "label": "Apply Filter Preset",
+    "menu": [],
+    "params": "{name} — replaces the current filter → {photos}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "filter.deletePreset",
+    "label": "Delete Filter Preset",
+    "menu": [],
+    "params": "{name}",
+    "shortcut": null
+  },
+  {
+    "enabled": true,
+    "id": "app.export",
+    "label": "Export Now",
+    "menu": [],
+    "params": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.dng) | dir?, ids?, format?: jpeg|png|tiff|webp|avif|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?, limitKb?, colorSpace?, bitDepth?, sharpen?, metadata?, watermark?, naming?}",
+    "shortcut": null
+  }
+]

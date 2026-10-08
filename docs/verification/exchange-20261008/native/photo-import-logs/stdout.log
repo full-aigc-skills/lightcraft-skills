@@ -1,0 +1,2 @@
+{"command":"library.import","ms":22.7,"ok":true,"result":{"duplicates":[],"failed":[],"imported":[1],"scanned":1,"sidecars":0}}
+{"command":"catalog.query","ms":0.1,"ok":true,"result":{"photos":[{"camera":"","captured":null,"copyName":null,"copyOf":null,"deleted":false,"edited":false,"fileName":"original.png","flag":"none","format":"PNG","height":64,"id":1,"keywords":[],"kind":"image","label":null,"previewOnly":null,"rating":0,"title":"","width":96}],"total":1}}

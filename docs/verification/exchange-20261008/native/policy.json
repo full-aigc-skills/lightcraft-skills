@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "runtimes": [
+    {
+      "pluginId": "lightcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "a24be4d0e37617fc45e1588d92ad656da1d289a3537b934353ceaf56de5fcec0"
+    },
+    {
+      "pluginId": "designcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "e18578b28f43d6c6854ded930065feed5c9ee8af6a2e51338aa675ba4a5723a8",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "9ec2b504a09975ae0a3fd530bc74afa52abfcac4e7c083e8cb88a86f3eb5dd12"
+    },
+    {
+      "pluginId": "printcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+    }
+  ]
+}

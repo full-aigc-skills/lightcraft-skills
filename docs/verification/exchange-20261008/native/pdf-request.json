@@ -1,0 +1,58 @@
+{
+  "protocolVersion": "craft-task/v1",
+  "taskId": "pdf",
+  "idempotencyKey": "pdf",
+  "planHash": "fb6139b98eeaaba51942504b5e860e246b321e59509d876a516b6285680db891",
+  "inputRefs": [
+    {
+      "assetId": "layout-pdf",
+      "version": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+      "sha256": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48"
+    }
+  ],
+  "expectedRevision": null,
+  "runtimeIdentity": {
+    "pluginId": "printcraft",
+    "pluginVersion": "lightcraft-exchange-local-acceptance",
+    "cliVersion": "0.2.1",
+    "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+  },
+  "authorizationRef": "explicit-local-native-protocol-acceptance",
+  "budget": {
+    "currency": "USD",
+    "maxMinorUnits": 0,
+    "maxRevisions": 2,
+    "maxExternalCalls": 0
+  },
+  "deadline": "2099-01-01T00:00:00.000Z",
+  "payload": {
+    "schemaVersion": "craft-native-plan/v1",
+    "plan": {
+      "domain": "printcraft",
+      "steps": [
+        {
+          "command": "doc_open",
+          "params": {
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/layout.pdf"
+          }
+        },
+        {
+          "command": "doc_info",
+          "params": {
+            "doc": 1
+          }
+        },
+        {
+          "command": "doc_save",
+          "params": {
+            "doc": 1,
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/delivery.pdf",
+            "full": true
+          }
+        }
+      ]
+    }
+  }
+}

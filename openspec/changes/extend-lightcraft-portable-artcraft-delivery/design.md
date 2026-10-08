@@ -1,6 +1,6 @@
 ## Context
 
-扩展登记，未实施。源码与固定制品能力必须分开。
+三领域公共协议消费、依赖版本与失效规则已实施并有实际原生/协议证据；平台、选择性重建与移动设备验收仍开放。源码与固定制品能力必须分开。
 
 ## Goals / Non-Goals
 
@@ -17,3 +17,8 @@ Goals: 平台制品和跨领域交付。Non-Goals: 不修改基础变更验收�
 ## Migration Plan
 
 先建立失败回归，再实现并验证各门禁；兼容旧记录并保留人工修改。
+
+
+### 三领域协议消费与失效契约
+
+公共 craft-task/v1、craft-artifact/v1 的规范事实源仍为 ArtCraft；按当前干净 Git 检出的 commit 和 schema SHA256 固定消费快照，不声称来源已公开发布。消费器只验证任务与文件、计算确定性 DAG 失效；原生执行由显式调度器负责，不由交接 JSON 授权。Lightcraft/Designcraft/Printcraft 的运行时兼容表必须由调用方提供，不能由输入请求自举信任。协议计算使用 Node 24 的原生 JSON 数值/字符串编码，与 ArtCraft 的 planHash 保持同一语义，避免 Python 浮点或 Unicode 排序差异。

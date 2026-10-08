@@ -1,0 +1,69 @@
+{
+  "status": "TASK_PREFLIGHT_ONLY",
+  "domain": "designcraft",
+  "plan": {
+    "domain": "designcraft",
+    "steps": [
+      {
+        "command": "file.new",
+        "params": {
+          "width": 96,
+          "height": 64,
+          "pages": 1,
+          "facingPages": false,
+          "margins": 0
+        }
+      },
+      {
+        "command": "file.place",
+        "params": {
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-plugin-final-v2/photo.png",
+          "x": 0,
+          "y": 0,
+          "width": 96
+        }
+      },
+      {
+        "command": "file.saveAs",
+        "params": {
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-plugin-final-v2/page.designcraft"
+        }
+      },
+      {
+        "command": "file.exportPdf",
+        "params": {
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-plugin-final-v2/layout.pdf"
+        }
+      },
+      {
+        "command": "document.inspect",
+        "params": {}
+      }
+    ]
+  },
+  "inputRefs": [
+    {
+      "assetId": "developed-photo",
+      "version": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+      "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744"
+    }
+  ],
+  "protocolSource": {
+    "schemaVersion": 1,
+    "repository": "https://github.com/full-aigc-plugins/artcraft-plugin",
+    "commit": "8e9a519cd2b34187f9dc74cd95ccf98570daeea0",
+    "producerVersion": "0.1.0-dev.126-runtime.1",
+    "protocols": [
+      "craft-task/v1",
+      "craft-artifact/v1"
+    ],
+    "schemaSha256": {
+      "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+      "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d"
+    },
+    "sourceStatus": "observed-clean-local-checkout-not-publication-proof"
+  },
+  "executionAllowed": false,
+  "automaticReplay": false,
+  "taskExecutionAllowed": false
+}

@@ -199,7 +199,7 @@ def capture_inputs(paths):
 
 def capture_resources(script_dir):
     """把当前技能执行资源绑定到回执，不能借用兄弟技能的身份。"""
-    names=tuple(sorted(p.name for p in script_dir.iterdir() if p.suffix in ('.py','.json')))
+    names=tuple(sorted(p.name for p in script_dir.iterdir() if p.suffix in ('.py','.json','.ts')))
     result={}
     for name in names:
         path=script_dir/name

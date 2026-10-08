@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "0a57663448bad1a5d29b5a64bd145bd12555435df46ce19294e11e2fb8738395",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "README.md"
+      ],
+      "scope": "package validation, strict OpenSpec validation and generated-resource/source-snapshot consistency"
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log",
+        "node-contract-tests.log"
+      ],
+      "pythonTestsPerVersion": 91,
+      "nodeTests": 14
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "native/native-exchange-report.json",
+        "native/protocol-acceptance.json",
+        "archived-artifact-verification.json",
+        "plugin-controller-inspection.json"
+      ],
+      "scope": "three-domain native CLI and public protocol/planned ledger only; not ArtCraft scheduling or complete acceptance"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "SEXT3-2/PEXT3-2 protocol consumption and invalidation only",
+  "completeAcceptance": false
+}

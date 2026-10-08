@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:32:42.885932+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "run",
+    "--script",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-native.json",
+    "--library",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 28205,
+  "processStartedAt": "2026-10-08T14:32:42.889002+00:00",
+  "processIdentity": "Thu Oct  8 22:32:42 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli run --script /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-native.json --library /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:32:42.998758+00:00",
+  "stdout": "{\"command\":\"library.select\",\"ms\":0.1,\"ok\":true,\"result\":{\"selected\":1}}\n{\"command\":\"develop.set\",\"ms\":8.6,\"ok\":true,\"result\":null}\n{\"command\":\"app.export\",\"ms\":58.1,\"ok\":true,\"result\":{\"bytes\":2203,\"files\":[{\"bytes\":2203,\"height\":64,\"path\":\"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png\",\"sidecars\":[],\"width\":96}],\"height\":64,\"path\":\"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo.png\",\"sidecars\":[],\"width\":96}}\n{\"command\":\"library.info\",\"ms\":0.1,\"ok\":true,\"result\":{\"albums\":0,\"cache\":{\"disk\":{\"bytes\":0,\"hits\":0,\"misses\":0,\"path\":\"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library/thumbs\",\"writes\":0},\"renderedBytes\":0,\"renderedInMemory\":0,\"sourceBytes\":0,\"sourcesInMemory\":0},\"forgotLocal\":{\"forgotten\":0,\"keptInUse\":0,\"keptRecent\":0,\"keptTouched\":0,\"local\":0},\"lastError\":null,\"load\":{\"created\":false,\"damaged\":null,\"replayed\":0,\"tornBytes\":0},\"logBytes\":5445,\"logRecords\":1,\"path\":\"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/library\",\"persistence\":{\"appends\":1,\"failedSnapshots\":0,\"lastAppendMs\":8.611792,\"lastSnapshot\":{\"background\":false,\"blockingMs\":0.0,\"bytes\":0,\"records\":0,\"resetMs\":0.0,\"serializeMs\":0.0,\"totalMs\":0.0,\"writeSyncMs\":0.0},\"maxAppendMs\":8.611792,\"maxBlockingMs\":0.0,\"maxSnapshotMs\":0.0,\"snapshotRunning\":false,\"snapshots\":0},\"persistent\":true,\"photos\":1,\"seq\":2,\"settingsWarnings\":[],\"snapshotSeq\":1,\"unsavedError\":null,\"unsavedOps\":0}}\n",
+  "stderr": "",
+  "stdoutBytes": 1675,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2/photo-logs",
+  "logComplete": true
+}
