@@ -54,6 +54,6 @@ test_wrapper_chain_binds_actual_fixture_binary_and_steps (test_wrapper_integrati
 test_wrapper_chain_preserves_native_timeout_and_partial_step (test_wrapper_integration.WrapperIntegration.test_wrapper_chain_preserves_native_timeout_and_partial_step) ... ok
 
 ----------------------------------------------------------------------
-Ran 54 tests in 3.264s
+Ran 54 tests in 3.419s
 
 OK

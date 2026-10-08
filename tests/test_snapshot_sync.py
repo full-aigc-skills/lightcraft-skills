@@ -8,7 +8,6 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 DOMAIN=ROOT.name.removesuffix('-skills')
-PLUGIN=ROOT.parents[1]/'full-aigc-plugins-repositories'/f'{DOMAIN}-plugin'
 
 class SnapshotSyncContract(unittest.TestCase):
     def module(self):
@@ -17,9 +16,20 @@ class SnapshotSyncContract(unittest.TestCase):
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
         return module
 
+    def fixture(self, target):
+        """从当前技能源构造候选，不依赖工作区兄弟仓库。"""
+        shutil.copytree(ROOT/'skills', target/'skills', ignore=shutil.ignore_patterns('__pycache__'))
+        suite=json.loads((ROOT/'skill-suite.json').read_text())
+        (target/'source-suite.json').write_text(json.dumps(suite))
+        (target/'plugin.json').write_text(json.dumps({'name':DOMAIN}))
+        lock={'sourceProject':ROOT.name,'sourceStatus':'local-unpublished-candidate',
+              'releaseTag':None,'sourceVersion':suite['version'],'managedSkills':suite['skills'],
+              'skillFileSha256':self.module().inventory(target/'skills')}
+        (target/'candidate-source.json').write_text(json.dumps(lock))
+
     def test_user_snapshot_edits_are_preserved(self):
         with tempfile.TemporaryDirectory() as t:
-            target=Path(t)/'plugin';shutil.copytree(PLUGIN,target)
+            target=Path(t)/'plugin';self.fixture(target)
             skill=target/'skills'/f'{DOMAIN}-use'/'SKILL.md'
             skill.write_text(skill.read_text()+'\nUser edit must survive\n')
             before=skill.read_bytes();lock=(target/'candidate-source.json').read_bytes()
@@ -30,7 +40,7 @@ class SnapshotSyncContract(unittest.TestCase):
 
     def test_published_source_identity_is_never_replaced_by_local_candidate(self):
         with tempfile.TemporaryDirectory() as t:
-            target=Path(t)/'plugin';shutil.copytree(PLUGIN,target)
+            target=Path(t)/'plugin';self.fixture(target)
             path=target/'candidate-source.json';data=json.loads(path.read_text());data['releaseTag']='v0.1.0';path.write_text(json.dumps(data))
             before=path.read_bytes()
             with self.assertRaisesRegex(ValueError,'not_current_local_candidate'):
@@ -40,8 +50,8 @@ class SnapshotSyncContract(unittest.TestCase):
     def test_source_removal_is_not_silently_applied(self):
         from unittest.mock import patch
         with tempfile.TemporaryDirectory() as t:
-            root=Path(t);target=root/'plugin';shutil.copytree(PLUGIN,target)
-            source=root/ROOT.name;shutil.copytree(ROOT,source)
+            root=Path(t);target=root/'plugin';self.fixture(target)
+            source=root/ROOT.name;shutil.copytree(ROOT,source,ignore=shutil.ignore_patterns('.git','__pycache__'))
             (source/'skills'/f'{DOMAIN}-use'/'SKILL.md').unlink()
             module=self.module()
             before=(target/'candidate-source.json').read_bytes()
@@ -51,7 +61,7 @@ class SnapshotSyncContract(unittest.TestCase):
 
     def test_source_version_identity_is_checked_before_copy(self):
         with tempfile.TemporaryDirectory() as t:
-            target=Path(t)/'plugin';shutil.copytree(PLUGIN,target)
+            target=Path(t)/'plugin';self.fixture(target)
             path=target/'candidate-source.json';data=json.loads(path.read_text());data['sourceVersion']='wrong';path.write_text(json.dumps(data))
             before=path.read_bytes()
             with self.assertRaisesRegex(ValueError,'source_identity_mismatch'):self.module().sync(target)
