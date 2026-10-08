@@ -14,6 +14,11 @@ permissions:
 jobs:
   native:
     timeout-minutes: 15
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONUTF8: '1'
     strategy:
       fail-fast: false
       matrix:
@@ -22,26 +27,59 @@ jobs:
           - {runner: ubuntu-24.04, target: linux-x86_64}
           - {runner: macos-15-intel, target: darwin-x86_64}
           - {runner: macos-15, target: darwin-arm64}
+          - {runner: windows-2022, target: windows-x86_64, python_arch: x64}
+          - {runner: windows-2022, target: windows-x86, python_arch: x86}
     runs-on: ${{ matrix.runner }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+      - if: runner.os != 'Windows'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
+      - if: runner.os == 'Windows'
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+          architecture: ${{ matrix.python_arch }}
+      - name: Windows installer and process supervisor regression
+        if: runner.os == 'Windows'
+        run: |
+          python -I -B -m unittest discover -s tests -p test_windows_installer.py -v
+          python -I -B -m unittest discover -s tests -p test_windows_native_process.py -v
       - run: >-
           python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt
       - run: python -I -B scripts/validate_package.py
       - name: Execute fixed native photo workflow
-        run: python -I -B scripts/native_acceptance.py --allow-install --workdir "${{ runner.temp }}/native-${{ matrix.target }}"
+        env:
+          NATIVE_WORKDIR: ${{ runner.temp }}/native-${{ matrix.target }}
+        run: python -I -B scripts/native_acceptance.py --allow-install --workdir "$NATIVE_WORKDIR"
       - name: Check actual runner identity
+        env:
+          NATIVE_WORKDIR: ${{ runner.temp }}/native-${{ matrix.target }}
         run: |
           python -I -B - <<'PY'
-          import json, pathlib
-          report=json.loads(pathlib.Path('${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json').read_text())
+          import json, pathlib, os
+          report=json.loads((pathlib.Path(os.environ['NATIVE_WORKDIR'])/'native-evidence.json').read_text())
           assert report['platform']=='${{ matrix.target }}', report['platform']
           assert report['nativeStatus']=='PASS'
           assert len(report['photos'])==2 and len(report['artifacts'])==6
           PY
+      - name: Record Windows signature and PE dependencies
+        if: always() && runner.os == 'Windows'
+        shell: pwsh
+        env:
+          NATIVE_WORKDIR: ${{ runner.temp }}/native-${{ matrix.target }}
+        run: |
+          $binary = Join-Path $env:NATIVE_WORKDIR 'runtime/lightcraft/0.2.1/lightcraft-cli.exe'
+          if (!(Test-Path $binary)) { throw 'native CLI not installed; dependency evidence unavailable' }
+          $signature = Get-AuthenticodeSignature -FilePath $binary
+          $facts = @{ hostOS = [Environment]::OSVersion.VersionString; hostArchitecture = $env:PROCESSOR_ARCHITECTURE; status = $signature.Status.ToString(); statusMessage = $signature.StatusMessage; signerSubject = $signature.SignerCertificate.Subject; binarySha256 = (Get-FileHash $binary -Algorithm SHA256).Hash.ToLower() }
+          $facts | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-signature.json') -Encoding utf8
+          $vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'
+          $dumpbin = & $vswhere -latest -products '*' -find 'VC/Tools/MSVC/**/bin/Hostx64/x64/dumpbin.exe' | Select-Object -First 1
+          if (!$dumpbin) { throw 'PE dependency inspection tool unavailable' }
+          & $dumpbin /dependents $binary | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-dependencies.txt') -Encoding utf8
+          if ($LASTEXITCODE -ne 0) { throw 'PE dependency inspection failed' }
       - name: Preserve exact native evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -49,6 +87,8 @@ jobs:
           name: native-${{ matrix.target }}
           path: |
             ${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/windows-*.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/windows-*.txt
             ${{ runner.temp }}/native-${{ matrix.target }}/*-plan.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*/receipt.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*/logs/*.log

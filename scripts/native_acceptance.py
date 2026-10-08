@@ -36,7 +36,7 @@ def native(workdir,archive=None):
     source=originals/'gradient.png';gradient(source)
     jpeg=originals/'gradient.jpg'
     inputs={}
-    reply={'schemaVersion':1,'startedAt':datetime.now(timezone.utc).isoformat(),'workdir':str(workdir),'nativeStatus':'STARTED','visual':'NOT_RUN','host':'NOT_RUN','RAW':'NOT_RUN','platform':platform.system().lower()+'-'+platform.machine().lower(),'libc':platform.libc_ver(),'acceptanceDriverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'runtimeLockSha256':load('bootstrap').digest(SCRIPTS/'runtime.lock.json')}
+    reply={'schemaVersion':1,'startedAt':datetime.now(timezone.utc).isoformat(),'workdir':str(workdir),'nativeStatus':'STARTED','visual':'NOT_RUN','host':'NOT_RUN','RAW':'NOT_RUN','platform':load('bootstrap').current_platform(),'hostMachine':platform.machine(),'processBits':struct.calcsize('P')*8,'libc':platform.libc_ver(),'acceptanceDriverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'runtimeLockSha256':load('bootstrap').digest(SCRIPTS/'runtime.lock.json')}
     def command(argv):
         result=subprocess.run([sys.executable,'-I','-B',*argv],capture_output=True,text=True)
         if result.returncode:raise ValueError('native_acceptance_command_failed: '+result.stdout[-4000:]+result.stderr[-2000:])

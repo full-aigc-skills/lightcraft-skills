@@ -25,6 +25,18 @@
       "archiveSha256": "543f91c96e4081e86065ec8fb3d62447b08bfd6ae0da22df50fc27a55bb9777d",
       "binarySha256": "b008a5b86ca2a0a727714aa5d30ddcde59cd578ff0bfbda6bee76c7bf1507ab0",
       "versionOutput": "lightcraft-cli 0.2.1"
+    },
+    "windows-x86_64": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-windows-x64-portable.zip",
+      "archiveSha256": "9fae1279ba7b08e0faf1ca3497c15d0b7130b76822a7992865c221aab5208670",
+      "binarySha256": "4dc3361a25594b417f7763eb56e8e2d56a029861f8a1574deb1070676cbdba74",
+      "versionOutput": "lightcraft-cli 0.2.1"
+    },
+    "windows-x86": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-windows-x86-portable.zip",
+      "archiveSha256": "80b5e84283d61b94e25e676774711ebe3cc2955f12c86d0ac9eaeb591faff37a",
+      "binarySha256": "40e25c444db4cf4c059510d829efe829923b13cdca54c9c9ccc867844d9b5beb",
+      "versionOutput": "lightcraft-cli 0.2.1"
     }
   }
 }

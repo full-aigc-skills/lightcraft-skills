@@ -29,6 +29,6 @@ Goals: 平台制品和跨领域交付。Non-Goals: 不修改基础变更验收�
 
 ### 官方平台制品增量
 
-Linux tar.gz 发布树本身包含 CLI 与许可证，按固定 archive/binary SHA256 安装 CLI 子集，不能要求其文件名使用 macOS CLI ZIP 命名。macOS universal 的 Intel 分支使用相同制品身份，但必须在 Intel 目标上独立运行；本机没有 Rosetta，拒绝把架构存在当成执行通过。Linux 以当前容器/CI 用户空间和依赖身份记录，非 Linux 桌面验收。Windows 未接入，继续开放。
+Linux tar.gz 发布树本身包含 CLI 与许可证，按固定 archive/binary SHA256 安装 CLI 子集，不能要求其文件名使用 macOS CLI ZIP 命名。macOS universal 的 Intel 分支使用相同制品身份，但必须在 Intel 目标上独立运行；本机没有 Rosetta，拒绝把架构存在当成执行通过。Linux 以当前容器/CI 用户空间和依赖身份记录，非 Linux 桌面验收。Windows x64/x86 固定 portable 资产增量采用 .exe、按 Python 进程位数选制品及 msvcrt 单字节系统互斥锁；x86 在 x64 runner 的 32 位子系统验证并记录主机/进程身份。Windows 原生 CI 结果取得前继续开放，ARM64 无固定制品保持不支持。超时监督仅请求终止启动进程，UNKNOWN 不自动重放。
 
 插件受管技能仍固定公开 v0.1.0-dev.1，不把本轮技能源候选修改复制成公开来源。插件仓库仅保存对应技能源平台证据和明确缺口；不能据此声称插件的 Linux 安装或任务入口已经支持。

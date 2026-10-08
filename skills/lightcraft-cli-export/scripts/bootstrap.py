@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """仅用标准库安装锁定的官方 CLI；技能单独复制后仍可运行。"""
 import argparse
+from contextlib import contextmanager
+import struct
 import hashlib
 import http.client
 import ssl
@@ -22,6 +24,55 @@ import tarfile
 
 MAX_BYTES = 1024 * 1024 * 1024
 LOCK_WAIT_SECONDS = 120
+
+
+def current_platform():
+    """Windows 按 Python 进程位数选制品；保留主机 ARM64 不支持边界。"""
+    system=platform.system().lower();machine=platform.machine().lower()
+    if system=='windows':
+        if machine in ('arm64','aarch64'):return 'windows-arm64'
+        return 'windows-x86_64' if struct.calcsize('P')==8 else 'windows-x86'
+    return f'{system}-{machine}'
+
+
+def executable_name(artifact, key):
+    return artifact+'.exe' if key.startswith('windows-') else artifact
+
+
+@contextmanager
+def installation_mutex(parent):
+    """系统持有的非阻塞文件锁；退出释放，不以遗留 PID 推断锁状态。"""
+    path=parent/'.install.lock'
+    if path.is_symlink():raise ValueError('invalid_install_lock')
+    fd=os.open(path,os.O_CREAT|os.O_RDWR|getattr(os,'O_NOFOLLOW',0),0o600)
+    with os.fdopen(fd,'r+b') as mutex:
+        info=os.fstat(mutex.fileno());on_disk=path.lstat()
+        if (not stat.S_ISREG(info.st_mode) or stat.S_ISLNK(on_disk.st_mode)
+                or getattr(on_disk,'st_file_attributes',0)&0x400
+                or (info.st_dev,info.st_ino)!=(on_disk.st_dev,on_disk.st_ino)):
+            raise ValueError('invalid_install_lock')
+        windows=os.name=='nt'
+        if windows:
+            import msvcrt
+            if info.st_size==0:mutex.write(b'\0');mutex.flush()
+        else:import fcntl
+        deadline=time.monotonic()+LOCK_WAIT_SECONDS
+        while True:
+            try:
+                if windows:
+                    mutex.seek(0);msvcrt.locking(mutex.fileno(),msvcrt.LK_NBLCK,1)
+                else:fcntl.flock(mutex,fcntl.LOCK_EX|fcntl.LOCK_NB)
+                break
+            except OSError as error:
+                if error.errno not in (11,13,35,36):raise
+                remaining=deadline-time.monotonic()
+                if remaining<=0:raise TimeoutError('runtime_install_busy: installation lock wait expired') from None
+                time.sleep(min(.05,remaining))
+        try:yield
+        finally:
+            if windows:
+                mutex.seek(0);msvcrt.locking(mutex.fileno(),msvcrt.LK_UNLCK,1)
+            else:fcntl.flock(mutex,fcntl.LOCK_UN)
 
 
 def digest(path):
@@ -119,8 +170,8 @@ def extract(archive, destination):
         source.extractall(destination)
 
 
-def inspect_install(destination, artifact, expected):
-    binary = destination / artifact
+def inspect_install(destination, artifact, expected, platform_key=None):
+    binary = destination / executable_name(artifact, platform_key or current_platform())
     if destination.is_symlink() or binary.is_symlink() or not binary.is_file():
         raise ValueError('invalid_installed_path')
     if digest(binary) != expected['binarySha256']:
@@ -140,7 +191,7 @@ def inspect_install(destination, artifact, expected):
 
 def install(lock, runtime_home, archive=None, platform_key=None):
     """每个版本只安装一次；失败不覆盖旧版，也不改变 PATH 或用户配置。"""
-    key = platform_key or f'{platform.system().lower()}-{platform.machine().lower()}'
+    key = platform_key or current_platform()
     # 锁结构先验证：损坏的独立安装材料不能触发目录写入或下载。
     if (not isinstance(lock, dict) or not isinstance(lock.get('artifacts'), dict)
             or not isinstance(lock.get('artifact'), str)
@@ -171,6 +222,9 @@ def install(lock, runtime_home, archive=None, platform_key=None):
         expected_name=f'lightcraft-{version}-{key}.tar.gz'
     elif key in ('darwin-arm64','darwin-x86_64'):
         expected_name=f'{artifact}-{version}-macos-universal.zip'
+    elif key in ('windows-x86_64','windows-x86'):
+        arch='x64' if key=='windows-x86_64' else 'x86'
+        expected_name=f'lightcraft-{version}-windows-{arch}-portable.zip'
     else:raise ValueError('unsupported_platform: '+key)
     if release_path.parent.name != f'v{version}' or release_path.name != expected_name:
         raise ValueError('runtime_release_identity_mismatch')
@@ -179,23 +233,9 @@ def install(lock, runtime_home, archive=None, platform_key=None):
     if parent.is_symlink():
         raise ValueError('invalid_runtime_directory')
     destination = parent / version
-    # macOS/Linux 使用 flock；随进程退出释放，不靠遗留 PID 判断活动状态。
-    import fcntl
-    fd = os.open(parent / '.install.lock', os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
-    with os.fdopen(fd, 'w') as mutex:
-        # 只等待安装互斥；不得因此重放编辑、渲染等原生副作用。
-        deadline = time.monotonic() + LOCK_WAIT_SECONDS
-        while True:
-            try:
-                fcntl.flock(mutex, fcntl.LOCK_EX | fcntl.LOCK_NB)
-                break
-            except BlockingIOError:
-                remaining = deadline - time.monotonic()
-                if remaining <= 0:
-                    raise TimeoutError('runtime_install_busy: installation lock wait expired') from None
-                time.sleep(min(.05, remaining))
+    with installation_mutex(parent):
         if destination.exists() or destination.is_symlink():
-            return inspect_install(destination, artifact, expected)
+            return inspect_install(destination, artifact, expected, key)
         with tempfile.TemporaryDirectory(prefix='.install-', dir=parent) as temporary:
             stage = Path(temporary)
             package = Path(archive) if archive else stage / 'release.zip'
@@ -205,12 +245,12 @@ def install(lock, runtime_home, archive=None, platform_key=None):
                 raise ValueError('archive_checksum_mismatch')
             unpacked = stage / 'unpacked'
             extract(package, unpacked)
-            binaries = [p for p in unpacked.rglob(artifact) if p.is_file()]
+            binaries = [p for p in unpacked.rglob(executable_name(artifact,key)) if p.is_file()]
             if len(binaries) != 1 or digest(binaries[0]) != expected['binarySha256']:
                 raise ValueError('binary_checksum_mismatch')
             payload = stage / 'payload'
             payload.mkdir()
-            binary = payload / artifact
+            binary = payload / executable_name(artifact,key)
             shutil.copyfile(binaries[0], binary)
             binary.chmod(0o755)
             licenses = [p for p in unpacked.rglob('LICENSE*') if p.is_file()]
@@ -229,7 +269,7 @@ def install(lock, runtime_home, archive=None, platform_key=None):
             (payload / 'installation.json').write_text(json.dumps(receipt, indent=2) + '\n')
             # 同文件系统原子发布。没有任何自动升级/替换已有版本的分支。
             payload.rename(destination)
-            return dict(inspect_install(destination, artifact, expected), reused=False)
+            return dict(inspect_install(destination, artifact, expected, key), reused=False)
 
 
 def setup_failure(runtime_home):
@@ -243,7 +283,7 @@ def setup_failure(runtime_home):
 def doctor(lock, runtime_home, platform_key=None):
     """只读取锁和已安装目录；不创建目录、不下载、不执行二进制。"""
     import sys
-    key = platform_key or f'{platform.system().lower()}-{platform.machine().lower()}'
+    key = platform_key or current_platform()
     reply = {'schemaVersion': 1, 'platform': key, 'python': sys.version.split()[0],
              'runtimeLockSha256': digest(Path(__file__).with_name('runtime.lock.json')),
              'status': 'MISSING', 'installed': False, 'execution': 'NOT_RUN'}
@@ -253,7 +293,7 @@ def doctor(lock, runtime_home, platform_key=None):
     if not destination.exists() and not destination.is_symlink():
         return dict(reply, dependencySetup=setup_failure(runtime_home))
     try:
-        found = inspect_install(destination, lock['artifact'], lock['artifacts'][key])
+        found = inspect_install(destination, lock['artifact'], lock['artifacts'][key], key)
         return dict(reply, **found, status='READY', installed=True, version=lock['resolvedVersion'])
     except (ValueError, OSError) as error:
         return dict(reply, status='INVALID', error=str(error))
