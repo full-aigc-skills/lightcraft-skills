@@ -51,7 +51,7 @@ def file_facts(directory):
 
 def assess(snapshot,status=None,model_dir=None):
     """用户提供的状态只记录为 reported；匹配身份不能证明实际推理通过。"""
-    lock=gateway().strict_json(resource('runtime.lock.json').read_text())
+    lock=gateway().strict_json(resource('runtime.lock.json').read_text(encoding='utf-8'))
     if not isinstance(snapshot,dict) or snapshot.get('domain')!='lightcraft' or snapshot.get('mode')!='Headless' or snapshot.get('executionAllowed') is not True:raise ValueError('sam_live_snapshot_required')
     identity=snapshot.get('executableIdentity')
     if not isinstance(identity,dict) or identity.get('status')!='READY' or identity.get('version')!=lock['resolvedVersion'] or identity.get('binarySha256') not in {row['binarySha256'] for row in lock['artifacts'].values()}:raise ValueError('sam_runtime_identity_mismatch')
@@ -82,7 +82,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('snapshot',type=Path);parser.add_argument('--status',type=Path);parser.add_argument('--model-dir',type=Path);args=parser.parse_args()
     try:
         read=gateway().strict_json
-        print(json.dumps(assess(read(args.snapshot.read_text()),read(args.status.read_text()) if args.status else None,args.model_dir),ensure_ascii=False,indent=2));return 0
+        print(json.dumps(assess(read(args.snapshot.read_text(encoding='utf-8')),read(args.status.read_text(encoding='utf-8')) if args.status else None,args.model_dir),ensure_ascii=True,indent=2));return 0
     except (ValueError,OSError,TypeError) as error:
-        print(json.dumps({'error':str(error),'executionAllowed':False,'downloadAllowed':False,'automaticReplay':False},ensure_ascii=False));return 1
+        print(json.dumps({'error':str(error),'executionAllowed':False,'downloadAllowed':False,'automaticReplay':False},ensure_ascii=True));return 1
 if __name__=='__main__':raise SystemExit(main())

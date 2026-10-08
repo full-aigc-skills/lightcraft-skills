@@ -62,12 +62,12 @@ def supervise(argv, logs, timeout=600, tee=False, stop_file=None, stdin_data=Non
         result['processIdentity']=None
         if os.name=='posix':
             try:
-                identity=subprocess.run(['ps','-ww','-p',str(process.pid),'-o','lstart=','-o','command='],capture_output=True,text=True,timeout=2)
+                identity=subprocess.run(['ps','-ww','-p',str(process.pid),'-o','lstart=','-o','command='],capture_output=True,text=True,timeout=2, encoding='utf-8')
                 if identity.returncode==0:result['processIdentity']=identity.stdout.strip()
             except (OSError,subprocess.SubprocessError):pass
         # 进程启动事实单独持久化；调用层消失后仍可只读核对。
         start = logs / 'process-start.json'
-        with start.open('x') as stream:
+        with start.open('x', encoding='utf-8') as stream:
             json.dump(result, stream); stream.flush(); os.fsync(stream.fileno())
         for pipe, name, channel in [(process.stdout, 'stdout', sys.stdout), (process.stderr, 'stderr', sys.stderr)]:
             thread = threading.Thread(target=drain, args=(pipe, name, channel), daemon=True)

@@ -50,14 +50,14 @@ def verify(path, output_root, expected=None):
         # sips 转码完整像素，临时产物不作为用户交付；仅读取原图。
         with tempfile.TemporaryDirectory(prefix='lightcraft-decode-') as temporary:
             decoded = Path(temporary) / 'decoded.png'
-            conversion = subprocess.run(['sips', '-s', 'format', 'png', str(path), '--out', str(decoded)], capture_output=True, text=True, timeout=60)
+            conversion = subprocess.run(['sips', '-s', 'format', 'png', str(path), '--out', str(decoded)], capture_output=True, text=True, timeout=60, encoding='utf-8')
             if conversion.returncode or not decoded.is_file():
                 raise ValueError('artifact_decode_failed: ' + conversion.stderr[-1000:])
             with decoded.open('rb') as stream: header = stream.read(33)
             if header[:8] != b'\x89PNG\r\n\x1a\n':
                 raise ValueError('decoder_output_invalid')
             width, height = struct.unpack('>II', header[16:24])
-        properties = subprocess.run(['sips', '-g', 'format', '-g', 'bitsPerSample', '-g', 'profile', str(path)], capture_output=True, text=True, check=True, timeout=20)
+        properties = subprocess.run(['sips', '-g', 'format', '-g', 'bitsPerSample', '-g', 'profile', str(path)], capture_output=True, text=True, check=True, timeout=20, encoding='utf-8')
         props = {}
         for line in properties.stdout.splitlines()[1:]:
             if ': ' in line:
@@ -102,9 +102,9 @@ if __name__ == '__main__':
     parser.add_argument('--expected', type=Path)
     args = parser.parse_args()
     try:
-        result = verify(args.path, args.output_root, json.loads(args.expected.read_text()) if args.expected else {})
-        print(json.dumps(result, ensure_ascii=False))
+        result = verify(args.path, args.output_root, json.loads(args.expected.read_text(encoding='utf-8')) if args.expected else {})
+        print(json.dumps(result, ensure_ascii=True))
         raise SystemExit(0 if result['technicalStatus'] == 'PASS' else 1)
     except (ValueError, OSError, subprocess.SubprocessError) as error:
-        print(json.dumps({'technicalStatus': 'FAIL', 'error': str(error)}, ensure_ascii=False))
+        print(json.dumps({'technicalStatus': 'FAIL', 'error': str(error)}, ensure_ascii=True))
         raise SystemExit(1)

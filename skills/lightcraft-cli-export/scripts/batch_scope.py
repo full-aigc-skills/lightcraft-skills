@@ -77,7 +77,7 @@ def verify(contract,receipt):
      or receipt.get('skillResourceAfterSha256')!=receipt.get('skillResourceSha256')
      or receipt.get('runtimeLockSha256')!=gateway.file_sha(Path(__file__).with_name('runtime.lock.json'))
      or receipt.get('process',{}).get('status')!='EXITED' or receipt.get('process',{}).get('exitCode')!=0 or receipt.get('process',{}).get('logComplete') is not True):raise ValueError('batch_receipt_identity_mismatch')
- lock=json.loads(Path(__file__).with_name('runtime.lock.json').read_text());native=receipt.get('runtimeIdentity',{})
+ lock=json.loads(Path(__file__).with_name('runtime.lock.json').read_text(encoding='utf-8'));native=receipt.get('runtimeIdentity',{})
  if native.get('version')!=lock['resolvedVersion'] or native.get('binarySha256') not in {v['binarySha256'] for v in lock['artifacts'].values()} or native.get('mode')!='Headless':raise ValueError('batch_native_identity_mismatch')
  rows=receipt.get('steps',[]);steps=contract['plan']['steps'];n=len(contract['scope']['observedIds']);before={};after={};photos=[]
  if len(rows)!=len(steps) or any(r.get('index')!=i or r.get('command')!=steps[i]['command'] or r.get('status')!='SUCCEEDED' for i,r in enumerate(rows)):raise ValueError('batch_steps_incomplete')
@@ -99,7 +99,7 @@ def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('action',choices=['prepare','verify']);parser.add_argument('request',type=Path);parser.add_argument('--receipt',type=Path);parser.add_argument('--output',type=Path,required=True)
  args=parser.parse_args();gateway=load('command_gateway')
  try:
-  request=gateway.strict_json(args.request.read_text())
+  request=gateway.strict_json(args.request.read_text(encoding='utf-8'))
   result=prepare(**request) if args.action=='prepare' else verify(request,gateway.read_receipt(args.receipt)['receipt'])
   # 同目录 O_EXCL：失败不覆盖人工合同，不在检查时启动原生程序。
   with args.output.open('x',encoding='utf-8') as stream:json.dump(result,stream,ensure_ascii=False,indent=2,allow_nan=False);stream.write('\n')

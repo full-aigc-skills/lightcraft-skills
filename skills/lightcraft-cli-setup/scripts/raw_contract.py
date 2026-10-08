@@ -42,7 +42,7 @@ def validate_manifest(manifest):
    if not {'catalogEntryPath','catalogEntrySha256'}<=set(row):raise ValueError('raw_catalog_identity_missing')
    entry_path=Path(row['catalogEntryPath'])
    if entry_path.is_symlink() or not entry_path.is_file() or entry_path.stat().st_size>65536:raise ValueError('raw_catalog_entry_invalid')
-   entry=gateway().strict_json(entry_path.read_text())
+   entry=gateway().strict_json(entry_path.read_text(encoding='utf-8'))
    if (digest(entry)!=row['catalogEntrySha256'] or not isinstance(entry,list) or len(entry)<8 or entry[:3]!=[row['make'],row['model'],row['variant']]
        or not isinstance(entry[5],str) or row['licenseUrl'] not in entry[5] or not isinstance(entry[7],str) or row['sha256'] not in entry[7] or row['sourceUrl'] not in entry[7]):raise ValueError('raw_catalog_metadata_mismatch')
  return manifest
@@ -92,5 +92,5 @@ def unsupported_reason(receipt,source):
 if __name__=='__main__':
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('manifest',type=Path);args=parser.parse_args()
  try:
-  value=validate_manifest(gateway().strict_json(args.manifest.read_text()));print(json.dumps({'schemaVersion':1,'status':'PASS','samples':len(value['samples']),'manifestSha256':digest(value),'execution':'NOT_RUN'}))
+  value=validate_manifest(gateway().strict_json(args.manifest.read_text(encoding='utf-8')));print(json.dumps({'schemaVersion':1,'status':'PASS','samples':len(value['samples']),'manifestSha256':digest(value),'execution':'NOT_RUN'}))
  except (ValueError,OSError,TypeError,KeyError) as error:print(json.dumps({'error':str(error),'execution':'NOT_RUN'}));raise SystemExit(1)

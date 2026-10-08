@@ -284,11 +284,11 @@ def preflight_writes(plan, originals, output_root=None):
 
 def read_receipt(path):
     """旧记录只读；未知版本不转换为可继续执行的状态。"""
-    receipt=strict_json(Path(path).read_text())
+    receipt=strict_json(Path(path).read_text(encoding='utf-8'))
     if not isinstance(receipt,dict):raise ValueError('receipt_invalid')
     compatible=receipt.get('schemaVersion')==1
     if compatible:
-        schema=strict_json(Path(__file__).with_name('execution-receipt.schema.json').read_text())
+        schema=strict_json(Path(__file__).with_name('execution-receipt.schema.json').read_text(encoding='utf-8'))
         validate_schema(schema,receipt)
     return {'readOnly':True,'compatible':compatible,'receipt':receipt,'automaticReplay':False}
 
@@ -321,7 +321,7 @@ def main(domain,script_dir):
     args=parser.parse_args()
     try:
         if args.action=='inspect':
-            print(json.dumps(read_receipt(args.argument),ensure_ascii=False));return 0
+            print(json.dumps(read_receipt(args.argument),ensure_ascii=True));return 0
         if args.action=='doctor':
             prefix=[sys.executable,'-I','-B',str(script_dir/'bootstrap.py'),'--no-install']
             if args.runtime_home:prefix+=['--runtime-home',str(args.runtime_home)]
@@ -330,7 +330,7 @@ def main(domain,script_dir):
         # 在安装前检查计划的 JSON、领域与结构；实际目录存在后再检查命令。
         if args.action in ('check','run'):
             if args.argument is None:raise ValueError('plan_required')
-            plan=strict_json(Path(args.argument).read_text())
+            plan=strict_json(Path(args.argument).read_text(encoding='utf-8'))
             validate_shape(domain,plan)
         if args.action=='run' and (args.catalog is not None or args.output is None or args.output.exists()):raise ValueError('run_requires_live_catalog_and_new_output')
         if args.action=='describe' and args.argument is None:raise ValueError('command_id_required')
@@ -345,10 +345,10 @@ def main(domain,script_dir):
         input_sha=capture_inputs(input_paths) if args.action=='run' else {}
         resources=capture_resources(script_dir) if args.action=='run' else {}
         if args.action=='run':preflight_writes(plan,input_sha,args.output_root)
-        if args.catalog:raw=strict_json(args.catalog.read_text())
+        if args.catalog:raw=strict_json(args.catalog.read_text(encoding='utf-8'))
         else:
             discovery=['tools'] if domain=='printcraft' else ['commands']+(['--json'] if domain=='lightcraft' else [])
-            observed=subprocess.run(prefix+['--',*discovery],capture_output=True,text=True,timeout=900)
+            observed=subprocess.run(prefix+['--',*discovery],capture_output=True,text=True,timeout=900, encoding='utf-8')
             if observed.returncode:raise ValueError('native_catalog_failed: '+observed.stdout.strip()+observed.stderr.strip())
             raw=strict_json(observed.stdout)
         rows=normalize(domain,raw)
@@ -357,13 +357,13 @@ def main(domain,script_dir):
             if args.action=='discover':
                 reply.update(schemaVersion=1,mode='offline',executableIdentity=None,executionAllowed=False,controls=None)
                 if not args.catalog:
-                    controls=subprocess.run(prefix+['--','controls','--json'],capture_output=True,text=True,timeout=900)
+                    controls=subprocess.run(prefix+['--','controls','--json'],capture_output=True,text=True,timeout=900, encoding='utf-8')
                     if controls.returncode:raise ValueError('native_controls_failed')
                     import importlib.util
                     spec=importlib.util.spec_from_file_location('bootstrap',script_dir/'bootstrap.py')
                     bootstrap=importlib.util.module_from_spec(spec);spec.loader.exec_module(bootstrap)
                     runtime_home=args.runtime_home or os.environ.get('CRAFT_RUNTIME_HOME',str(Path.home()/'.local/share/craft-runtimes'))
-                    identity=bootstrap.doctor(strict_json((script_dir/'runtime.lock.json').read_text()),runtime_home)
+                    identity=bootstrap.doctor(strict_json((script_dir/'runtime.lock.json').read_text(encoding='utf-8')),runtime_home)
                     if identity['status']!='READY':raise ValueError('discovery_runtime_identity_unconfirmed')
                     reply.update(mode='Headless',executableIdentity=identity,executionAllowed=True,controls=strict_json(controls.stdout))
                 reply['catalogSha256']=hashlib.sha256(json.dumps(raw,sort_keys=True).encode()).hexdigest()
@@ -383,8 +383,8 @@ def main(domain,script_dir):
                 args.output.mkdir(parents=True)
                 script=args.output/'native-plan.json'
                 script_data=native_script(domain,plan['steps'])
-                if domain=='printcraft':script.write_text(json.dumps(script_data,ensure_ascii=False)+'\n')
-                else:script.write_text(''.join(json.dumps(s,ensure_ascii=False)+'\n' for s in script_data))
+                if domain=='printcraft':script.write_text(json.dumps(script_data,ensure_ascii=False)+'\n', encoding='utf-8')
+                else:script.write_text(''.join(json.dumps(s,ensure_ascii=False)+'\n' for s in script_data), encoding='utf-8')
                 argv=['script',str(script)] if domain=='designcraft' else ['run','--script',str(script)]
                 if args.source:argv+=['--in',str(args.source)]
                 if args.library:argv+=['--library',str(args.library)]
@@ -397,7 +397,7 @@ def main(domain,script_dir):
                     # cli.py owns the sole native deadline; outer wait has no competing timeout.
                     supervised=prefix+['--supervised','--logs-dir',str(args.output/'logs'),'--timeout',str(args.timeout),'--',*argv]
                     if args.stop_file:supervised=prefix+['--supervised','--logs-dir',str(args.output/'logs'),'--timeout',str(args.timeout),'--stop-file',str(args.stop_file),'--',*argv]
-                    result=subprocess.run(supervised,capture_output=True,text=True)
+                    result=subprocess.run(supervised,capture_output=True,text=True, encoding='utf-8')
                     envelope=None
                     try:
                         candidate=strict_json(result.stdout)
@@ -429,7 +429,7 @@ def main(domain,script_dir):
                     except (OSError,ValueError) as error:receipt['libraryIdentityError']=str(error)
                 receipt['endedAt']=datetime.now(timezone.utc).isoformat()
                 write_receipt(target,receipt);reply=receipt
-                if receipt['status']!='NATIVE_EXIT_ZERO_REVIEW_REQUIRED':print(json.dumps(reply,ensure_ascii=False));return 1
-        print(json.dumps(reply,ensure_ascii=False,indent=2));return 0
+                if receipt['status']!='NATIVE_EXIT_ZERO_REVIEW_REQUIRED':print(json.dumps(reply,ensure_ascii=True));return 1
+        print(json.dumps(reply,ensure_ascii=True,indent=2));return 0
     except (ValueError,OSError,subprocess.SubprocessError,TypeError) as error:
-        print(json.dumps({'error':str(error),'result':'failed','automaticReplay':False},ensure_ascii=False));return 1
+        print(json.dumps({'error':str(error),'result':'failed','automaticReplay':False},ensure_ascii=True));return 1

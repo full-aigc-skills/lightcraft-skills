@@ -46,7 +46,7 @@ def probe(output,runtime_home=None,connect=None,library=None,timeout=30):
     if runtime_home is not None:argv+=['--runtime-home',str(runtime_home)]
     argv+=['--',*native];receipt['argv']=argv
     try:
-        result=subprocess.run(argv,capture_output=True,text=True)
+        result=subprocess.run(argv,capture_output=True,text=True, encoding='utf-8')
         envelope=gateway.strict_json(result.stdout)
         if not isinstance(envelope,dict):raise ValueError('invalid_supervised_reply')
         receipt.update(process=envelope,runtimeIdentity=envelope.get('runtimeIdentity'))
@@ -55,7 +55,7 @@ def probe(output,runtime_home=None,connect=None,library=None,timeout=30):
                            steps=[{'index':i,'command':s['command'],'status':'NOT_EXECUTED'} for i,s in enumerate(steps)])
         else:
             replies=[gateway.strict_json(line) for line in gateway.bounded_lines(output/'logs/stdout.log') if line.strip()]
-            classified=mode.classify_probe(requests,replies,json.loads((scripts/'runtime.lock.json').read_text())['resolvedVersion'])
+            classified=mode.classify_probe(requests,replies,json.loads((scripts/'runtime.lock.json').read_text(encoding='utf-8'))['resolvedVersion'])
             receipt.update(classified)
             if (envelope.get('status')!='EXITED' or envelope.get('exitCode')!=0 or envelope.get('logComplete') is not True
                     or envelope.get('stdinSha256')!=receipt['requestsSha256'] or envelope.get('runtimeIdentity',{}).get('mode')!=identity['mode']):
@@ -76,7 +76,7 @@ def main():
     args=parser.parse_args()
     try:
         result=probe(args.output,args.runtime_home,args.connect,args.library,args.timeout)
-        print(json.dumps(result,ensure_ascii=False,indent=2));return 0 if result['status']=='NATIVE_EXIT_ZERO_REVIEW_REQUIRED' else 1
+        print(json.dumps(result,ensure_ascii=True,indent=2));return 0 if result['status']=='NATIVE_EXIT_ZERO_REVIEW_REQUIRED' else 1
     except (ValueError,OSError,TypeError) as error:
         print(json.dumps({'error':str(error),'automaticReplay':False}));return 1
 

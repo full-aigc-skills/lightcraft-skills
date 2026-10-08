@@ -25,4 +25,4 @@ def report(snapshot, tested=None):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('snapshot',type=Path)
-    args=parser.parse_args();print(json.dumps(report(json.loads(args.snapshot.read_text())),ensure_ascii=False,indent=2))
+    args=parser.parse_args();print(json.dumps(report(json.loads(args.snapshot.read_text(encoding='utf-8'))),ensure_ascii=True,indent=2))

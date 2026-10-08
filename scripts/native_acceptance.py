@@ -38,11 +38,11 @@ def native(workdir,archive=None):
     inputs={}
     reply={'schemaVersion':1,'startedAt':datetime.now(timezone.utc).isoformat(),'workdir':str(workdir),'nativeStatus':'STARTED','visual':'NOT_RUN','host':'NOT_RUN','RAW':'NOT_RUN','platform':load('bootstrap').current_platform(),'hostMachine':platform.machine(),'processBits':struct.calcsize('P')*8,'libc':platform.libc_ver(),'acceptanceDriverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'runtimeLockSha256':load('bootstrap').digest(SCRIPTS/'runtime.lock.json')}
     def command(argv):
-        result=subprocess.run([sys.executable,'-I','-B',*argv],capture_output=True,text=True)
+        result=subprocess.run([sys.executable,'-I','-B',*argv],capture_output=True,text=True, encoding='utf-8')
         if result.returncode:raise ValueError('native_acceptance_command_failed: '+result.stdout[-4000:]+result.stderr[-2000:])
         return json.loads(result.stdout)
     def run(name,steps):
-        plan=workdir/(name+'-plan.json');plan.write_text(json.dumps({'domain':'lightcraft','steps':steps}))
+        plan=workdir/(name+'-plan.json');plan.write_text(json.dumps({'domain':'lightcraft','steps':steps}), encoding='utf-8')
         command([str(SCRIPTS/'commands.py'),'run',str(plan),'--runtime-home',str(runtime),'--require-installed','--library',str(library),'--input',str(originals),'--output-root',str(exports),'--output',str(workdir/name)])
         gateway=load('command_gateway');read=gateway.read_receipt(workdir/name/'receipt.json');receipt=read['receipt']
         if not read.get('compatible') or receipt.get('status')!='NATIVE_EXIT_ZERO_REVIEW_REQUIRED' or receipt.get('protocolComplete') is not True:raise ValueError('native_execution_unconfirmed')
@@ -104,7 +104,7 @@ def native(workdir,archive=None):
     except (ValueError,OSError,KeyError,TypeError,IndexError,AttributeError,subprocess.SubprocessError) as error:
         reply.update(nativeStatus='FAIL',error=str(error))
     reply['endedAt']=datetime.now(timezone.utc).isoformat()
-    (workdir/'native-evidence.json').write_text(json.dumps(reply,ensure_ascii=False,indent=2)+'\n')
+    (workdir/'native-evidence.json').write_text(json.dumps(reply,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
     return reply
 
 
@@ -112,4 +112,4 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--workdir',type=Path,required=True);parser.add_argument('--archive',type=Path);parser.add_argument('--allow-install',action='store_true')
     args=parser.parse_args()
     if not args.allow_install:parser.error('requires_runtime_install_authorization_and_allow_install')
-    result=native(args.workdir,args.archive);print(json.dumps(result,ensure_ascii=False,indent=2));raise SystemExit(0 if result['nativeStatus']=='PASS' else 1)
+    result=native(args.workdir,args.archive);print(json.dumps(result,ensure_ascii=True,indent=2));raise SystemExit(0 if result['nativeStatus']=='PASS' else 1)

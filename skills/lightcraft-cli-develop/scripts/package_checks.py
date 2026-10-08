@@ -8,7 +8,7 @@ def markdown(root):
     files=list((root/'skills').rglob('*.md'))
     files += list((root/'docs').glob('*.md')) + list(root.glob('README*.md')) + list(root.glob('THIRD_PARTY*.md'))
     for path in files:
-        for target in re.findall(r'\]\(([^)]+)\)',path.read_text()):
+        for target in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
             if re.match(r'[a-z]+://|#',target):continue
             relative=target.split('#')[0]
             resolved=(path.parent/relative).resolve()
@@ -27,7 +27,7 @@ def skills(root, expected, canonical=None):
     for name in expected:
         directory=root/'skills'/name
         if any(p.is_symlink() for p in directory.rglob('*')) or directory.is_symlink():raise ValueError('skill_symlink')
-        text=(directory/'SKILL.md').read_text()
+        text=(directory/'SKILL.md').read_text(encoding='utf-8')
         if not text.startswith('---\n') or text.count('\n---\n')!=1:raise ValueError('skill_frontmatter_invalid')
         front=text.split('---',2)[1]
         keys=re.findall(r'^(\w+):',front,re.M)

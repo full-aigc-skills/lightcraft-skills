@@ -180,7 +180,7 @@ def inspect_install(destination, artifact, expected, platform_key=None):
     if receipt.is_symlink() or not receipt.is_file():
         raise ValueError('installation_receipt_missing')
     try:
-        recorded = json.loads(receipt.read_text())
+        recorded = json.loads(receipt.read_text(encoding='utf-8'))
     except (OSError, ValueError) as error:
         raise ValueError('installation_receipt_mismatch') from error
     required = dict(expected, name=artifact.removesuffix('-cli'), version=destination.name)
@@ -261,12 +261,12 @@ def install(lock, runtime_home, archive=None, platform_key=None):
                 if target.exists():
                     target = payload / f'{index}-{path.name}'
                 shutil.copyfile(path, target)
-            result = subprocess.run([str(binary), '--version'], capture_output=True, text=True, timeout=20, check=True)
+            result = subprocess.run([str(binary), '--version'], capture_output=True, text=True, timeout=20, check=True, encoding='utf-8')
             if not result.stdout.splitlines() or result.stdout.splitlines()[0].strip() != expected.get('versionOutput', f'{artifact} {version}'):
                 raise ValueError('runtime_version_mismatch')
             receipt = dict(expected, name=artifact.removesuffix('-cli'), version=version,
                            platform=key, versionOutput=result.stdout.splitlines()[0].strip(), rawVersionOutput=result.stdout.strip(), source='official-github-release')
-            (payload / 'installation.json').write_text(json.dumps(receipt, indent=2) + '\n')
+            (payload / 'installation.json').write_text(json.dumps(receipt, indent=2) + '\n', encoding='utf-8')
             # 同文件系统原子发布。没有任何自动升级/替换已有版本的分支。
             payload.rename(destination)
             return dict(inspect_install(destination, artifact, expected, key), reused=False)
@@ -306,10 +306,10 @@ def main():
     parser.add_argument('--no-install', action='store_true', help='纯检查，不执行安装或原生程序')
     args = parser.parse_args()
     try:
-        lock = json.loads(Path(__file__).with_name('runtime.lock.json').read_text())
-        print(json.dumps(doctor(lock, args.runtime_home) if args.no_install else install(lock, args.runtime_home, args.archive), ensure_ascii=False))
+        lock = json.loads(Path(__file__).with_name('runtime.lock.json').read_text(encoding='utf-8'))
+        print(json.dumps(doctor(lock, args.runtime_home) if args.no_install else install(lock, args.runtime_home, args.archive), ensure_ascii=True))
     except (ValueError, OSError, subprocess.SubprocessError, zipfile.BadZipFile) as error:
-        print(json.dumps({'error': str(error), 'installed': False, 'dependencySetup': setup_failure(args.runtime_home)}, ensure_ascii=False))
+        print(json.dumps({'error': str(error), 'installed': False, 'dependencySetup': setup_failure(args.runtime_home)}, ensure_ascii=True))
         raise SystemExit(1)
 
 
