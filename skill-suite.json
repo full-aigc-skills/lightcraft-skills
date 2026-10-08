@@ -1,6 +1,6 @@
 {
   "domain": "lightcraft",
-  "version": "0.1.0-dev.1",
+  "version": "0.1.0-dev.2",
   "nativeVersion": "0.2.1",
   "skills": [
     "lightcraft-cli",

@@ -1,6 +1,6 @@
 # Lightcraft 独立技能库
 
-开发预发行 `0.1.0-dev.1`，固定原生 CLI `0.2.1`；当前目标为 macOS arm64、Python 3.11+。六项技能可以独立分发：`lightcraft-use`、`lightcraft-cli-setup`、`lightcraft-cli-library`、`lightcraft-cli-develop`、`lightcraft-cli-export`、`lightcraft-cli`。
+待发布开发预发行 `0.1.0-dev.2`，固定原生 CLI `0.2.1`；当前目标为 macOS arm64、Python 3.11+。六项技能可以独立分发：`lightcraft-use`、`lightcraft-cli-setup`、`lightcraft-cli-library`、`lightcraft-cli-develop`、`lightcraft-cli-export`、`lightcraft-cli`。
 
 已实现纯诊断、带身份的能力发现、唯一进程监督、逐步骤 JSONL 回执、原片与输出预检、实际图像解码及来源快照同步。`runtime/` 是运行资源唯一维护源；通过 `scripts/generate_runtime.py` 生成六份自包含副本。
 
