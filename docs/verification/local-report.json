@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-08T10:56:13.952828+00:00",
+  "sourceFingerprint": "24c85fab97dfd95b461c2ed18cfbea08d785ae829647b6341a2152aa67ffd5b7",
+  "project": "lightcraft-skills",
+  "developmentVersion": "0.1.0-dev.1",
+  "pinnedNativeVersion": "0.2.1",
+  "overall": "LOCAL_VERIFIED_ACCEPTANCE_OPEN",
+  "localRuns": [
+    {
+      "python": "Python 3.12.13",
+      "command": [
+        "/Users/wandl/.local/bin/python3.12",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "tests": 54,
+      "log": "docs/verification/unittest-python-3.12.log"
+    },
+    {
+      "python": "Python 3.13.0",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-I",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exitCode": 0,
+      "tests": 54,
+      "log": "docs/verification/unittest-python-3.13.log"
+    }
+  ],
+  "structureChecks": [
+    {
+      "command": "python3.12 -I -B scripts/validate_package.py",
+      "exitCode": 0,
+      "evidence": "docs/verification/package-validation.log"
+    },
+    {
+      "command": "python3.12 -I -B scripts/generate_runtime.py --check",
+      "exitCode": 0,
+      "evidence": "docs/verification/generated-resources.log"
+    },
+    {
+      "evidence": "docs/verification/python-syntax.json",
+      "status": "PASS"
+    },
+    {
+      "evidence": "docs/verification/openspec-validation.json",
+      "status": "PASS"
+    }
+  ],
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/package-validation.log",
+        "docs/verification/generated-resources.log",
+        "docs/verification/python-syntax.json",
+        "docs/verification/openspec-validation.json"
+      ]
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/unittest-python-3.12.log",
+        "docs/verification/unittest-python-3.13.log"
+      ],
+      "scope": "stdlib contracts, fake CLI/Python child processes; actual synthetic image decoding via existing macOS sips"
+    },
+    "native": {
+      "status": "BLOCKED",
+      "reason": "runtime installation authorization pending; no Lightcraft CLI executed"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "reason": "host install/load authorization and native prerequisite pending"
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "reason": "no independent native output review"
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "reason": "Python host tests do not establish pinned CLI/platform acceptance"
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "reason": "workflow configured; no repository/publication/CI run"
+    }
+  },
+  "python311": "NOT_RUN_UNAVAILABLE_LOCALLY",
+  "git": "INITIALIZED",
+  "published": false,
+  "automaticReplay": false,
+  "specSyncArchive": "NOT_RUN_ACCEPTANCE_OPEN",
+  "quickValidate": "NOT_RUN_PYYAML_UNAVAILABLE_STDLIB_EQUIVALENT_USED",
+  "tddObservedFailures": [
+    "nested timeout previously downgraded UNKNOWN",
+    "missing step interpreter and unsafe original writes",
+    "candidate source identity mutations accepted",
+    "missing task controller",
+    "corrupt receipt left RUNNING",
+    "persistent=false accepted for delivery",
+    "different run identity accepted for remainder",
+    "delivery execution evidence remained NOT_RUN",
+    "native duplicate existing ID and inspected source ignored",
+    "RAW nullable previewOnly interpreted as boolean",
+    "RAW persistence and unknown execution not rejected",
+    "synthetic harness skipped JPEG input and before preview",
+    "require-installed execution mode unavailable",
+    "RAW driver accepted a different original source path",
+    "license text and receipt example changes did not invalidate source evidence"
+  ],
+  "releasePreflight": {
+    "ready": false,
+    "missing": [
+      "native",
+      "host",
+      "visual",
+      "platform"
+    ],
+    "published": false,
+    "automaticPublish": false
+  },
+  "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+  "managedSkillFiles": 108,
+  "releaseStatus": "DEVELOPMENT_DRAFT_PREPARING"
+}

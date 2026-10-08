@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lightcraft execution receipt v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "domain",
+    "runId",
+    "status",
+    "planSha256",
+    "runtimeLockSha256",
+    "skillResourceSha256",
+    "inputSha256",
+    "startedAt",
+    "steps",
+    "automaticReplay",
+    "completeAcceptance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "domain": {
+      "const": "lightcraft"
+    },
+    "runId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "STARTED",
+        "UNKNOWN",
+        "FAILED_OR_PARTIAL",
+        "PERSISTENCE_UNCONFIRMED",
+        "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+        "INPUT_CHANGED_REVIEW_REQUIRED",
+        "SKILL_CHANGED_REVIEW_REQUIRED",
+        "INPUT_OR_SKILL_CHANGED_REVIEW_REQUIRED"
+      ]
+    },
+    "planSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "runtimeLockSha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "skillResourceSha256": {
+      "type": "object"
+    },
+    "inputSha256": {
+      "type": "object"
+    },
+    "startedAt": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "index",
+          "command",
+          "status"
+        ],
+        "properties": {
+          "index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "command": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "SUCCEEDED",
+              "FAILED",
+              "APPLIED_NOT_SAVED",
+              "UNKNOWN",
+              "NOT_EXECUTED",
+              "PARTIAL"
+            ]
+          }
+        }
+      }
+    },
+    "automaticReplay": {
+      "const": false
+    },
+    "completeAcceptance": {
+      "const": false
+    }
+  }
+}

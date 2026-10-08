@@ -1,0 +1,14 @@
+{
+  "domain": "lightcraft",
+  "version": "0.1.0-dev.1",
+  "nativeVersion": "0.2.1",
+  "skills": [
+    "lightcraft-cli",
+    "lightcraft-cli-develop",
+    "lightcraft-cli-export",
+    "lightcraft-cli-library",
+    "lightcraft-cli-setup",
+    "lightcraft-use"
+  ],
+  "sourceStatus": "local-unpublished-candidate"
+}

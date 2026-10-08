@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "samples": [
+    {
+      "make": "Blackmagic",
+      "model": "Micro Cinema Camera",
+      "variant": "12bit (16:9)",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://raw.pixls.us/getfile.php/7317/nice/Blackmagic - Micro Cinema Camera - 12bit (16:9).dng",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "path": "/var/folders/_s/9_xnnkz141920t1yv5zhvd1r0000gn/T/lightcraft-raw-fixtures-7jj3jhwn/sample-1.dng",
+      "bytes": 1228096,
+      "sha256": "4c65b8cda205087cfb94d8931811e53e15eb4df538ad67c1b4a3e76c1185b277",
+      "nativeAcceptance": "NOT_RUN"
+    },
+    {
+      "make": "Nikon",
+      "model": "D2H",
+      "variant": "12bit 12bit compressed (Lossy (type 1)) (3:2)",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://raw.pixls.us/getfile.php/5227/nice/Nikon - D2H - 12bit 12bit compressed (Lossy (type 1)) (3:2).NEF",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "path": "/var/folders/_s/9_xnnkz141920t1yv5zhvd1r0000gn/T/lightcraft-raw-fixtures-7jj3jhwn/sample-2.nef",
+      "bytes": 3236017,
+      "sha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+      "nativeAcceptance": "NOT_RUN"
+    }
+  ],
+  "scope": "仅这些相机和变体；不扩展为全 RAW 支持"
+}

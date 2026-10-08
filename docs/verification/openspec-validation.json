@@ -1,0 +1,60 @@
+{
+  "command": "openspec validate --all --strict --no-interactive --json",
+  "exitCode": 0,
+  "result": {
+    "items": [
+      {
+        "id": "extend-lightcraft-connect-mcp",
+        "type": "change",
+        "valid": true,
+        "issues": [],
+        "durationMs": 3
+      },
+      {
+        "id": "extend-lightcraft-expanded-photo-capabilities",
+        "type": "change",
+        "valid": true,
+        "issues": [],
+        "durationMs": 3
+      },
+      {
+        "id": "extend-lightcraft-portable-artcraft-delivery",
+        "type": "change",
+        "valid": true,
+        "issues": [],
+        "durationMs": 3
+      },
+      {
+        "id": "harden-lightcraft-skill-workflows",
+        "type": "change",
+        "valid": true,
+        "issues": [],
+        "durationMs": 5
+      }
+    ],
+    "summary": {
+      "totals": {
+        "items": 4,
+        "passed": 4,
+        "failed": 0
+      },
+      "byType": {
+        "change": {
+          "items": 4,
+          "passed": 4,
+          "failed": 0
+        },
+        "spec": {
+          "items": 0,
+          "passed": 0,
+          "failed": 0
+        }
+      }
+    },
+    "version": "1.0",
+    "root": {
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills",
+      "source": "nearest"
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "skill_dir": "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/skills/lightcraft-cli-library",
+  "skill_name": "lightcraft-cli-library",
+  "generated_at": "2026-10-08T10:15:27.509198Z",
+  "frontmatter": {
+    "name": "lightcraft-cli-library",
+    "name_valid": true,
+    "name_matches_dir": true,
+    "description": "用户显式要求导入、选择、组织照片或排查 Lightcraft 照片库及重复导入时使用。",
+    "description_length": 43,
+    "description_valid": true,
+    "license": "Apache-2.0"
+  },
+  "body": {
+    "body_lines": 25,
+    "body_chars": 790,
+    "has_chinese": true,
+    "has_workflow_steps": false,
+    "step_count": 0,
+    "has_rules_section": false,
+    "has_gotchas_section": false,
+    "has_validation": true,
+    "has_boundary": false,
+    "has_when_to_use": false,
+    "has_trigger_hints": true,
+    "has_security_declaration": false,
+    "cli_sections_count": 0,
+    "bash_blocks_count": 1,
+    "tool_reference_count": 1,
+    "prompt_keyword_count": 1,
+    "gotchas_count": 0,
+    "skill_type": "doc"
+  },
+  "directory": {
+    "has_scripts": true,
+    "scripts_files": 13,
+    "has_references": true,
+    "references_files": 2,
+    "references_subdirs": 0,
+    "has_examples": true,
+    "examples_files": 1,
+    "has_license_file": false,
+    "ref_names": [
+      "runtime.md",
+      "workflow.md"
+    ]
+  },
+  "safety": {
+    "secrets_detected": false,
+    "secret_findings": [],
+    "has_interactive_patterns": []
+  },
+  "base_scores": {
+    "T": {
+      "avg": 4.12,
+      "sub_items": {
+        "T1": {
+          "base": 4.2,
+          "formula": "4.5 + (no_scripts:False ? +0.3 : -0.3) + (secdecl:False ? +0.2 : 0) - (secrets_detected:False ? -1.0 : 0)",
+          "evidence": {
+            "secrets_detected": false,
+            "has_scripts": true,
+            "has_security_declaration": false
+          }
+        },
+        "T2": {
+          "base": 5.0,
+          "formula": "has_chinese=True → 5.0",
+          "evidence": {
+            "has_chinese": true
+          }
+        },
+        "T3": {
+          "base": 3.0,
+          "formula": "boundary=False(+0.3) + when_to_use=False(+0.3) off 4.5 base → 3.0",
+          "evidence": {
+            "has_boundary": false,
+            "has_when_to_use": false
+          }
+        },
+        "T4": {
+          "base": 4.3,
+          "formula": "4.5 + (secdecl:False ? +0.5 : 0) - (has_scripts:True ? -0.2 : 0)",
+          "evidence": {
+            "has_security_declaration": false,
+            "has_scripts": true
+          }
+        }
+      }
+    },
+    "R": {
+      "avg": 3.55,
+      "sub_items": {
+        "R1": {
+          "base": 3.0,
+          "formula": "gotchas=False→4.0 + (validation:True ? +0.5)",
+          "evidence": {
+            "has_gotchas_section": false,
+            "has_validation": true
+          }
+        },
+        "R2": {
+          "base": 3.5,
+          "formula": "WF=False(0steps) CLI=0 exs=1 type=doc → 3.5",
+          "evidence": {
+            "has_workflow_steps": false,
+            "step_count": 0,
+            "cli_sections_count": 0,
+            "examples_files": 1
+          }
+        },
+        "R3": {
+          "base": 4.2,
+          "formula": "gotchas=False rules=False validation=True → 4.2",
+          "evidence": {
+            "has_gotchas_section": false,
+            "has_rules_section": false,
+            "has_validation": true
+          }
+        },
+        "R4": {
+          "base": 3.5,
+          "formula": "boundary=False → 3.5",
+          "evidence": {
+            "has_boundary": false
+          }
+        }
+      }
+    },
+    "A": {
+      "avg": 3.95,
+      "sub_items": {
+        "A1": {
+          "base": 4.0,
+          "formula": "boundary=False + when_to_use=False → 4.0",
+          "evidence": {
+            "has_boundary": false,
+            "has_when_to_use": false
+          }
+        },
+        "A2": {
+          "base": 3.5,
+          "formula": "description_length=43 valid=True → 3.5",
+          "evidence": {
+            "description_length": 43,
+            "description_valid": true
+          }
+        },
+        "A3": {
+          "base": 4.3,
+          "formula": "chinese=True → 4.3",
+          "evidence": {
+            "has_chinese": true
+          }
+        },
+        "A4": {
+          "base": 4.0,
+          "formula": "type=doc exs=1 refs=2 → 4.0",
+          "evidence": {
+            "skill_type": "doc",
+            "examples_files": 1,
+            "references_files": 2
+          }
+        }
+      }
+    },
+    "C": {
+      "avg": 3.98,
+      "sub_items": {
+        "C1": {
+          "base": 3.5,
+          "formula": "type=doc exs=1>=10 → 3.5",
+          "evidence": {
+            "skill_type": "doc",
+            "examples_files": 1
+          }
+        },
+        "C2": {
+          "base": 4.2,
+          "formula": "type=doc refs=2 body=25 trigger_hints=True → 4.2",
+          "evidence": {
+            "references_files": 2,
+            "body_lines": 25,
+            "has_trigger_hints": true
+          }
+        },
+        "C3": {
+          "base": 4.7,
+          "formula": "name_valid=True name_matches=True ref_subdirs=0 → 4.7",
+          "evidence": {
+            "name_valid": true,
+            "name_matches_dir": true,
+            "references_subdirs": 0
+          }
+        },
+        "C4": {
+          "base": 3.5,
+          "formula": "gotchas_section=False gotchas_count≈0 → 3.5",
+          "evidence": {
+            "has_gotchas_section": false,
+            "gotchas_count_approx": 0
+          }
+        }
+      }
+    },
+    "E": {
+      "avg": 3.9,
+      "sub_items": {
+        "E1": {
+          "base": 4.3,
+          "formula": "type=doc WF=False validation=True → 4.3",
+          "evidence": {
+            "skill_type": "doc",
+            "has_workflow_steps": false,
+            "has_validation": true
+          }
+        },
+        "E2": {
+          "base": 3.0,
+          "formula": "type=doc exs=1>=5 → 3.0",
+          "evidence": {
+            "skill_type": "doc",
+            "examples_files": 1
+          }
+        },
+        "E3": {
+          "base": 4.0,
+          "formula": "ref_subdirs=0 refs=2 → 4.0",
+          "evidence": {
+            "references_subdirs": 0,
+            "references_files": 2
+          }
+        },
+        "E4": {
+          "base": 4.3,
+          "formula": "WF=False val=True gotchas=False cli_secs=0 → 4.3",
+          "evidence": {
+            "has_workflow_steps": false,
+            "has_validation": true,
+            "has_gotchas_section": false,
+            "cli_sections_count": 0
+          }
+        }
+      }
+    },
+    "overall": 3.9
+  }
+}

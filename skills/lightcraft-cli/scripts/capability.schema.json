@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lightcraft capability snapshot v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "domain",
+    "mode",
+    "executableIdentity",
+    "commands",
+    "controls",
+    "catalogSha256",
+    "controlsSha256",
+    "executionAllowed",
+    "observedAt"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "domain": {
+      "const": "lightcraft"
+    },
+    "mode": {
+      "enum": [
+        "Headless",
+        "offline"
+      ]
+    },
+    "commands": {
+      "type": "array"
+    },
+    "executionAllowed": {
+      "type": "boolean"
+    },
+    "catalogSha256": {
+      "type": "string"
+    },
+    "controlsSha256": {
+      "type": "string"
+    },
+    "observedAt": {
+      "type": "string"
+    }
+  }
+}

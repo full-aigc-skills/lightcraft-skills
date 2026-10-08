@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lightcraft artifact facts v1",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "path",
+    "bytes",
+    "sha256",
+    "format",
+    "width",
+    "height",
+    "bitDepth",
+    "decodable",
+    "technicalStatus",
+    "visualAcceptance"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "path": {
+      "type": "string"
+    },
+    "bytes": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "decodable": {
+      "const": true
+    },
+    "technicalStatus": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "visualAcceptance": {
+      "const": "NOT_RUN"
+    }
+  }
+}

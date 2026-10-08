@@ -1,0 +1,15 @@
+{
+  "scope": "研究源码静态接口定位，不能证明固定 CLI 0.2.1 原生行为",
+  "root": "/Users/wandl/workspaces/workspace-agent-skills/research/lightcraft",
+  "gitCommit": "629e39380e296f588c64cd9c0053a8edc3528f36",
+  "files": {
+    "crates/engine/src/import.rs": "648b5213aa8e3b055cae54913aee7cd11b621175c4e28493f15594868befb119",
+    "crates/engine/src/cmd/query.rs": "6a953fc1fab61fb849e6cbeb21ab852820c1c3fd308da1320af1ca4ac2b7135d",
+    "crates/catalog/src/model.rs": "fd3fc094cc9a5799df55c21f3995b6758fa400e1e0f0749a45954b496b9c6f03"
+  },
+  "facts": [
+    "ImportReport.duplicates entries contain existing, not id",
+    "catalog.query.previewOnly is nullable reason string",
+    "catalog.query summaries omit source path; photo.inspect exposes Source::File.path"
+  ]
+}

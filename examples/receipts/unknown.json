@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "domain": "lightcraft",
+  "runId": "synthetic-unknown",
+  "status": "UNKNOWN",
+  "planSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "runtimeLockSha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "skillResourceSha256": {},
+  "inputSha256": {},
+  "startedAt": "2026-10-08T00:00:00+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.info",
+      "status": "UNKNOWN"
+    }
+  ],
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "fixtureOnly": true,
+  "nativeAcceptance": "NOT_RUN"
+}

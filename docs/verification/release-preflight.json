@@ -1,0 +1,11 @@
+{
+  "ready": false,
+  "missing": [
+    "native",
+    "host",
+    "visual",
+    "platform"
+  ],
+  "published": false,
+  "automaticPublish": false
+}

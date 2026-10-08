@@ -1,0 +1,30 @@
+{
+  "scope": "只读检查常见已有运行位置，未安装或执行 CLI；不声称穷举整个磁盘",
+  "candidates": [
+    {
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/research/lightcraft/target/release/lightcraft-cli",
+      "exists": false
+    },
+    {
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/research/lightcraft/target/debug/lightcraft-cli",
+      "exists": false
+    },
+    {
+      "path": "/Applications/LightCraft.app/Contents/MacOS/lightcraft-cli",
+      "exists": false
+    },
+    {
+      "path": "/Users/wandl/.local/bin/lightcraft-cli",
+      "exists": false
+    },
+    {
+      "path": "/usr/local/bin/lightcraft-cli",
+      "exists": false
+    },
+    {
+      "path": "/opt/homebrew/bin/lightcraft-cli",
+      "exists": false
+    }
+  ],
+  "matchingPinnedBinary": false
+}

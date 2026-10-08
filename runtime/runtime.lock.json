@@ -1,0 +1,12 @@
+{
+  "artifact": "lightcraft-cli",
+  "resolvedVersion": "0.2.1",
+  "artifacts": {
+    "darwin-arm64": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-cli-0.2.1-macos-universal.zip",
+      "archiveSha256": "72ff4d0c63b403fd8b5fd5224de565318fe8cd956f8c4d6945d242b55a42d43b",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "versionOutput": "lightcraft-cli 0.2.1"
+    }
+  }
+}

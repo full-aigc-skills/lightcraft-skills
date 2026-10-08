@@ -1,0 +1,34 @@
+schema: spec-driven
+
+context: |
+  Language: zh-CN
+  All artifacts must be written in zh-CN.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  本项目是已有实现的 Lightcraft 技能库；本次按已批准优化规格实施，不能把文档完成当成实现完成。
+  当前变更为 harden-lightcraft-skill-workflows，proposal、design、specs 与 tasks 是本次变更的唯一规格事实源。
+  技能库负责六项独立技能、运行时与执行回执；插件消费不可变来源快照，负责宿主、任务恢复和审阅。
+  原生运行时基线为 Lightcraft CLI 0.2.1、darwin-arm64；Python 离线测试不能证明其他原生平台支持。
+  保持既有接口和用户修改；实施任务未经对应实现与验证不得勾选，不得提前 sync 或 archive。
+  安装、Git 初始化和远端发行须在对应授权范围内执行；本轮已授权技能与插件的范围内实施和本地验证。
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always include a "Non-goals" section
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing

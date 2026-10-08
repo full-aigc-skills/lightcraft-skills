@@ -1,0 +1,33 @@
+{
+  "domain": "lightcraft",
+  "version": "0.1.0-dev.1",
+  "status": "LOCAL_IMPLEMENTATION_VERIFIED_ACCEPTANCE_OPEN",
+  "gitRepository": "INITIALIZED",
+  "specification": "OPEN_SPEC_CHANGE_IMPLEMENTED_LOCALLY_ACCEPTANCE_OPEN",
+  "specificationChange": "harden-lightcraft-skill-workflows",
+  "specificationPath": "openspec/changes/harden-lightcraft-skill-workflows/",
+  "nativeInstallation": "AWAITING_AUTHORIZATION",
+  "hostDiscovery": "NOT_RUN",
+  "modelDispatch": "NOT_RUN",
+  "creativeAcceptance": "NOT_RUN",
+  "published": false,
+  "tasks": {
+    "complete": 21,
+    "total": 29,
+    "remaining": [
+      "S-4.2",
+      "S-4.3",
+      "S-4.4",
+      "S-4.6",
+      "S-5.4",
+      "S-5.5",
+      "S-6.2",
+      "S-6.4"
+    ]
+  },
+  "evidence": "docs/verification/local-report.json",
+  "remoteCI": "NOT_RUN",
+  "repository": "https://github.com/full-aigc-skills/lightcraft-skills",
+  "branch": "main",
+  "releaseStatus": "DEVELOPMENT_CANDIDATE_REVIEW_PENDING"
+}
