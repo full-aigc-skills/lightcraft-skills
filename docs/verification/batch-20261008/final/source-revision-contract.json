@@ -1,0 +1,1787 @@
+{
+  "schemaVersion": 1,
+  "scope": {
+    "targetIds": [
+      2,
+      3
+    ],
+    "observedIds": [
+      1,
+      2,
+      3
+    ],
+    "allowedFields": [
+      "light.exposure"
+    ]
+  },
+  "changes": [
+    {
+      "ids": [
+        3
+      ],
+      "values": {
+        "light.exposure": 0.25
+      }
+    }
+  ],
+  "controls": [
+    {
+      "decimals": 0,
+      "default": 100.0,
+      "id": "profile.amount",
+      "label": "Amount",
+      "max": 200.0,
+      "min": 0.0,
+      "section": "profile",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 100.0
+    },
+    {
+      "decimals": 0,
+      "default": 6500.0,
+      "id": "wb.temp",
+      "label": "Temp",
+      "max": 50000.0,
+      "min": 2000.0,
+      "section": "color",
+      "step": 50.0,
+      "track": {
+        "kind": "temp"
+      },
+      "value": 6500.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "wb.tint",
+      "label": "Tint",
+      "max": 150.0,
+      "min": -150.0,
+      "section": "color",
+      "step": 1.0,
+      "track": {
+        "kind": "tint"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 2,
+      "default": 0.0,
+      "id": "light.exposure",
+      "label": "Exposure",
+      "max": 5.0,
+      "min": -5.0,
+      "section": "light",
+      "step": 0.01,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.contrast",
+      "label": "Contrast",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.highlights",
+      "label": "Highlights",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.shadows",
+      "label": "Shadows",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.whites",
+      "label": "Whites",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.blacks",
+      "label": "Blacks",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "curve.highlights",
+      "label": "Highlights",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "curve.lights",
+      "label": "Lights",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "curve.darks",
+      "label": "Darks",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "curve.shadows",
+      "label": "Shadows",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 25.0,
+      "id": "curve.splitShadows",
+      "label": "Shadows split",
+      "max": 70.0,
+      "min": 10.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 25.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "curve.splitMid",
+      "label": "Midtones split",
+      "max": 80.0,
+      "min": 20.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 75.0,
+      "id": "curve.splitHighlights",
+      "label": "Highlights split",
+      "max": 90.0,
+      "min": 30.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 75.0
+    },
+    {
+      "decimals": 0,
+      "default": 100.0,
+      "id": "curve.refineSaturation",
+      "label": "Refine Saturation",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "curve",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#d85a3a"
+      },
+      "value": 100.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "color.vibrance",
+      "label": "Vibrance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "color",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#d8406a"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "color.saturation",
+      "label": "Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "color",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#e04a3a"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.red.hue",
+      "label": "Red Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 0,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.red.sat",
+      "label": "Red Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 0,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.red.lum",
+      "label": "Red Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 0,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.orange.hue",
+      "label": "Orange Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 1,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.orange.sat",
+      "label": "Orange Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 1,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.orange.lum",
+      "label": "Orange Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 1,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.yellow.hue",
+      "label": "Yellow Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 2,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.yellow.sat",
+      "label": "Yellow Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 2,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.yellow.lum",
+      "label": "Yellow Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 2,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.green.hue",
+      "label": "Green Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 3,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.green.sat",
+      "label": "Green Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 3,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.green.lum",
+      "label": "Green Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 3,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.aqua.hue",
+      "label": "Aqua Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 4,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.aqua.sat",
+      "label": "Aqua Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 4,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.aqua.lum",
+      "label": "Aqua Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 4,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.blue.hue",
+      "label": "Blue Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 5,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.blue.sat",
+      "label": "Blue Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 5,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.blue.lum",
+      "label": "Blue Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 5,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.purple.hue",
+      "label": "Purple Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 6,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.purple.sat",
+      "label": "Purple Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 6,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.purple.lum",
+      "label": "Purple Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 6,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.magenta.hue",
+      "label": "Magenta Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 7,
+        "kind": "hue"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.magenta.sat",
+      "label": "Magenta Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 7,
+        "kind": "sat"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "mixer.magenta.lum",
+      "label": "Magenta Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "mixer",
+      "step": 1.0,
+      "track": {
+        "band": 7,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.red",
+      "label": "Red",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 0,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.orange",
+      "label": "Orange",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 1,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.yellow",
+      "label": "Yellow",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 2,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.green",
+      "label": "Green",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 3,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.aqua",
+      "label": "Aqua",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 4,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.blue",
+      "label": "Blue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 5,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.purple",
+      "label": "Purple",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 6,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "bw.magenta",
+      "label": "Magenta",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "bwMix",
+      "step": 1.0,
+      "track": {
+        "band": 7,
+        "kind": "lum"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.shadows.hue",
+      "label": "Shadows Hue",
+      "max": 360.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "rainbow"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.shadows.sat",
+      "label": "Shadows Saturation",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.shadows.lum",
+      "label": "Shadows Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.midtones.hue",
+      "label": "Midtones Hue",
+      "max": 360.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "rainbow"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.midtones.sat",
+      "label": "Midtones Saturation",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.midtones.lum",
+      "label": "Midtones Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.highlights.hue",
+      "label": "Highlights Hue",
+      "max": 360.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "rainbow"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.highlights.sat",
+      "label": "Highlights Saturation",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.highlights.lum",
+      "label": "Highlights Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.global.hue",
+      "label": "Global Hue",
+      "max": 360.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "rainbow"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.global.sat",
+      "label": "Global Saturation",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.global.lum",
+      "label": "Global Luminance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "grading.blending",
+      "label": "Blending",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grading.balance",
+      "label": "Balance",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "grading",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "effects.texture",
+      "label": "Texture",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "effects",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "effects.clarity",
+      "label": "Clarity",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "effects",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "effects.dehaze",
+      "label": "Dehaze",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "effects",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "vignette.amount",
+      "label": "Vignette",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "vignette",
+      "step": 1.0,
+      "track": {
+        "from": "#101010",
+        "kind": "gradient",
+        "to": "#f0f0f0"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "vignette.midpoint",
+      "label": "Midpoint",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "vignette",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "vignette.roundness",
+      "label": "Roundness",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "vignette",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "vignette.feather",
+      "label": "Feather",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "vignette",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "vignette.highlights",
+      "label": "Highlights",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "vignette",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "grain.amount",
+      "label": "Grain",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grain",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 25.0,
+      "id": "grain.size",
+      "label": "Size",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grain",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 25.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "grain.roughness",
+      "label": "Roughness",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "grain",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "detail.sharpenAmount",
+      "label": "Sharpening",
+      "max": 150.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 1,
+      "default": 1.0,
+      "id": "detail.sharpenRadius",
+      "label": "Radius",
+      "max": 3.0,
+      "min": 0.5,
+      "section": "detail",
+      "step": 0.1,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 1.0
+    },
+    {
+      "decimals": 0,
+      "default": 25.0,
+      "id": "detail.sharpenDetail",
+      "label": "Detail",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 25.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "detail.sharpenMasking",
+      "label": "Masking",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "detail.nrLuminance",
+      "label": "Noise Reduction",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "detail.nrDetail",
+      "label": "Detail",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "detail.nrContrast",
+      "label": "Contrast",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "detail.nrColor",
+      "label": "Color Noise Reduction",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "detail.nrColorDetail",
+      "label": "Detail",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "detail.nrColorSmoothness",
+      "label": "Smoothness",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "detail",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.distortion",
+      "label": "Distortion",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.vignetting",
+      "label": "Vignetting",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 50.0,
+      "id": "optics.vignettingMidpoint",
+      "label": "Midpoint",
+      "max": 100.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 50.0
+    },
+    {
+      "decimals": 0,
+      "default": 100.0,
+      "id": "optics.profileDistortion",
+      "label": "Profile Distortion",
+      "max": 200.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 100.0
+    },
+    {
+      "decimals": 0,
+      "default": 100.0,
+      "id": "optics.profileVignetting",
+      "label": "Profile Vignetting",
+      "max": 200.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 100.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.defringePurple",
+      "label": "Purple Amount",
+      "max": 20.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#a040d0"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 30.0,
+      "id": "optics.defringePurpleHueLo",
+      "label": "Purple Hue Low",
+      "max": 90.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#6040e0",
+        "kind": "gradient",
+        "to": "#d040b0"
+      },
+      "value": 30.0
+    },
+    {
+      "decimals": 0,
+      "default": 70.0,
+      "id": "optics.defringePurpleHueHi",
+      "label": "Purple Hue High",
+      "max": 100.0,
+      "min": 10.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#6040e0",
+        "kind": "gradient",
+        "to": "#d040b0"
+      },
+      "value": 70.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.defringeGreen",
+      "label": "Green Amount",
+      "max": 20.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#40c040"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 40.0,
+      "id": "optics.defringeGreenHueLo",
+      "label": "Green Hue Low",
+      "max": 90.0,
+      "min": 0.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#c0d030",
+        "kind": "gradient",
+        "to": "#30c0b0"
+      },
+      "value": 40.0
+    },
+    {
+      "decimals": 0,
+      "default": 60.0,
+      "id": "optics.defringeGreenHueHi",
+      "label": "Green Hue High",
+      "max": 100.0,
+      "min": 10.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#c0d030",
+        "kind": "gradient",
+        "to": "#30c0b0"
+      },
+      "value": 60.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.caRed",
+      "label": "Red/Cyan Fringe",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#30c0c0",
+        "kind": "gradient",
+        "to": "#e04040"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "optics.caBlue",
+      "label": "Blue/Yellow Fringe",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "optics",
+      "step": 1.0,
+      "track": {
+        "from": "#d0c030",
+        "kind": "gradient",
+        "to": "#4060e0"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "geometry.vertical",
+      "label": "Vertical",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "geometry",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "geometry.horizontal",
+      "label": "Horizontal",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "geometry",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 1,
+      "default": 0.0,
+      "id": "geometry.rotate",
+      "label": "Rotate",
+      "max": 10.0,
+      "min": -10.0,
+      "section": "geometry",
+      "step": 0.1,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "geometry.aspect",
+      "label": "Aspect",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "geometry",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 100.0,
+      "id": "geometry.scale",
+      "label": "Scale",
+      "max": 150.0,
+      "min": 50.0,
+      "section": "geometry",
+      "step": 1.0,
+      "track": {
+        "kind": "plain"
+      },
+      "value": 100.0
+    },
+    {
+      "decimals": 1,
+      "default": 0.0,
+      "id": "geometry.offsetX",
+      "label": "Offset X",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "geometry",
+      "step": 0.1,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 1,
+      "default": 0.0,
+      "id": "geometry.offsetY",
+      "label": "Offset Y",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "geometry",
+      "step": 0.1,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.shadowsTint",
+      "label": "Shadows Tint",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "kind": "tint"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.redHue",
+      "label": "Red Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#e0306a",
+        "kind": "gradient",
+        "to": "#e08a30"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.redSat",
+      "label": "Red Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#e03a3a"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.greenHue",
+      "label": "Green Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#b0c030",
+        "kind": "gradient",
+        "to": "#30c08a"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.greenSat",
+      "label": "Green Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#40b050"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.blueHue",
+      "label": "Blue Hue",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#30a0d0",
+        "kind": "gradient",
+        "to": "#8040d0"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "calibration.blueSat",
+      "label": "Blue Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "calibration",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#3a60e0"
+      },
+      "value": 0.0
+    },
+    {
+      "decimals": 2,
+      "default": 0.0,
+      "id": "crop.angle",
+      "label": "Straighten",
+      "max": 45.0,
+      "min": -45.0,
+      "section": "geometry",
+      "step": 0.01,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    }
+  ],
+  "parentContractSha256": "49ce7c462ec906cb717bb9fbaefe30e0fe80b962f0a9bc85cf57e27eebab2c31",
+  "plan": {
+    "domain": "lightcraft",
+    "steps": [
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 2
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 2
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 3
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 3
+        }
+      },
+      {
+        "command": "develop.set",
+        "params": {
+          "ids": [
+            3
+          ],
+          "values": {
+            "light.exposure": 0.25
+          }
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 2
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 2
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 3
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 3
+        }
+      },
+      {
+        "command": "library.info",
+        "params": {}
+      }
+    ]
+  },
+  "automaticReplay": false
+}

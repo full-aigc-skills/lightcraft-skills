@@ -53,3 +53,9 @@ python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/ru
 探测只消费已安装并校验通过的固定运行时，不安装；initialize、tools/list 和实际库资源查询在同一 MCP 进程完成。协议握手成功不等于桌面已连接；逐项核对 `backendQuery`、`runtimeIdentity.mode`、传输、地址及执行回执。原生不提供远端会话 UUID 时保留 NOT_PROVIDED，不用客户端 runId 冒充。只读表示不发送照片修改命令；Headless 打开持久库仍可能执行原生库初始化或迁移，严格文件只读任务不要传 `--library`。
 
 当前已验证 Headless MCP 与 Connect 失联的失败路径；桌面真实会话、重启身份和修改/写回门禁仍 OPEN，不宣称完整 Connect/MCP 宿主接入。
+
+### 显式批量范围
+
+使用当前技能的 `scripts/batch_scope.py prepare request.json --output contract.json` 生成合同（输入含 scope/changes/controls，可选 parent）；scope 明确 targetIds、observedIds、allowedFields，changes 每项含明确 ids 和局部 values。controls 必须取当前原生发现结果，不能假定未列出的字段可用。合同的 plan 另存 JSON 后通过本技能 commands.py run 执行；修改只在已授权范围内发生。
+
+执行后用 `scripts/batch_scope.py verify contract.json --receipt /absolute/run/receipt.json --output facts.json` 核对完整前后设置、原片和当前资源身份。修订 prepare 必须带上前次完整合同 parent，保持同一 scope，只提交需要修订的 ID/字段。缺失观测、越界、未知执行或未落盘不能产生通过结论。settings 核对不等于视觉或最终照片交付。

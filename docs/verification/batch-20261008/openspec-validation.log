@@ -1,0 +1,9 @@
+✓ spec/execution-receipts
+✓ change/extend-lightcraft-connect-mcp
+✓ change/extend-lightcraft-expanded-photo-capabilities
+✓ change/extend-lightcraft-portable-artcraft-delivery
+✓ spec/photo-workflows
+✓ spec/quality-evidence
+✓ spec/runtime-discovery
+✓ spec/skill-routing
+Totals: 8 passed, 0 failed (8 items)

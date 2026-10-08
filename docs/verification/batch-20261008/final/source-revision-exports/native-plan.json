@@ -1,0 +1,4 @@
+{"command": "library.select", "params": {"ids": [2], "active": 2}}
+{"command": "app.export", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-batch-20261008-final/exports/source-revision-2.png", "format": "png", "width": 60}}
+{"command": "library.select", "params": {"ids": [3], "active": 3}}
+{"command": "app.export", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-batch-20261008-final/exports/source-revision-3.png", "format": "png", "width": 60}}

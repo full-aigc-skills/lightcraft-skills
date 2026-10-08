@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "b06ef85fb01bfb843636581a4eeb09371dcff7ec9e0f6413510ca0b1f1c1ecad",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "../../../scripts/validate_package.py",
+        "README.md"
+      ]
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log"
+      ]
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "final/index.json",
+        "final/source-initial-fact.json",
+        "final/source-revision-fact.json"
+      ],
+      "scope": "three synthetic photos, fixed CLI 0.2.1 macOS arm64; batch and selective revision only"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "SEXT2-1/PEXT2-1 batch-only development evidence; other gates remain OPEN",
+  "completeAcceptance": false
+}

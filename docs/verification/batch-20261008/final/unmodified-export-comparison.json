@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "pixelAndProfileIdentity": {
+    "filteredPixelSha256": "2ac327e954738b1e846dba85cf07999b5b3ebaf1b9cc8198c60c00dd12002d5e",
+    "iccContentExceptCreationTimeSha256": "b5e381758afd146933555c5ecfb06156344461c493b9acd048a71e17b0a39b84",
+    "otherChunks": [
+      [
+        "49484452",
+        "29907f4f3f8f526e813c86b6bbb053e51a84a61887180965b5ab97c2586527eb"
+      ],
+      [
+        "70485973",
+        "d784155776de06ad5920b8be00623947ee7643481adecdc540e7a6574979cfa7"
+      ],
+      [
+        "65584966",
+        "2dc82b67f448c469cf42db4700f80e1b0bf3dfb3795cf054559418d35725a868"
+      ],
+      [
+        "69545874",
+        "6b01f5625a76cc31ebcbe5ce32afe699f63abad9818bd9ed51bf0b8f95c18d3e"
+      ],
+      [
+        "49454e44",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    ]
+  },
+  "beforeFileSha256": "2d5eb848107716a7708f407c15da5c6c95a1d720583a7adb4f1d940e197ec277",
+  "afterFileSha256": "521ef192beb178a5da7de8c965f2027568b1b2054c10f252a494534fdec1ff03",
+  "allowedDifference": "ICC header creation timestamp bytes 24:36 only; every other chunk and profile byte must match"
+}
