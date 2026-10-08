@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "checks": {
+    "nativeReportsNotSaved": true,
+    "unsavedOpsPositive": true,
+    "memoryRatingFour": true,
+    "diskJournalUnchangedDuringFailure": true,
+    "queuedSaveRecovered": false,
+    "independentReopenRatingFour": true,
+    "originalUnchanged": true,
+    "wrapperClassifiesNotSaved": false
+  },
+  "nativeSha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+  "fixtureSha256": "e8a82db3b022f56a405d57cf5e8fa23bbb95ff9224efaaa49c3f7c0fa0c53109",
+  "classification": {
+    "status": "PERSISTENCE_UNCONFIRMED",
+    "steps": [
+      {
+        "index": 0,
+        "command": "photo.rate",
+        "status": "APPLIED_NOT_SAVED",
+        "native": {
+          "command": "photo.rate",
+          "ok": false,
+          "error": "saved in memory but not written to disk: catalog storage: Permission denied (os error 13); LightCraft will retry"
+        }
+      }
+    ],
+    "protocolErrors": [],
+    "protocolComplete": true
+  },
+  "replay": "one explicit photo.rate only; after permission restoration native persistence retries queued save on explicit library.info, not command replay",
+  "scope": "fixed CLI headless native MCP; real disk permission failure; no desktop or Connect NotSaved claim"
+}

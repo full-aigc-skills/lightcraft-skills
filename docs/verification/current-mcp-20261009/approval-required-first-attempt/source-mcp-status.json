@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "name": "lightcraft_readonly",
+      "runtimeStatus": null,
+      "pluginId": null,
+      "httpOrigin": null,
+      "serverInfo": {
+        "name": "lightcraft",
+        "title": "LightCraft",
+        "version": "0.2.1",
+        "description": null,
+        "icons": null,
+        "websiteUrl": null
+      },
+      "serverCapabilities": {
+        "resources": {
+          "subscribe": false,
+          "listChanged": false
+        },
+        "tools": {
+          "listChanged": false
+        }
+      },
+      "tools": {
+        "list_commands": {
+          "name": "list_commands",
+          "title": "List commands",
+          "description": "Every command (engine + UI when connected) with id, label, menu, shortcut, parameter doc and whether it is enabled now. Each id is also callable as tool `cmd_<id with . replaced by _>` or via run_command.",
+          "inputSchema": {
+            "properties": {
+              "filter": {
+                "description": "Only commands whose id or label contains this text (case-insensitive)",
+                "type": "string"
+              }
+            },
+            "required": [],
+            "type": "object"
+          }
+        },
+        "query_photos": {
+          "name": "query_photos",
+          "title": "Query photos",
+          "description": "List photos (id, file name, size, rating, flag, edited…). Without filter/sort: the current library view.",
+          "inputSchema": {
+            "properties": {
+              "filter": {
+                "additionalProperties": true,
+                "description": "Catalog Filter JSON (e.g. {\"minRating\": 3})",
+                "type": "object"
+              },
+              "limit": {
+                "description": "Default 200",
+                "type": "integer"
+              },
+              "offset": {
+                "type": "integer"
+              },
+              "sort": {
+                "additionalProperties": true,
+                "type": "object"
+              }
+            },
+            "required": [],
+            "type": "object"
+          }
+        }
+      },
+      "toolsError": null,
+      "resources": [
+        {
+          "description": "Current source, filter, sort, selection, active photo/mask and undo/redo labels (library.state)",
+          "mimeType": "application/json",
+          "name": "library",
+          "title": "Library state",
+          "uri": "lightcraft://library"
+        },
+        {
+          "description": "The photos in the current view with ids, ratings, flags and metadata (catalog.query)",
+          "mimeType": "application/json",
+          "name": "photos",
+          "title": "Photos in view",
+          "uri": "lightcraft://photos"
+        },
+        {
+          "description": "Everything about the active photo: file, metadata, develop settings, albums, history (photo.inspect)",
+          "mimeType": "application/json",
+          "name": "active-photo",
+          "title": "Active photo",
+          "uri": "lightcraft://photo/active"
+        },
+        {
+          "description": "The active photo's full develop settings JSON (develop.get)",
+          "mimeType": "application/json",
+          "name": "develop",
+          "title": "Develop settings",
+          "uri": "lightcraft://develop/active"
+        },
+        {
+          "description": "Every develop slider with id, range, default and current value (develop.controls)",
+          "mimeType": "application/json",
+          "name": "controls",
+          "title": "Develop controls",
+          "uri": "lightcraft://controls"
+        }
+      ],
+      "resourceTemplates": [],
+      "authStatus": "unsupported"
+    }
+  ],
+  "nextCursor": null
+}

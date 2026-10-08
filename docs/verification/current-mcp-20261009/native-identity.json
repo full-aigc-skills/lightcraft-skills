@@ -1,0 +1,6 @@
+{
+  "expectedSha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+  "observedSha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+  "status": "PASS",
+  "version": "lightcraft-cli 0.2.1"
+}

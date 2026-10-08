@@ -1,0 +1,385 @@
+[
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2024-11-05",
+        "clientInfo": {
+          "name": "notsaved_acceptance",
+          "version": "1"
+        },
+        "capabilities": {}
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "capabilities": {
+          "resources": {
+            "listChanged": false,
+            "subscribe": false
+          },
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "instructions": "LightCraft is a non-destructive photo library and raw developer (a Lightroom alternative). Photos have integer ids; most editing acts on the *active* photo (tools that take `id` make that photo active first). Typical loop: query_photos → select_photos (or pass id) → list_controls → set_develop {values: {\"light.exposure\": 0.5}} → render_photo to look at the result → export. Positions (crop rects, mask points, brush strokes) are normalized image coordinates 0..1 with the origin at the top-left. Every action is a command: list_commands shows ids and parameter docs; run_command runs any of them. Edits are undoable (undo / redo). Backend: headless.",
+        "protocolVersion": "2024-11-05",
+        "serverInfo": {
+          "name": "lightcraft",
+          "title": "LightCraft",
+          "version": "0.2.1"
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/call",
+      "params": {
+        "name": "query_photos",
+        "arguments": {}
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 2,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"photos\": [\n    {\n      \"camera\": \"\",\n      \"captured\": null,\n      \"copyName\": null,\n      \"copyOf\": null,\n      \"deleted\": false,\n      \"edited\": false,\n      \"fileName\": \"before-1.png\",\n      \"flag\": \"none\",\n      \"format\": \"PNG\",\n      \"height\": 40,\n      \"id\": 1,\n      \"keywords\": [],\n      \"kind\": \"image\",\n      \"label\": null,\n      \"previewOnly\": null,\n      \"rating\": 1,\n      \"title\": \"\",\n      \"width\": 60\n    }\n  ],\n  \"total\": 1\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "photos": [
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": false,
+              "fileName": "before-1.png",
+              "flag": "none",
+              "format": "PNG",
+              "height": 40,
+              "id": 1,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 1,
+              "title": "",
+              "width": 60
+            }
+          ],
+          "total": 1
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "tools/call",
+      "params": {
+        "name": "select_photos",
+        "arguments": {
+          "ids": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 3,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"selected\": 1\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "selected": 1
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "method": "tools/call",
+      "params": {
+        "name": "run_command",
+        "arguments": {
+          "command": "photo.rate",
+          "params": {
+            "rating": 4
+          }
+        }
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 4,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "saved in memory but not written to disk: catalog storage: Permission denied (os error 13); LightCraft will retry",
+            "type": "text"
+          }
+        ],
+        "isError": true
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "method": "tools/call",
+      "params": {
+        "name": "run_command",
+        "arguments": {
+          "command": "library.info",
+          "params": {}
+        }
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 5,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"albums\": 0,\n  \"cache\": {\n    \"disk\": {\n      \"bytes\": 0,\n      \"hits\": 0,\n      \"misses\": 0,\n      \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library/thumbs\",\n      \"writes\": 0\n    },\n    \"renderedBytes\": 0,\n    \"renderedInMemory\": 0,\n    \"sourceBytes\": 0,\n    \"sourcesInMemory\": 0\n  },\n  \"forgotLocal\": {\n    \"forgotten\": 0,\n    \"keptInUse\": 0,\n    \"keptRecent\": 0,\n    \"keptTouched\": 0,\n    \"local\": 0\n  },\n  \"lastError\": \"catalog storage: Permission denied (os error 13)\",\n  \"load\": {\n    \"created\": false,\n    \"damaged\": null,\n    \"replayed\": 0,\n    \"tornBytes\": 0\n  },\n  \"logBytes\": 0,\n  \"logRecords\": 0,\n  \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library\",\n  \"persistence\": {\n    \"appends\": 0,\n    \"failedSnapshots\": 0,\n    \"lastAppendMs\": 0.0,\n    \"lastSnapshot\": {\n      \"background\": false,\n      \"blockingMs\": 0.0,\n      \"bytes\": 0,\n      \"records\": 0,\n      \"resetMs\": 0.0,\n      \"serializeMs\": 0.0,\n      \"totalMs\": 0.0,\n      \"writeSyncMs\": 0.0\n    },\n    \"maxAppendMs\": 0.0,\n    \"maxBlockingMs\": 0.0,\n    \"maxSnapshotMs\": 0.0,\n    \"snapshotRunning\": false,\n    \"snapshots\": 0\n  },\n  \"persistent\": true,\n  \"photos\": 1,\n  \"seq\": 2,\n  \"settingsWarnings\": [],\n  \"snapshotSeq\": 2,\n  \"unsavedError\": \"catalog storage: Permission denied (os error 13)\",\n  \"unsavedOps\": 1\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "albums": 0,
+          "cache": {
+            "disk": {
+              "bytes": 0,
+              "hits": 0,
+              "misses": 0,
+              "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library/thumbs",
+              "writes": 0
+            },
+            "renderedBytes": 0,
+            "renderedInMemory": 0,
+            "sourceBytes": 0,
+            "sourcesInMemory": 0
+          },
+          "forgotLocal": {
+            "forgotten": 0,
+            "keptInUse": 0,
+            "keptRecent": 0,
+            "keptTouched": 0,
+            "local": 0
+          },
+          "lastError": "catalog storage: Permission denied (os error 13)",
+          "load": {
+            "created": false,
+            "damaged": null,
+            "replayed": 0,
+            "tornBytes": 0
+          },
+          "logBytes": 0,
+          "logRecords": 0,
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library",
+          "persistence": {
+            "appends": 0,
+            "failedSnapshots": 0,
+            "lastAppendMs": 0.0,
+            "lastSnapshot": {
+              "background": false,
+              "blockingMs": 0.0,
+              "bytes": 0,
+              "records": 0,
+              "resetMs": 0.0,
+              "serializeMs": 0.0,
+              "totalMs": 0.0,
+              "writeSyncMs": 0.0
+            },
+            "maxAppendMs": 0.0,
+            "maxBlockingMs": 0.0,
+            "maxSnapshotMs": 0.0,
+            "snapshotRunning": false,
+            "snapshots": 0
+          },
+          "persistent": true,
+          "photos": 1,
+          "seq": 2,
+          "settingsWarnings": [],
+          "snapshotSeq": 2,
+          "unsavedError": "catalog storage: Permission denied (os error 13)",
+          "unsavedOps": 1
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 6,
+      "method": "tools/call",
+      "params": {
+        "name": "query_photos",
+        "arguments": {}
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 6,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"photos\": [\n    {\n      \"camera\": \"\",\n      \"captured\": null,\n      \"copyName\": null,\n      \"copyOf\": null,\n      \"deleted\": false,\n      \"edited\": false,\n      \"fileName\": \"before-1.png\",\n      \"flag\": \"none\",\n      \"format\": \"PNG\",\n      \"height\": 40,\n      \"id\": 1,\n      \"keywords\": [],\n      \"kind\": \"image\",\n      \"label\": null,\n      \"previewOnly\": null,\n      \"rating\": 4,\n      \"title\": \"\",\n      \"width\": 60\n    }\n  ],\n  \"total\": 1\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "photos": [
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": false,
+              "fileName": "before-1.png",
+              "flag": "none",
+              "format": "PNG",
+              "height": 40,
+              "id": 1,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 4,
+              "title": "",
+              "width": 60
+            }
+          ],
+          "total": 1
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "method": "tools/call",
+      "params": {
+        "name": "run_command",
+        "arguments": {
+          "command": "library.info",
+          "params": {}
+        }
+      }
+    }
+  },
+  {
+    "reply": {
+      "id": 7,
+      "jsonrpc": "2.0",
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"albums\": 0,\n  \"cache\": {\n    \"disk\": {\n      \"bytes\": 0,\n      \"hits\": 0,\n      \"misses\": 0,\n      \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library/thumbs\",\n      \"writes\": 0\n    },\n    \"renderedBytes\": 0,\n    \"renderedInMemory\": 0,\n    \"sourceBytes\": 0,\n    \"sourcesInMemory\": 0\n  },\n  \"forgotLocal\": {\n    \"forgotten\": 0,\n    \"keptInUse\": 0,\n    \"keptRecent\": 0,\n    \"keptTouched\": 0,\n    \"local\": 0\n  },\n  \"lastError\": \"catalog storage: Permission denied (os error 13)\",\n  \"load\": {\n    \"created\": false,\n    \"damaged\": null,\n    \"replayed\": 0,\n    \"tornBytes\": 0\n  },\n  \"logBytes\": 0,\n  \"logRecords\": 0,\n  \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library\",\n  \"persistence\": {\n    \"appends\": 0,\n    \"failedSnapshots\": 0,\n    \"lastAppendMs\": 0.0,\n    \"lastSnapshot\": {\n      \"background\": false,\n      \"blockingMs\": 0.0,\n      \"bytes\": 0,\n      \"records\": 0,\n      \"resetMs\": 0.0,\n      \"serializeMs\": 0.0,\n      \"totalMs\": 0.0,\n      \"writeSyncMs\": 0.0\n    },\n    \"maxAppendMs\": 0.0,\n    \"maxBlockingMs\": 0.0,\n    \"maxSnapshotMs\": 0.0,\n    \"snapshotRunning\": false,\n    \"snapshots\": 0\n  },\n  \"persistent\": true,\n  \"photos\": 1,\n  \"seq\": 2,\n  \"settingsWarnings\": [],\n  \"snapshotSeq\": 2,\n  \"unsavedError\": \"catalog storage: Permission denied (os error 13)\",\n  \"unsavedOps\": 1\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "albums": 0,
+          "cache": {
+            "disk": {
+              "bytes": 0,
+              "hits": 0,
+              "misses": 0,
+              "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library/thumbs",
+              "writes": 0
+            },
+            "renderedBytes": 0,
+            "renderedInMemory": 0,
+            "sourceBytes": 0,
+            "sourcesInMemory": 0
+          },
+          "forgotLocal": {
+            "forgotten": 0,
+            "keptInUse": 0,
+            "keptRecent": 0,
+            "keptTouched": 0,
+            "local": 0
+          },
+          "lastError": "catalog storage: Permission denied (os error 13)",
+          "load": {
+            "created": false,
+            "damaged": null,
+            "replayed": 0,
+            "tornBytes": 0
+          },
+          "logBytes": 0,
+          "logRecords": 0,
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library",
+          "persistence": {
+            "appends": 0,
+            "failedSnapshots": 0,
+            "lastAppendMs": 0.0,
+            "lastSnapshot": {
+              "background": false,
+              "blockingMs": 0.0,
+              "bytes": 0,
+              "records": 0,
+              "resetMs": 0.0,
+              "serializeMs": 0.0,
+              "totalMs": 0.0,
+              "writeSyncMs": 0.0
+            },
+            "maxAppendMs": 0.0,
+            "maxBlockingMs": 0.0,
+            "maxSnapshotMs": 0.0,
+            "snapshotRunning": false,
+            "snapshots": 0
+          },
+          "persistent": true,
+          "photos": 1,
+          "seq": 2,
+          "settingsWarnings": [],
+          "snapshotSeq": 2,
+          "unsavedError": "catalog storage: Permission denied (os error 13)",
+          "unsavedOps": 1
+        }
+      }
+    }
+  }
+]

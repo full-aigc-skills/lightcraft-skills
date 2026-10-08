@@ -33,9 +33,10 @@
       "status": "NOT_RUN",
       "evidence": [
         "scenario-index.json",
-        "source-discovery.json"
+        "source-discovery.json",
+        "../current-mcp-20261009/README.md"
       ],
-      "partial": "PASS five current isolated skill discovery/routing/readonly scenarios; MCP and desktop not run"
+      "partial": "PASS five skill routing/readonly scenarios and manually configured current-host native MCP empty-library query; desktop Connect and plugin automatic MCP integration remain open"
     },
     "visual": {
       "status": "FAIL",

@@ -1,0 +1,7 @@
+{"type":"thread.started","thread_id":"01a11c3c-e991-7230-9a19-1c75fa017850"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"我会仅调用指定的 `lightcraft_readonly.query_photos` 工具，查询后报告实际返回的照片数量。\n"}}
+{"type":"item.started","item":{"id":"item_1","type":"mcp_tool_call","server":"lightcraft_readonly","tool":"query_photos","arguments":{"limit":2,"offset":0},"result":null,"error":null,"status":"in_progress"}}
+{"type":"item.completed","item":{"id":"item_1","type":"mcp_tool_call","server":"lightcraft_readonly","tool":"query_photos","arguments":{"limit":2,"offset":0},"result":{"content":[{"type":"text","text":"{\n  \"photos\": [],\n  \"total\": 0\n}"}],"structured_content":{"photos":[],"total":0}},"error":null,"status":"completed"}}
+{"type":"item.completed","item":{"id":"item_2","type":"agent_message","text":"已调用 `lightcraft_readonly.query_photos` 一次，参数为 `limit=2、offset=0`。实际返回 **0 张照片**（`photos=[]，total=0`）。"}}
+{"type":"turn.completed","usage":{"input_tokens":27971,"cached_input_tokens":25984,"cache_write_input_tokens":0,"output_tokens":197,"reasoning_output_tokens":0}}

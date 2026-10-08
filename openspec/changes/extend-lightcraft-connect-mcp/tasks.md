@@ -9,3 +9,7 @@
 ## 2026-10-08 增量进展（不替代任务验收）
 
 已完成模式/只读观察适配与失败回归；当前证据见 `docs/verification/connect-mcp-20261008/README.md`。真实桌面、真实 NotSaved、重启恢复、当前宿主 MCP 和不可变来源配套门禁未完成，以上四项继续 OPEN，不执行规格同步或归档。
+
+## 2026-10-09 MCP 与原生故障验收进展（任务继续 OPEN）
+
+当前 Codex 0.161.0 隔离宿主实际加载手工配置的只读原生 MCP，目录仅两个查询工具，实际空库查询通过；固定 CLI 0.2.1 headless 中真实 journal 权限故障、APPLIED_NOT_SAVED 分类、保存队列恢复与独立重开通过。证据：`docs/verification/current-mcp-20261009/README.md`。不替代桌面 Connect、桌面 NotSaved、失联/重启恢复或插件 manifest 自动注册；未勾选任务、未同步归档。

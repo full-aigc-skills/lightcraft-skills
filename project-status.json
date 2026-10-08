@@ -42,5 +42,8 @@
   "extensionTasks": {
     "complete": 4,
     "total": 12
-  }
+  },
+  "mcpAcceptance": "PASS_MANUAL_HOST_HEADLESS_QUERY_DESKTOP_OPEN",
+  "notSavedAcceptance": "PASS_NATIVE_HEADLESS_PERMISSION_FAULT_DESKTOP_OPEN",
+  "mcpEvidence": "docs/verification/current-mcp-20261009/README.md"
 }

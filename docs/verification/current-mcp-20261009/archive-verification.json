@@ -1,0 +1,19 @@
+{
+  "recordedAt": "2026-10-08T16:01:31.397337+00:00",
+  "currentRepositoryCommit": "195d92840b9d13b1c3c99e42f905c80a968e751d",
+  "installedSkillBytesMatchCurrentRepository": true,
+  "isolatedAuthRemoved": true,
+  "isolatedMcpConfigurationRestored": true,
+  "exactEmptyLibraryResponse": true,
+  "nativeNotSavedChecks": {
+    "nativeReportsNotSaved": true,
+    "unsavedOpsPositive": true,
+    "memoryRatingFour": true,
+    "diskJournalUnchangedDuringFailure": true,
+    "queuedSaveRecovered": true,
+    "independentReopenRatingFour": true,
+    "originalUnchanged": true,
+    "wrapperClassifiesNotSaved": true
+  },
+  "scope": "manual host MCP configuration plus direct native headless fault injection; no desktop Connect or plugin auto MCP registration proof"
+}

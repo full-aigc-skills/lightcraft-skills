@@ -1,0 +1,2 @@
+lightcraft-cli mcp: opened library /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/notsaved-library-2 (LoadReport { snapshot_seq: 2, replayed: 0, stale: 0, failed: 0, torn_bytes: 0, torn_fragments: 0, damaged: None, created: false, upgraded_from: None })
+lightcraft-cli mcp: serving MCP on stdio (headless)

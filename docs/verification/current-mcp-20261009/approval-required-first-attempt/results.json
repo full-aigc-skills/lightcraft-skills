@@ -1,0 +1,80 @@
+[
+  {
+    "schemaVersion": 1,
+    "name": "source",
+    "status": "FAIL",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "oneActualMcpCall": true,
+      "noShell": true,
+      "restrictedCatalog": true,
+      "globalConfigUnchanged": true,
+      "installedSkillsUnchanged": true,
+      "querySucceeded": false
+    },
+    "calls": [
+      {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "lightcraft_readonly",
+        "tool": "query_photos",
+        "arguments": {
+          "limit": 2,
+          "offset": 0
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    ],
+    "elapsedSeconds": 20,
+    "hostVersion": "0.161.0",
+    "hostSha256": "12ac11d2c7eee27cfae34393986d7b7c9ed0dea537cb749831cdd7033893e6de",
+    "nativeSha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "sourceCommit": "195d92840b9d13b1c3c99e42f905c80a968e751d",
+    "scope": "manual temporary host configuration; actual fixed headless MCP only, not desktop Connect or plugin manifest auto registration",
+    "installationBaselineCommit": "ce6100472452c16af7c87e3c47e24ea0b048245d"
+  },
+  {
+    "schemaVersion": 1,
+    "name": "plugin",
+    "status": "FAIL",
+    "checks": {
+      "processExitZero": true,
+      "turnCompleted": true,
+      "oneActualMcpCall": true,
+      "noShell": true,
+      "restrictedCatalog": true,
+      "globalConfigUnchanged": true,
+      "installedSkillsUnchanged": true,
+      "querySucceeded": false
+    },
+    "calls": [
+      {
+        "id": "item_1",
+        "type": "mcp_tool_call",
+        "server": "lightcraft_readonly",
+        "tool": "query_photos",
+        "arguments": {
+          "limit": 2,
+          "offset": 0
+        },
+        "result": null,
+        "error": {
+          "message": "MCP tool call requires approval, but approval policy is never"
+        },
+        "status": "failed"
+      }
+    ],
+    "elapsedSeconds": 22,
+    "hostVersion": "0.161.0",
+    "hostSha256": "12ac11d2c7eee27cfae34393986d7b7c9ed0dea537cb749831cdd7033893e6de",
+    "nativeSha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "sourceCommit": "3ff53db8b518f527f3c4345873682634755fe56f",
+    "scope": "manual temporary host configuration; actual fixed headless MCP only, not desktop Connect or plugin manifest auto registration",
+    "installationBaselineCommit": "9c4c029f2860cd1def39f58d7b6c8906b26028a0"
+  }
+]

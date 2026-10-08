@@ -1,0 +1,12 @@
+
+[mcp_servers.lightcraft_readonly]
+command = "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli"
+args = ["mcp", "--compact", "--library", "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-current-mcp-20261008/source-测试库"]
+enabled_tools = ["query_photos", "list_commands"]
+startup_timeout_sec = 30
+tool_timeout_sec = 30
+
+[mcp_servers.lightcraft_readonly.tools.query_photos]
+approval_mode = "approve"
+[mcp_servers.lightcraft_readonly.tools.list_commands]
+approval_mode = "approve"
