@@ -1,0 +1,29 @@
+{
+  "url": "https://github.com/storytold/lightcraft/releases/tag/v0.2.1",
+  "id": 404664767,
+  "tag": "v0.2.1",
+  "publishedAt": "2026-10-06T12:10:48Z",
+  "assets": [
+    {
+      "id": 615413891,
+      "name": "lightcraft-0.2.1-linux-aarch64.tar.gz",
+      "size": 48425036,
+      "digest": "sha256:57c0c2504de55a8bc6a0c9611a030272abd8e254b255e12f89114ed6bc16c69e",
+      "browser_download_url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-linux-aarch64.tar.gz"
+    },
+    {
+      "id": 615414152,
+      "name": "lightcraft-0.2.1-linux-x86_64.tar.gz",
+      "size": 50921955,
+      "digest": "sha256:543f91c96e4081e86065ec8fb3d62447b08bfd6ae0da22df50fc27a55bb9777d",
+      "browser_download_url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-linux-x86_64.tar.gz"
+    },
+    {
+      "id": 615414398,
+      "name": "lightcraft-cli-0.2.1-macos-universal.zip",
+      "size": 48579371,
+      "digest": "sha256:72ff4d0c63b403fd8b5fd5224de565318fe8cd956f8c4d6945d242b55a42d43b",
+      "browser_download_url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-cli-0.2.1-macos-universal.zip"
+    }
+  ]
+}

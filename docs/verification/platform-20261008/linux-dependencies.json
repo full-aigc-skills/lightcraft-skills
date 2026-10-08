@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--read-only",
+    "--cap-drop",
+    "ALL",
+    "--security-opt",
+    "no-new-privileges",
+    "--mount",
+    "type=bind,source=/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-platform-20261008,target=/work,readonly",
+    "--entrypoint",
+    "/bin/sh",
+    "python@sha256:34386ef0cb081344d7ec1c103ba398e6e9f64e9ab3a1509accc92a4e24a07258",
+    "-c",
+    "uname -a; cat /etc/os-release; ldd /work/linux-aarch64-native/runtime/lightcraft/0.2.1/lightcraft-cli; sha256sum /lib/aarch64-linux-gnu/libgcc_s.so.1 /lib/aarch64-linux-gnu/libm.so.6 /lib/aarch64-linux-gnu/libc.so.6 /lib/ld-linux-aarch64.so.1"
+  ],
+  "exitCode": 0,
+  "stdout": "Linux e054a4305538 7.0.14-linuxkit #1 SMP PREEMPT Sun Sep 20 16:14:09 UTC 2026 aarch64 GNU/Linux\nPRETTY_NAME=\"Debian GNU/Linux 12 (bookworm)\"\nNAME=\"Debian GNU/Linux\"\nVERSION_ID=\"12\"\nVERSION=\"12 (bookworm)\"\nVERSION_CODENAME=bookworm\nID=debian\nHOME_URL=\"https://www.debian.org/\"\nSUPPORT_URL=\"https://www.debian.org/support\"\nBUG_REPORT_URL=\"https://bugs.debian.org/\"\n\tlinux-vdso.so.1 (0x0000ffffa5e1c000)\n\tlibgcc_s.so.1 => /lib/aarch64-linux-gnu/libgcc_s.so.1 (0x0000ffffa32a0000)\n\tlibm.so.6 => /lib/aarch64-linux-gnu/libm.so.6 (0x0000ffffa31f0000)\n\tlibc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffa3040000)\n\t/lib/ld-linux-aarch64.so.1 (0x0000ffffa5de0000)\n046856f95f4636f1fc7c3a12bf4f3cd5634c2fc5145c3fdf7395d4f349fa69c7  /lib/aarch64-linux-gnu/libgcc_s.so.1\n3c4cb3be0b974edf05f023f85ab15107fb5afc2687163593d0d4cf8e80c17b39  /lib/aarch64-linux-gnu/libm.so.6\ne4ac8ae1d81e4865e3aadedb962879cf9415903b3f2ba81ec75e9962b86ab8b0  /lib/aarch64-linux-gnu/libc.so.6\n17538b8f9889a470c061f69a8fea8124da89627311cd16546c133a89f09056df  /lib/ld-linux-aarch64.so.1\n",
+  "stderr": "",
+  "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+  "scope": "actual recorded container runtime dependencies; no desktop acceptance"
+}

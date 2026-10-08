@@ -1,6 +1,6 @@
 # 公共运行契约
 
-仅锁定 macOS arm64 / CLI 0.2.1 / Python 3.11+；研究源码不证明固定发行具备相同能力。
+固定 CLI 0.2.1 / Python 3.11+，锁含 macOS arm64/x86_64 与 Linux aarch64/x86_64；锁存在不等于目标验收完成。当前 macOS arm64 与 Linux arm64 容器有实际照片闭环证据，其他目标见原生 CI。Windows 未接入；研究源码不能证明固定发行能力。
 
 把 `SKILL_DIR` 设置为宿主实际加载的本技能绝对目录，命令路径始终加引号。
 

@@ -21,7 +21,7 @@ class InstallerBoundaries(unittest.TestCase):
         b,lock=self.setup()
         with tempfile.TemporaryDirectory() as temporary:
             home=Path(temporary)/'runtime'
-            with self.assertRaisesRegex(ValueError,'unsupported_platform'):b.install(lock,home,platform_key='linux-x86_64')
+            with self.assertRaisesRegex(ValueError,'unsupported_platform'):b.install(lock,home,platform_key='plan9-mips')
             self.assertFalse(home.exists())
 
     def test_bad_archive_never_executes_and_no_destination(self):

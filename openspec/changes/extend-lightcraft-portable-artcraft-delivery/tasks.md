@@ -13,3 +13,7 @@
 ## 2026-10-08 选择性重建增量（1.3 保持 OPEN）
 
 明确曝光 1→2 后，失效选择与实际原生执行均为 photo/layout/pdf；photo-import 复用、基线摘要保持不变。真实三领域产物及独立重开、公共协议复核、篡改/无变化/库占用拒绝回归通过。证据：`docs/verification/rebuild-20261008/README.md`。本轮是显式验收驱动，非 ArtCraft 宿主调度；手机/平板设备与完整移动交付门禁尚未验收，因此不关闭 1.3，不同步或归档整个变更。
+
+## 2026-10-08 平台增量（1.1 保持 OPEN）
+
+技能源已新增 Linux aarch64/x86_64 官方制品锁与安全 tar 安装适配，并增加原生目标 CI；已完成 Linux arm64 容器的两图导入/显影/六产物解码及第二会话重开。macOS Developer ID 签名本机校验通过；本机 Intel 执行因缺少 Rosetta 未通过。其他目标 CI 结果和 Windows、插件受管来源配套仍独立核验，不能用来源候选的平台结果关闭插件或全平台任务。证据：`docs/verification/platform-20261008/README.md`。

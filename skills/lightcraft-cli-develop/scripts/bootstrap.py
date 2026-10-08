@@ -18,6 +18,7 @@ import time
 import urllib.parse
 import urllib.request
 import zipfile
+import tarfile
 
 MAX_BYTES = 1024 * 1024 * 1024
 LOCK_WAIT_SECONDS = 120
@@ -72,8 +73,34 @@ def download(url, destination):
             time.sleep(attempt + 1)
 
 
+def extract_tar(archive, destination):
+    """Linux 官方发布树：先验证所有成员，再手工复制普通文件。"""
+    destination=Path(destination)
+    if destination.exists() or destination.is_symlink():raise ValueError('unsafe_archive_destination')
+    with tarfile.open(archive,'r:gz') as source:
+        members=[];seen={};total=0
+        for item in source:
+            path=PurePosixPath(item.name)
+            if (len(members)>=10000 or path.is_absolute() or '..' in path.parts or not path.parts
+                    or '\\' in item.name or ':' in item.name or str(path) in seen
+                    or not (item.isfile() or item.isdir()) or item.issparse()):
+                raise ValueError('unsafe_archive: '+item.name)
+            seen[str(path)]=item;members.append(item);total+=item.size
+            if item.size<0 or total>MAX_BYTES:raise ValueError('archive_too_large')
+        for name in seen:
+            if any(str(parent) in seen and not seen[str(parent)].isdir() for parent in PurePosixPath(name).parents):
+                raise ValueError('unsafe_archive: file_directory_conflict')
+        for item in members:
+            target=destination.joinpath(*PurePosixPath(item.name).parts)
+            if item.isdir():target.mkdir(parents=True,exist_ok=True)
+            else:
+                target.parent.mkdir(parents=True,exist_ok=True)
+                with source.extractfile(item) as stream,target.open('xb') as out:shutil.copyfileobj(stream,out)
+
+
 def extract(archive, destination):
     """先检查全部成员，再解压；拒绝链接、重复路径和越界。"""
+    if not zipfile.is_zipfile(archive):return extract_tar(archive,destination)
     with zipfile.ZipFile(archive) as source:
         seen = set()
         total = 0
@@ -140,16 +167,19 @@ def install(lock, runtime_home, archive=None, platform_key=None):
     if not trusted_release_url(expected['url']):
         raise ValueError('untrusted_release_url')
     release_path = PurePosixPath(urllib.parse.urlsplit(expected['url']).path)
-    if (release_path.parent.name != f'v{version}'
-            or not release_path.name.startswith(f'{artifact}-{version}-')
-            or not release_path.name.endswith('.zip')):
+    if key in ('linux-aarch64','linux-x86_64'):
+        expected_name=f'lightcraft-{version}-{key}.tar.gz'
+    elif key in ('darwin-arm64','darwin-x86_64'):
+        expected_name=f'{artifact}-{version}-macos-universal.zip'
+    else:raise ValueError('unsupported_platform: '+key)
+    if release_path.parent.name != f'v{version}' or release_path.name != expected_name:
         raise ValueError('runtime_release_identity_mismatch')
     parent = Path(runtime_home).expanduser().absolute() / artifact.removesuffix('-cli')
     parent.mkdir(parents=True, exist_ok=True)
     if parent.is_symlink():
         raise ValueError('invalid_runtime_directory')
     destination = parent / version
-    # 当前发行矩阵仅支持 macOS；flock 随进程退出释放，不靠遗留 PID 判断活动状态。
+    # macOS/Linux 使用 flock；随进程退出释放，不靠遗留 PID 判断活动状态。
     import fcntl
     fd = os.open(parent / '.install.lock', os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
     with os.fdopen(fd, 'w') as mutex:
@@ -232,7 +262,7 @@ def doctor(lock, runtime_home, platform_key=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--runtime-home', default=os.environ.get('CRAFT_RUNTIME_HOME', str(Path.home() / '.local/share/craft-runtimes')))
-    parser.add_argument('--archive', type=Path, help='已下载的官方 ZIP；仍强制校验锁定摘要')
+    parser.add_argument('--archive', type=Path, help='已下载的官方 ZIP/tar.gz；仍强制校验锁定摘要')
     parser.add_argument('--no-install', action='store_true', help='纯检查，不执行安装或原生程序')
     args = parser.parse_args()
     try:

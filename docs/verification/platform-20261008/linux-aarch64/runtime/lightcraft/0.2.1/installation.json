@@ -1,0 +1,11 @@
+{
+  "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-linux-aarch64.tar.gz",
+  "archiveSha256": "57c0c2504de55a8bc6a0c9611a030272abd8e254b255e12f89114ed6bc16c69e",
+  "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+  "versionOutput": "lightcraft-cli 0.2.1",
+  "name": "lightcraft",
+  "version": "0.2.1",
+  "platform": "linux-aarch64",
+  "rawVersionOutput": "lightcraft-cli 0.2.1",
+  "source": "official-github-release"
+}

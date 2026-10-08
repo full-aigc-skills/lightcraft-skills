@@ -1,0 +1,57 @@
+{
+  "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+  "checks": [
+    {
+      "name": "signature",
+      "argv": [
+        "/usr/bin/codesign",
+        "--verify",
+        "--strict",
+        "--verbose=2",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli: valid on disk\n/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli: satisfies its Designated Requirement\n"
+    },
+    {
+      "name": "signer",
+      "argv": [
+        "/usr/bin/codesign",
+        "-d",
+        "--verbose=4",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "Executable=/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli\nIdentifier=lightcraft-cli\nFormat=Mach-O universal (x86_64 arm64)\nCodeDirectory v=20500 size=425978 flags=0x10000(runtime) hashes=13306+2 location=embedded\nVersionPlatform=1\nVersionMin=720896\nVersionSDK=984320\nHash type=sha256 size=32\nCandidateCDHash sha256=bc4a68a6d322ca0bcd61c56db032ce19dc721813\nCandidateCDHashFull sha256=bc4a68a6d322ca0bcd61c56db032ce19dc7218135cc89073c652a0491cf16cc5\nHash choices=sha256\nCMSDigest=bc4a68a6d322ca0bcd61c56db032ce19dc7218135cc89073c652a0491cf16cc5\nCMSDigestType=2\nExecutable Segment base=0\nExecutable Segment limit=42729472\nExecutable Segment flags=0x1\nPage size=4096\nCDHash=bc4a68a6d322ca0bcd61c56db032ce19dc721813\nSignature size=9063\nAuthority=Developer ID Application: Learning Machines LLC (DJ6XS33FX8)\nAuthority=Developer ID Certification Authority\nAuthority=Apple Root CA\nTimestamp=Oct 6, 2026 at 20:07:57\nInfo.plist=not bound\nTeamIdentifier=DJ6XS33FX8\nRuntime Version=15.5.0\nSealed Resources=none\nInternal requirements count=1 size=176\nTotal signatures=1\nChosen signature=1\n"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "/usr/bin/otool",
+        "-L",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli"
+      ],
+      "exitCode": 0,
+      "stdout": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli (architecture x86_64):\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1351.0.0)\n\t/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1.11.0)\n\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1889.5.3)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/System/Library/Frameworks/Metal.framework/Versions/A/Metal (compatibility version 1.0.0, current version 368.12.0)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 3502.1.255)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 3502.1.255)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli (architecture arm64):\n\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1351.0.0)\n\t/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore (compatibility version 1.2.0, current version 1.11.0)\n\t/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics (compatibility version 64.0.0, current version 1889.5.3)\n\t/usr/lib/libiconv.2.dylib (compatibility version 7.0.0, current version 7.0.0)\n\t/System/Library/Frameworks/Metal.framework/Versions/A/Metal (compatibility version 1.0.0, current version 368.12.0)\n\t/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation (compatibility version 300.0.0, current version 3502.1.255)\n\t/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 3502.1.255)\n\t/usr/lib/libobjc.A.dylib (compatibility version 1.0.0, current version 228.0.0)\n",
+      "stderr": ""
+    },
+    {
+      "name": "intel-attempt",
+      "argv": [
+        "/usr/bin/arch",
+        "-x86_64",
+        "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+        "--version"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "arch: posix_spawnp: /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli: Bad CPU type in executable\n"
+    }
+  ],
+  "signature": "PASS",
+  "intelExecution": "NOT_CONFIRMED",
+  "rosettaInstalled": false,
+  "notarization": "NOT_ASSESSED"
+}

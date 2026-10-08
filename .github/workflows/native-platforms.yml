@@ -1,0 +1,58 @@
+name: native-platforms
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'runtime/**'
+      - 'skills/**'
+      - 'scripts/native_acceptance.py'
+      - 'scripts/native-requirements.txt'
+      - '.github/workflows/native-platforms.yml'
+permissions:
+  contents: read
+jobs:
+  native:
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {runner: ubuntu-24.04-arm, target: linux-aarch64}
+          - {runner: ubuntu-24.04, target: linux-x86_64}
+          - {runner: macos-15-intel, target: darwin-x86_64}
+          - {runner: macos-15, target: darwin-arm64}
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+      - run: python -m pip install --only-binary=:all: --require-hashes -r scripts/native-requirements.txt
+      - run: python -I -B scripts/validate_package.py
+      - name: Execute fixed native photo workflow
+        run: python -I -B scripts/native_acceptance.py --allow-install --workdir "${{ runner.temp }}/native-${{ matrix.target }}"
+      - name: Check actual runner identity
+        run: |
+          python -I -B - <<'PY'
+          import json, pathlib
+          report=json.loads(pathlib.Path('${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json').read_text())
+          assert report['platform']=='${{ matrix.target }}', report['platform']
+          assert report['nativeStatus']=='PASS'
+          assert len(report['photos'])==2 and len(report['artifacts'])==6
+          PY
+      - name: Preserve exact native evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: native-${{ matrix.target }}
+          path: |
+            ${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/*-plan.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/receipt.json
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/stdout.log
+            ${{ runner.temp }}/native-${{ matrix.target }}/*/stderr.log
+            ${{ runner.temp }}/native-${{ matrix.target }}/exports/*
+            ${{ runner.temp }}/native-${{ matrix.target }}/originals/*
+          if-no-files-found: error
+          retention-days: 30

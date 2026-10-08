@@ -7,6 +7,24 @@
       "archiveSha256": "72ff4d0c63b403fd8b5fd5224de565318fe8cd956f8c4d6945d242b55a42d43b",
       "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
       "versionOutput": "lightcraft-cli 0.2.1"
+    },
+    "darwin-x86_64": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-cli-0.2.1-macos-universal.zip",
+      "archiveSha256": "72ff4d0c63b403fd8b5fd5224de565318fe8cd956f8c4d6945d242b55a42d43b",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "versionOutput": "lightcraft-cli 0.2.1"
+    },
+    "linux-aarch64": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-linux-aarch64.tar.gz",
+      "archiveSha256": "57c0c2504de55a8bc6a0c9611a030272abd8e254b255e12f89114ed6bc16c69e",
+      "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+      "versionOutput": "lightcraft-cli 0.2.1"
+    },
+    "linux-x86_64": {
+      "url": "https://github.com/storytold/lightcraft/releases/download/v0.2.1/lightcraft-0.2.1-linux-x86_64.tar.gz",
+      "archiveSha256": "543f91c96e4081e86065ec8fb3d62447b08bfd6ae0da22df50fc27a55bb9777d",
+      "binarySha256": "b008a5b86ca2a0a727714aa5d30ddcde59cd578ff0bfbda6bee76c7bf1507ab0",
+      "versionOutput": "lightcraft-cli 0.2.1"
     }
   }
 }

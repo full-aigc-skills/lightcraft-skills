@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "e3b91f0d6025dbfe77167b6747b5458d854de05df997da9a51a28399cc967906",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "README.md"
+      ],
+      "scope": "package, strict OpenSpec and source/generated resources"
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log"
+      ],
+      "testsPerVersion": 99
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "linux-aarch64/native-evidence.json",
+        "archived-artifacts.json"
+      ],
+      "scope": "Linux arm64 recorded container only; not all targets or host acceptance"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "partial platform extension; full target matrix and paired immutable source remain OPEN",
+  "completeAcceptance": false
+}

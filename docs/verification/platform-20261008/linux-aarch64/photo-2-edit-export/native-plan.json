@@ -1,0 +1,8 @@
+{"command": "library.select", "params": {"ids": [2], "active": 2}}
+{"command": "photo.inspect", "params": {"id": 2}}
+{"command": "develop.get", "params": {"id": 2}}
+{"command": "app.export", "params": {"path": "/work/linux-aarch64-native/exports/before-2.png", "format": "png", "width": 60}}
+{"command": "develop.set", "params": {"control": "light.exposure", "value": 0.5}}
+{"command": "develop.get", "params": {"id": 2}}
+{"command": "app.export", "params": {"path": "/work/linux-aarch64-native/exports/edited-2.png", "format": "png", "width": 60}}
+{"command": "app.export", "params": {"path": "/work/linux-aarch64-native/exports/edited-2.jpg", "format": "jpeg", "width": 60}}

@@ -1,0 +1,1 @@
+{"domain": "lightcraft", "steps": [{"command": "library.import", "params": {"paths": ["/work/linux-aarch64-native/originals/gradient.png", "/work/linux-aarch64-native/originals/gradient.jpg"], "mode": "add"}}, {"command": "catalog.query", "params": {"limit": 100}}]}

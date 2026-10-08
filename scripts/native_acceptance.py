@@ -4,6 +4,8 @@ import hashlib
 from datetime import datetime, timezone
 import importlib.util
 import json
+import platform
+import shutil
 from pathlib import Path
 import struct
 import subprocess
@@ -34,7 +36,7 @@ def native(workdir,archive=None):
     source=originals/'gradient.png';gradient(source)
     jpeg=originals/'gradient.jpg'
     inputs={}
-    reply={'schemaVersion':1,'startedAt':datetime.now(timezone.utc).isoformat(),'workdir':str(workdir),'nativeStatus':'STARTED','visual':'NOT_RUN','host':'NOT_RUN','RAW':'NOT_RUN'}
+    reply={'schemaVersion':1,'startedAt':datetime.now(timezone.utc).isoformat(),'workdir':str(workdir),'nativeStatus':'STARTED','visual':'NOT_RUN','host':'NOT_RUN','RAW':'NOT_RUN','platform':platform.system().lower()+'-'+platform.machine().lower(),'libc':platform.libc_ver(),'acceptanceDriverSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'runtimeLockSha256':load('bootstrap').digest(SCRIPTS/'runtime.lock.json')}
     def command(argv):
         result=subprocess.run([sys.executable,'-I','-B',*argv],capture_output=True,text=True)
         if result.returncode:raise ValueError('native_acceptance_command_failed: '+result.stdout[-4000:]+result.stderr[-2000:])
@@ -53,7 +55,13 @@ def native(workdir,archive=None):
         return receipt
     def step(command,**params):return {'command':command,'params':params}
     try:
-        subprocess.run(['sips','-s','format','jpeg',str(source),'--out',str(jpeg)],check=True,capture_output=True)
+        try:
+            from PIL import Image
+        except ImportError:
+            if not shutil.which('sips'):raise ValueError('image_decoder_required: Pillow or macOS sips')
+            subprocess.run(['sips','-s','format','jpeg',str(source),'--out',str(jpeg)],check=True,capture_output=True)
+        else:
+            with Image.open(source) as image:image.convert('RGB').save(jpeg,'JPEG')
         inputs=load('command_gateway').capture_inputs([originals]);reply['inputs']=inputs
         argv=[str(SCRIPTS/'bootstrap.py'),'--runtime-home',str(runtime)]
         if archive:argv+=['--archive',str(archive)]
@@ -91,6 +99,7 @@ def native(workdir,archive=None):
             reply['artifacts'].extend(facts)
             reply['receipts'].update({name:str(workdir/name/'receipt.json') for name in (edit_name,reopen_name)})
         if observed_sources!=set(inputs):raise ValueError('synthetic_input_coverage_incomplete')
+        if hashlib.sha256(Path(__file__).read_bytes()).hexdigest()!=reply['acceptanceDriverSha256']:raise ValueError('acceptance_driver_changed')
         reply.update(nativeStatus='PASS',scope='两个合成 PNG/JPEG 输入均独立显影、前后导出及第二会话重开；视觉仍未验收')
     except (ValueError,OSError,KeyError,TypeError,IndexError,AttributeError,subprocess.SubprocessError) as error:
         reply.update(nativeStatus='FAIL',error=str(error))

@@ -7,7 +7,7 @@ license: Apache-2.0
 # Lightcraft 环境诊断
 
 纯诊断与固定制品安装；先区分只检查和已授权安装。
-仅声明 CLI 0.2.1 / macOS arm64 / Python 3.11+ 的固定运行范围；原生、宿主和视觉验收状态分别记录。
+固定 CLI 0.2.1 / Python 3.11+；macOS arm64 与 Linux arm64 容器已实际验证。其他锁定目标仍按原生 CI/平台证据判断；宿主和视觉单独验收。
 
 ## 必要输入与执行
 
