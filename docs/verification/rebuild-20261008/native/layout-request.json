@@ -1,0 +1,73 @@
+{
+  "protocolVersion": "craft-task/v1",
+  "taskId": "layout",
+  "idempotencyKey": "layout",
+  "planHash": "1c344d77b4862ce33cf8a1415e50b42db24ea673f1752540a53cfb32dd3f8d48",
+  "inputRefs": [
+    {
+      "assetId": "developed-photo",
+      "version": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+      "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526"
+    }
+  ],
+  "expectedRevision": null,
+  "runtimeIdentity": {
+    "pluginId": "designcraft",
+    "pluginVersion": "lightcraft-exchange-local-acceptance",
+    "cliVersion": "0.2.1",
+    "sha256": "e18578b28f43d6c6854ded930065feed5c9ee8af6a2e51338aa675ba4a5723a8",
+    "mode": "headless",
+    "capabilitySnapshotSha256": "9ec2b504a09975ae0a3fd530bc74afa52abfcac4e7c083e8cb88a86f3eb5dd12"
+  },
+  "authorizationRef": "explicit-local-native-protocol-acceptance",
+  "budget": {
+    "currency": "USD",
+    "maxMinorUnits": 0,
+    "maxRevisions": 2,
+    "maxExternalCalls": 0
+  },
+  "deadline": "2099-01-01T00:00:00.000Z",
+  "payload": {
+    "schemaVersion": "craft-native-plan/v1",
+    "plan": {
+      "domain": "designcraft",
+      "steps": [
+        {
+          "command": "file.new",
+          "params": {
+            "width": 96,
+            "height": 64,
+            "pages": 1,
+            "facingPages": false,
+            "margins": 0
+          }
+        },
+        {
+          "command": "file.place",
+          "params": {
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/photo.png",
+            "x": 0,
+            "y": 0,
+            "width": 96
+          }
+        },
+        {
+          "command": "file.saveAs",
+          "params": {
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/page.designcraft"
+          }
+        },
+        {
+          "command": "file.exportPdf",
+          "params": {
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf"
+          }
+        },
+        {
+          "command": "document.inspect",
+          "params": {}
+        }
+      ]
+    }
+  }
+}

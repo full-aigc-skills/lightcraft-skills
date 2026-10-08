@@ -38,7 +38,7 @@ try{
  const tasks=new Map(report.requests.map((request:any)=>[request.taskId,request]));
  const node=(id:string,parents:string[])=>({id,dependsOn:parents,request:tasks.get(id),inputs:tasks.get(id).inputRefs.map((ref:any)=>artifactById.get(ref.assetId))});
  const previous=[node('photo',[]),node('layout',['photo']),node('pdf',['layout']),{...node('photo-import',[]),id:'unrelated'}];
- const current=structuredClone(previous);current[0].request.payload.plan.steps[1].params.value=2;current[0].request.planHash=planHash(current[0].request.payload);
+ const current=structuredClone(previous);current[0].request.payload.plan.steps[1].params.value+=1;current[0].request.planHash=planHash(current[0].request.payload);
  const result=own.invalidation(previous,current,policy),official=[...invalidated(current,['photo'])];
  assert.deepEqual(result.invalidated,official);assert.deepEqual(result.invalidated,['photo','layout','pdf']);assert.deepEqual(result.reusable,['unrelated']);
  const numbers=[{v:-0},{v:1e-7},{v:0.000001},{v:0.25},{'😀':true,'\ue000':'中文'}];for(const value of numbers)assert.equal(own.planHash(value),planHash(value));

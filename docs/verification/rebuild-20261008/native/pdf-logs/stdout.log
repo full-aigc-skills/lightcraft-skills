@@ -1,0 +1,75 @@
+{
+  "dirty": false,
+  "doc": 1,
+  "editable": true,
+  "encrypted": false,
+  "name": "layout.pdf",
+  "pages": 1,
+  "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf",
+  "read_only_reason": null,
+  "redo": null,
+  "undo": null
+}
+{
+  "annotations": [],
+  "attachments": [],
+  "author": null,
+  "creator": "DesignCraft",
+  "document": {
+    "dirty": false,
+    "doc": 1,
+    "editable": true,
+    "encrypted": false,
+    "name": "layout.pdf",
+    "pages": 1,
+    "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf",
+    "read_only_reason": null,
+    "redo": null,
+    "undo": null
+  },
+  "fields": [],
+  "file_size": 12458,
+  "fonts": [],
+  "has_javascript": false,
+  "keywords": null,
+  "layers": [],
+  "links": [],
+  "outline": [],
+  "pages": [
+    {
+      "height": 64.0,
+      "label": "1",
+      "page": 1,
+      "rotation": 0,
+      "width": 96.0
+    }
+  ],
+  "pdf_version": "1.7",
+  "producer": "DesignCraft",
+  "repairs": [],
+  "security": {
+    "protected": false
+  },
+  "subject": null,
+  "tagged": false,
+  "title": "Untitled-2",
+  "warnings": [],
+  "xfa": null
+}
+{
+  "bytes": 12370,
+  "document": {
+    "dirty": false,
+    "doc": 1,
+    "editable": true,
+    "encrypted": false,
+    "name": "delivery.pdf",
+    "pages": 1,
+    "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf",
+    "read_only_reason": null,
+    "redo": null,
+    "undo": null
+  },
+  "incremental": false,
+  "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf"
+}

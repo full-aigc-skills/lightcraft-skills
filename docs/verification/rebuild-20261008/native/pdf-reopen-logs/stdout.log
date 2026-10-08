@@ -1,0 +1,28 @@
+{
+  "annotations": 0,
+  "attachments": 0,
+  "author": null,
+  "bookmarks": 0,
+  "creator": "DesignCraft",
+  "encrypted": false,
+  "fields": 0,
+  "file": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf",
+  "file_size": 12370,
+  "first_page_pt": [
+    96.0,
+    64.0
+  ],
+  "javascript": false,
+  "layers": 0,
+  "links": 0,
+  "page_labels": [
+    "1"
+  ],
+  "pages": 1,
+  "pdf_version": "1.7",
+  "producer": "DesignCraft",
+  "tagged": false,
+  "title": "Untitled-2",
+  "warnings": [],
+  "xfa": null
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "changed": [
+    "photo"
+  ],
+  "invalidated": [
+    "photo",
+    "layout",
+    "pdf"
+  ],
+  "reusable": [
+    "photo-import"
+  ],
+  "previousFingerprint": {
+    "photo": "bdce56de168a66ead03730ed733718d82e622098b8311f36578c245515050fef",
+    "layout": "4ca92a7419735a927175bc131b4de04a7e79a385fdd6fbe254d21d0f64c938dc",
+    "pdf": "51bcec7c53f8385e5f8068150453caa07b5a7e7a6ec7cc5e84915103fc470ff8",
+    "photo-import": "e31bc4dc8854b3f1bb54cc920b2526f6fee8a33054ab4b42a28e52971e4f47a0"
+  },
+  "currentFingerprint": {
+    "photo": "4172c84fbe49420ac629a2708aef5ccd2cb84465d5d7284ae24466e74509ca2d",
+    "layout": "4ca92a7419735a927175bc131b4de04a7e79a385fdd6fbe254d21d0f64c938dc",
+    "pdf": "51bcec7c53f8385e5f8068150453caa07b5a7e7a6ec7cc5e84915103fc470ff8",
+    "photo-import": "e31bc4dc8854b3f1bb54cc920b2526f6fee8a33054ab4b42a28e52971e4f47a0"
+  },
+  "automaticReplay": false,
+  "executionAllowed": false
+}

@@ -13,3 +13,9 @@
 跨技能交接按名称安装：**designcraft-use**：`npx skills add full-aigc-skills/designcraft-skills --skill designcraft-use`；**printcraft-use**：`npx skills add full-aigc-skills/printcraft-skills --skill printcraft-use`。不依赖本机兄弟目录路径或未安装的技能内部模块。
 
 实际范围、固定二进制与剩余宿主/平台/移动门禁见 [验收记录](verification/exchange-20261008/README.md)。
+
+## 选择性重建验收入口
+
+技能源仓库的 `scripts/craft_exchange_acceptance.py` 支持 `--allow-native --rebuild-from <既有原生报告> --exposure 2 --workdir <不存在的新目录>`，另外必须显式提供三个已有 CLI、三个运行时锁和本次 `--contract` 路径。这个入口是仓库级 macOS 验收驱动，未作为插件宿主调度器或独立安装技能的公共重建 API 分发。
+
+只接受该夹具原生基线的 photo-import/photo/layout/pdf 四节点，当前实测曝光 1→2。运行时、schema、基线产物和整个基线目录核对后，克隆独立库；原库被占用时拒绝，不强制解锁。执行前绑定失效集合与全部三节点原生计划摘要，逐阶段再绑定实际新上游文件版本。只能执行 photo/layout/pdf，导入事实从基线复用；基线输入、旧产物及新产物摘要均保留。`invalidate` 和插件 `craft-inspect` 本身仍不触发执行。详见 [本轮原生证据](verification/rebuild-20261008/README.md)。

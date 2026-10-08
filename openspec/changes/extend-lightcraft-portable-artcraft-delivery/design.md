@@ -22,3 +22,7 @@ Goals: 平台制品和跨领域交付。Non-Goals: 不修改基础变更验收�
 ### 三领域协议消费与失效契约
 
 公共 craft-task/v1、craft-artifact/v1 的规范事实源仍为 ArtCraft；按当前干净 Git 检出的 commit 和 schema SHA256 固定消费快照，不声称来源已公开发布。消费器只验证任务与文件、计算确定性 DAG 失效；原生执行由显式调度器负责，不由交接 JSON 授权。Lightcraft/Designcraft/Printcraft 的运行时兼容表必须由调用方提供，不能由输入请求自举信任。协议计算使用 Node 24 的原生 JSON 数值/字符串编码，与 ArtCraft 的 planHash 保持同一语义，避免 Python 浮点或 Unicode 排序差异。
+
+### 显式选择性原生重建验收
+
+在不可变验收基线旁创建独立目录，克隆基线库并保留原媒体位置，核对所有基线文件/库摘要；原库和媒体不修改。仅显式 `--allow-native --rebuild-from` 启动一轮验收，不由 invalidate 计算自动触发执行。执行前按实际新 payload 和固定运行时计算 DAG 失效，限定本验收三节点闭包；导入节点仅复用历史事实，不启动其原生请求。当前实际执行记录必须与选择计划一致，并绑定基线库、原图、旧产物以及新产物。移动设备门禁保持独立 OPEN。

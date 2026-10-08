@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "22e5b9bddf7025a32b6c6da88e3dd347d88e9fb6fbe0764b2bf616bd51110721",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "README.md"
+      ],
+      "scope": "package validation, strict OpenSpec and generated/source snapshot consistency"
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log"
+      ],
+      "testsPerVersion": 94
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "native/native-exchange-report.json",
+        "native/protocol-acceptance.json",
+        "failure-regressions.json",
+        "plugin-selection-inspection.json",
+        "archived-artifact-verification.json"
+      ],
+      "scope": "explicit local native selective rebuild fixture; not ArtCraft scheduler or mobile delivery"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "partial SEXT3-3/PEXT3-3; mobile gates remain OPEN",
+  "completeAcceptance": false
+}

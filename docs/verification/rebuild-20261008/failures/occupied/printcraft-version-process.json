@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:47:01.706022+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/printcraft-dev6-host/runtime/printcraft/0.2.1/printcraft-cli",
+    "--version"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 74197,
+  "processStartedAt": "2026-10-08T14:47:01.708998+00:00",
+  "processIdentity": "Thu Oct  8 22:47:01 2026     (printcraft-cli)",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:47:01.716192+00:00",
+  "stdout": "printcraft-cli 0.2.1\nDiscord: https://discord.gg/artcraft  (help and feedback)\nWeb:     https://getartcraft.com/apps/printcraft\nSource:  https://github.com/storytold/printcraft\n",
+  "stderr": "",
+  "stdoutBytes": 177,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-occupied-v2/printcraft-version-logs",
+  "logComplete": true
+}

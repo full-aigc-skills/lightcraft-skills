@@ -1,0 +1,137 @@
+{
+  "completed": 5,
+  "results": [
+    {
+      "index": 1
+    },
+    {
+      "asset": 7,
+      "id": 8
+    },
+    {
+      "bytes": 7116,
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/page.designcraft"
+    },
+    {
+      "bytes": 12458,
+      "pages": 1,
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf",
+      "warnings": []
+    },
+    {
+      "activeLayer": 1,
+      "canUndo": true,
+      "characterStyles": [
+        "[None]"
+      ],
+      "dirty": false,
+      "layers": [
+        {
+          "color": [
+            43,
+            155,
+            255
+          ],
+          "id": 1,
+          "locked": false,
+          "name": "Layer 1",
+          "printable": true,
+          "showGuides": true,
+          "suppressWrapWhenHidden": false,
+          "visible": true
+        }
+      ],
+      "pageCount": 1,
+      "paragraphStyles": [
+        "[No Paragraph Style]",
+        "[Basic Paragraph]"
+      ],
+      "parents": [
+        {
+          "id": 3,
+          "items": 0,
+          "label": "A-Parent"
+        }
+      ],
+      "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/page.designcraft",
+      "selection": {
+        "content": false,
+        "items": [
+          8
+        ]
+      },
+      "settings": {
+        "facingPages": false,
+        "intent": "print",
+        "pageHeight": 64.0,
+        "pageWidth": 96.0
+      },
+      "spreads": [
+        {
+          "index": 0,
+          "items": [
+            {
+              "asset": 7,
+              "bounds": [
+                0.0,
+                0.0,
+                96.0,
+                64.0
+              ],
+              "fill": "[None]",
+              "hidden": false,
+              "id": 8,
+              "kind": "<image>",
+              "layer": 1,
+              "locked": false,
+              "name": "",
+              "stroke": {
+                "swatch": "[None]",
+                "weight": 1.0
+              }
+            }
+          ],
+          "pages": [
+            {
+              "bounds": [
+                0.0,
+                0.0,
+                96.0,
+                64.0
+              ],
+              "columns": 1,
+              "index": 0,
+              "margins": {
+                "bottom": 0.0,
+                "inside": 0.0,
+                "outside": 0.0,
+                "top": 0.0
+              },
+              "name": "1",
+              "parent": "A-Parent",
+              "side": "single"
+            }
+          ]
+        }
+      ],
+      "stories": [],
+      "swatches": [
+        "[None]",
+        "[Registration]",
+        "[Paper]",
+        "[Black]",
+        "C=100 M=0 Y=0 K=0",
+        "C=0 M=100 Y=0 K=0",
+        "C=0 M=0 Y=100 K=0",
+        "C=0 M=100 Y=100 K=0",
+        "C=100 M=0 Y=100 K=0",
+        "C=100 M=100 Y=0 K=0",
+        "C=15 M=100 Y=100 K=0",
+        "C=75 M=5 Y=100 K=0",
+        "C=100 M=90 Y=10 K=0"
+      ],
+      "title": "page.designcraft",
+      "tool": "selection"
+    }
+  ]
+}

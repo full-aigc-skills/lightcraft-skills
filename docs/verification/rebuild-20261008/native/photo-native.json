@@ -1,0 +1,4 @@
+{"command": "library.select", "params": {"ids": [1], "active": 1}}
+{"command": "develop.set", "params": {"control": "light.exposure", "value": 2}}
+{"command": "app.export", "params": {"path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/photo.png", "format": "png", "width": 96}}
+{"command": "library.info", "params": {}}

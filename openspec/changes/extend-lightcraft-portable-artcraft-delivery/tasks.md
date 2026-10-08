@@ -9,3 +9,7 @@
 ## 2026-10-08 三领域协议验收
 
 1.2 完成：固定 schema/版本、可信兼容表、craft-task 与 craft-artifact 消费和变更失效回归通过；实际 LightCraft→DesignCraft→PrintCraft 产物、ArtCraft 公共校验与 planned 账本及依赖图对照通过。证据：`docs/verification/exchange-20261008/README.md`。不声明 ArtCraft 宿主自动调度或选择性原生重建；其他任务保持 OPEN。
+
+## 2026-10-08 选择性重建增量（1.3 保持 OPEN）
+
+明确曝光 1→2 后，失效选择与实际原生执行均为 photo/layout/pdf；photo-import 复用、基线摘要保持不变。真实三领域产物及独立重开、公共协议复核、篡改/无变化/库占用拒绝回归通过。证据：`docs/verification/rebuild-20261008/README.md`。本轮是显式验收驱动，非 ArtCraft 宿主调度；手机/平板设备与完整移动交付门禁尚未验收，因此不关闭 1.3，不同步或归档整个变更。

@@ -1,0 +1,27 @@
+{
+  "operation": "artifact",
+  "root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2",
+  "artifact": {
+    "protocolVersion": "craft-artifact/v1",
+    "assetId": "delivery-pdf",
+    "version": "b2cc05d0bfc9fee8308b28e3650fd4db67651f199ce1d6a3d983e96049ebfde4",
+    "sha256": "b2cc05d0bfc9fee8308b28e3650fd4db67651f199ce1d6a3d983e96049ebfde4",
+    "bytes": 14979,
+    "mediaType": "application/pdf",
+    "producerTaskId": "pdf",
+    "sourceRefs": [
+      {
+        "assetId": "layout-pdf",
+        "version": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48",
+        "sha256": "714533d24d7a47f71a778ee27bd04d27a14847636be96a12cbd8f03904605a48"
+      }
+    ],
+    "nativeProjectRef": null,
+    "renditions": [],
+    "dependencies": [],
+    "technicalMetadata": {},
+    "lossReportRef": null,
+    "evidenceRefs": [],
+    "location": "delivery.pdf"
+  }
+}

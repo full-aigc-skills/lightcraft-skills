@@ -1,0 +1,27 @@
+{
+  "operation": "artifact",
+  "root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-exchange-20261008/native-source-final-v2",
+  "artifact": {
+    "protocolVersion": "craft-artifact/v1",
+    "assetId": "developed-photo",
+    "version": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+    "sha256": "152075fc86224d3dbb430cbb9ee690abd7e4856ea9eba8268435ff96d537c744",
+    "bytes": 2203,
+    "mediaType": "image/png",
+    "producerTaskId": "photo",
+    "sourceRefs": [
+      {
+        "assetId": "original-photo",
+        "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+        "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+      }
+    ],
+    "nativeProjectRef": null,
+    "renditions": [],
+    "dependencies": [],
+    "technicalMetadata": {},
+    "lossReportRef": null,
+    "evidenceRefs": [],
+    "location": "photo.png"
+  }
+}

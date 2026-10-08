@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:47:01.574398+00:00",
+  "argv": [
+    "/Users/wandl/.local/share/craft-runtimes/designcraft/0.2.1/designcraft-cli",
+    "--version"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 74190,
+  "processStartedAt": "2026-10-08T14:47:01.577010+00:00",
+  "processIdentity": "Thu Oct  8 22:47:01 2026     <defunct>",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:47:01.582168+00:00",
+  "stdout": "designcraft-cli 0.2.1\n",
+  "stderr": "",
+  "stdoutBytes": 22,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-occupied-v2/designcraft-version-logs",
+  "logComplete": true
+}

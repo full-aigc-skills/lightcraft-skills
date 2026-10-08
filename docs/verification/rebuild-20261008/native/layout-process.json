@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:46:59.944962+00:00",
+  "argv": [
+    "/Users/wandl/.local/share/craft-runtimes/designcraft/0.2.1/designcraft-cli",
+    "script",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout-native.json"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 74061,
+  "processStartedAt": "2026-10-08T14:46:59.947936+00:00",
+  "processIdentity": "Thu Oct  8 22:46:59 2026     /Users/wandl/.local/share/craft-runtimes/designcraft/0.2.1/designcraft-cli script /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout-native.json",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:46:59.956715+00:00",
+  "stdout": "{\n  \"completed\": 5,\n  \"results\": [\n    {\n      \"index\": 1\n    },\n    {\n      \"asset\": 7,\n      \"id\": 8\n    },\n    {\n      \"bytes\": 7116,\n      \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/page.designcraft\"\n    },\n    {\n      \"bytes\": 12458,\n      \"pages\": 1,\n      \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf\",\n      \"warnings\": []\n    },\n    {\n      \"activeLayer\": 1,\n      \"canUndo\": true,\n      \"characterStyles\": [\n        \"[None]\"\n      ],\n      \"dirty\": false,\n      \"layers\": [\n        {\n          \"color\": [\n            43,\n            155,\n            255\n          ],\n          \"id\": 1,\n          \"locked\": false,\n          \"name\": \"Layer 1\",\n          \"printable\": true,\n          \"showGuides\": true,\n          \"suppressWrapWhenHidden\": false,\n          \"visible\": true\n        }\n      ],\n      \"pageCount\": 1,\n      \"paragraphStyles\": [\n        \"[No Paragraph Style]\",\n        \"[Basic Paragraph]\"\n      ],\n      \"parents\": [\n        {\n          \"id\": 3,\n          \"items\": 0,\n          \"label\": \"A-Parent\"\n        }\n      ],\n      \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/page.designcraft\",\n      \"selection\": {\n        \"content\": false,\n        \"items\": [\n          8\n        ]\n      },\n      \"settings\": {\n        \"facingPages\": false,\n        \"intent\": \"print\",\n        \"pageHeight\": 64.0,\n        \"pageWidth\": 96.0\n      },\n      \"spreads\": [\n        {\n          \"index\": 0,\n          \"items\": [\n            {\n              \"asset\": 7,\n              \"bounds\": [\n                0.0,\n                0.0,\n                96.0,\n                64.0\n              ],\n              \"fill\": \"[None]\",\n              \"hidden\": false,\n              \"id\": 8,\n              \"kind\": \"<image>\",\n              \"layer\": 1,\n              \"locked\": false,\n              \"name\": \"\",\n              \"stroke\": {\n                \"swatch\": \"[None]\",\n                \"weight\": 1.0\n              }\n            }\n          ],\n          \"pages\": [\n            {\n              \"bounds\": [\n                0.0,\n                0.0,\n                96.0,\n                64.0\n              ],\n              \"columns\": 1,\n              \"index\": 0,\n              \"margins\": {\n                \"bottom\": 0.0,\n                \"inside\": 0.0,\n                \"outside\": 0.0,\n                \"top\": 0.0\n              },\n              \"name\": \"1\",\n              \"parent\": \"A-Parent\",\n              \"side\": \"single\"\n            }\n          ]\n        }\n      ],\n      \"stories\": [],\n      \"swatches\": [\n        \"[None]\",\n        \"[Registration]\",\n        \"[Paper]\",\n        \"[Black]\",\n        \"C=100 M=0 Y=0 K=0\",\n        \"C=0 M=100 Y=0 K=0\",\n        \"C=0 M=0 Y=100 K=0\",\n        \"C=0 M=100 Y=100 K=0\",\n        \"C=100 M=0 Y=100 K=0\",\n        \"C=100 M=100 Y=0 K=0\",\n        \"C=15 M=100 Y=100 K=0\",\n        \"C=75 M=5 Y=100 K=0\",\n        \"C=100 M=90 Y=10 K=0\"\n      ],\n      \"title\": \"page.designcraft\",\n      \"tool\": \"selection\"\n    }\n  ]\n}\n",
+  "stderr": "",
+  "stdoutBytes": 3162,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout-logs",
+  "logComplete": true
+}

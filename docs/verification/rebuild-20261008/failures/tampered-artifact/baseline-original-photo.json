@@ -1,0 +1,21 @@
+{
+  "operation": "artifact",
+  "root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-tampered-baseline-v2",
+  "artifact": {
+    "protocolVersion": "craft-artifact/v1",
+    "assetId": "original-photo",
+    "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+    "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+    "bytes": 12703,
+    "mediaType": "image/png",
+    "producerTaskId": "fixture",
+    "sourceRefs": [],
+    "nativeProjectRef": null,
+    "renditions": [],
+    "dependencies": [],
+    "technicalMetadata": {},
+    "lossReportRef": null,
+    "evidenceRefs": [],
+    "location": "original.png"
+  }
+}

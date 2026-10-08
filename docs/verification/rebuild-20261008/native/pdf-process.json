@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-10-08T14:47:00.065305+00:00",
+  "argv": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/printcraft-dev6-host/runtime/printcraft/0.2.1/printcraft-cli",
+    "run",
+    "--script",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/pdf-native.json"
+  ],
+  "status": "EXITED",
+  "automaticReplay": false,
+  "descendantsConfirmedStopped": false,
+  "pid": 74066,
+  "processStartedAt": "2026-10-08T14:47:00.068111+00:00",
+  "processIdentity": "Thu Oct  8 22:47:00 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/printcraft-dev6-host/runtime/printcraft/0.2.1/printcraft-cli run --script /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/pdf-native.json",
+  "exitCode": 0,
+  "endedAt": "2026-10-08T14:47:00.076633+00:00",
+  "stdout": "{\n  \"dirty\": false,\n  \"doc\": 1,\n  \"editable\": true,\n  \"encrypted\": false,\n  \"name\": \"layout.pdf\",\n  \"pages\": 1,\n  \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf\",\n  \"read_only_reason\": null,\n  \"redo\": null,\n  \"undo\": null\n}\n{\n  \"annotations\": [],\n  \"attachments\": [],\n  \"author\": null,\n  \"creator\": \"DesignCraft\",\n  \"document\": {\n    \"dirty\": false,\n    \"doc\": 1,\n    \"editable\": true,\n    \"encrypted\": false,\n    \"name\": \"layout.pdf\",\n    \"pages\": 1,\n    \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf\",\n    \"read_only_reason\": null,\n    \"redo\": null,\n    \"undo\": null\n  },\n  \"fields\": [],\n  \"file_size\": 12458,\n  \"fonts\": [],\n  \"has_javascript\": false,\n  \"keywords\": null,\n  \"layers\": [],\n  \"links\": [],\n  \"outline\": [],\n  \"pages\": [\n    {\n      \"height\": 64.0,\n      \"label\": \"1\",\n      \"page\": 1,\n      \"rotation\": 0,\n      \"width\": 96.0\n    }\n  ],\n  \"pdf_version\": \"1.7\",\n  \"producer\": \"DesignCraft\",\n  \"repairs\": [],\n  \"security\": {\n    \"protected\": false\n  },\n  \"subject\": null,\n  \"tagged\": false,\n  \"title\": \"Untitled-2\",\n  \"warnings\": [],\n  \"xfa\": null\n}\n{\n  \"bytes\": 12370,\n  \"document\": {\n    \"dirty\": false,\n    \"doc\": 1,\n    \"editable\": true,\n    \"encrypted\": false,\n    \"name\": \"delivery.pdf\",\n    \"pages\": 1,\n    \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf\",\n    \"read_only_reason\": null,\n    \"redo\": null,\n    \"undo\": null\n  },\n  \"incremental\": false,\n  \"path\": \"/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf\"\n}\n",
+  "stderr": "",
+  "stdoutBytes": 1771,
+  "stderrBytes": 0,
+  "stdoutTruncated": false,
+  "stderrTruncated": false,
+  "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/pdf-logs",
+  "logComplete": true
+}

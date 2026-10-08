@@ -1,0 +1,123 @@
+{
+  "operation": "task",
+  "request": {
+    "protocolVersion": "craft-task/v1",
+    "taskId": "pdf",
+    "idempotencyKey": "pdf",
+    "planHash": "d654d4574354941eacb9522a700b348b2bb493ca85de423547d6450ed0f0abdf",
+    "inputRefs": [
+      {
+        "assetId": "layout-pdf",
+        "version": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+        "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f"
+      }
+    ],
+    "expectedRevision": null,
+    "runtimeIdentity": {
+      "pluginId": "printcraft",
+      "pluginVersion": "lightcraft-exchange-local-acceptance",
+      "cliVersion": "0.2.1",
+      "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+      "mode": "headless",
+      "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+    },
+    "authorizationRef": "explicit-local-native-protocol-acceptance",
+    "budget": {
+      "currency": "USD",
+      "maxMinorUnits": 0,
+      "maxRevisions": 2,
+      "maxExternalCalls": 0
+    },
+    "deadline": "2099-01-01T00:00:00.000Z",
+    "payload": {
+      "schemaVersion": "craft-native-plan/v1",
+      "plan": {
+        "domain": "printcraft",
+        "steps": [
+          {
+            "command": "doc_open",
+            "params": {
+              "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/layout.pdf"
+            }
+          },
+          {
+            "command": "doc_info",
+            "params": {
+              "doc": 1
+            }
+          },
+          {
+            "command": "doc_save",
+            "params": {
+              "doc": 1,
+              "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2/delivery.pdf",
+              "full": true
+            }
+          }
+        ]
+      }
+    }
+  },
+  "policy": {
+    "schemaVersion": 1,
+    "runtimes": [
+      {
+        "pluginId": "lightcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "a24be4d0e37617fc45e1588d92ad656da1d289a3537b934353ceaf56de5fcec0"
+      },
+      {
+        "pluginId": "designcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "e18578b28f43d6c6854ded930065feed5c9ee8af6a2e51338aa675ba4a5723a8",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "9ec2b504a09975ae0a3fd530bc74afa52abfcac4e7c083e8cb88a86f3eb5dd12"
+      },
+      {
+        "pluginId": "printcraft",
+        "pluginVersion": "lightcraft-exchange-local-acceptance",
+        "cliVersion": "0.2.1",
+        "sha256": "b7783b596870ed5a326f29456d4647382d2e1e4d7b7ffe75ded192cd15b86995",
+        "mode": "headless",
+        "capabilitySnapshotSha256": "0ff11f5d0c71533a616fa9216251493de4f4107d0e1c8cf39c43295ed37b6310"
+      }
+    ]
+  },
+  "inputs": [
+    {
+      "root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-rebuild-20261008/source-positive-v2",
+      "artifact": {
+        "protocolVersion": "craft-artifact/v1",
+        "assetId": "layout-pdf",
+        "version": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+        "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+        "bytes": 12458,
+        "mediaType": "application/pdf",
+        "producerTaskId": "layout",
+        "sourceRefs": [
+          {
+            "assetId": "developed-photo",
+            "version": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+            "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526"
+          }
+        ],
+        "nativeProjectRef": {
+          "assetId": "layout-native",
+          "version": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982",
+          "sha256": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982",
+          "location": "page.designcraft"
+        },
+        "renditions": [],
+        "dependencies": [],
+        "technicalMetadata": {},
+        "lossReportRef": null,
+        "evidenceRefs": [],
+        "location": "layout.pdf"
+      }
+    }
+  ]
+}
