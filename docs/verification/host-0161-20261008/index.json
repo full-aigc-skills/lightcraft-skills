@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "host": "Codex CLI 0.161.0",
+  "platform": "darwin-arm64",
+  "status": "PASS",
+  "cacheContainsChineseAndSpaces": true,
+  "scenarios": [
+    {
+      "name": "natural",
+      "status": "PASS",
+      "commands": 3,
+      "evidence": "natural.json"
+    },
+    {
+      "name": "explicit",
+      "status": "PASS",
+      "commands": 3,
+      "evidence": "explicit.json"
+    },
+    {
+      "name": "recovery",
+      "status": "PASS",
+      "commands": 8,
+      "evidence": "recovery.json"
+    },
+    {
+      "name": "missing-dependency",
+      "status": "PASS",
+      "commands": 4,
+      "evidence": "missing-dependency.json"
+    },
+    {
+      "name": "unrelated",
+      "status": "PASS",
+      "commands": 0,
+      "evidence": "unrelated.json"
+    }
+  ],
+  "scope": "actual host model invocation; six Lightcraft skills enabled in an isolated host home; other skills disabled for these processes only; no global config changes",
+  "fullEnvironment": {
+    "skills": 771,
+    "naturalEntryRead": "PASS_VIA_FILE_SEARCH",
+    "descriptionInjection": "CONTEXT_BUDGET_EXCEEDED",
+    "status": "LIMITED_NOT_DEFAULT_DISCOVERY_PROOF"
+  },
+  "sourceCommits": {
+    "lightcraft-skills": "5d3882441bdc9f0c3232b6bb3480169ff61475fa",
+    "lightcraft-plugin": "5cf70d3df1d2673caef287ed4d2b4b98385c8006"
+  },
+  "filesSha256": {
+    "natural.json": "deda92467d1d280cfa8b809db0897cf0006c39955a777f430ca90b7b47e2be6e",
+    "explicit.json": "7ef31420ed3b6c2f29e8cf2f24991ed5e708dd1fb46459d4b29f390160c670c7",
+    "recovery.json": "263939ec2f27e8d2a4220785db243cf1ace7dde736dbdaf0a5e2d1e2b79aa016",
+    "missing-dependency.json": "af375766e7df18275b680408a0e8703f7fcd49d03c8371543f05a9691987d363",
+    "unrelated.json": "626c0f25c58682e53d496c81df481b6ecbd1c0e14e07c42afa78d6f08b03ecb8",
+    "discovery.json": "82a92f43b547b07aed788825da04561edafd70b727772366e0d32cd404da40e6"
+  }
+}

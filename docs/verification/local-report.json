@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T12:31:05.010760+00:00",
-  "sourceFingerprint": "f5653cf8c8cdbd9d9aafce5b0f6d52346284189bb25af93c388778eb592b67fc",
+  "generatedAt": "2026-10-08T12:49:10.178783+00:00",
+  "sourceFingerprint": "7d970ab1ea3471d1b6f68db61ba1949ee693970a3a945fcb4fae5ce94d47ceda",
   "project": "lightcraft-skills",
   "developmentVersion": "0.1.0-dev.1",
   "pinnedNativeVersion": "0.2.1",
@@ -88,11 +88,12 @@
       "scope": "fixed 0.2.1 macOS arm64 PNG/JPEG; four RAW model variants with full/reported, preview fallback and unsupported results"
     },
     "host": {
-      "status": "BLOCKED",
+      "status": "PASS",
       "evidence": [
-        "docs/verification/native-20261008/host-discovery.json"
+        "docs/verification/host-0161-20261008/index.json"
       ],
-      "reason": "six skills installed/discovered; CLI 0.147.0 cannot invoke configured gpt-6-astra model and skills context budget exceeded; natural language scenarios not accepted"
+      "scope": "actual host model invocation; six Lightcraft skills enabled in an isolated host home; other skills disabled for these processes only; no global config changes",
+      "fullEnvironmentLimitation": "771 skills exceed context budget; full environment description injection not accepted"
     },
     "visual": {
       "status": "PASS",
@@ -141,15 +142,13 @@
     "license text and receipt example changes did not invalidate source evidence"
   ],
   "releasePreflight": {
-    "ready": false,
-    "missing": [
-      "host"
-    ],
+    "ready": true,
+    "missing": [],
     "published": false,
     "automaticPublish": false
   },
   "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
   "managedSkillFiles": 108,
-  "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
+  "releaseStatus": "READY_FOR_AUTHORIZED_DEVELOPMENT_PRERELEASE",
   "documentationUpdate": "real native/host evidence and completed task markers"
 }

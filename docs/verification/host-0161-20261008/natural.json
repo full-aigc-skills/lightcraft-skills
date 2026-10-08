@@ -1,0 +1,50 @@
+{
+  "scenario": "natural",
+  "completedItems": [
+    {
+      "id": "item_2",
+      "type": "agent_message",
+      "text": "我会按已安装的 Lightcraft 技能检查入口规则，只读取说明，确认必要输入和原片保护方式。"
+    },
+    {
+      "id": "item_3",
+      "type": "command_execution",
+      "command": "/bin/zsh -lc \"cat '/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/SKILL.md'\"",
+      "aggregated_output": "---\nname: lightcraft-use\ndescription: 用户以自然语言要求使用 Lightcraft 管理、显影或导出照片，或需要衔接多个照片处理阶段时使用。\nlicense: Apache-2.0\n---\n\n# Lightcraft 照片任务路由\n\n协调诊断、照片库、显影和导出；已有阶段直接复用，显式领域请求保持指定入口。\n仅声明 CLI 0.2.1 / macOS arm64 / Python 3.11+ 的固定运行范围；原生、宿主和视觉验收状态分别记录。\n\n## 必要输入与执行\n\n先确定原片、持久照片库、目标照片、用户修改范围及输出根；复用已核实的安装和已有阶段。显式指定本技能时保留入口。\n\n把 `SKILL_DIR` 设为宿主实际加载本 SKILL.md 的绝对目录，本技能脚本可独立使用，不猜测开发者路径。\n\n```bash\npython3 -I -B \"$SKILL_DIR/scripts/bootstrap.py\" --no-install\n```\n\n只检查环境到此结束。查询/执行可能触发缺失运行时的固定安装，只在已有相应授权时使用。\n执行前按需阅读 [公共运行契约](references/runtime.md)，本领域步骤见 [操作与验收](references/workflow.md)。\n\n## 输出与恢复\n\n交接照片 ID/库位置、原片身份、当前设置、版本化执行回执和实际输出。编辑、保存、解码、重开、视觉分别验收；零退出只表示待验证。\nUNKNOWN 不重放；部分成功保留已生效步骤，NotSaved 区分内存修改与未落盘。已知导出冲突执行前拒绝，摘要检测不提供回滚或通用沙箱。\n\n[成功、部分失败、恢复与覆盖拒绝示例](examples/scenarios.md)用于决策；公共脚本和契约保留在本技能内。\n跨技能交接按名称和安装命令，不读取兄弟目录。领域入口及安装方式见本技能操作资料；显式领域请求保持用户指定入口。\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_4",
+      "type": "command_execution",
+      "command": "/bin/zsh -lc \"cat '/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/references/runtime.md'\"",
+      "aggregated_output": "# 公共运行契约\n\n仅锁定 macOS arm64 / CLI 0.2.1 / Python 3.11+；研究源码不证明固定发行具备相同能力。\n\n把 `SKILL_DIR` 设置为宿主实际加载的本技能绝对目录，命令路径始终加引号。\n\n纯检查不安装、不执行原生程序，不创建运行目录：\n\n```bash\npython3 -I -B \"$SKILL_DIR/scripts/bootstrap.py\" --no-install\n```\n\n已授权安装时才运行安装器；`--runtime-home` 可隔离到指定数据目录，`--archive` 仍强制校验固定摘要。已有损坏版本保留，不覆盖。原生调用会复用该版本；缺失时安装器下载固定制品，不改 PATH、不用 sudo。权限与完整性错误不自动重试编辑。\n\n```bash\npython3 -I -B \"$SKILL_DIR/scripts/bootstrap.py\" --runtime-home \"/absolute/runtime\"\npython3 -I -B \"$SKILL_DIR/scripts/commands.py\" discover --runtime-home \"/absolute/runtime\"\n```\n\n能力快照将实际二进制、版本、Headless 模式、命令与 controls 摘要绑定。目录 enabled 仅是观察值，选择状态仍由目标会话判断。离线 `--catalog` 可 list/describe/check，不能 run。查询也可能首次安装，只有 doctor 或 bootstrap --no-install 是纯诊断。\n\n计划保留 `{\"domain\":\"lightcraft\",\"steps\":[{\"command\":\"library.info\",\"params\":{}}]}`。先 check；Lightcraft 参数文档是文本，不是机器 Schema。交付执行默认 run，单计划一个原生会话：\n\n```bash\npython3 -I -B \"$SKILL_DIR/scripts/commands.py\" run \"/absolute/plan.json\" --library \"/absolute/library\" --input \"/absolute/originals\" --output-root \"/absolute/exports\" --output \"/absolute/new-run\"\n```\n\n输入原片须保持；照片库和工作副本预期可变。已知写入目标与原片/既有文件冲突会执行前拒绝，未识别参数副作用仍不受通用沙箱保护。摘要改变是检测，不提供回滚。不要使用 move 导入已登记需保持的原片。\n\n回执 schemaVersion=1，含 runId、时间、计划/技能/运行时锁/原片身份、逐步骤状态和日志。原生监督器独占超时；stdout/stderr 流式落盘，回执只保留有界尾部，协议从日志逐行解释。UNKNOWN 禁止重放；APPLIED_NOT_SAVED 表示修改在内存生效但持久化未确认。FAILED 后可信 NOT_EXECUTED 步骤只是后续计划候选，还需恢复会话选择与已有授权。\n\n```bash\npython3 -I -B \"$SKILL_DIR/scripts/commands.py\" inspect \"/absolute/new-run/receipt.json\"\n```\n\ninspect 与旧回执读取均只读。直接 cli.py 透传 argv 保持兼容，但缺少完整交付回执和输入保全；不把其零退出当作验收。\n\n实际文件验证使用 Pillow（若已有）或 macOS sips 解码，不静默安装依赖。尺寸/格式/位深读取文件；色彩仅确认可得元数据，不代表视觉保真。缺少解码器或色彩证据时返回失败/未确认。\n\n## 只用现有安装\n\n已有原生运行许可但没有安装许可时，commands.py 的在线 list/describe/check/discover/run 和直接 cli.py 可传 --require-installed。缺失、损坏或平台不支持时拒绝，不创建运行时目录、不调用安装器；不能与 --archive 混用。纯检查仍用 doctor 或 bootstrap.py --no-install，不执行原生程序。\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_5",
+      "type": "command_execution",
+      "command": "/bin/zsh -lc \"cat '/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/references/workflow.md'\"",
+      "aggregated_output": "# 路由与交接\n\n| 意图 | 入口 | 交接 |\n|---|---|---|\n| 只检查环境 | setup 的 --no-install | 诊断，不安装 |\n| 已有库局部修图 | develop | 当前照片 ID、基线、修改范围 |\n| 导入或库占用 | library | 导入报告、ID/路径、选择、库位置 |\n| 已有候选导出 | export | 设置、输出目标、原片、技术与视觉验收 |\n| 原生命令问题 | cli | 当前命令/控件快照与计划 |\n\n每个领域交接使用技能名；例如 **lightcraft-cli-export**。安装：`npx skills add full-aigc-skills/lightcraft-skills --skill lightcraft-cli-export`。仅安装本技能也有完整公共运行资源，不要求读取兄弟技能文件。\n\n完成报告分别列编辑、保存、实际文件、独立重开、视觉结论。插件若可用，使用其本地控制器维护 taskId 和审阅；技能独立使用时仍可保留网关回执，不伪造插件状态。\n",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "id": "item_6",
+      "type": "agent_message",
+      "text": "已读取 [SKILL.md](</private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/SKILL.md>) 及其运行契约、路由资料。\n\n- **入口选择**：使用已安装的 `lightcraft:lightcraft-use`。你的请求涉及提亮与导出两个阶段，由该入口协调；已有照片库时衔接 `develop → export`，需要导入时先进入 `library`。\n- **必要输入**：原片路径、持久照片库位置、目标照片 ID 或可定位路径、提亮范围及强度、输出根目录与导出设置。复用已核实的安装和已有处理阶段。\n- **原片保护**：保持原片不变，不使用 `move` 导入；照片库和工作副本允许变化。执行前拒绝已知的原片或既有文件覆盖冲突。摘要校验只能检测变化，不提供回滚或通用沙箱保护。\n\n本次仅阅读说明，未运行安装、下载、显影、导出或修改文件，也未执行环境诊断；运行环境与实际效果尚未验证。"
+    }
+  ],
+  "final": "已读取 [SKILL.md](</private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/SKILL.md>) 及其运行契约、路由资料。\n\n- **入口选择**：使用已安装的 `lightcraft:lightcraft-use`。你的请求涉及提亮与导出两个阶段，由该入口协调；已有照片库时衔接 `develop → export`，需要导入时先进入 `library`。\n- **必要输入**：原片路径、持久照片库位置、目标照片 ID 或可定位路径、提亮范围及强度、输出根目录与导出设置。复用已核实的安装和已有处理阶段。\n- **原片保护**：保持原片不变，不使用 `move` 导入；照片库和工作副本允许变化。执行前拒绝已知的原片或既有文件覆盖冲突。摘要校验只能检测变化，不提供回滚或通用沙箱保护。\n\n本次仅阅读说明，未运行安装、下载、显影、导出或修改文件，也未执行环境诊断；运行环境与实际效果尚未验证。",
+  "turn": {
+    "type": "turn.completed",
+    "usage": {
+      "input_tokens": 45541,
+      "cached_input_tokens": 38656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 579,
+      "reasoning_output_tokens": 0
+    }
+  }
+}

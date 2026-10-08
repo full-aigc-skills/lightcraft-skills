@@ -1,6 +1,6 @@
 # Lightcraft 技能库 OpenSpec
 
-当前优化变更为 **harden-lightcraft-skill-workflows**。本轮已实施并验证本地代码；固定 CLI 原生与合成图视觉验收已完成，宿主自然语言路由与发行验收仍待完成；以下产物是本项目本次变更的唯一规格事实源。
+当前优化变更为 **harden-lightcraft-skill-workflows**。本轮已实施并验证本地代码；固定 CLI 原生与合成图视觉验收已完成，六技能隔离宿主验收已通过，发行验收仍待完成；以下产物是本项目本次变更的唯一规格事实源。
 
 - [变更提案与范围](changes/harden-lightcraft-skill-workflows/proposal.md)
 - [架构设计、兼容性与依赖](changes/harden-lightcraft-skill-workflows/design.md)

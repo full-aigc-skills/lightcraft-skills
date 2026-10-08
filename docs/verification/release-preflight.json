@@ -1,8 +1,1 @@
-{
-  "ready": false,
-  "missing": [
-    "host"
-  ],
-  "published": false,
-  "automaticPublish": false
-}
+{"ready": true, "missing": [], "published": false, "automaticPublish": false}

@@ -1,0 +1,59 @@
+{
+  "initialize": {
+    "userAgent": "Codex Desktop/0.161.0 (Mac OS 27.0.1; arm64) dumb (lightcraft_acceptance; 0.1.0)",
+    "codexHome": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home",
+    "platformFamily": "unix",
+    "platformOs": "macos"
+  },
+  "skills": [
+    {
+      "name": "lightcraft:lightcraft-cli",
+      "description": "用户显式要求查询 Lightcraft 命令与控件、检查 JSON 计划或直接调用 CLI 时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-cli/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-develop",
+      "description": "用户显式要求使用 Lightcraft 调整曝光、白平衡、局部参数或按明确范围同步显影时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-cli-develop/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-export",
+      "description": "用户显式要求使用 Lightcraft 导出照片、检查格式尺寸色彩或核对实际交付文件时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-cli-export/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-library",
+      "description": "用户显式要求导入、选择、组织照片或排查 Lightcraft 照片库及重复导入时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-cli-library/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-cli-setup",
+      "description": "用户要求检查或安装 Lightcraft CLI、核对固定版本、排查安装失败时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-cli-setup/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    },
+    {
+      "name": "lightcraft:lightcraft-use",
+      "description": "用户以自然语言要求使用 Lightcraft 管理、显影或导出照片，或需要衔接多个照片处理阶段时使用。",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/宿主 验收 home/plugins/cache/lightcraft-acceptance/lightcraft/0.1.0-dev.1/skills/lightcraft-use/SKILL.md",
+      "scope": "user",
+      "enabled": true,
+      "pluginId": "lightcraft@lightcraft-acceptance"
+    }
+  ],
+  "errors": []
+}
