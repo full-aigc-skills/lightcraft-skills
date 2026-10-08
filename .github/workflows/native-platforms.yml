@@ -63,6 +63,24 @@ jobs:
           assert report['nativeStatus']=='PASS'
           assert len(report['photos'])==2 and len(report['artifacts'])==6
           PY
+      - name: Record POSIX binary signature and dependencies
+        if: runner.os != 'Windows'
+        env:
+          NATIVE_WORKDIR: ${{ runner.temp }}/native-${{ matrix.target }}
+        run: |
+          binary="$NATIVE_WORKDIR/runtime/lightcraft/0.2.1/lightcraft-cli"
+          uname -a > "$NATIVE_WORKDIR/posix-platform.txt"
+          if [[ "$RUNNER_OS" == Linux ]]; then
+            ldd "$binary" > "$NATIVE_WORKDIR/posix-dependencies.txt"
+            if grep -q 'not found' "$NATIVE_WORKDIR/posix-dependencies.txt"; then exit 1; fi
+            getconf GNU_LIBC_VERSION >> "$NATIVE_WORKDIR/posix-platform.txt"
+            sha256sum "$binary" >> "$NATIVE_WORKDIR/posix-platform.txt"
+          else
+            otool -L "$binary" > "$NATIVE_WORKDIR/posix-dependencies.txt"
+            codesign --verify --strict --verbose=2 "$binary" 2> "$NATIVE_WORKDIR/posix-signature.txt"
+            codesign -d --verbose=4 "$binary" 2>> "$NATIVE_WORKDIR/posix-signature.txt"
+            shasum -a 256 "$binary" >> "$NATIVE_WORKDIR/posix-platform.txt"
+          fi
       - name: Record Windows signature and PE dependencies
         if: always() && runner.os == 'Windows'
         shell: pwsh
@@ -88,6 +106,7 @@ jobs:
             ${{ runner.temp }}/native-${{ matrix.target }}/native-evidence.json
             ${{ runner.temp }}/native-${{ matrix.target }}/windows-*.json
             ${{ runner.temp }}/native-${{ matrix.target }}/windows-*.txt
+            ${{ runner.temp }}/native-${{ matrix.target }}/posix-*.txt
             ${{ runner.temp }}/native-${{ matrix.target }}/*-plan.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*/receipt.json
             ${{ runner.temp }}/native-${{ matrix.target }}/*/logs/*.log
