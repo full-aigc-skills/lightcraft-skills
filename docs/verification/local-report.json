@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T11:01:52.452931+00:00",
-  "sourceFingerprint": "5b61ba4cd42d05a2db3ffcea5d99505ec5688ae382ea83571975cf682c654929",
+  "generatedAt": "2026-10-08T12:25:38.565605+00:00",
+  "sourceFingerprint": "53dba96c9775bb799979e0239712cb05b9d9d4c93e3f73c3cb1240bf536b6391",
   "project": "lightcraft-skills",
   "developmentVersion": "0.1.0-dev.1",
   "pinnedNativeVersion": "0.2.1",
@@ -81,20 +81,32 @@
       "scope": "stdlib contracts, fake CLI/Python child processes; actual synthetic image decoding via existing macOS sips"
     },
     "native": {
-      "status": "BLOCKED",
-      "reason": "runtime installation authorization pending; no Lightcraft CLI executed"
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/native-20261008/index.json"
+      ],
+      "scope": "fixed 0.2.1 macOS arm64 PNG/JPEG; four RAW model variants with full/reported, preview fallback and unsupported results"
     },
     "host": {
-      "status": "NOT_RUN",
-      "reason": "host install/load authorization and native prerequisite pending"
+      "status": "BLOCKED",
+      "evidence": [
+        "docs/verification/native-20261008/host-discovery.json"
+      ],
+      "reason": "six skills installed/discovered; CLI 0.147.0 cannot invoke configured gpt-6-astra model and skills context budget exceeded; natural language scenarios not accepted"
     },
     "visual": {
-      "status": "NOT_RUN",
-      "reason": "no independent native output review"
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/native-20261008/plugin-visual-review-v4.json"
+      ],
+      "scope": "actual synthetic gradient image review only"
     },
     "platform": {
-      "status": "NOT_RUN",
-      "reason": "Python host tests do not establish pinned CLI/platform acceptance"
+      "status": "PASS",
+      "evidence": [
+        "docs/verification/native-20261008/index.json"
+      ],
+      "scope": "macOS arm64 only; other platforms independent OPEN changes"
     },
     "remoteCI": {
       "status": "PASS",
@@ -131,10 +143,7 @@
   "releasePreflight": {
     "ready": false,
     "missing": [
-      "native",
-      "host",
-      "visual",
-      "platform"
+      "host"
     ],
     "published": false,
     "automaticPublish": false
@@ -142,5 +151,5 @@
   "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
   "managedSkillFiles": 108,
   "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
-  "documentationUpdate": "CI result and Git status only; executable source and tests unchanged since tested commit"
+  "documentationUpdate": "real native/host evidence and completed task markers"
 }

@@ -6,21 +6,15 @@
   "specification": "OPEN_SPEC_CHANGE_IMPLEMENTED_LOCALLY_ACCEPTANCE_OPEN",
   "specificationChange": "harden-lightcraft-skill-workflows",
   "specificationPath": "openspec/changes/harden-lightcraft-skill-workflows/",
-  "nativeInstallation": "AWAITING_AUTHORIZATION",
-  "hostDiscovery": "NOT_RUN",
-  "modelDispatch": "NOT_RUN",
-  "creativeAcceptance": "NOT_RUN",
+  "nativeInstallation": "PASS_ISOLATED_LOCKED_021",
+  "hostDiscovery": "PASS_SIX_SKILLS",
+  "modelDispatch": "BLOCKED_HOST_COMPATIBILITY",
+  "creativeAcceptance": "PASS_SYNTHETIC_GRADIENT_ONLY",
   "published": false,
   "tasks": {
-    "complete": 21,
+    "complete": 27,
     "total": 29,
     "remaining": [
-      "S-4.2",
-      "S-4.3",
-      "S-4.4",
-      "S-4.6",
-      "S-5.4",
-      "S-5.5",
       "S-6.2",
       "S-6.4"
     ]

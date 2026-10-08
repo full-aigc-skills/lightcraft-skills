@@ -1,0 +1,40 @@
+{
+  "partialImport": {
+    "status": "PASS",
+    "receipt": "/tmp/lightcraft-acceptance-HoMkD5/duplicate-missing/receipt.json",
+    "result": {
+      "duplicates": [
+        {
+          "existing": 1,
+          "path": "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png",
+          "reason": "content"
+        }
+      ],
+      "failed": [
+        [
+          "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png",
+          "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png: No such file or directory (os error 2)"
+        ]
+      ],
+      "imported": [],
+      "scanned": 2,
+      "sidecars": 0
+    }
+  },
+  "batchScope": {
+    "status": "PASS",
+    "receipt": "/tmp/lightcraft-acceptance-HoMkD5/batch-scope/receipt.json",
+    "targetIds": [
+      1
+    ],
+    "unchangedIds": [
+      2
+    ]
+  },
+  "libraryLock": {
+    "status": "PASS",
+    "receipt": "/tmp/lightcraft-acceptance-HoMkD5/occupied-library/receipt.json",
+    "observedStatus": "UNKNOWN",
+    "noForcedUnlock": true
+  }
+}

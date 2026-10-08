@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "taskId": "a29efb4c-074b-4914-bdfb-dd14064853ca",
+  "runId": "75d259d3-1f4c-425d-8a4c-331287a20126",
+  "acceptance": {
+    "execution": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+    "persistence": "PASS",
+    "artifacts": "PASS",
+    "reopen": "PASS",
+    "visual": "PASS"
+  },
+  "artifacts": [
+    {
+      "schemaVersion": 1,
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/plugin-exports-v4/edited.png",
+      "bytes": 2090,
+      "sha256": "a381cf3eaa9e6881960bd10bbc1d41c8097a00d443f2903e917e5f41f047ca51",
+      "format": "png",
+      "width": 96,
+      "height": 64,
+      "bitDepth": 8,
+      "colorProfile": "sRGB",
+      "iccSha256": null,
+      "decoder": "macOS sips",
+      "decodable": true,
+      "technicalStatus": "PASS",
+      "differences": {},
+      "visualAcceptance": "NOT_RUN"
+    }
+  ],
+  "reviewReceipt": {
+    "schemaVersion": 1,
+    "requestId": "feae801e-87a7-4283-bcbc-97a824c1bc7c",
+    "bindingSha256": "9e948d27501b498cea6c9ed8871a3a07dcbe96cd4d0208f439b2b6edce46a3df",
+    "source": "host-model",
+    "reviewer": "Codex current task image review",
+    "verdict": "PASS",
+    "observations": [
+      "已实际查看 before.png 与 edited.png：候选整体亮度提高，与曝光 +0.5 的目标一致。",
+      "96×64 渐变的颜色过渡、位置与外形保持连续，未见空白块、破损或几何偏移。",
+      "审阅仅覆盖合成渐变样本，不证明人像肤色、复杂场景或其他 RAW 型号质量。"
+    ]
+  },
+  "reopenEvidence": {
+    "receiptPath": "/private/tmp/lightcraft-acceptance-HoMkD5/plugin-reopen-v4/receipt.json"
+  },
+  "unverified": [
+    "other RAW variants",
+    "other platforms",
+    "remote CI"
+  ]
+}

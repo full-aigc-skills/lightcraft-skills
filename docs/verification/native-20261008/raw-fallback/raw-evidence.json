@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "runtimeIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "samples": [
+    {
+      "make": "Canon",
+      "model": "EOS D30",
+      "variant": "RAW (3:2)",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://raw.pixls.us/getfile.php/1307/nice/Canon - EOS D30 - RAW (3:2).CRW",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw",
+      "bytes": 2993260,
+      "sha256": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e",
+      "nativeAcceptance": "FAIL_OR_UNSUPPORTED",
+      "decodeMode": "UNKNOWN",
+      "visual": "NOT_RUN",
+      "error": "raw_native_failed: 3192393f726a918ab1c8da\", \"executable\": \"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli\", \"mode\": \"Headless\"}, \"inputAfterSha256\": {\"/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw\": \"4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e\"}, \"skillResourceAfterSha256\": {\"artifact.schema.json\": \"a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff\", \"artifacts.py\": \"cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8\", \"bootstrap.py\": \"b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631\", \"capability.schema.json\": \"78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42\", \"cli.py\": \"3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f\", \"command_gateway.py\": \"60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32\", \"commands.py\": \"7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5\", \"coverage.py\": \"8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64\", \"execution-receipt.schema.json\": \"9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0\", \"native_process.py\": \"874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed\", \"package_checks.py\": \"46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883\", \"photo_workflows.py\": \"9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917\", \"runtime.lock.json\": \"38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253\"}, \"libraryAfterSha256\": {\"/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.lock\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.log\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.snap\": \"bd5cefad86629f7f4e3a424fecb463231f0ae68e35219534b4adcc0e9a487a7f\"}, \"endedAt\": \"2026-10-08T12:28:02.496092+00:00\"}\n"
+    }
+  ],
+  "scope": "仅记录所测相机和变体，不代表全部 RAW",
+  "visual": "NOT_RUN"
+}

@@ -36,4 +36,4 @@ stateDiagram-v2
 
 文件可解码、格式/尺寸/位深/色彩符合、原片未变、独立重开和视觉判断分别记录；没有色彩证据时不宣称符合。任务与审阅 Schema 随插件分发，旧回执只读，修订次数不因重启重置。
 
-详见 [实施证据与未完成门禁](verification/implementation-evidence.md)。当前未执行原生安装/照片验收、宿主加载、模型分派和独立视觉检查；Python 3.11/3.12/3.13 远端离线 CI 已通过，main 已推送，开发版发行仍为草稿。Connect/MCP、扩展照片能力、跨平台/ArtCraft/移动交付为独立 OPEN 变更，不由基础检查关闭。
+详见 [实施证据与未完成门禁](verification/implementation-evidence.md)。已完成隔离原生安装、PNG/JPEG 验收、宿主六技能发现和合成图独立视觉审阅；自然语言模型分派受宿主兼容性阻塞，Canon sRAW 预览回退已验收，其他型号未据此扩展；Python 3.11/3.12/3.13 远端离线 CI 已通过，main 已推送，开发版发行仍为草稿。Connect/MCP、扩展照片能力、跨平台/ArtCraft/移动交付为独立 OPEN 变更，不由基础检查关闭。

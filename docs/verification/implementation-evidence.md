@@ -2,7 +2,7 @@
 
 2026-10-08。本变更完成 **21/29** 项任务；勾选表示对应本地实现/契约验证完成，不表示 Lightcraft 原生、宿主或整体发行验收。原生安装授权问题已发出，尚未收到回复。
 
-当前测试与身份见 [分层报告](local-report.json)。所有 Python 原生进程测试使用测试替身或普通 Python 子进程；实际图像解码使用现有 macOS sips。未安装 Lightcraft CLI、插件、Python 包，Git main 已提交推送，开发版发行为草稿；未公开发布。
+当前测试与身份见 [分层报告](local-report.json)。所有 Python 原生进程测试使用测试替身或普通 Python 子进程；实际图像解码使用现有 macOS sips。早期离线阶段未安装 Lightcraft CLI、插件或 Python 包；随后已获授权安装 CLI 与宿主插件，真实结果见末节。Git main 已提交推送，开发版发行为草稿；未公开发布。
 
 ## 任务映射
 
@@ -20,16 +20,16 @@
 | S-3.4 | LOCAL_DONE | runtime/capability.schema.json, examples/receipts/, tests/test_capability_contract.py |
 | S-3.5 | LOCAL_DONE | runtime/command_gateway.py, tests/test_execution_protocol.py, tests/test_gateway_receipts.py |
 | S-4.1 | LOCAL_DONE | skills/*/SKILL.md, references/, examples/scenarios.md, agents/openai.yaml |
-| S-4.2 | OPEN | runtime/coverage.py, tests/test_capability_contract.py。coverage.py 已能绑定快照并列出未覆盖命令；尚无固定原生制品的实际能力快照。 |
-| S-4.3 | OPEN | runtime/photo_workflows.py, skills/lightcraft-cli-library/references/workflow.md, scripts/native_acceptance.py。library 工作流、导入结果身份映射和部分失败回归已实现；真实库锁、原生导入和重开仍待验收。 |
-| S-4.4 | OPEN | runtime/photo_workflows.py, tests/test_photo_contract.py, skills/lightcraft-cli-develop/references/workflow.md。局部参数保持、控件范围和批量/预览规则已实现；实际前后预览、显影及批量范围仍待原生验证。 |
+| S-4.2 | DONE | native-20261008/index.json、实际原生回执与宿主缓存控制器交付证据；仅该固定制品与合成样本范围。 |
+| S-4.3 | DONE | native-20261008/index.json、实际原生回执与宿主缓存控制器交付证据；仅该固定制品与合成样本范围。 |
+| S-4.4 | DONE | native-20261008/index.json、实际原生回执与宿主缓存控制器交付证据；仅该固定制品与合成样本范围。 |
 | S-4.5 | LOCAL_DONE | runtime/artifacts.py, runtime/artifact.schema.json, tests/test_photo_contract.py |
-| S-4.6 | OPEN | scripts/native_acceptance.py, scripts/raw_acceptance.py。独立原生重开驱动已准备；原生运行时安装授权待回复。 |
+| S-4.6 | DONE | native-20261008/index.json、实际原生回执与宿主缓存控制器交付证据；仅该固定制品与合成样本范围。 |
 | S-5.1 | LOCAL_DONE | scripts/generate_runtime.py, tests/test_package.py |
 | S-5.2 | LOCAL_DONE | runtime/package_checks.py, scripts/validate_package.py, LICENSE, licenses/Apache-2.0.txt |
 | S-5.3 | LOCAL_DONE | scripts/verify_evidence.py, tests/test_evidence_identity.py, docs/verification/local-report.json |
-| S-5.4 | OPEN | scripts/native_acceptance.py。固定制品冷安装及 PNG/JPEG 驱动已准备；原生安装授权待回复。 |
-| S-5.5 | OPEN | scripts/raw_acceptance.py, docs/verification/raw-samples.json。两个具有来源与摘要的真实 RAW 样本和验收驱动已准备；尚未原生解码。 |
+| S-5.4 | DONE | native-20261008/index.json、实际原生回执与宿主缓存控制器交付证据；仅该固定制品与合成样本范围。 |
+| S-5.5 | DONE | native-20261008/raw*/raw-evidence.json：四个真实 CC0 型号/变体，保留完整/预览回退/不支持三类事实与摘要，不扩大支持范围。 |
 | S-6.1 | LOCAL_DONE | scripts/sync_local_snapshot.py, tests/test_snapshot_sync.py, 插件 tests/test_provenance_identity.py |
 | S-6.2 | OPEN | scripts/release_preflight.py。本目录没有 Git 身份；未获 Git/远端/发布授权，不伪造发行身份。 |
 | S-6.3 | LOCAL_DONE | scripts/sync_local_snapshot.py, tests/test_snapshot_sync.py, 插件 tests/test_snapshot.py |
@@ -79,3 +79,7 @@
 - RAW 驱动按 previewOnly 的字符串/null 协议区分预览回退；不把布尔值或缺字段当作完整 RAW。核对回执、计划、资源、原片与独立重开持久化；回退单列 PASS_WITH_PREVIEW_FALLBACK，完整 RAW 保持 NOT_PROVEN。
 - 合成驱动逐一处理 PNG/JPEG 两个输入，记录前后预览和独立重开。以上驱动只完成模拟协议回归，真实原生任务仍 OPEN。
 - --require-installed 的缺失目录拒绝回归及已有安装替身包装链均无下载/安装；真实 CLI 仍未执行。
+
+## 2026-10-08 获授权后的真实验收
+
+证据见 [原生与宿主验收索引](native-20261008/index.json)。固定制品安装、PNG/JPEG 显影导出及独立重开通过；重复/损坏/缺失导入逐项报告，占用锁未强制解除，显式批量修改只影响指定 ID。缓存插件的控制器完成真实闭环、实际图像审阅和 delivery.json。Nikon D2H 完整 RAW 解码由运行时报告通过；Blackmagic DNG 为明确不支持，Canon EOS 7D sRAW 仅预览回退通过，Canon D30 CRW 不支持。自然语言路由未通过：Codex CLI 0.147.0 配置模型要求更新宿主，且现有技能列表超出上下文预算。加载六技能不代表路由通过；未升级 Codex，也未公开发行。

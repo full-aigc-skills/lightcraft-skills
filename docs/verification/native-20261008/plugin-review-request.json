@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 1,
+  "requestId": "feae801e-87a7-4283-bcbc-97a824c1bc7c",
+  "taskId": "a29efb4c-074b-4914-bdfb-dd14064853ca",
+  "binding": {
+    "goalSha256": "f650c3f5c671b17c9540cf33bc61d53401b6cb35d1afd4cf087dc5bb00c02d58",
+    "originals": {
+      "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+    },
+    "candidates": [
+      {
+        "schemaVersion": 1,
+        "path": "/private/tmp/lightcraft-acceptance-HoMkD5/plugin-exports-v4/edited.png",
+        "bytes": 2090,
+        "sha256": "a381cf3eaa9e6881960bd10bbc1d41c8097a00d443f2903e917e5f41f047ca51",
+        "format": "png",
+        "width": 96,
+        "height": 64,
+        "bitDepth": 8,
+        "colorProfile": "sRGB",
+        "iccSha256": null,
+        "decoder": "macOS sips",
+        "decodable": true,
+        "technicalStatus": "PASS",
+        "differences": {},
+        "visualAcceptance": "NOT_RUN"
+      }
+    ],
+    "settings": {
+      "bw_mix": {
+        "aqua": 0.0,
+        "blue": 0.0,
+        "green": 0.0,
+        "magenta": 0.0,
+        "orange": 0.0,
+        "purple": 0.0,
+        "red": 0.0,
+        "yellow": 0.0
+      },
+      "calibration": {
+        "blue_hue": 0.0,
+        "blue_sat": 0.0,
+        "green_hue": 0.0,
+        "green_sat": 0.0,
+        "red_hue": 0.0,
+        "red_sat": 0.0,
+        "shadows_tint": 0.0
+      },
+      "color": {
+        "saturation": 0.0,
+        "vibrance": 0.0
+      },
+      "crop": {
+        "aspect": null,
+        "flip_h": false,
+        "flip_v": false,
+        "geometry": {
+          "angle": 0.0,
+          "rect": {
+            "x0": 0.0,
+            "x1": 1.0,
+            "y0": 0.0,
+            "y1": 1.0
+          }
+        }
+      },
+      "curve": {
+        "blue": [],
+        "darks": 0.0,
+        "green": [],
+        "highlights": 0.0,
+        "lights": 0.0,
+        "master": [],
+        "red": [],
+        "refine_saturation": 100.0,
+        "shadows": 0.0,
+        "split_highlights": 75.0,
+        "split_mid": 50.0,
+        "split_shadows": 25.0
+      },
+      "detail": {
+        "nr_color": 0.0,
+        "nr_color_detail": 50.0,
+        "nr_color_smoothness": 50.0,
+        "nr_contrast": 0.0,
+        "nr_detail": 50.0,
+        "nr_luminance": 0.0,
+        "sharpen_amount": 0.0,
+        "sharpen_detail": 25.0,
+        "sharpen_masking": 0.0,
+        "sharpen_radius": 1.0
+      },
+      "disabled_sections": [],
+      "effects": {
+        "clarity": 0.0,
+        "dehaze": 0.0,
+        "texture": 0.0
+      },
+      "enhance": {
+        "denoise": 0.0,
+        "raw_details": false,
+        "super_resolution": false
+      },
+      "geometry": {
+        "aspect": 0.0,
+        "constrain_crop": false,
+        "guides": [],
+        "horizontal": 0.0,
+        "offset_x": 0.0,
+        "offset_y": 0.0,
+        "rotate": 0.0,
+        "scale": 100.0,
+        "upright": "off",
+        "upright_transform": null,
+        "vertical": 0.0
+      },
+      "grading": {
+        "balance": 0.0,
+        "blending": 50.0,
+        "global": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "highlights": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "midtones": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "shadows": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        }
+      },
+      "grain": {
+        "amount": 0.0,
+        "roughness": 50.0,
+        "seed": 0,
+        "size": 25.0
+      },
+      "lens_blur": {
+        "amount": 0.0,
+        "enabled": false,
+        "focal_distance": 0.0,
+        "focal_range": 0.0
+      },
+      "light": {
+        "blacks": 0.0,
+        "contrast": 0.0,
+        "exposure": 0.5,
+        "highlights": 0.0,
+        "shadows": 0.0,
+        "whites": 0.0
+      },
+      "masks": [],
+      "mixer": {
+        "aqua": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "blue": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "green": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "magenta": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "orange": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "purple": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "red": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        },
+        "yellow": {
+          "hue": 0.0,
+          "lum": 0.0,
+          "sat": 0.0
+        }
+      },
+      "optics": {
+        "ca_blue": 0.0,
+        "ca_red": 0.0,
+        "defringe_green_amount": 0.0,
+        "defringe_green_hue_hi": 60.0,
+        "defringe_green_hue_lo": 40.0,
+        "defringe_purple_amount": 0.0,
+        "defringe_purple_hue_hi": 70.0,
+        "defringe_purple_hue_lo": 30.0,
+        "distortion": 0.0,
+        "lens_profile": false,
+        "profile_distortion": 100.0,
+        "profile_vignetting": 100.0,
+        "remove_ca": false,
+        "vignetting": 0.0,
+        "vignetting_midpoint": 50.0
+      },
+      "orientation": "Normal",
+      "point_colors": [],
+      "profile": {
+        "amount": 100.0,
+        "id": "lc.color"
+      },
+      "red_eye": [],
+      "spots": [],
+      "treatment": "color",
+      "version": 1,
+      "vignette": {
+        "amount": 0.0,
+        "feather": 50.0,
+        "highlights": 0.0,
+        "midpoint": 50.0,
+        "roundness": 0.0,
+        "style": "highlightPriority"
+      },
+      "wb": {
+        "mode": "asShot",
+        "temp": 6500.0,
+        "tint": 0.0
+      }
+    },
+    "settingsSha256": "8c8f75e3b48fea7ab1b11a0505306cd8274cdfd1ff6cbdf8b848df8ee7fa5a5d",
+    "photos": [
+      {
+        "id": 1,
+        "source": {
+          "path": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png",
+          "type": "file"
+        }
+      }
+    ],
+    "rubricVersion": "synthetic-gradient-v1",
+    "revision": 0
+  },
+  "bindingSha256": "9e948d27501b498cea6c9ed8871a3a07dcbe96cd4d0208f439b2b6edce46a3df"
+}

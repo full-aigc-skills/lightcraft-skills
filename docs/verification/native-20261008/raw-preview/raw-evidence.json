@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "runtimeIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "samples": [
+    {
+      "make": "Canon",
+      "model": "EOS 7D",
+      "variant": "sRAW2 (sRAW) (3:2)",
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://raw.pixls.us/getfile.php/129/nice/Canon - EOS 7D - sRAW2 (sRAW) (3:2).CR2",
+      "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+      "path": "/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-7d-sraw.cr2",
+      "bytes": 11062629,
+      "sha256": "3789b1ba5d880613104637c40a06619cd9f3b54b0cf62d2d95b9f9e885edcf6e",
+      "nativeAcceptance": "PASS_WITH_PREVIEW_FALLBACK",
+      "decodeMode": "PREVIEW_FALLBACK",
+      "visual": "NOT_RUN",
+      "previewOnlyReason": "Canon sRAW/mRAW",
+      "artifact": {
+        "schemaVersion": 1,
+        "path": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-preview/0/exports/raw-preview.png",
+        "bytes": 86726,
+        "sha256": "212371e4dc9e8d32dcd541c3bde9505c360c9b4411c353ed51c99f4b1d451feb",
+        "format": "png",
+        "width": 256,
+        "height": 171,
+        "bitDepth": 8,
+        "colorProfile": "sRGB",
+        "iccSha256": null,
+        "decoder": "macOS sips",
+        "decodable": true,
+        "technicalStatus": "PASS",
+        "differences": {},
+        "visualAcceptance": "NOT_RUN"
+      },
+      "fullRawAcceptance": "NOT_PROVEN",
+      "photoId": 1,
+      "observedCamera": "Canon Canon EOS 7D",
+      "receipts": {
+        "import": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-preview/0/import/receipt.json",
+        "edit-export": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-preview/0/edit-export/receipt.json",
+        "reopen": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-preview/0/reopen/receipt.json"
+      }
+    }
+  ],
+  "scope": "仅记录所测相机和变体，不代表全部 RAW",
+  "visual": "NOT_RUN"
+}

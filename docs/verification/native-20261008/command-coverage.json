@@ -1,0 +1,2213 @@
+{
+  "schemaVersion": 1,
+  "snapshotSha256": "8692a12d92c588d017bc88d7e9ba0a484f355a3580b4736bfa632b823fb38449",
+  "binaryIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "mode": "Headless",
+  "commands": [
+    {
+      "command": "edit.undo",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "edit.redo",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.source",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.filter",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.clearFilter",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.sort",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.groups",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.select",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.selectAll",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.devices",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.copyMetadata",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.pasteMetadata",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.selectBy",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.selectNone",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.next",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.previous",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.rate",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.flag",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.pick",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.reject",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.unflag",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.label",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.rotateLeft",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.rotateRight",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.flipHorizontal",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.flipVertical",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.delete",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.restore",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.deletePermanently",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.setMeta",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "album.create",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.createSmart",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.ruleFields",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.setRules",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.rename",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.move",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.addPhotos",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.toggleTarget",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.setTarget",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.clearQuick",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.autoImport",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.autoImportScan",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "album.removePhotos",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "album.setCover",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.importPreview",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.import",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.info",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.compact",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.clearPreviews",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.set",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.adjust",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.merge",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.reset",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.resetSection",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.resetControl",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.sectionEnabled",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.autoBwMix",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.auto",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.wb",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.wbPick",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.treatment",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.profile",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "profile.favorite",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "develop.curve",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "crop.set",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "crop.straighten",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "crop.autoStraighten",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "crop.aspect",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "crop.rotateAspect",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "crop.reset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "geometry.upright",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "geometry.guides",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "develop.copy",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.pastePrevious",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.paste",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.sync",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.quickAdjust",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.matchExposure",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.autoSync",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.apply",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.create",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.delete",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.favorite",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.rename",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.move",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.update",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "version.create",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "version.restore",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "version.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "version.rename",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "version.update",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "history.clear",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "history.restore",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "develop.beginInteraction",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.endInteraction",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.cancelInteraction",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "pointColor.pick",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "develop.targeted",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "pointColor.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "curve.reset",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.presets",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.applyPreset",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.savePreset",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.deletePreset",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.importPresets",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "curve.exportPresets",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "mask.add",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.addComponent",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.brushStroke",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.update",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.sampleColor",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.refine",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.adjust",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.select",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.deleteAll",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.rename",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.invert",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.visible",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.duplicate",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.component",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "mask.move",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.findDust",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.add",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.select",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.update",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.refreshSource",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "spot.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "redeye.add",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "redeye.catchlight",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "redeye.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "photo.virtualCopy",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "stack.group",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.ungroup",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.remove",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.setTop",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.moveUp",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.moveDown",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.split",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.toggle",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.expandAll",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.collapseAll",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "stack.auto",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.sets",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.useSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.saveSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.deleteSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.toggleFromSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.suggest",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.rename",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.delete",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "keyword.merge",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "photo.renameTokens",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.renamePreview",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.rename",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.setCaptureTime",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.autoTagTracklog",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "label.names",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "label.setNames",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "label.sets",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "label.applySet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "label.saveSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "label.deleteSet",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.smartPreviews",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.smartPreviewsLocation",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.smartPreview",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.buildPreviews",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.previewProgress",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.cancelPreviews",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "profile.import",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "profile.deleteImported",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.findSimilar",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.analyze",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.convertToDng",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.duplicate",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.reload",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.editExternal",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "merge.hdr",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "merge.panorama",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "merge.hdrPanorama",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "catalog.query",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "catalog.stats",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.state",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.allMetadata",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "albums.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "photo.inspect",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.get",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "develop.controls",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "presets.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "profiles.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "profiles.menu",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "history.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "app.gpu",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.memory",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "app.memoryBudget",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "journal.list",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "photo.saveMetadataToFile",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.readMetadataFromFile",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.xmpPreferences",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.toggleAutoWriteXmp",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.import",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "preset.export",
+      "owner": "lightcraft-cli-develop",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.preferences",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "export.presets",
+      "owner": "lightcraft-cli-export",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "export.savePreset",
+      "owner": "lightcraft-cli-export",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "export.deletePreset",
+      "owner": "lightcraft-cli-export",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "export.checkTarget",
+      "owner": "lightcraft-cli-export",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "beforeAfter.setBefore",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "beforeAfter.copyAfterToBefore",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "beforeAfter.copyBeforeToAfter",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "beforeAfter.swap",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "beforeAfter.resetBefore",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "folder.rename",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "folder.move",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "library.browse",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.forgetLocal",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.addToLibrary",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.missing",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "photo.relink",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "library.findMissing",
+      "owner": "lightcraft-cli-library",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NOT_RUN",
+      "coverage": "ASSIGNED"
+    },
+    {
+      "command": "metadata.presets",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "metadata.savePreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "metadata.deletePreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "metadata.applyPreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "filter.presets",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "filter.savePreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "filter.applyPreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "filter.deletePreset",
+      "owner": null,
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": null,
+      "verification": "NOT_RUN",
+      "coverage": "UNASSIGNED"
+    },
+    {
+      "command": "app.export",
+      "owner": "lightcraft-cli-export",
+      "mode": "Headless",
+      "sideEffects": "native-guidance-required",
+      "example": "examples/scenarios.md",
+      "verification": "NATIVE_PASS_FIXED_021",
+      "coverage": "ASSIGNED"
+    }
+  ],
+  "uncovered": [
+    "album.create",
+    "album.createSmart",
+    "album.ruleFields",
+    "album.setRules",
+    "album.rename",
+    "album.delete",
+    "album.move",
+    "album.addPhotos",
+    "album.toggleTarget",
+    "album.setTarget",
+    "album.clearQuick",
+    "album.removePhotos",
+    "album.setCover",
+    "profile.favorite",
+    "crop.set",
+    "crop.straighten",
+    "crop.autoStraighten",
+    "crop.aspect",
+    "crop.rotateAspect",
+    "crop.reset",
+    "geometry.upright",
+    "geometry.guides",
+    "version.create",
+    "version.restore",
+    "version.delete",
+    "version.rename",
+    "version.update",
+    "history.clear",
+    "history.restore",
+    "pointColor.pick",
+    "pointColor.delete",
+    "mask.add",
+    "mask.addComponent",
+    "mask.brushStroke",
+    "mask.update",
+    "mask.sampleColor",
+    "mask.refine",
+    "mask.adjust",
+    "mask.select",
+    "mask.delete",
+    "mask.deleteAll",
+    "mask.rename",
+    "mask.invert",
+    "mask.visible",
+    "mask.duplicate",
+    "mask.component",
+    "mask.move",
+    "spot.findDust",
+    "spot.add",
+    "spot.select",
+    "spot.update",
+    "spot.refreshSource",
+    "spot.delete",
+    "redeye.add",
+    "redeye.catchlight",
+    "redeye.delete",
+    "stack.group",
+    "stack.ungroup",
+    "stack.remove",
+    "stack.setTop",
+    "stack.moveUp",
+    "stack.moveDown",
+    "stack.split",
+    "stack.toggle",
+    "stack.expandAll",
+    "stack.collapseAll",
+    "stack.auto",
+    "keyword.sets",
+    "keyword.useSet",
+    "keyword.saveSet",
+    "keyword.deleteSet",
+    "keyword.toggleFromSet",
+    "keyword.list",
+    "keyword.suggest",
+    "keyword.rename",
+    "keyword.delete",
+    "keyword.merge",
+    "label.names",
+    "label.setNames",
+    "label.sets",
+    "label.applySet",
+    "label.saveSet",
+    "label.deleteSet",
+    "profile.import",
+    "profile.deleteImported",
+    "merge.hdr",
+    "merge.panorama",
+    "merge.hdrPanorama",
+    "albums.list",
+    "presets.list",
+    "profiles.list",
+    "profiles.menu",
+    "history.list",
+    "app.gpu",
+    "app.memoryBudget",
+    "journal.list",
+    "beforeAfter.setBefore",
+    "beforeAfter.copyAfterToBefore",
+    "beforeAfter.copyBeforeToAfter",
+    "beforeAfter.swap",
+    "beforeAfter.resetBefore",
+    "folder.rename",
+    "folder.move",
+    "metadata.presets",
+    "metadata.savePreset",
+    "metadata.deletePreset",
+    "metadata.applyPreset",
+    "filter.presets",
+    "filter.savePreset",
+    "filter.applyPreset",
+    "filter.deletePreset"
+  ],
+  "runtimeAcceptance": "NOT_IMPLIED"
+}

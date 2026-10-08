@@ -1,0 +1,710 @@
+{
+  "domain": "lightcraft",
+  "status": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/photo-2-reopen/native-plan.json",
+    "--library",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg": "df3bf90373918e63cee83ca39d7a2d83945d075255747de3a1af66d95d07c5af",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "schemaVersion": 1,
+  "runId": "224154a2-998d-4686-ae1a-8d391320e273",
+  "startedAt": "2026-10-08T12:17:42.566403+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.select",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.select",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "selected": 1
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "photo.inspect",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "photo.inspect",
+        "ms": 0.1,
+        "ok": true,
+        "result": {
+          "albums": [],
+          "as_shot_wb": null,
+          "captured": null,
+          "content_hash": "68db3227011fd172a4a5adbe05ff641a",
+          "deleted": false,
+          "develop": {
+            "bw_mix": {
+              "aqua": 0.0,
+              "blue": 0.0,
+              "green": 0.0,
+              "magenta": 0.0,
+              "orange": 0.0,
+              "purple": 0.0,
+              "red": 0.0,
+              "yellow": 0.0
+            },
+            "calibration": {
+              "blue_hue": 0.0,
+              "blue_sat": 0.0,
+              "green_hue": 0.0,
+              "green_sat": 0.0,
+              "red_hue": 0.0,
+              "red_sat": 0.0,
+              "shadows_tint": 0.0
+            },
+            "color": {
+              "saturation": 0.0,
+              "vibrance": 0.0
+            },
+            "crop": {
+              "aspect": null,
+              "flip_h": false,
+              "flip_v": false,
+              "geometry": {
+                "angle": 0.0,
+                "rect": {
+                  "x0": 0.0,
+                  "x1": 1.0,
+                  "y0": 0.0,
+                  "y1": 1.0
+                }
+              }
+            },
+            "curve": {
+              "blue": [],
+              "darks": 0.0,
+              "green": [],
+              "highlights": 0.0,
+              "lights": 0.0,
+              "master": [],
+              "red": [],
+              "refine_saturation": 100.0,
+              "shadows": 0.0,
+              "split_highlights": 75.0,
+              "split_mid": 50.0,
+              "split_shadows": 25.0
+            },
+            "detail": {
+              "nr_color": 0.0,
+              "nr_color_detail": 50.0,
+              "nr_color_smoothness": 50.0,
+              "nr_contrast": 0.0,
+              "nr_detail": 50.0,
+              "nr_luminance": 0.0,
+              "sharpen_amount": 0.0,
+              "sharpen_detail": 25.0,
+              "sharpen_masking": 0.0,
+              "sharpen_radius": 1.0
+            },
+            "disabled_sections": [],
+            "effects": {
+              "clarity": 0.0,
+              "dehaze": 0.0,
+              "texture": 0.0
+            },
+            "enhance": {
+              "denoise": 0.0,
+              "raw_details": false,
+              "super_resolution": false
+            },
+            "geometry": {
+              "aspect": 0.0,
+              "constrain_crop": false,
+              "guides": [],
+              "horizontal": 0.0,
+              "offset_x": 0.0,
+              "offset_y": 0.0,
+              "rotate": 0.0,
+              "scale": 100.0,
+              "upright": "off",
+              "upright_transform": null,
+              "vertical": 0.0
+            },
+            "grading": {
+              "balance": 0.0,
+              "blending": 50.0,
+              "global": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "highlights": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "midtones": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "shadows": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              }
+            },
+            "grain": {
+              "amount": 0.0,
+              "roughness": 50.0,
+              "seed": 0,
+              "size": 25.0
+            },
+            "lens_blur": {
+              "amount": 0.0,
+              "enabled": false,
+              "focal_distance": 0.0,
+              "focal_range": 0.0
+            },
+            "light": {
+              "blacks": 0.0,
+              "contrast": 0.0,
+              "exposure": 0.5,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0
+            },
+            "masks": [],
+            "mixer": {
+              "aqua": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "blue": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "green": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "magenta": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "orange": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "purple": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "red": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "yellow": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              }
+            },
+            "optics": {
+              "ca_blue": 0.0,
+              "ca_red": 0.0,
+              "defringe_green_amount": 0.0,
+              "defringe_green_hue_hi": 60.0,
+              "defringe_green_hue_lo": 40.0,
+              "defringe_purple_amount": 0.0,
+              "defringe_purple_hue_hi": 70.0,
+              "defringe_purple_hue_lo": 30.0,
+              "distortion": 0.0,
+              "lens_profile": false,
+              "profile_distortion": 100.0,
+              "profile_vignetting": 100.0,
+              "remove_ca": false,
+              "vignetting": 0.0,
+              "vignetting_midpoint": 50.0
+            },
+            "orientation": "Normal",
+            "point_colors": [],
+            "profile": {
+              "amount": 100.0,
+              "id": "lc.color"
+            },
+            "red_eye": [],
+            "spots": [],
+            "treatment": "color",
+            "version": 1,
+            "vignette": {
+              "amount": 0.0,
+              "feather": 50.0,
+              "highlights": 0.0,
+              "midpoint": 50.0,
+              "roundness": 0.0,
+              "style": "highlightPriority"
+            },
+            "wb": {
+              "mode": "asShot",
+              "temp": 6500.0,
+              "tint": 0.0
+            }
+          },
+          "duration": null,
+          "edited": "2026-09-30T12:00:00",
+          "file_name": "gradient.jpg",
+          "file_size": 1489,
+          "flag": "none",
+          "format": "JPEG",
+          "height": 64,
+          "history": [
+            "Exposure"
+          ],
+          "id": 2,
+          "imported": "2026-09-30T12:00:00",
+          "kind": "image",
+          "label": null,
+          "meta": {
+            "alt_text": "",
+            "aperture": null,
+            "camera": "",
+            "caption": "",
+            "city": "",
+            "copyright": "",
+            "country": "",
+            "creator": "",
+            "extended_description": "",
+            "focal_mm": null,
+            "gps": null,
+            "iso": null,
+            "keywords": [],
+            "lens": "",
+            "location": "",
+            "shutter": "",
+            "state": "",
+            "title": ""
+          },
+          "rating": 0,
+          "source": {
+            "path": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg",
+            "type": "file"
+          },
+          "versions": [],
+          "width": 96
+        }
+      }
+    },
+    {
+      "index": 2,
+      "command": "develop.get",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "develop.get",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "bw_mix": {
+            "aqua": 0.0,
+            "blue": 0.0,
+            "green": 0.0,
+            "magenta": 0.0,
+            "orange": 0.0,
+            "purple": 0.0,
+            "red": 0.0,
+            "yellow": 0.0
+          },
+          "calibration": {
+            "blue_hue": 0.0,
+            "blue_sat": 0.0,
+            "green_hue": 0.0,
+            "green_sat": 0.0,
+            "red_hue": 0.0,
+            "red_sat": 0.0,
+            "shadows_tint": 0.0
+          },
+          "color": {
+            "saturation": 0.0,
+            "vibrance": 0.0
+          },
+          "crop": {
+            "aspect": null,
+            "flip_h": false,
+            "flip_v": false,
+            "geometry": {
+              "angle": 0.0,
+              "rect": {
+                "x0": 0.0,
+                "x1": 1.0,
+                "y0": 0.0,
+                "y1": 1.0
+              }
+            }
+          },
+          "curve": {
+            "blue": [],
+            "darks": 0.0,
+            "green": [],
+            "highlights": 0.0,
+            "lights": 0.0,
+            "master": [],
+            "red": [],
+            "refine_saturation": 100.0,
+            "shadows": 0.0,
+            "split_highlights": 75.0,
+            "split_mid": 50.0,
+            "split_shadows": 25.0
+          },
+          "detail": {
+            "nr_color": 0.0,
+            "nr_color_detail": 50.0,
+            "nr_color_smoothness": 50.0,
+            "nr_contrast": 0.0,
+            "nr_detail": 50.0,
+            "nr_luminance": 0.0,
+            "sharpen_amount": 0.0,
+            "sharpen_detail": 25.0,
+            "sharpen_masking": 0.0,
+            "sharpen_radius": 1.0
+          },
+          "disabled_sections": [],
+          "effects": {
+            "clarity": 0.0,
+            "dehaze": 0.0,
+            "texture": 0.0
+          },
+          "enhance": {
+            "denoise": 0.0,
+            "raw_details": false,
+            "super_resolution": false
+          },
+          "geometry": {
+            "aspect": 0.0,
+            "constrain_crop": false,
+            "guides": [],
+            "horizontal": 0.0,
+            "offset_x": 0.0,
+            "offset_y": 0.0,
+            "rotate": 0.0,
+            "scale": 100.0,
+            "upright": "off",
+            "upright_transform": null,
+            "vertical": 0.0
+          },
+          "grading": {
+            "balance": 0.0,
+            "blending": 50.0,
+            "global": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "highlights": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "midtones": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "shadows": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            }
+          },
+          "grain": {
+            "amount": 0.0,
+            "roughness": 50.0,
+            "seed": 0,
+            "size": 25.0
+          },
+          "lens_blur": {
+            "amount": 0.0,
+            "enabled": false,
+            "focal_distance": 0.0,
+            "focal_range": 0.0
+          },
+          "light": {
+            "blacks": 0.0,
+            "contrast": 0.0,
+            "exposure": 0.5,
+            "highlights": 0.0,
+            "shadows": 0.0,
+            "whites": 0.0
+          },
+          "masks": [],
+          "mixer": {
+            "aqua": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "blue": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "green": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "magenta": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "orange": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "purple": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "red": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "yellow": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            }
+          },
+          "optics": {
+            "ca_blue": 0.0,
+            "ca_red": 0.0,
+            "defringe_green_amount": 0.0,
+            "defringe_green_hue_hi": 60.0,
+            "defringe_green_hue_lo": 40.0,
+            "defringe_purple_amount": 0.0,
+            "defringe_purple_hue_hi": 70.0,
+            "defringe_purple_hue_lo": 30.0,
+            "distortion": 0.0,
+            "lens_profile": false,
+            "profile_distortion": 100.0,
+            "profile_vignetting": 100.0,
+            "remove_ca": false,
+            "vignetting": 0.0,
+            "vignetting_midpoint": 50.0
+          },
+          "orientation": "Normal",
+          "point_colors": [],
+          "profile": {
+            "amount": 100.0,
+            "id": "lc.color"
+          },
+          "red_eye": [],
+          "spots": [],
+          "treatment": "color",
+          "version": 1,
+          "vignette": {
+            "amount": 0.0,
+            "feather": 50.0,
+            "highlights": 0.0,
+            "midpoint": 50.0,
+            "roundness": 0.0,
+            "style": "highlightPriority"
+          },
+          "wb": {
+            "mode": "asShot",
+            "temp": 6500.0,
+            "tint": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 3,
+      "command": "library.info",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.info",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "albums": 0,
+          "cache": {
+            "disk": {
+              "bytes": 0,
+              "hits": 0,
+              "misses": 0,
+              "path": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/thumbs",
+              "writes": 0
+            },
+            "renderedBytes": 0,
+            "renderedInMemory": 0,
+            "sourceBytes": 0,
+            "sourcesInMemory": 0
+          },
+          "forgotLocal": {
+            "forgotten": 0,
+            "keptInUse": 0,
+            "keptRecent": 0,
+            "keptTouched": 0,
+            "local": 0
+          },
+          "lastError": null,
+          "load": {
+            "created": false,
+            "damaged": null,
+            "replayed": 0,
+            "tornBytes": 0
+          },
+          "logBytes": 0,
+          "logRecords": 0,
+          "path": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library",
+          "persistence": {
+            "appends": 0,
+            "failedSnapshots": 0,
+            "lastAppendMs": 0.0,
+            "lastSnapshot": {
+              "background": false,
+              "blockingMs": 0.0,
+              "bytes": 0,
+              "records": 0,
+              "resetMs": 0.0,
+              "serializeMs": 0.0,
+              "totalMs": 0.0,
+              "writeSyncMs": 0.0
+            },
+            "maxAppendMs": 0.0,
+            "maxBlockingMs": 0.0,
+            "maxSnapshotMs": 0.0,
+            "snapshotRunning": false,
+            "snapshots": 0
+          },
+          "persistent": true,
+          "photos": 2,
+          "seq": 4,
+          "settingsWarnings": [],
+          "snapshotSeq": 4,
+          "unsavedError": null,
+          "unsavedOps": 0
+        }
+      }
+    }
+  ],
+  "libraryPath": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library",
+  "outputRoot": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/exports",
+  "libraryBeforeSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.snap": "a699674ad54a29a4061befa13e4705d21eeac9a7fd3bd055e8676d72dab1636c",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.select\",\"ms\":0.0,\"ok\":true,\"result\":{\"selected\":1}}\n{\"command\":\"photo.inspect\",\"ms\":0.1,\"ok\":true,\"result\":{\"albums\":[],\"as_shot_wb\":null,\"captured\":null,\"content_hash\":\"68db3227011fd172a4a5adbe05ff641a\",\"deleted\":false,\"develop\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}},\"duration\":null,\"edited\":\"2026-09-30T12:00:00\",\"file_name\":\"gradient.jpg\",\"file_size\":1489,\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"history\":[\"Exposure\"],\"id\":2,\"imported\":\"2026-09-30T12:00:00\",\"kind\":\"image\",\"label\":null,\"meta\":{\"alt_text\":\"\",\"aperture\":null,\"camera\":\"\",\"caption\":\"\",\"city\":\"\",\"copyright\":\"\",\"country\":\"\",\"creator\":\"\",\"extended_description\":\"\",\"focal_mm\":null,\"gps\":null,\"iso\":null,\"keywords\":[],\"lens\":\"\",\"location\":\"\",\"shutter\":\"\",\"state\":\"\",\"title\":\"\"},\"rating\":0,\"source\":{\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg\",\"type\":\"file\"},\"versions\":[],\"width\":96}}\n{\"command\":\"develop.get\",\"ms\":0.0,\"ok\":true,\"result\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}}}\n{\"command\":\"library.info\",\"ms\":0.0,\"ok\":true,\"result\":{\"albums\":0,\"cache\":{\"disk\":{\"bytes\":0,\"hits\":0,\"misses\":0,\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/thumbs\",\"writes\":0},\"renderedBytes\":0,\"renderedInMemory\":0,\"sourceBytes\":0,\"sourcesInMemory\":0},\"forgotLocal\":{\"forgotten\":0,\"keptInUse\":0,\"keptRecent\":0,\"keptTouched\":0,\"local\":0},\"lastError\":null,\"load\":{\"created\":false,\"damaged\":null,\"replayed\":0,\"tornBytes\":0},\"logBytes\":0,\"logRecords\":0,\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library\",\"persistence\":{\"appends\":0,\"failedSnapshots\":0,\"lastAppendMs\":0.0,\"lastSnapshot\":{\"background\":false,\"blockingMs\":0.0,\"bytes\":0,\"records\":0,\"resetMs\":0.0,\"serializeMs\":0.0,\"totalMs\":0.0,\"writeSyncMs\":0.0},\"maxAppendMs\":0.0,\"maxBlockingMs\":0.0,\"maxSnapshotMs\":0.0,\"snapshotRunning\":false,\"snapshots\":0},\"persistent\":true,\"photos\":2,\"seq\":4,\"settingsWarnings\":[],\"snapshotSeq\":4,\"unsavedError\":null,\"unsavedOps\":0}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T12:17:42.645406+00:00",
+    "argv": [
+      "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/photo-2-reopen/native-plan.json",
+      "--library",
+      "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 88686,
+    "processStartedAt": "2026-10-08T12:17:42.648166+00:00",
+    "processIdentity": "Thu Oct  8 20:17:42 2026     /private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli run --script /private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/photo-2-reopen/native-plan.json --library /private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T12:17:42.690286+00:00",
+    "stdout": "{\"command\":\"library.select\",\"ms\":0.0,\"ok\":true,\"result\":{\"selected\":1}}\n{\"command\":\"photo.inspect\",\"ms\":0.1,\"ok\":true,\"result\":{\"albums\":[],\"as_shot_wb\":null,\"captured\":null,\"content_hash\":\"68db3227011fd172a4a5adbe05ff641a\",\"deleted\":false,\"develop\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}},\"duration\":null,\"edited\":\"2026-09-30T12:00:00\",\"file_name\":\"gradient.jpg\",\"file_size\":1489,\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"history\":[\"Exposure\"],\"id\":2,\"imported\":\"2026-09-30T12:00:00\",\"kind\":\"image\",\"label\":null,\"meta\":{\"alt_text\":\"\",\"aperture\":null,\"camera\":\"\",\"caption\":\"\",\"city\":\"\",\"copyright\":\"\",\"country\":\"\",\"creator\":\"\",\"extended_description\":\"\",\"focal_mm\":null,\"gps\":null,\"iso\":null,\"keywords\":[],\"lens\":\"\",\"location\":\"\",\"shutter\":\"\",\"state\":\"\",\"title\":\"\"},\"rating\":0,\"source\":{\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg\",\"type\":\"file\"},\"versions\":[],\"width\":96}}\n{\"command\":\"develop.get\",\"ms\":0.0,\"ok\":true,\"result\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}}}\n{\"command\":\"library.info\",\"ms\":0.0,\"ok\":true,\"result\":{\"albums\":0,\"cache\":{\"disk\":{\"bytes\":0,\"hits\":0,\"misses\":0,\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/thumbs\",\"writes\":0},\"renderedBytes\":0,\"renderedInMemory\":0,\"sourceBytes\":0,\"sourcesInMemory\":0},\"forgotLocal\":{\"forgotten\":0,\"keptInUse\":0,\"keptRecent\":0,\"keptTouched\":0,\"local\":0},\"lastError\":null,\"load\":{\"created\":false,\"damaged\":null,\"replayed\":0,\"tornBytes\":0},\"logBytes\":0,\"logRecords\":0,\"path\":\"/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library\",\"persistence\":{\"appends\":0,\"failedSnapshots\":0,\"lastAppendMs\":0.0,\"lastSnapshot\":{\"background\":false,\"blockingMs\":0.0,\"bytes\":0,\"records\":0,\"resetMs\":0.0,\"serializeMs\":0.0,\"totalMs\":0.0,\"writeSyncMs\":0.0},\"maxAppendMs\":0.0,\"maxBlockingMs\":0.0,\"maxSnapshotMs\":0.0,\"snapshotRunning\":false,\"snapshots\":0},\"persistent\":true,\"photos\":2,\"seq\":4,\"settingsWarnings\":[],\"snapshotSeq\":4,\"unsavedError\":null,\"unsavedOps\":0}}\n",
+    "stderr": "",
+    "stdoutBytes": 7117,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/photo-2-reopen/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless"
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless"
+  },
+  "inputAfterSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg": "df3bf90373918e63cee83ca39d7a2d83945d075255747de3a1af66d95d07c5af",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "libraryAfterSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.snap": "a699674ad54a29a4061befa13e4705d21eeac9a7fd3bd055e8676d72dab1636c",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "endedAt": "2026-10-08T12:17:42.697243+00:00"
+}

@@ -1,0 +1,210 @@
+{
+  "domain": "lightcraft",
+  "status": "FAILED_OR_PARTIAL",
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/tmp/lightcraft-acceptance-HoMkD5/duplicate-missing/native-plan.json",
+    "--library",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "e6f3948bde09a30606a5c832d1d3f76fe86ab4d2b72804641f5a95adb8c6967c",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg": "df3bf90373918e63cee83ca39d7a2d83945d075255747de3a1af66d95d07c5af",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "schemaVersion": 1,
+  "runId": "6c9ebbb0-4b6b-4ffc-adab-14ad0666742b",
+  "startedAt": "2026-10-08T12:20:33.399857+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.import",
+      "status": "PARTIAL",
+      "native": {
+        "command": "library.import",
+        "ms": 1.1,
+        "ok": true,
+        "result": {
+          "duplicates": [
+            {
+              "existing": 1,
+              "path": "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png",
+              "reason": "content"
+            }
+          ],
+          "failed": [
+            [
+              "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png",
+              "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png: No such file or directory (os error 2)"
+            ]
+          ],
+          "imported": [],
+          "scanned": 2,
+          "sidecars": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "catalog.query",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "catalog.query",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "photos": [
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": true,
+              "fileName": "gradient.jpg",
+              "flag": "none",
+              "format": "JPEG",
+              "height": 64,
+              "id": 2,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 0,
+              "title": "",
+              "width": 96
+            },
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": true,
+              "fileName": "gradient.png",
+              "flag": "none",
+              "format": "PNG",
+              "height": 64,
+              "id": 1,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 0,
+              "title": "",
+              "width": 96
+            }
+          ],
+          "total": 2
+        }
+      }
+    }
+  ],
+  "libraryPath": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library",
+  "outputRoot": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/exports",
+  "libraryBeforeSha256": {
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.snap": "a699674ad54a29a4061befa13e4705d21eeac9a7fd3bd055e8676d72dab1636c",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.import\",\"ms\":1.1,\"ok\":true,\"result\":{\"duplicates\":[{\"existing\":1,\"path\":\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png\",\"reason\":\"content\"}],\"failed\":[[\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png\",\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png: No such file or directory (os error 2)\"]],\"imported\":[],\"scanned\":2,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":true,\"fileName\":\"gradient.jpg\",\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"id\":2,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96},{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":true,\"fileName\":\"gradient.png\",\"flag\":\"none\",\"format\":\"PNG\",\"height\":64,\"id\":1,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96}],\"total\":2}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T12:20:33.479536+00:00",
+    "argv": [
+      "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/tmp/lightcraft-acceptance-HoMkD5/duplicate-missing/native-plan.json",
+      "--library",
+      "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 54598,
+    "processStartedAt": "2026-10-08T12:20:33.482738+00:00",
+    "processIdentity": "Thu Oct  8 20:20:33 2026     /tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli run --script /tmp/lightcraft-acceptance-HoMkD5/duplicate-missing/native-plan.json --library /tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T12:20:33.526140+00:00",
+    "stdout": "{\"command\":\"library.import\",\"ms\":1.1,\"ok\":true,\"result\":{\"duplicates\":[{\"existing\":1,\"path\":\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png\",\"reason\":\"content\"}],\"failed\":[[\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png\",\"/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/missing.png: No such file or directory (os error 2)\"]],\"imported\":[],\"scanned\":2,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":true,\"fileName\":\"gradient.jpg\",\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"id\":2,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96},{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":true,\"fileName\":\"gradient.png\",\"flag\":\"none\",\"format\":\"PNG\",\"height\":64,\"id\":1,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96}],\"total\":2}}\n",
+    "stderr": "",
+    "stdoutBytes": 1005,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/private/tmp/lightcraft-acceptance-HoMkD5/duplicate-missing/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless"
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless"
+  },
+  "inputAfterSha256": {
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.jpg": "df3bf90373918e63cee83ca39d7a2d83945d075255747de3a1af66d95d07c5af",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "libraryAfterSha256": {
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/catalog.snap": "a699674ad54a29a4061befa13e4705d21eeac9a7fd3bd055e8676d72dab1636c",
+    "/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "endedAt": "2026-10-08T12:20:33.532957+00:00"
+}

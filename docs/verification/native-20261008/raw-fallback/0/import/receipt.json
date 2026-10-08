@@ -1,0 +1,155 @@
+{
+  "domain": "lightcraft",
+  "status": "FAILED_OR_PARTIAL",
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/import/native-plan.json",
+    "--library",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "3521b2cec10ed31df7fa7c51587758745fbb668a761d1eb673f3ea3c0f1931ed",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e"
+  },
+  "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "schemaVersion": 1,
+  "runId": "9498b8ff-99c2-4825-ba57-49d57c212d94",
+  "startedAt": "2026-10-08T12:28:02.325555+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.import",
+      "status": "PARTIAL",
+      "native": {
+        "command": "library.import",
+        "ms": 1.3,
+        "ok": true,
+        "result": {
+          "duplicates": [],
+          "failed": [
+            [
+              "/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw",
+              "RawOther files are not supported yet"
+            ]
+          ],
+          "imported": [],
+          "scanned": 1,
+          "sidecars": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "catalog.query",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "catalog.query",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "photos": [],
+          "total": 0
+        }
+      }
+    }
+  ],
+  "libraryPath": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library",
+  "outputRoot": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/exports",
+  "libraryBeforeSha256": null,
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.import\",\"ms\":1.3,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[[\"/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw\",\"RawOther files are not supported yet\"]],\"imported\":[],\"scanned\":1,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[],\"total\":0}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T12:28:02.407636+00:00",
+    "argv": [
+      "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/import/native-plan.json",
+      "--library",
+      "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 31248,
+    "processStartedAt": "2026-10-08T12:28:02.410255+00:00",
+    "processIdentity": "Thu Oct  8 20:28:02 2026     /private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli run --script /private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/import/native-plan.json --library /private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T12:28:02.487224+00:00",
+    "stdout": "{\"command\":\"library.import\",\"ms\":1.3,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[[\"/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw\",\"RawOther files are not supported yet\"]],\"imported\":[],\"scanned\":1,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[],\"total\":0}}\n",
+    "stderr": "",
+    "stdoutBytes": 308,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/import/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless"
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/private/tmp/lightcraft-acceptance-HoMkD5/png-jpeg/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless"
+  },
+  "inputAfterSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/canon-eos-d30.crw": "4ee482f2b6f9f1a8d370703ea04e9f2abaa49356973a7f56b229af93a78e8a2e"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "cce01832502d06a5d6be6ed7bb9d54084102041c0ea92fe567c5ce5b0d95a7d8",
+    "bootstrap.py": "b6bb1b0c16817261ac34789abcfd17dca29945a27028ee04fe1f65d03654d631",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "3a23ff916c58d5542e47b1149a2c17f49536ed6b892b8df5bd717eab80f3d28f",
+    "command_gateway.py": "60b0f47a9e66a20d34d15d5f436c16c3ab8031f366dce5cd24238a8b5a3f9d32",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "8ecd3796eb2bdb62db8c3d249efbb47d4634e9d14e643ee92f174b2ce795ac64",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "native_process.py": "874ab198ddc5108f05be799f9c26d3a3baf8a5377d5595323dd0608895057fed",
+    "package_checks.py": "46333a614ee6b3dd61d90fda04f01e64a3efa15f1379a5fcf56ac5711a0b1883",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "runtime.lock.json": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253"
+  },
+  "libraryAfterSha256": {
+    "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/private/tmp/lightcraft-acceptance-HoMkD5/raw-fallback/0/library/catalog.snap": "bd5cefad86629f7f4e3a424fecb463231f0ae68e35219534b4adcc0e9a487a7f"
+  },
+  "endedAt": "2026-10-08T12:28:02.496092+00:00"
+}
