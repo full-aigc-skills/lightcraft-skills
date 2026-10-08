@@ -1,0 +1,27 @@
+[
+  {
+    "probe": "promote-feature",
+    "result": "PASS_REJECTED",
+    "error": "sam_assessment_changed_or_inconsistent"
+  },
+  {
+    "probe": "allow-download",
+    "result": "PASS_REJECTED",
+    "error": "sam_assessment_changed_or_inconsistent"
+  },
+  {
+    "probe": "allow-execution",
+    "result": "PASS_REJECTED",
+    "error": "sam_assessment_changed_or_inconsistent"
+  },
+  {
+    "probe": "claim-model-verified",
+    "result": "PASS_REJECTED",
+    "error": "sam_assessment_changed_or_inconsistent"
+  },
+  {
+    "probe": "erase-blockers",
+    "result": "PASS_REJECTED",
+    "error": "sam_assessment_changed_or_inconsistent"
+  }
+]

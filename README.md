@@ -21,3 +21,5 @@ Connect/MCP 增量正在验收，见 [当前增量证据](docs/verification/conn
 批量范围与选择性修订增量已完成实际三照片验收，见 [批量证据](docs/verification/batch-20261008/README.md)。扩展变更尚未整体完成，当前发布草稿的旧目标提交不会自动包含此增量。
 
 逐样本 RAW 身份与结果分层已完成当前原生验收，见 [RAW 证据](docs/verification/raw-20261008/README.md)。完整解码、预览回退和不支持分别记录，仅适用于所测摘要与相机变体。
+
+SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam-20261008/README.md)。

@@ -1,0 +1,35 @@
+{
+  "readOnly": true,
+  "taskExecutionAllowed": false,
+  "downloadAllowed": false,
+  "executionAllowed": false,
+  "deliveryAllowed": false,
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "compatible": true,
+  "compileFeature": "UNKNOWN",
+  "statusCommandPresent": false,
+  "modelIdentityVerified": false,
+  "runtimeIdentity": {
+    "schemaVersion": 1,
+    "platform": "darwin-arm64",
+    "python": "3.12.12",
+    "runtimeLockSha256": "38a5d826d3ee5fec91edc004710c564d8e2766eafa66a000f78e302a09d6b253",
+    "status": "READY",
+    "installed": true,
+    "execution": "NOT_RUN",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "reused": true,
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "version": "0.2.1"
+  },
+  "blockers": [
+    "status_command_absent",
+    "model_identity_not_verified",
+    "download_authorization_not_granted",
+    "execution_authorization_not_granted",
+    "real_segmentation_not_verified"
+  ],
+  "nativeAttestation": "NOT_PROVEN",
+  "scope": "user-supplied facts; no native receipt attestation or inference acceptance"
+}

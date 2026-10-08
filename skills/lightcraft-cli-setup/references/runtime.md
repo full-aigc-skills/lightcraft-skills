@@ -65,3 +65,7 @@ python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/ru
 原生执行前用 `python3 -I -B "$SKILL_DIR/scripts/raw_contract.py" /absolute/manifest.json` 检查版本化样本清单。清单字段为 schemaVersion=1、samples；每项明确 sampleId、make、model、variant、license/licenseUrl、sourceUrl/catalogUrl、path、bytes、sha256，可附 catalogEntryPath/catalogEntrySha256。检查只读，不下载、安装或启动原生程序；缺失、漂移或重复样本在执行前拒绝。
 
 通过后仍须用本技能 commands.py 对明确照片 ID 执行已授权计划，登记原片并保存逐步骤回执。RAW 变体从绑定来源条目记录，不能从文件扩展名推断。catalog.query 的 kind=raw、previewOnly=null 只表示运行时报告完整 RAW；非空原因字符串表示预览回退；缺失或布尔值保持未知。必须核对实际 camera、照片源身份、导出解码和独立会话设置重开；技术通过不等于视觉通过，也不外推其他相机变体。
+
+### SAM 只读评估
+
+用当前技能目录中的 `python3 "$SKILL_DIR/scripts/sam_contract.py" snapshot.json --model-dir /明确的现有模型目录` 检查发现快照和文件；可选 `--status status.json` 只记录报告值，不替代原生回执。无状态命令时编译标记 UNKNOWN。固定 SAM 3 revision/文件身份及未完成门禁见包内 `docs/verification/sam-20261008/README.md`。评估不会下载、接受许可或执行推理；下载和执行须另有明确授权及真实验收，文件匹配不能单独证明可用。
