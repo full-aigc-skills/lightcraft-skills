@@ -1,0 +1,2 @@
+lightcraft-cli: /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/current-native-baseline/library: This library is already open in another LightCraft program. Close it there first.
+To work with the library while the app has it open, start the app with `--control PORT` and use `lightcraft-cli mcp --connect 127.0.0.1:PORT`.

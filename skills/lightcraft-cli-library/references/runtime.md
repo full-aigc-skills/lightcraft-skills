@@ -40,3 +40,16 @@ inspect 与旧回执读取均只读。直接 cli.py 透传 argv 保持兼容，�
 ## 只用现有安装
 
 已有原生运行许可但没有安装许可时，commands.py 的在线 list/describe/check/discover/run 和直接 cli.py 可传 --require-installed。缺失、损坏或平台不支持时拒绝，不创建运行时目录、不调用安装器；不能与 --archive 混用。纯检查仍用 doctor 或 bootstrap.py --no-install，不执行原生程序。
+
+## Connect/MCP 只读探测（扩展实施中）
+
+Headless 计划入口保持不变。`cli.py` 现在在安装前检查实际模式；Connect 与 `--library`、`--import`、`--demo`、`--headless` 或 MCP 素材参数互斥。固定 0.2.1 客户端可能重试连接请求，因此禁止经 Connect 透传修改命令，交互式 Connect MCP 也未开放。只读查询的原生重试单独记录。
+
+```bash
+python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/runtime" --output "/absolute/new-probe"
+python3 -I -B "$SKILL_DIR/scripts/session_probe.py" --runtime-home "/absolute/runtime" --connect "127.0.0.1:18991" --output "/absolute/new-connect-probe"
+```
+
+探测只消费已安装并校验通过的固定运行时，不安装；initialize、tools/list 和实际库资源查询在同一 MCP 进程完成。协议握手成功不等于桌面已连接；逐项核对 `backendQuery`、`runtimeIdentity.mode`、传输、地址及执行回执。原生不提供远端会话 UUID 时保留 NOT_PROVIDED，不用客户端 runId 冒充。只读表示不发送照片修改命令；Headless 打开持久库仍可能执行原生库初始化或迁移，严格文件只读任务不要传 `--library`。
+
+当前已验证 Headless MCP 与 Connect 失联的失败路径；桌面真实会话、重启身份和修改/写回门禁仍 OPEN，不宣称完整 Connect/MCP 宿主接入。

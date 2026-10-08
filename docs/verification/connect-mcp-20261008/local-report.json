@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "288b67f40b3fea43daf716ce7f13ddd4f02cdf19d956985db7186003d3f7ff83",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "README.md",
+        "../../../scripts/validate_package.py"
+      ],
+      "scope": "package structure; not host loading"
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log"
+      ]
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "headless-current/receipt.json",
+        "disconnected-current/receipt.json",
+        "occupied-contract.json",
+        "native-baseline.json"
+      ],
+      "scope": "bounded Headless MCP, disconnected Connect classification, Headless occupied library and PNG/JPEG baseline only; no desktop Connect or real NotSaved"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "remoteCI": {
+      "status": "NOT_RUN",
+      "evidence": []
+    }
+  },
+  "scope": "Connect/MCP development increment; extension requirements remain OPEN; historical release evidence not reused",
+  "completeAcceptance": false
+}

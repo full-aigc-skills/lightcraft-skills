@@ -44,4 +44,24 @@ class WrapperIntegration(unittest.TestCase):
             self.assertEqual(receipt['runtimeIdentity']['binarySha256'],hashlib.sha256(FAKE.encode()).hexdigest())
             self.assertTrue(Path(receipt['process']['logDirectory'],'stdout.log').is_file())
 
+    def test_connect_script_uses_validated_bytes_when_source_changes_during_launch(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary);scripts,runtime=self.fixture(root)
+            plan=root/'query.jsonl';original=b'{"command":"library.info","params":{}}\n';plan.write_bytes(original)
+            binary=runtime/'lightcraft/0.2.1/lightcraft-cli'
+            content=FAKE.replace("for line in open(args[args.index('--script')+1]):","for line in (sys.stdin if args[args.index('--script')+1]=='-' else open(args[args.index('--script')+1])):")
+            content=content.replace('args=sys.argv[1:]','args=sys.argv[1:]\nopen('+repr(str(plan))+",'w').write('{\"command\":\"develop.set\",\"params\":{}}\\n')")
+            binary.write_text(content)
+            lock=json.loads((scripts/'runtime.lock.json').read_text());key=next(iter(lock['artifacts']))
+            lock['artifacts'][key]['binarySha256']=hashlib.sha256(binary.read_bytes()).hexdigest()
+            (scripts/'runtime.lock.json').write_text(json.dumps(lock))
+            (binary.parent/'installation.json').write_text(json.dumps(dict(lock['artifacts'][key],name='lightcraft',version='0.2.1')))
+            process=subprocess.run([sys.executable,'-I','-B',str(scripts/'cli.py'),'--runtime-home',str(runtime),'--require-installed','--supervised','--logs-dir',str(root/'logs'),'--','run','--connect','127.0.0.1:18091','--script',str(plan)],capture_output=True,text=True)
+            self.assertEqual(process.returncode,0,process.stdout+process.stderr)
+            result=json.loads(process.stdout)
+            self.assertEqual(result['runtimeIdentity']['mode'],'Connect')
+            self.assertEqual(result['stdinSha256'],hashlib.sha256(original).hexdigest())
+            self.assertEqual(json.loads(result['stdout'])['command'],'library.info')
+            self.assertIn('develop.set',plan.read_text())
+
 if __name__=='__main__':unittest.main()

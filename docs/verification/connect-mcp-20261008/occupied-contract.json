@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "observedStatus": "UNKNOWN",
+  "receipt": "occupied-current/receipt.json",
+  "lockStillHeld": true,
+  "lockInodeUnchanged": true,
+  "automaticReplay": false,
+  "scope": "Headless MCP occupied library; desktop Connect lock recovery not verified"
+}

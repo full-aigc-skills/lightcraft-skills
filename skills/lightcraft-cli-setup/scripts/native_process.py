@@ -16,10 +16,12 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 
-def supervise(argv, logs, timeout=600, tee=False, stop_file=None):
+def supervise(argv, logs, timeout=600, tee=False, stop_file=None, stdin_data=None):
     """运行一次 argv；日志落盘，超时不推断后代退出或写入回滚。"""
     if not 0 < timeout <= 86400:
         raise ValueError('invalid_timeout')
+    if stdin_data is not None and (not isinstance(stdin_data,bytes) or len(stdin_data)>1048576):
+        raise ValueError('stdin_not_bounded_bytes')
     logs = Path(logs)
     logs.mkdir(parents=True, exist_ok=True)
     if any((logs/name).exists() or (logs/name).is_symlink() for name in ('stdout.log','stderr.log','process-start.json')):
@@ -54,7 +56,7 @@ def supervise(argv, logs, timeout=600, tee=False, stop_file=None):
 
     try:
         import sys
-        process = subprocess.Popen(argv, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+        process = subprocess.Popen(argv, stdin=subprocess.PIPE if stdin_data is not None else None, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
                                    start_new_session=(os.name == 'posix'))
         result.update(pid=process.pid, processStartedAt=now())
         result['processIdentity']=None
@@ -70,6 +72,15 @@ def supervise(argv, logs, timeout=600, tee=False, stop_file=None):
         for pipe, name, channel in [(process.stdout, 'stdout', sys.stdout), (process.stderr, 'stderr', sys.stderr)]:
             thread = threading.Thread(target=drain, args=(pipe, name, channel), daemon=True)
             thread.start(); threads.append(thread)
+        if stdin_data is not None:
+            def feed():
+                try:
+                    with process.stdin as stream:
+                        stream.write(stdin_data);stream.flush()
+                except (OSError,ValueError) as error:
+                    failures.append('stdin_incomplete: '+str(error))
+            thread=threading.Thread(target=feed,daemon=True)
+            thread.start();threads.append(thread)
         try:
             deadline=time.monotonic()+timeout
             while process.poll() is None:

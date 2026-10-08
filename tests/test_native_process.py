@@ -23,6 +23,19 @@ class NativeProcess(unittest.TestCase):
             self.assertFalse(result['descendantsConfirmedStopped'])
             self.assertTrue(result['launchProcessStopped'])
 
+    def test_bounded_stdin_reaches_one_process_and_closes(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            result=self.module().supervise([sys.executable,'-c','import sys; print(sys.stdin.read())'],Path(temporary),stdin_data=b'{"id":1}\n')
+            self.assertEqual(result['status'],'EXITED')
+            self.assertEqual(result['stdout'].strip(),'{"id":1}')
+            self.assertTrue(result['logComplete'])
+
+    def test_stdin_does_not_add_an_unbounded_second_deadline(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            result=self.module().supervise([sys.executable,'-c','import time; time.sleep(10)'],Path(temporary),.1,stdin_data=b'x'*1000000)
+            self.assertEqual(result['status'],'UNKNOWN')
+            self.assertTrue(result['launchProcessStopped'])
+
     def test_large_log_is_on_disk_with_bounded_tail(self):
         with tempfile.TemporaryDirectory() as temporary:
             result = self.module().supervise([sys.executable, '-c', 'print("x" * 200000)'], Path(temporary))
