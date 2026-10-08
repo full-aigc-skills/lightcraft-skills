@@ -9,7 +9,7 @@
 - [分层验收与限制](../docs/verification/implementation-evidence.md)
 - [同步归档执行回执](../docs/verification/openspec-archive.json)
 
-三个独立扩展变更仍在 `changes/`，状态为：Connect/MCP 0/4、扩展照片/SAM 2/4、跨平台/ArtCraft/移动交付 1/4。批量范围、选择性修订、逐样本 RAW 与三领域公共协议任务已完成，其他 9 项继续 OPEN。基础闭环验收不关闭这些范围。
+三个独立扩展变更仍在 `changes/`，状态为：Connect/MCP 0/4、扩展照片/SAM 2/4、跨平台/ArtCraft/移动交付 2/4。批量范围、选择性修订、逐样本 RAW 与三领域公共协议任务已完成，其他 8 项继续 OPEN。基础闭环验收不关闭这些范围。
 
 ```bash
 openspec list
@@ -17,3 +17,5 @@ openspec validate --all --strict --no-interactive
 ```
 
 任务使用 S-X.Y（技能库）和 P-X.Y（插件）编号。技能库公开来源版本为 v0.1.0-dev.1，插件公开开发版本为 v0.1.0-dev.2；原生 CLI 独立固定为 0.2.1 / macOS arm64。宿主模型验收仅覆盖六技能隔离环境，全量技能列表的上下文预算限制仍保留。
+
+候选技能源六目标 CLI 平台门禁已完成，见 [六目标证据](../docs/verification/windows-20261008/README.md)；公开来源 v0.1.0-dev.1 的平台范围不随候选代码扩大。

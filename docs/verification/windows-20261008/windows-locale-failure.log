@@ -1,0 +1,190 @@
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	﻿2026-10-08T15:21:40.3753751Z ##[group]Run python -I -B scripts/validate_package.py
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3754242Z ^[[36;1mpython -I -B scripts/validate_package.py^[[0m
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3767817Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3768207Z env:
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3768375Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3768655Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3769125Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3769581Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3769972Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3770356Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.3770666Z ##[endgroup]
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4525315Z Traceback (most recent call last):
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4533973Z   File "D:\a\lightcraft-skills\lightcraft-skills\scripts\validate_package.py", line 25, in <module>
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4535006Z     if __name__=='__main__':print(json.dumps(validate(),ensure_ascii=False))
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4535527Z                                              ^^^^^^^^^^
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4536224Z   File "D:\a\lightcraft-skills\lightcraft-skills\scripts\validate_package.py", line 14, in validate
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4536941Z     result=checks.skills(ROOT,suite['skills'],ROOT/'runtime')
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4537378Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4538012Z   File "D:\a\lightcraft-skills\lightcraft-skills\runtime\package_checks.py", line 30, in skills
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4538651Z     text=(directory/'SKILL.md').read_text()
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4538994Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4539600Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\pathlib.py", line 1028, in read_text
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4725931Z     return f.read()
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4726292Z            ^^^^^^^^
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4726888Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\encodings\cp1252.py", line 23, in decode
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4969621Z     return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4970341Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.4970989Z UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 51: character maps to <undefined>
+native (windows-2022, windows-x86_64, x64)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:40.5074636Z ##[error]Process completed with exit code 1.
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	﻿2026-10-08T15:21:40.5265098Z ##[group]Run $binary = Join-Path $env:NATIVE_WORKDIR 'runtime/lightcraft/0.2.1/lightcraft-cli.exe'
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5265898Z ^[[36;1m$binary = Join-Path $env:NATIVE_WORKDIR 'runtime/lightcraft/0.2.1/lightcraft-cli.exe'^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5266548Z ^[[36;1mif (!(Test-Path $binary)) { throw 'native CLI not installed; dependency evidence unavailable' }^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5267096Z ^[[36;1m$signature = Get-AuthenticodeSignature -FilePath $binary^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5269069Z ^[[36;1m$facts = @{ hostOS = [Environment]::OSVersion.VersionString; hostArchitecture = $env:PROCESSOR_ARCHITECTURE; status = $signature.Status.ToString(); statusMessage = $signature.StatusMessage; signerSubject = $signature.SignerCertificate.Subject; binarySha256 = (Get-FileHash $binary -Algorithm SHA256).Hash.ToLower() }^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5270638Z ^[[36;1m$facts | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-signature.json') -Encoding utf8^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5271355Z ^[[36;1m$vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5272108Z ^[[36;1m$dumpbin = & $vswhere -latest -products '*' -find 'VC/Tools/MSVC/**/bin/Hostx64/x64/dumpbin.exe' | Select-Object -First 1^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5272744Z ^[[36;1mif (!$dumpbin) { throw 'PE dependency inspection tool unavailable' }^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5273548Z ^[[36;1m& $dumpbin /dependents $binary | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-dependencies.txt') -Encoding utf8^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5274247Z ^[[36;1mif ($LASTEXITCODE -ne 0) { throw 'PE dependency inspection failed' }^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5377849Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5378259Z env:
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5378462Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5378793Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5379345Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5379909Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5380400Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5380883Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5381316Z   NATIVE_WORKDIR: D:\a\_temp/native-windows-x86_64
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:40.5381649Z ##[endgroup]
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2036690Z ^[[31;1mException: ^[[0mD:\a\_temp\5e9ceed1-021c-432c-84a8-de954b5d6461.ps1:3^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2037651Z ^[[31;1m^[[0m^[[36;1mLine |^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2038542Z ^[[31;1m^[[0m^[[36;1m^[[36;1m   3 | ^[[0m … $binary)) { ^[[36;1mthrow 'native CLI not installed; dependency evidence unav^[[0m …^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2040251Z ^[[31;1m^[[0m^[[36;1m^[[36;1m^[[0m^[[36;1m^[[0m^[[36;1m     | ^[[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2041882Z ^[[31;1m^[[0m^[[36;1m^[[36;1m^[[0m^[[36;1m^[[0m^[[36;1m^[[31;1m^[[31;1m^[[36;1m     | ^[[31;1mnative CLI not installed; dependency evidence unavailable^[[0m
+native (windows-2022, windows-x86_64, x64)	Record Windows signature and PE dependencies	2026-10-08T15:21:41.2480449Z ##[error]Process completed with exit code 1.
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	﻿2026-10-08T15:21:41.2668570Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2669308Z with:
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2669614Z   name: native-windows-x86_64
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2672489Z   path: D:\a\_temp/native-windows-x86_64/native-evidence.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/windows-*.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/windows-*.txt
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*-plan.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/receipt.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/logs/*.log
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/logs/*.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/native-plan.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/exports/*
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/originals/*
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2676568Z   if-no-files-found: error
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2676949Z   retention-days: 30
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2677171Z   compression-level: 6
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2677373Z   overwrite: false
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2677574Z   include-hidden-files: false
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2677803Z env:
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2677976Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2678300Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2678752Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2679197Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2679590Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2679993Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.2680315Z ##[endgroup]
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.4510214Z (node:5960) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.4510958Z (Use `node --trace-deprecation ...` to show where the warning was created)
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	2026-10-08T15:21:41.4574514Z ##[error]No files were found with the provided path: D:\a\_temp/native-windows-x86_64/native-evidence.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/windows-*.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/windows-*.txt
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*-plan.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/receipt.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/logs/*.log
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/logs/*.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/*/native-plan.json
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/exports/*
+native (windows-2022, windows-x86_64, x64)	Preserve exact native evidence	D:\a\_temp/native-windows-x86_64/originals/*. No artifacts will be uploaded.
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	﻿2026-10-08T15:21:47.8416077Z ##[group]Run python -I -B scripts/validate_package.py
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8416590Z ^[[36;1mpython -I -B scripts/validate_package.py^[[0m
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8429701Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8430104Z env:
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8430278Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8430565Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8431024Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x86/lib/pkgconfig
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8431476Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8431874Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8432274Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.8432597Z ##[endgroup]
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9263360Z Traceback (most recent call last):
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9272021Z   File "D:\a\lightcraft-skills\lightcraft-skills\scripts\validate_package.py", line 25, in <module>
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9273177Z     if __name__=='__main__':print(json.dumps(validate(),ensure_ascii=False))
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9273700Z                                              ^^^^^^^^^^
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9274392Z   File "D:\a\lightcraft-skills\lightcraft-skills\scripts\validate_package.py", line 14, in validate
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9275124Z     result=checks.skills(ROOT,suite['skills'],ROOT/'runtime')
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9275564Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9276183Z   File "D:\a\lightcraft-skills\lightcraft-skills\runtime\package_checks.py", line 30, in skills
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9276814Z     text=(directory/'SKILL.md').read_text()
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9277156Z          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9277726Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x86\Lib\pathlib.py", line 1028, in read_text
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9562301Z     return f.read()
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9562634Z            ^^^^^^^^
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9563191Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x86\Lib\encodings\cp1252.py", line 23, in decode
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9849185Z     return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9850013Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9850819Z UnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 51: character maps to <undefined>
+native (windows-2022, windows-x86, x86)	Run python -I -B scripts/validate_package.py	2026-10-08T15:21:47.9961153Z ##[error]Process completed with exit code 1.
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	﻿2026-10-08T15:21:48.0146408Z ##[group]Run $binary = Join-Path $env:NATIVE_WORKDIR 'runtime/lightcraft/0.2.1/lightcraft-cli.exe'
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0147206Z ^[[36;1m$binary = Join-Path $env:NATIVE_WORKDIR 'runtime/lightcraft/0.2.1/lightcraft-cli.exe'^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0147848Z ^[[36;1mif (!(Test-Path $binary)) { throw 'native CLI not installed; dependency evidence unavailable' }^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0148399Z ^[[36;1m$signature = Get-AuthenticodeSignature -FilePath $binary^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0149727Z ^[[36;1m$facts = @{ hostOS = [Environment]::OSVersion.VersionString; hostArchitecture = $env:PROCESSOR_ARCHITECTURE; status = $signature.Status.ToString(); statusMessage = $signature.StatusMessage; signerSubject = $signature.SignerCertificate.Subject; binarySha256 = (Get-FileHash $binary -Algorithm SHA256).Hash.ToLower() }^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0151289Z ^[[36;1m$facts | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-signature.json') -Encoding utf8^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0152013Z ^[[36;1m$vswhere = Join-Path ${env:ProgramFiles(x86)} 'Microsoft Visual Studio/Installer/vswhere.exe'^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0152781Z ^[[36;1m$dumpbin = & $vswhere -latest -products '*' -find 'VC/Tools/MSVC/**/bin/Hostx64/x64/dumpbin.exe' | Select-Object -First 1^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0153419Z ^[[36;1mif (!$dumpbin) { throw 'PE dependency inspection tool unavailable' }^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0154073Z ^[[36;1m& $dumpbin /dependents $binary | Set-Content (Join-Path $env:NATIVE_WORKDIR 'windows-dependencies.txt') -Encoding utf8^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0154724Z ^[[36;1mif ($LASTEXITCODE -ne 0) { throw 'PE dependency inspection failed' }^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0280980Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0281344Z env:
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0281525Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0281815Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0282371Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x86/lib/pkgconfig
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0282917Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0283365Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0283794Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0284172Z   NATIVE_WORKDIR: D:\a\_temp/native-windows-x86
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.0284472Z ##[endgroup]
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.7857312Z ^[[31;1mException: ^[[0mD:\a\_temp\69a8c7c8-0e4d-4d15-92f4-c4742c178097.ps1:3^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.7858240Z ^[[31;1m^[[0m^[[36;1mLine |^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.7859196Z ^[[31;1m^[[0m^[[36;1m^[[36;1m   3 | ^[[0m … $binary)) { ^[[36;1mthrow 'native CLI not installed; dependency evidence unav^[[0m …^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.7860137Z ^[[31;1m^[[0m^[[36;1m^[[36;1m^[[0m^[[36;1m^[[0m^[[36;1m     | ^[[31;1m               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.7860890Z ^[[31;1m^[[0m^[[36;1m^[[36;1m^[[0m^[[36;1m^[[0m^[[36;1m^[[31;1m^[[31;1m^[[36;1m     | ^[[31;1mnative CLI not installed; dependency evidence unavailable^[[0m
+native (windows-2022, windows-x86, x86)	Record Windows signature and PE dependencies	2026-10-08T15:21:48.8300793Z ##[error]Process completed with exit code 1.
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	﻿2026-10-08T15:21:48.8475955Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8476429Z with:
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8476625Z   name: native-windows-x86
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8478271Z   path: D:\a\_temp/native-windows-x86/native-evidence.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/windows-*.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/windows-*.txt
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*-plan.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/receipt.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/logs/*.log
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/logs/*.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/native-plan.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/exports/*
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/originals/*
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8480770Z   if-no-files-found: error
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8480995Z   retention-days: 30
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8481207Z   compression-level: 6
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8481410Z   overwrite: false
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8481607Z   include-hidden-files: false
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8481817Z env:
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8481991Z   PYTHONUTF8: 1
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8482298Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8482755Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x86/lib/pkgconfig
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8483204Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8483605Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8484013Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x86
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:48.8484347Z ##[endgroup]
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:49.0342671Z (node:7332) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:49.0343435Z (Use `node --trace-deprecation ...` to show where the warning was created)
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	2026-10-08T15:21:49.0406834Z ##[error]No files were found with the provided path: D:\a\_temp/native-windows-x86/native-evidence.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/windows-*.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/windows-*.txt
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*-plan.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/receipt.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/logs/*.log
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/logs/*.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/*/native-plan.json
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/exports/*
+native (windows-2022, windows-x86, x86)	Preserve exact native evidence	D:\a\_temp/native-windows-x86/originals/*. No artifacts will be uploaded.

@@ -1,0 +1,738 @@
+{
+  "domain": "lightcraft",
+  "status": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+  "argv": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python",
+    "-I",
+    "-B",
+    "/Users/runner/work/lightcraft-skills/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/Users/runner/work/_temp/native-darwin-arm64/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/Users/runner/work/_temp/native-darwin-arm64/photo-2-reopen/native-plan.json",
+    "--library",
+    "/Users/runner/work/_temp/native-darwin-arm64/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.jpg": "5534a1d334c266b70248796e178ed9db038d1b46be9798e8f9cd860b8dc86d5e",
+    "/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "runtimeLockSha256": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "schemaVersion": 1,
+  "runId": "4b50eeec-9987-4105-a9b2-69e1785d3a93",
+  "startedAt": "2026-10-08T15:28:15.342675+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.select",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.select",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "selected": 1
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "photo.inspect",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "photo.inspect",
+        "ms": 0.1,
+        "ok": true,
+        "result": {
+          "albums": [],
+          "as_shot_wb": null,
+          "captured": null,
+          "content_hash": "31b94f3ef5a14b55eb0862be119bbc5b",
+          "deleted": false,
+          "develop": {
+            "bw_mix": {
+              "aqua": 0.0,
+              "blue": 0.0,
+              "green": 0.0,
+              "magenta": 0.0,
+              "orange": 0.0,
+              "purple": 0.0,
+              "red": 0.0,
+              "yellow": 0.0
+            },
+            "calibration": {
+              "blue_hue": 0.0,
+              "blue_sat": 0.0,
+              "green_hue": 0.0,
+              "green_sat": 0.0,
+              "red_hue": 0.0,
+              "red_sat": 0.0,
+              "shadows_tint": 0.0
+            },
+            "color": {
+              "saturation": 0.0,
+              "vibrance": 0.0
+            },
+            "crop": {
+              "aspect": null,
+              "flip_h": false,
+              "flip_v": false,
+              "geometry": {
+                "angle": 0.0,
+                "rect": {
+                  "x0": 0.0,
+                  "x1": 1.0,
+                  "y0": 0.0,
+                  "y1": 1.0
+                }
+              }
+            },
+            "curve": {
+              "blue": [],
+              "darks": 0.0,
+              "green": [],
+              "highlights": 0.0,
+              "lights": 0.0,
+              "master": [],
+              "red": [],
+              "refine_saturation": 100.0,
+              "shadows": 0.0,
+              "split_highlights": 75.0,
+              "split_mid": 50.0,
+              "split_shadows": 25.0
+            },
+            "detail": {
+              "nr_color": 0.0,
+              "nr_color_detail": 50.0,
+              "nr_color_smoothness": 50.0,
+              "nr_contrast": 0.0,
+              "nr_detail": 50.0,
+              "nr_luminance": 0.0,
+              "sharpen_amount": 0.0,
+              "sharpen_detail": 25.0,
+              "sharpen_masking": 0.0,
+              "sharpen_radius": 1.0
+            },
+            "disabled_sections": [],
+            "effects": {
+              "clarity": 0.0,
+              "dehaze": 0.0,
+              "texture": 0.0
+            },
+            "enhance": {
+              "denoise": 0.0,
+              "raw_details": false,
+              "super_resolution": false
+            },
+            "geometry": {
+              "aspect": 0.0,
+              "constrain_crop": false,
+              "guides": [],
+              "horizontal": 0.0,
+              "offset_x": 0.0,
+              "offset_y": 0.0,
+              "rotate": 0.0,
+              "scale": 100.0,
+              "upright": "off",
+              "upright_transform": null,
+              "vertical": 0.0
+            },
+            "grading": {
+              "balance": 0.0,
+              "blending": 50.0,
+              "global": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "highlights": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "midtones": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "shadows": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              }
+            },
+            "grain": {
+              "amount": 0.0,
+              "roughness": 50.0,
+              "seed": 0,
+              "size": 25.0
+            },
+            "lens_blur": {
+              "amount": 0.0,
+              "enabled": false,
+              "focal_distance": 0.0,
+              "focal_range": 0.0
+            },
+            "light": {
+              "blacks": 0.0,
+              "contrast": 0.0,
+              "exposure": 0.5,
+              "highlights": 0.0,
+              "shadows": 0.0,
+              "whites": 0.0
+            },
+            "masks": [],
+            "mixer": {
+              "aqua": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "blue": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "green": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "magenta": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "orange": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "purple": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "red": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              },
+              "yellow": {
+                "hue": 0.0,
+                "lum": 0.0,
+                "sat": 0.0
+              }
+            },
+            "optics": {
+              "ca_blue": 0.0,
+              "ca_red": 0.0,
+              "defringe_green_amount": 0.0,
+              "defringe_green_hue_hi": 60.0,
+              "defringe_green_hue_lo": 40.0,
+              "defringe_purple_amount": 0.0,
+              "defringe_purple_hue_hi": 70.0,
+              "defringe_purple_hue_lo": 30.0,
+              "distortion": 0.0,
+              "lens_profile": false,
+              "profile_distortion": 100.0,
+              "profile_vignetting": 100.0,
+              "remove_ca": false,
+              "vignetting": 0.0,
+              "vignetting_midpoint": 50.0
+            },
+            "orientation": "Normal",
+            "point_colors": [],
+            "profile": {
+              "amount": 100.0,
+              "id": "lc.color"
+            },
+            "red_eye": [],
+            "spots": [],
+            "treatment": "color",
+            "version": 1,
+            "vignette": {
+              "amount": 0.0,
+              "feather": 50.0,
+              "highlights": 0.0,
+              "midpoint": 50.0,
+              "roundness": 0.0,
+              "style": "highlightPriority"
+            },
+            "wb": {
+              "mode": "asShot",
+              "temp": 6500.0,
+              "tint": 0.0
+            }
+          },
+          "duration": null,
+          "edited": "2026-09-30T12:00:00",
+          "file_name": "gradient.jpg",
+          "file_size": 1055,
+          "flag": "none",
+          "format": "JPEG",
+          "height": 64,
+          "history": [
+            "Exposure"
+          ],
+          "id": 2,
+          "imported": "2026-09-30T12:00:00",
+          "kind": "image",
+          "label": null,
+          "meta": {
+            "alt_text": "",
+            "aperture": null,
+            "camera": "",
+            "caption": "",
+            "city": "",
+            "copyright": "",
+            "country": "",
+            "creator": "",
+            "extended_description": "",
+            "focal_mm": null,
+            "gps": null,
+            "iso": null,
+            "keywords": [],
+            "lens": "",
+            "location": "",
+            "shutter": "",
+            "state": "",
+            "title": ""
+          },
+          "rating": 0,
+          "source": {
+            "path": "/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.jpg",
+            "type": "file"
+          },
+          "versions": [],
+          "width": 96
+        }
+      }
+    },
+    {
+      "index": 2,
+      "command": "develop.get",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "develop.get",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "bw_mix": {
+            "aqua": 0.0,
+            "blue": 0.0,
+            "green": 0.0,
+            "magenta": 0.0,
+            "orange": 0.0,
+            "purple": 0.0,
+            "red": 0.0,
+            "yellow": 0.0
+          },
+          "calibration": {
+            "blue_hue": 0.0,
+            "blue_sat": 0.0,
+            "green_hue": 0.0,
+            "green_sat": 0.0,
+            "red_hue": 0.0,
+            "red_sat": 0.0,
+            "shadows_tint": 0.0
+          },
+          "color": {
+            "saturation": 0.0,
+            "vibrance": 0.0
+          },
+          "crop": {
+            "aspect": null,
+            "flip_h": false,
+            "flip_v": false,
+            "geometry": {
+              "angle": 0.0,
+              "rect": {
+                "x0": 0.0,
+                "x1": 1.0,
+                "y0": 0.0,
+                "y1": 1.0
+              }
+            }
+          },
+          "curve": {
+            "blue": [],
+            "darks": 0.0,
+            "green": [],
+            "highlights": 0.0,
+            "lights": 0.0,
+            "master": [],
+            "red": [],
+            "refine_saturation": 100.0,
+            "shadows": 0.0,
+            "split_highlights": 75.0,
+            "split_mid": 50.0,
+            "split_shadows": 25.0
+          },
+          "detail": {
+            "nr_color": 0.0,
+            "nr_color_detail": 50.0,
+            "nr_color_smoothness": 50.0,
+            "nr_contrast": 0.0,
+            "nr_detail": 50.0,
+            "nr_luminance": 0.0,
+            "sharpen_amount": 0.0,
+            "sharpen_detail": 25.0,
+            "sharpen_masking": 0.0,
+            "sharpen_radius": 1.0
+          },
+          "disabled_sections": [],
+          "effects": {
+            "clarity": 0.0,
+            "dehaze": 0.0,
+            "texture": 0.0
+          },
+          "enhance": {
+            "denoise": 0.0,
+            "raw_details": false,
+            "super_resolution": false
+          },
+          "geometry": {
+            "aspect": 0.0,
+            "constrain_crop": false,
+            "guides": [],
+            "horizontal": 0.0,
+            "offset_x": 0.0,
+            "offset_y": 0.0,
+            "rotate": 0.0,
+            "scale": 100.0,
+            "upright": "off",
+            "upright_transform": null,
+            "vertical": 0.0
+          },
+          "grading": {
+            "balance": 0.0,
+            "blending": 50.0,
+            "global": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "highlights": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "midtones": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "shadows": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            }
+          },
+          "grain": {
+            "amount": 0.0,
+            "roughness": 50.0,
+            "seed": 0,
+            "size": 25.0
+          },
+          "lens_blur": {
+            "amount": 0.0,
+            "enabled": false,
+            "focal_distance": 0.0,
+            "focal_range": 0.0
+          },
+          "light": {
+            "blacks": 0.0,
+            "contrast": 0.0,
+            "exposure": 0.5,
+            "highlights": 0.0,
+            "shadows": 0.0,
+            "whites": 0.0
+          },
+          "masks": [],
+          "mixer": {
+            "aqua": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "blue": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "green": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "magenta": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "orange": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "purple": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "red": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            },
+            "yellow": {
+              "hue": 0.0,
+              "lum": 0.0,
+              "sat": 0.0
+            }
+          },
+          "optics": {
+            "ca_blue": 0.0,
+            "ca_red": 0.0,
+            "defringe_green_amount": 0.0,
+            "defringe_green_hue_hi": 60.0,
+            "defringe_green_hue_lo": 40.0,
+            "defringe_purple_amount": 0.0,
+            "defringe_purple_hue_hi": 70.0,
+            "defringe_purple_hue_lo": 30.0,
+            "distortion": 0.0,
+            "lens_profile": false,
+            "profile_distortion": 100.0,
+            "profile_vignetting": 100.0,
+            "remove_ca": false,
+            "vignetting": 0.0,
+            "vignetting_midpoint": 50.0
+          },
+          "orientation": "Normal",
+          "point_colors": [],
+          "profile": {
+            "amount": 100.0,
+            "id": "lc.color"
+          },
+          "red_eye": [],
+          "spots": [],
+          "treatment": "color",
+          "version": 1,
+          "vignette": {
+            "amount": 0.0,
+            "feather": 50.0,
+            "highlights": 0.0,
+            "midpoint": 50.0,
+            "roundness": 0.0,
+            "style": "highlightPriority"
+          },
+          "wb": {
+            "mode": "asShot",
+            "temp": 6500.0,
+            "tint": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 3,
+      "command": "library.info",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.info",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "albums": 0,
+          "cache": {
+            "disk": {
+              "bytes": 0,
+              "hits": 0,
+              "misses": 0,
+              "path": "/Users/runner/work/_temp/native-darwin-arm64/library/thumbs",
+              "writes": 0
+            },
+            "renderedBytes": 0,
+            "renderedInMemory": 0,
+            "sourceBytes": 0,
+            "sourcesInMemory": 0
+          },
+          "forgotLocal": {
+            "forgotten": 0,
+            "keptInUse": 0,
+            "keptRecent": 0,
+            "keptTouched": 0,
+            "local": 0
+          },
+          "lastError": null,
+          "load": {
+            "created": false,
+            "damaged": null,
+            "replayed": 0,
+            "tornBytes": 0
+          },
+          "logBytes": 0,
+          "logRecords": 0,
+          "path": "/Users/runner/work/_temp/native-darwin-arm64/library",
+          "persistence": {
+            "appends": 0,
+            "failedSnapshots": 0,
+            "lastAppendMs": 0.0,
+            "lastSnapshot": {
+              "background": false,
+              "blockingMs": 0.0,
+              "bytes": 0,
+              "records": 0,
+              "resetMs": 0.0,
+              "serializeMs": 0.0,
+              "totalMs": 0.0,
+              "writeSyncMs": 0.0
+            },
+            "maxAppendMs": 0.0,
+            "maxBlockingMs": 0.0,
+            "maxSnapshotMs": 0.0,
+            "snapshotRunning": false,
+            "snapshots": 0
+          },
+          "persistent": true,
+          "photos": 2,
+          "seq": 4,
+          "settingsWarnings": [],
+          "snapshotSeq": 4,
+          "unsavedError": null,
+          "unsavedOps": 0
+        }
+      }
+    }
+  ],
+  "libraryPath": "/Users/runner/work/_temp/native-darwin-arm64/library",
+  "outputRoot": "/Users/runner/work/_temp/native-darwin-arm64/exports",
+  "libraryBeforeSha256": {
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.snap": "cc002de574c06ace4f259050832e2b80346f597b6fdb16e7029e11a97458e020",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.select\",\"ms\":0.0,\"ok\":true,\"result\":{\"selected\":1}}\n{\"command\":\"photo.inspect\",\"ms\":0.1,\"ok\":true,\"result\":{\"albums\":[],\"as_shot_wb\":null,\"captured\":null,\"content_hash\":\"31b94f3ef5a14b55eb0862be119bbc5b\",\"deleted\":false,\"develop\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}},\"duration\":null,\"edited\":\"2026-09-30T12:00:00\",\"file_name\":\"gradient.jpg\",\"file_size\":1055,\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"history\":[\"Exposure\"],\"id\":2,\"imported\":\"2026-09-30T12:00:00\",\"kind\":\"image\",\"label\":null,\"meta\":{\"alt_text\":\"\",\"aperture\":null,\"camera\":\"\",\"caption\":\"\",\"city\":\"\",\"copyright\":\"\",\"country\":\"\",\"creator\":\"\",\"extended_description\":\"\",\"focal_mm\":null,\"gps\":null,\"iso\":null,\"keywords\":[],\"lens\":\"\",\"location\":\"\",\"shutter\":\"\",\"state\":\"\",\"title\":\"\"},\"rating\":0,\"source\":{\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.jpg\",\"type\":\"file\"},\"versions\":[],\"width\":96}}\n{\"command\":\"develop.get\",\"ms\":0.0,\"ok\":true,\"result\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}}}\n{\"command\":\"library.info\",\"ms\":0.0,\"ok\":true,\"result\":{\"albums\":0,\"cache\":{\"disk\":{\"bytes\":0,\"hits\":0,\"misses\":0,\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/library/thumbs\",\"writes\":0},\"renderedBytes\":0,\"renderedInMemory\":0,\"sourceBytes\":0,\"sourcesInMemory\":0},\"forgotLocal\":{\"forgotten\":0,\"keptInUse\":0,\"keptRecent\":0,\"keptTouched\":0,\"local\":0},\"lastError\":null,\"load\":{\"created\":false,\"damaged\":null,\"replayed\":0,\"tornBytes\":0},\"logBytes\":0,\"logRecords\":0,\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/library\",\"persistence\":{\"appends\":0,\"failedSnapshots\":0,\"lastAppendMs\":0.0,\"lastSnapshot\":{\"background\":false,\"blockingMs\":0.0,\"bytes\":0,\"records\":0,\"resetMs\":0.0,\"serializeMs\":0.0,\"totalMs\":0.0,\"writeSyncMs\":0.0},\"maxAppendMs\":0.0,\"maxBlockingMs\":0.0,\"maxSnapshotMs\":0.0,\"snapshotRunning\":false,\"snapshots\":0},\"persistent\":true,\"photos\":2,\"seq\":4,\"settingsWarnings\":[],\"snapshotSeq\":4,\"unsavedError\":null,\"unsavedOps\":0}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T15:28:15.475809+00:00",
+    "argv": [
+      "/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/Users/runner/work/_temp/native-darwin-arm64/photo-2-reopen/native-plan.json",
+      "--library",
+      "/Users/runner/work/_temp/native-darwin-arm64/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 1400,
+    "processStartedAt": "2026-10-08T15:28:15.478857+00:00",
+    "processIdentity": "Thu Oct  8 15:28:15 2026     /Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli run --script /Users/runner/work/_temp/native-darwin-arm64/photo-2-reopen/native-plan.json --library /Users/runner/work/_temp/native-darwin-arm64/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T15:28:15.498255+00:00",
+    "stdout": "{\"command\":\"library.select\",\"ms\":0.0,\"ok\":true,\"result\":{\"selected\":1}}\n{\"command\":\"photo.inspect\",\"ms\":0.1,\"ok\":true,\"result\":{\"albums\":[],\"as_shot_wb\":null,\"captured\":null,\"content_hash\":\"31b94f3ef5a14b55eb0862be119bbc5b\",\"deleted\":false,\"develop\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}},\"duration\":null,\"edited\":\"2026-09-30T12:00:00\",\"file_name\":\"gradient.jpg\",\"file_size\":1055,\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"history\":[\"Exposure\"],\"id\":2,\"imported\":\"2026-09-30T12:00:00\",\"kind\":\"image\",\"label\":null,\"meta\":{\"alt_text\":\"\",\"aperture\":null,\"camera\":\"\",\"caption\":\"\",\"city\":\"\",\"copyright\":\"\",\"country\":\"\",\"creator\":\"\",\"extended_description\":\"\",\"focal_mm\":null,\"gps\":null,\"iso\":null,\"keywords\":[],\"lens\":\"\",\"location\":\"\",\"shutter\":\"\",\"state\":\"\",\"title\":\"\"},\"rating\":0,\"source\":{\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.jpg\",\"type\":\"file\"},\"versions\":[],\"width\":96}}\n{\"command\":\"develop.get\",\"ms\":0.0,\"ok\":true,\"result\":{\"bw_mix\":{\"aqua\":0.0,\"blue\":0.0,\"green\":0.0,\"magenta\":0.0,\"orange\":0.0,\"purple\":0.0,\"red\":0.0,\"yellow\":0.0},\"calibration\":{\"blue_hue\":0.0,\"blue_sat\":0.0,\"green_hue\":0.0,\"green_sat\":0.0,\"red_hue\":0.0,\"red_sat\":0.0,\"shadows_tint\":0.0},\"color\":{\"saturation\":0.0,\"vibrance\":0.0},\"crop\":{\"aspect\":null,\"flip_h\":false,\"flip_v\":false,\"geometry\":{\"angle\":0.0,\"rect\":{\"x0\":0.0,\"x1\":1.0,\"y0\":0.0,\"y1\":1.0}}},\"curve\":{\"blue\":[],\"darks\":0.0,\"green\":[],\"highlights\":0.0,\"lights\":0.0,\"master\":[],\"red\":[],\"refine_saturation\":100.0,\"shadows\":0.0,\"split_highlights\":75.0,\"split_mid\":50.0,\"split_shadows\":25.0},\"detail\":{\"nr_color\":0.0,\"nr_color_detail\":50.0,\"nr_color_smoothness\":50.0,\"nr_contrast\":0.0,\"nr_detail\":50.0,\"nr_luminance\":0.0,\"sharpen_amount\":0.0,\"sharpen_detail\":25.0,\"sharpen_masking\":0.0,\"sharpen_radius\":1.0},\"disabled_sections\":[],\"effects\":{\"clarity\":0.0,\"dehaze\":0.0,\"texture\":0.0},\"enhance\":{\"denoise\":0.0,\"raw_details\":false,\"super_resolution\":false},\"geometry\":{\"aspect\":0.0,\"constrain_crop\":false,\"guides\":[],\"horizontal\":0.0,\"offset_x\":0.0,\"offset_y\":0.0,\"rotate\":0.0,\"scale\":100.0,\"upright\":\"off\",\"upright_transform\":null,\"vertical\":0.0},\"grading\":{\"balance\":0.0,\"blending\":50.0,\"global\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"highlights\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"midtones\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"shadows\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"grain\":{\"amount\":0.0,\"roughness\":50.0,\"seed\":0,\"size\":25.0},\"lens_blur\":{\"amount\":0.0,\"enabled\":false,\"focal_distance\":0.0,\"focal_range\":0.0},\"light\":{\"blacks\":0.0,\"contrast\":0.0,\"exposure\":0.5,\"highlights\":0.0,\"shadows\":0.0,\"whites\":0.0},\"masks\":[],\"mixer\":{\"aqua\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"blue\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"green\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"magenta\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"orange\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"purple\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"red\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0},\"yellow\":{\"hue\":0.0,\"lum\":0.0,\"sat\":0.0}},\"optics\":{\"ca_blue\":0.0,\"ca_red\":0.0,\"defringe_green_amount\":0.0,\"defringe_green_hue_hi\":60.0,\"defringe_green_hue_lo\":40.0,\"defringe_purple_amount\":0.0,\"defringe_purple_hue_hi\":70.0,\"defringe_purple_hue_lo\":30.0,\"distortion\":0.0,\"lens_profile\":false,\"profile_distortion\":100.0,\"profile_vignetting\":100.0,\"remove_ca\":false,\"vignetting\":0.0,\"vignetting_midpoint\":50.0},\"orientation\":\"Normal\",\"point_colors\":[],\"profile\":{\"amount\":100.0,\"id\":\"lc.color\"},\"red_eye\":[],\"spots\":[],\"treatment\":\"color\",\"version\":1,\"vignette\":{\"amount\":0.0,\"feather\":50.0,\"highlights\":0.0,\"midpoint\":50.0,\"roundness\":0.0,\"style\":\"highlightPriority\"},\"wb\":{\"mode\":\"asShot\",\"temp\":6500.0,\"tint\":0.0}}}\n{\"command\":\"library.info\",\"ms\":0.0,\"ok\":true,\"result\":{\"albums\":0,\"cache\":{\"disk\":{\"bytes\":0,\"hits\":0,\"misses\":0,\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/library/thumbs\",\"writes\":0},\"renderedBytes\":0,\"renderedInMemory\":0,\"sourceBytes\":0,\"sourcesInMemory\":0},\"forgotLocal\":{\"forgotten\":0,\"keptInUse\":0,\"keptRecent\":0,\"keptTouched\":0,\"local\":0},\"lastError\":null,\"load\":{\"created\":false,\"damaged\":null,\"replayed\":0,\"tornBytes\":0},\"logBytes\":0,\"logRecords\":0,\"path\":\"/Users/runner/work/_temp/native-darwin-arm64/library\",\"persistence\":{\"appends\":0,\"failedSnapshots\":0,\"lastAppendMs\":0.0,\"lastSnapshot\":{\"background\":false,\"blockingMs\":0.0,\"bytes\":0,\"records\":0,\"resetMs\":0.0,\"serializeMs\":0.0,\"totalMs\":0.0,\"writeSyncMs\":0.0},\"maxAppendMs\":0.0,\"maxBlockingMs\":0.0,\"maxSnapshotMs\":0.0,\"snapshotRunning\":false,\"snapshots\":0},\"persistent\":true,\"photos\":2,\"seq\":4,\"settingsWarnings\":[],\"snapshotSeq\":4,\"unsavedError\":null,\"unsavedOps\":0}}\n",
+    "stderr": "",
+    "stdoutBytes": 7099,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/Users/runner/work/_temp/native-darwin-arm64/photo-2-reopen/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless",
+      "transport": "jsonl-run",
+      "connectAddress": null,
+      "readOnly": false,
+      "nativeMayRetryReads": false,
+      "scriptSha256": null
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless",
+    "transport": "jsonl-run",
+    "connectAddress": null,
+    "readOnly": false,
+    "nativeMayRetryReads": false,
+    "scriptSha256": null
+  },
+  "inputAfterSha256": {
+    "/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.jpg": "5534a1d334c266b70248796e178ed9db038d1b46be9798e8f9cd860b8dc86d5e",
+    "/Users/runner/work/_temp/native-darwin-arm64/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "libraryAfterSha256": {
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/catalog.snap": "cc002de574c06ace4f259050832e2b80346f597b6fdb16e7029e11a97458e020",
+    "/Users/runner/work/_temp/native-darwin-arm64/library/view.json": "b99c5cc80a9a0c51604458b1d048cb69d77822a966eb2aa973fc50631c9147d2"
+  },
+  "endedAt": "2026-10-08T15:28:15.508042+00:00"
+}

@@ -1,0 +1,31 @@
+Microsoft (R) COFF/PE Dumper Version 14.29.30159.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file D:\a\_temp\native-windows-x86_64\runtime\lightcraft\0.2.1\lightcraft-cli.exe
+
+File Type: EXECUTABLE IMAGE
+
+  Image has the following dependencies:
+
+    kernel32.dll
+    api-ms-win-core-synch-l1-2-0.dll
+    opengl32.dll
+    user32.dll
+    gdi32.dll
+    setupapi.dll
+    dxgi.dll
+    oleaut32.dll
+    bcryptprimitives.dll
+    KERNEL32.dll
+    ntdll.dll
+    WS2_32.dll
+
+  Summary
+
+        4000 .data
+        1000 .fptable
+       E6000 .pdata
+     17CB000 .rdata
+       14000 .reloc
+     1AA6000 .text

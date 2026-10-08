@@ -1,6 +1,6 @@
 # Lightcraft 独立技能库
 
-待发布开发预发行 `0.1.0-dev.2`，固定原生 CLI `0.2.1`；当前已验证 macOS arm64 与 Linux arm64 容器，Python 3.11+；macOS Intel、Linux x86_64 由独立原生 CI 验收，Windows 尚未接入。六项技能可以独立分发：`lightcraft-use`、`lightcraft-cli-setup`、`lightcraft-cli-library`、`lightcraft-cli-develop`、`lightcraft-cli-export`、`lightcraft-cli`。
+待发布开发预发行 `0.1.0-dev.2`，固定原生 CLI `0.2.1`；Python 3.11+；macOS arm64/x86_64、Linux aarch64/x86_64、Windows x64/x86 六目标 CLI 原生验收已通过，Windows x86 为 64 位主机上的 32 位进程。六项技能可以独立分发：`lightcraft-use`、`lightcraft-cli-setup`、`lightcraft-cli-library`、`lightcraft-cli-develop`、`lightcraft-cli-export`、`lightcraft-cli`。
 
 已实现纯诊断、带身份的能力发现、唯一进程监督、逐步骤 JSONL 回执、原片与输出预检、实际图像解码及来源快照同步。`runtime/` 是运行资源唯一维护源；通过 `scripts/generate_runtime.py` 生成六份自包含副本。
 
@@ -25,3 +25,5 @@ Connect/MCP 增量正在验收，见 [当前增量证据](docs/verification/conn
 SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam-20261008/README.md)。
 
 三领域协议消费与失效规则已验证，宿主自动调度仍未验收，见 [实际证据](docs/verification/exchange-20261008/README.md)。
+
+六目标平台任务已完成，当前扩展任务 4/12 完成、8 项 OPEN，见 [固定 CLI 平台证据](docs/verification/windows-20261008/README.md)。当前宿主、视觉和插件来源配套门禁仍未关闭，候选版本未公开发布。

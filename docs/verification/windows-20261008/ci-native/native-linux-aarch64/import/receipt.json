@@ -1,0 +1,225 @@
+{
+  "domain": "lightcraft",
+  "status": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+  "argv": [
+    "/opt/hostedtoolcache/Python/3.12.15/arm64/bin/python",
+    "-I",
+    "-B",
+    "/home/runner/work/lightcraft-skills/lightcraft-skills/skills/lightcraft-use/scripts/cli.py",
+    "--runtime-home",
+    "/home/runner/work/_temp/native-linux-aarch64/runtime",
+    "--require-installed",
+    "--",
+    "run",
+    "--script",
+    "/home/runner/work/_temp/native-linux-aarch64/import/native-plan.json",
+    "--library",
+    "/home/runner/work/_temp/native-linux-aarch64/library"
+  ],
+  "catalogSha256": "3fb3bc999d67f8b8df22739677ba9dc1c70b385cc14ce0f024ba0fa4f2470a3c",
+  "planSha256": "ff77de13b71bd315ce98a574b7e5c34cfd60d67c3b0c674eb81bb2053abec506",
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "inputSha256": {
+    "/home/runner/work/_temp/native-linux-aarch64/originals/gradient.jpg": "5534a1d334c266b70248796e178ed9db038d1b46be9798e8f9cd860b8dc86d5e",
+    "/home/runner/work/_temp/native-linux-aarch64/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "runtimeLockSha256": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "schemaVersion": 1,
+  "runId": "8989d244-a769-402d-874a-a99f154f2a4d",
+  "startedAt": "2026-10-08T15:28:07.967120+00:00",
+  "steps": [
+    {
+      "index": 0,
+      "command": "library.import",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "library.import",
+        "ms": 7.8,
+        "ok": true,
+        "result": {
+          "duplicates": [],
+          "failed": [],
+          "imported": [
+            1,
+            2
+          ],
+          "scanned": 2,
+          "sidecars": 0
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "catalog.query",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "catalog.query",
+        "ms": 0.0,
+        "ok": true,
+        "result": {
+          "photos": [
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": false,
+              "fileName": "gradient.jpg",
+              "flag": "none",
+              "format": "JPEG",
+              "height": 64,
+              "id": 2,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 0,
+              "title": "",
+              "width": 96
+            },
+            {
+              "camera": "",
+              "captured": null,
+              "copyName": null,
+              "copyOf": null,
+              "deleted": false,
+              "edited": false,
+              "fileName": "gradient.png",
+              "flag": "none",
+              "format": "PNG",
+              "height": 64,
+              "id": 1,
+              "keywords": [],
+              "kind": "image",
+              "label": null,
+              "previewOnly": null,
+              "rating": 0,
+              "title": "",
+              "width": 96
+            }
+          ],
+          "total": 2
+        }
+      }
+    }
+  ],
+  "libraryPath": "/home/runner/work/_temp/native-linux-aarch64/library",
+  "outputRoot": "/home/runner/work/_temp/native-linux-aarch64/exports",
+  "libraryBeforeSha256": null,
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "exitCode": 0,
+  "stdout": "{\"command\":\"library.import\",\"ms\":7.8,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[],\"imported\":[1,2],\"scanned\":2,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"gradient.jpg\",\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"id\":2,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96},{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"gradient.png\",\"flag\":\"none\",\"format\":\"PNG\",\"height\":64,\"id\":1,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96}],\"total\":2}}\n",
+  "stderr": "",
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-08T15:28:08.051871+00:00",
+    "argv": [
+      "/home/runner/work/_temp/native-linux-aarch64/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "run",
+      "--script",
+      "/home/runner/work/_temp/native-linux-aarch64/import/native-plan.json",
+      "--library",
+      "/home/runner/work/_temp/native-linux-aarch64/library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 2397,
+    "processStartedAt": "2026-10-08T15:28:08.052309+00:00",
+    "processIdentity": "Thu Oct  8 15:28:07 2026 /home/runner/work/_temp/native-linux-aarch64/runtime/lightcraft/0.2.1/lightcraft-cli run --script /home/runner/work/_temp/native-linux-aarch64/import/native-plan.json --library /home/runner/work/_temp/native-linux-aarch64/library",
+    "exitCode": 0,
+    "endedAt": "2026-10-08T15:28:08.094070+00:00",
+    "stdout": "{\"command\":\"library.import\",\"ms\":7.8,\"ok\":true,\"result\":{\"duplicates\":[],\"failed\":[],\"imported\":[1,2],\"scanned\":2,\"sidecars\":0}}\n{\"command\":\"catalog.query\",\"ms\":0.0,\"ok\":true,\"result\":{\"photos\":[{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"gradient.jpg\",\"flag\":\"none\",\"format\":\"JPEG\",\"height\":64,\"id\":2,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96},{\"camera\":\"\",\"captured\":null,\"copyName\":null,\"copyOf\":null,\"deleted\":false,\"edited\":false,\"fileName\":\"gradient.png\",\"flag\":\"none\",\"format\":\"PNG\",\"height\":64,\"id\":1,\"keywords\":[],\"kind\":\"image\",\"label\":null,\"previewOnly\":null,\"rating\":0,\"title\":\"\",\"width\":96}],\"total\":2}}\n",
+    "stderr": "",
+    "stdoutBytes": 727,
+    "stderrBytes": 0,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/home/runner/work/_temp/native-linux-aarch64/import/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+      "executable": "/home/runner/work/_temp/native-linux-aarch64/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless",
+      "transport": "jsonl-run",
+      "connectAddress": null,
+      "readOnly": false,
+      "nativeMayRetryReads": false,
+      "scriptSha256": null
+    }
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+    "executable": "/home/runner/work/_temp/native-linux-aarch64/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless",
+    "transport": "jsonl-run",
+    "connectAddress": null,
+    "readOnly": false,
+    "nativeMayRetryReads": false,
+    "scriptSha256": null
+  },
+  "inputAfterSha256": {
+    "/home/runner/work/_temp/native-linux-aarch64/originals/gradient.jpg": "5534a1d334c266b70248796e178ed9db038d1b46be9798e8f9cd860b8dc86d5e",
+    "/home/runner/work/_temp/native-linux-aarch64/originals/gradient.png": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+  },
+  "skillResourceAfterSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "libraryAfterSha256": {
+    "/home/runner/work/_temp/native-linux-aarch64/library/catalog.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/runner/work/_temp/native-linux-aarch64/library/catalog.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/home/runner/work/_temp/native-linux-aarch64/library/catalog.snap": "dc6afac3c470c098bacde61a56c74c67ea271985b14d58fec6f4519b4198a06c",
+    "/home/runner/work/_temp/native-linux-aarch64/library/view.json": "e60209308f0f097fef43a8bc61111a7a87050f26307a93314ca5e132bb682d90"
+  },
+  "endedAt": "2026-10-08T15:28:08.106059+00:00"
+}

@@ -1,0 +1,2 @@
+Darwin sjc22-bm209-78281e23-8a07-4c76-9afb-6abcfe7072e9-1EC9FF923AB7.local 24.6.0 Darwin Kernel Version 24.6.0: Tue Jul 21 20:51:34 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_VMAPPLE arm64
+45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da  /Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli

@@ -1,0 +1,22 @@
+✔ three domains match explicit trusted identities without execution (2.459083ms)
+✔ protocol, hash, identity, payload domain and expired deadline fail closed (0.391917ms)
+✔ trusted policy is not optional or inferred from input (0.150667ms)
+✔ strict bool, unknown fields and unsafe nested numbers reject (0.17025ms)
+✔ input references bind identity and reject duplicate IDs and conflicts (0.464917ms)
+✔ canonical JSON preserves JS numeric and Unicode semantics (0.0645ms)
+✔ real files, evidence digest and containment are checked (6.887625ms)
+✔ same logical artifact version cannot change digest (0.253958ms)
+✔ payload changes invalidate only node and transitive consumers (0.9505ms)
+✔ version and capability changes invalidate even with same payload (0.372875ms)
+✔ cycles, duplicate edges, missing dependencies and removed nodes reject (0.246792ms)
+✔ scheduling metadata alone does not invalidate unchanged native content (0.260459ms)
+✔ duplicate JSON fields and escaped equivalent keys reject (0.274708ms)
+✔ same asset version cannot silently change between graph revisions (0.656917ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.2345

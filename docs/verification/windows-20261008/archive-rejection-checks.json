@@ -1,0 +1,12 @@
+[
+  {
+    "case": "artifact_tamper",
+    "result": "REJECTED",
+    "reason": "artifact_digest_changed"
+  },
+  {
+    "case": "current_resource_drift",
+    "result": "REJECTED",
+    "reason": "current_resource_mismatch"
+  }
+]

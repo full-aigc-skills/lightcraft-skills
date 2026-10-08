@@ -1,0 +1,2 @@
+Darwin sjc20-cw761-593022f5-6bf1-4774-ae33-e5694589d1b4-3E0D540B75FB.local 24.6.0 Darwin Kernel Version 24.6.0: Tue Jul 21 20:50:07 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_X86_64 x86_64
+45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da  /Users/runner/work/_temp/native-darwin-x86_64/runtime/lightcraft/0.2.1/lightcraft-cli

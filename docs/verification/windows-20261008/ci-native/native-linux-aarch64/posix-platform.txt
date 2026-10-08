@@ -1,0 +1,3 @@
+Linux runnervmy3dvn 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:12:01 UTC 2026 aarch64 aarch64 aarch64 GNU/Linux
+glibc 2.39
+32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc  /home/runner/work/_temp/native-linux-aarch64/runtime/lightcraft/0.2.1/lightcraft-cli

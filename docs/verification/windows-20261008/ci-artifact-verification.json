@@ -1,0 +1,469 @@
+{
+  "status": "PASS",
+  "sourceCommit": "4a670975eea3aaf50004d9bb05ea4283fbb083ba",
+  "runtimeResources": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "targets": [
+    {
+      "platform": "darwin-arm64",
+      "status": "PASS",
+      "hostMachine": "arm64",
+      "processBits": 64,
+      "reportSha256": "848210e6fc81dc1d2e4f5d541ea670b5475c92aecd237b33dd89f9147617036f",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "signature": "codesign-strict-valid",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "15bfb4950d2ecffe5242aff958cf4185521d7fdc9736ef1b4adbd68a3b2589bc",
+          "stepCount": 2,
+          "planSha256": "95dcf1840c4dd63248050afac2753b54dec8d6f32665d9d2e402e6c7d7e041e5"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "66dc30ce3d6f7f5570a0c47ad054d12a17932deaf953d58112c8d934e686b90c",
+          "stepCount": 8,
+          "planSha256": "375b91ac52b7d6a1a4d3186f841e4e07bb19bbc7b8d314c88d40b1c30fd1af8d"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "7d9f22da11ebea6aa6c24636f9003aefa54619fb5d0535367d6870e6ad14cd9d",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "5e5c0d412678baf42480ca06c02e4bc541cb568f50e310c0d56f33f5c7d273eb",
+          "stepCount": 8,
+          "planSha256": "0dae46658d58561d1ee658f8248c1a839bfcaf82772934943be99ebe71ed8a10"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "8a09abb6a3708326bc2bfa82326605e8ac22602c510f1e257042dccdcd04b745",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "e8a82db3b022f56a405d57cf5e8fa23bbb95ff9224efaaa49c3f7c0fa0c53109",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "085a09e544ef768d8545b540581f54bf7e57b88723f4f6a6392d73cbfecca570",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "20b5af3548d3d4d0816593de854c31d5580ffa0a1f8cf08d38a7af2640cf7c0c",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "59dd72520088b6b7f335e84b0510afeb0c9cbccc554ba78d752bae7b7ca054bb",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "efb5b6c21144407919c647b0862f9cbda552bf4e7aae2ac913eac130ab309c15",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "3db8bf64ecd63911a6a13bca596bbce09106a4f382e3eb1af4acdc4698452e2e",
+          "decoder": "macOS sips"
+        }
+      ]
+    },
+    {
+      "platform": "darwin-x86_64",
+      "status": "PASS",
+      "hostMachine": "x86_64",
+      "processBits": 64,
+      "reportSha256": "157856efa7ab9936a21955df3b19d756076f7d1f32bc3fb42add77434b2c1bc4",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "signature": "codesign-strict-valid",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "917287267a5732eea22e55b934c07fa933518e3f5b1ced9930fbcc26c18f80fd",
+          "stepCount": 2,
+          "planSha256": "6865aee1a8a3d7dc0b19898a775624a23c333251a422434aecd78abec9d61000"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "b6e191984c88e956694dd3c4c81dfda9b0a7031930aef21a0c1a94977a1acfd4",
+          "stepCount": 8,
+          "planSha256": "eee4953fe12440db04cecc113409011c23990c52b4b67c0d7d4dc3c9b60ce8d0"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "3a450ce611073e7c19ccd8e6f9e1331fcf43d16573da9de1753490d5c900e14d",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "f12f0185488c86778b009c8f8830427c8d75d31c528067d5b21387fff38df744",
+          "stepCount": 8,
+          "planSha256": "4b0bdfcedf6823eb45554344a2757fa449d0822fac041c49f84e6266c91bec34"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "8dcdabe9568a8c7e08dbfb24aac8909c67f2cd5a1e3b1b1388b353b5af7ccaaa",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "cfd481414f04154ee75612d5807360423b8eacd578b01ddaa2b3c04e4141608e",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "3f7869d9e775d45742a07f94b3af47f440b98bfb78691757bbd0527b56cfc3e3",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "e0f3e5d9e86e64184fe7b66ce2f5928d67077b4012de6d580a376a0fcf08605b",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "b2a70041231cf9f5725388100442d337506fd42117cf73a629c5881b17f20964",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "70fb719e5f7ceac29663470e60b8bcdb568920621c147dbfb43c56bc5bfb7550",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "2dfff86e9a1ba07c86c63b08106657b21a5cede85f8da1052abcaf942abc0d73",
+          "decoder": "macOS sips"
+        }
+      ]
+    },
+    {
+      "platform": "linux-aarch64",
+      "status": "PASS",
+      "hostMachine": "aarch64",
+      "processBits": 64,
+      "reportSha256": "eb74b6eebabcc9d2a97878d4a8cc12218f596e329d5877e7c57781efbb48b256",
+      "binarySha256": "32a45ac2429b72be70bbc72706234d3f322db029825ec3250d8224ce8a1881dc",
+      "signature": "NOT_AVAILABLE_IN_OFFICIAL_LINUX_RELEASE",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "d22582b45a4263d84884c8ab37560fdb4c099b89f842b983e1a610729a1d6697",
+          "stepCount": 2,
+          "planSha256": "ff77de13b71bd315ce98a574b7e5c34cfd60d67c3b0c674eb81bb2053abec506"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "3804329a5ae4765af37c0c39f2598bdc5ea787def9ef4a5823f81b73723581a9",
+          "stepCount": 8,
+          "planSha256": "83261c4ab32a3e63932fb953463ea9c0b0034a86dbd3b194981c7b6f036107de"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "114ad783186335db9d11be3f81fb6f6cdccdf9c9b9ac5634d095c85ac234d01d",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "a59f6644a3bd60165f6e3a3c2455b61f0b035399bed61394a63aa466958fa71f",
+          "stepCount": 8,
+          "planSha256": "95e54ad0fa1c5ea9672cd10dba6e3323f7252f4d47b828066246a854bef4a770"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "4af00943a46822c8d0f9c60d1074ba4051073bbf3c1f5124e1aa093f271bdc1b",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "3f9f14f0a685c1d22aa8398356c239ca3a8be7c492567eb7c9f99fbcde68128a",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "9117650e5f1ed55def9e76cd44cccd21e7d1428079308cb057241c58b56ee513",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "e612836dc3dc1be6e38dcb598feb3218d50f3689f31a1599eac34de2168019c3",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "f033f75a45b54a830c29d95dad1f4a12dcce707f63f5507ad4bd097eea4070bc",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "e87b1a8dd7678ccb2324d0ca6dc9bf33c0f2606f3002f75e4e8f61ca7065cceb",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "1390cb5874d763d411387b955a7bb69fc2add6af3dc700aeda563b3657c280f7",
+          "decoder": "macOS sips"
+        }
+      ]
+    },
+    {
+      "platform": "linux-x86_64",
+      "status": "PASS",
+      "hostMachine": "x86_64",
+      "processBits": 64,
+      "reportSha256": "fddd21369980ea8447f45c69894df5bc7191b89598f743e2ecb8638be6256d63",
+      "binarySha256": "b008a5b86ca2a0a727714aa5d30ddcde59cd578ff0bfbda6bee76c7bf1507ab0",
+      "signature": "NOT_AVAILABLE_IN_OFFICIAL_LINUX_RELEASE",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "177d1c0fe76204e6eea68fb24cac0cbab7b832cbdbf5a3da406c47dcbd5790e7",
+          "stepCount": 2,
+          "planSha256": "4bafa76d0c58daf019a399c09243ba17e68e1614f776f3b9283033cdcb830a35"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "00afc2c9b40eda5cfbd65f06e3c1886d7eb8e3023148f4cf5df41506b1b03228",
+          "stepCount": 8,
+          "planSha256": "4053b707a420334755c40e19e4533c1aee2036ff397deded92a950d9767d186a"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "945c0cc7709e00685ea9e178dd82a2b2a2e50c8e9e08f55e07d420aeeaa96e8b",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "a4f8303f3ebd83560226d7b3bf54732b7bbe39dd81a09636f1372f5a0494ea81",
+          "stepCount": 8,
+          "planSha256": "763163bf5c049a3fd3ad93369fd0bea5d3162de484c4aafac8c9348f09dd3e30"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "7662e741d0897517e242fdbfa75bfe8e8e40427c93aee0491026875b6d419f0a",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "78a90df9d75fbf95604d9a7464225c295402058d11eb5354244d33df3672619e",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "daf5c3e68f14aaba14d174c77da580cbe452dfc58503250712bcbdc7d4d0697d",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "767b21f47e9458bce6701e24a6842dbe240b032af6f823d0f24527e0d80cbc6a",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "88c7dcf71cfd8e1d5ecebb33136b4bf7b04030aaeee47f798e07d271bb258cfb",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "a503bf4bcbca97dfed3e90ed0453d1da56f09e2aa90d32e36ad6184d795027db",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "6d492bde769331bcc8b3b5cdffb1e17ab42648fd7c8a91aab86a3982c1cfa012",
+          "decoder": "macOS sips"
+        }
+      ]
+    },
+    {
+      "platform": "windows-x86_64",
+      "status": "PASS",
+      "hostMachine": "AMD64",
+      "processBits": 64,
+      "reportSha256": "df44f9acba368d657cda982ad189554d37c61b6ffe4fb1c72e8e883ff931f5d9",
+      "binarySha256": "4dc3361a25594b417f7763eb56e8e2d56a029861f8a1574deb1070676cbdba74",
+      "signature": "Valid",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "06fecceb5aab529317c5a2322c744a08888fbcccc8912ef1113ccfc6f2b89d53",
+          "stepCount": 2,
+          "planSha256": "2b9b55846449f007ca0f3ad10b2eda29017c6e518517d5fc1efa8fa94a0e8db2"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "a3720b19912153eecd04fd51f3d1d8839c12d00993d3e7ebb411b47f7d6eb9d9",
+          "stepCount": 8,
+          "planSha256": "f21d1413c3fae59c62ac255d41b93eaf4e4d347c084aff30b2f472a76e2f2d37"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "567c54607653b6101d4e91ee976e1b4fdab5f74791ef17e31e60ba07e607e436",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "17f302f923ee3f81e27f387611f99d1c29d10b3aded13b12319dd51816e0b985",
+          "stepCount": 8,
+          "planSha256": "d9afc6e2b20d905374b7962ea05ff220e917477b42b20c64b4186717fd5c6bc2"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "9fec9bd7dbc85d2290398215eca6892be3c165781f2ea284f1e26d60d80b400e",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "694eae7f4473bdf7799a6d85b400e49c5bc363e5e8ff36ad1d0d84b95ac2d6b5",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "df565dc780b82dcdf5dae36ecb97a2c32769076806e2aff35777d7d2e0b49933",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "afbbb2f67cabee877aecbcb6b786ae6f059403ce5540b6ba53f9ca22a2e000f1",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "edc4e1bad9438becf54f9a7d3934670db88ad71914ee6f8ce48d11dca303a964",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "7c42d02363b077598df06f5ef4aaded59424b6ae0ecbbc8e3fa32e29b1304d1f",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "68bf6188c5d8d1bc511553fa102f893107891d14f77efe93b56cfd1fcedefcdf",
+          "decoder": "macOS sips"
+        }
+      ]
+    },
+    {
+      "platform": "windows-x86",
+      "status": "PASS",
+      "hostMachine": "AMD64",
+      "processBits": 32,
+      "reportSha256": "e818763202b74fba25e6813ce76e213f7a08a51ade4ffdaccecb8322672f26ea",
+      "binarySha256": "40e25c444db4cf4c059510d829efe829923b13cdca54c9c9ccc867844d9b5beb",
+      "signature": "Valid",
+      "receipts": [
+        {
+          "name": "import",
+          "sha256": "782279b8418be1a45cd25884845859d2642b0bf5c71317f3de870d71cf835ab0",
+          "stepCount": 2,
+          "planSha256": "eff50a3528ed92907ff44001b6826d99fb4a89ad2c7b5593f4f2f29a7654535d"
+        },
+        {
+          "name": "photo-1-edit-export",
+          "sha256": "6652544439cba571630a71bd9f67e57d54bb4617378d5367285b9eecd692ed34",
+          "stepCount": 8,
+          "planSha256": "cb8baccdb52d5a70f3aef1ce7371b2102fa0d34ce80ed27e6a3c5b5c9396f6ad"
+        },
+        {
+          "name": "photo-1-reopen",
+          "sha256": "cbd04e6e4d2b79ca78f8beab8c290f16c712ef30ba745b23ecbaf838665775b4",
+          "stepCount": 4,
+          "planSha256": "71ade6c9a5b9418c42e78c2831087060db0187301b1c1077361653a62bbe2ea6"
+        },
+        {
+          "name": "photo-2-edit-export",
+          "sha256": "96374ad18053dec50594fb694e91fa983e4825f4cce55720403cacd3ddc73735",
+          "stepCount": 8,
+          "planSha256": "efd1bf24f65f1bda52a7ad3d0e173910dce7b636eedfe0f30ea1e7e453751922"
+        },
+        {
+          "name": "photo-2-reopen",
+          "sha256": "d97d5f095e0f53f7a01b6b46dd6ff760606c909ea081073166b7769a39401e2c",
+          "stepCount": 4,
+          "planSha256": "03b69fef7389519bd0d4432cf0da40df1c05a9e0f3f2393dd398c3145544661c"
+        }
+      ],
+      "artifacts": [
+        {
+          "name": "before-1.png",
+          "sha256": "3a7d2eb06021716479b5115f60e4407077e450c298fffdca66c28198b3248b4e",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.png",
+          "sha256": "f686dfd10aa80e29f21a2d8bf658d0eb846e616184f8275ed3c7b0f934d70b57",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-1.jpg",
+          "sha256": "d9df6fd3d5f8acc03ba36453560661d5d054f76656531827a5da8a4fa8a1841b",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "before-2.png",
+          "sha256": "57a60dd6963e5c8204fc214892a3753952045b2562b332baa9a7d3c8c6fcdb47",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.png",
+          "sha256": "14f9bd1d1b1bd7ec9373f8b58059b27b4d51421105e8555d49fdce691e66dfdc",
+          "decoder": "macOS sips"
+        },
+        {
+          "name": "edited-2.jpg",
+          "sha256": "c267a1cad9a6cf3f525ddfda73b7c8cfcc1059773efe26f9d91c4eb5e55ee697",
+          "decoder": "macOS sips"
+        }
+      ]
+    }
+  ],
+  "scope": "six fixed CLI native targets; plugin snapshot, desktop host, SAM and mobile acceptance remain separate"
+}

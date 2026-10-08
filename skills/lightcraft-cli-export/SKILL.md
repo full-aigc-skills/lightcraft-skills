@@ -7,7 +7,7 @@ license: Apache-2.0
 # Lightcraft 导出验证
 
 输出目标与命名冲突、真实解码及媒体信息；交付需记录重开和视觉结果。
-固定 CLI 0.2.1 / Python 3.11+；macOS arm64 与 Linux arm64 容器已实际验证。其他锁定目标仍按原生 CI/平台证据判断；宿主和视觉单独验收。
+固定 CLI 0.2.1 / Python 3.11+；macOS arm64/x86_64、Linux aarch64/x86_64、Windows x64/x86 已通过固定 CLI 原生 CI；Windows x86 为 64 位主机上的 32 位进程。宿主、视觉与移动设备单独验收。
 
 ## 必要输入与执行
 

@@ -1,0 +1,30 @@
+/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli: valid on disk
+/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli: satisfies its Designated Requirement
+Executable=/Users/runner/work/_temp/native-darwin-arm64/runtime/lightcraft/0.2.1/lightcraft-cli
+Identifier=lightcraft-cli
+Format=Mach-O universal (x86_64 arm64)
+CodeDirectory v=20500 size=425978 flags=0x10000(runtime) hashes=13306+2 location=embedded
+VersionPlatform=1
+VersionMin=720896
+VersionSDK=984320
+Hash type=sha256 size=32
+CandidateCDHash sha256=bc4a68a6d322ca0bcd61c56db032ce19dc721813
+CandidateCDHashFull sha256=bc4a68a6d322ca0bcd61c56db032ce19dc7218135cc89073c652a0491cf16cc5
+Hash choices=sha256
+CMSDigest=bc4a68a6d322ca0bcd61c56db032ce19dc7218135cc89073c652a0491cf16cc5
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=42729472
+Executable Segment flags=0x1
+Page size=4096
+CDHash=bc4a68a6d322ca0bcd61c56db032ce19dc721813
+Signature size=9063
+Authority=Developer ID Application: Learning Machines LLC (DJ6XS33FX8)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Oct 6, 2026 at 12:07:57 PM
+Info.plist=not bound
+TeamIdentifier=DJ6XS33FX8
+Runtime Version=15.5.0
+Sealed Resources=none
+Internal requirements count=1 size=176

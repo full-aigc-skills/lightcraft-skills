@@ -1,0 +1,2 @@
+{"command": "library.import", "params": {"paths": ["D:\\a\\_temp\\native-windows-x86\\originals\\gradient.png", "D:\\a\\_temp\\native-windows-x86\\originals\\gradient.jpg"], "mode": "add"}}
+{"command": "catalog.query", "params": {"limit": 100}}

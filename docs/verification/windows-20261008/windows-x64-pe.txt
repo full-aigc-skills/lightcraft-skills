@@ -1,0 +1,293 @@
+
+evaluation-results/lightcraft-windows-20261008/x64-lightcraft-cli.exe:	file format coff-x86-64
+Characteristics 0x22
+	executable
+	large address aware
+
+Time/Date               Tue Oct  6 20:06:44 2026
+Magic                   020b	(PE32+)
+MajorLinkerVersion      14
+MinorLinkerVersion      51
+SizeOfCode              0000000001aa5400
+SizeOfInitializedData   00000000018c6e00
+SizeOfUninitializedData 0000000000000000
+AddressOfEntryPoint     00000000019e5190
+BaseOfCode              0000000000001000
+ImageBase               0000000140000000
+SectionAlignment        00001000
+FileAlignment           00000200
+MajorOSystemVersion     6
+MinorOSystemVersion     0
+MajorImageVersion       0
+MinorImageVersion       0
+MajorSubsystemVersion   6
+MinorSubsystemVersion   0
+Win32Version            00000000
+SizeOfImage             03371000
+SizeOfHeaders           00000400
+CheckSum                0337a919
+Subsystem               00000003	(Windows CUI)
+DllCharacteristics      00008160
+					HIGH_ENTROPY_VA
+					DYNAMIC_BASE
+					NX_COMPAT
+					TERMINAL_SERVER_AWARE
+SizeOfStackReserve      0000000000100000
+SizeOfStackCommit       0000000000001000
+SizeOfHeapReserve       0000000000100000
+SizeOfHeapCommit        0000000000001000
+LoaderFlags             00000000
+NumberOfRvaAndSizes     00000010
+
+The Data Directory
+Entry 0 0000000000000000 00000000 Export Directory [.edata (or where ever we found it)]
+Entry 1 00000000032702a4 00000104 Import Directory [parts of .idata]
+Entry 2 0000000000000000 00000000 Resource Directory [.rsrc]
+Entry 3 0000000003276000 000e5230 Exception Directory [.pdata]
+Entry 4 000000000336ba00 00003d70 Security Directory
+Entry 5 000000000335d000 00013a14 Base Relocation Directory [.reloc]
+Entry 6 0000000002ed8c80 00000054 Debug Directory
+Entry 7 0000000000000000 00000000 Description Directory
+Entry 8 0000000000000000 00000000 Special Directory
+Entry 9 0000000002ed8e80 00000028 Thread Storage Directory [.tls]
+Entry a 0000000002ed8b40 00000140 Load Configuration Directory
+Entry b 0000000000000000 00000000 Bound Import Directory
+Entry c 0000000001aa7000 00000580 Import Address Table Directory
+Entry d 0000000000000000 00000000 Delay Import Directory
+Entry e 0000000000000000 00000000 CLR Runtime Header
+Entry f 0000000000000000 00000000 Reserved
+TLS directory:
+  StartAddressOfRawData: 0x00000142ed9530
+  EndAddressOfRawData: 0x00000142ed9789
+  AddressOfIndex: 0x000001432748e0
+  AddressOfCallBacks: 0x00000141aa7618
+  SizeOfZeroFill: 0
+  Characteristics: 4194304
+  Alignment: 8
+
+
+The Import Tables:
+  lookup 032707b8 time 00000000 fwd 00000000 name 03270ab4 addr 01aa7308
+
+    DLL Name: kernel32.dll
+    Hint/Ord  Name
+           0  GetACP
+           0  GetOEMCP
+           0  GetCPInfo
+           0  EnterCriticalSection
+           0  GetStringTypeW
+           0  AddVectoredExceptionHandler
+           0  CreateEventA
+           0  WaitForSingleObject
+           0  RemoveVectoredExceptionHandler
+           0  LoadLibraryA
+           0  CompareStringW
+           0  LCMapStringW
+           0  GetModuleHandleA
+           0  QueryPerformanceCounter
+           0  QueryPerformanceFrequency
+           0  UnhandledExceptionFilter
+           0  IsDebuggerPresent
+           0  EncodePointer
+           0  CloseHandle
+           0  GetModuleFileNameW
+           0  SetThreadErrorMode
+           0  GetModuleHandleExW
+           0  FreeLibrary
+           0  GetLastError
+           0  LoadLibraryExW
+           0  FlsGetValue
+           0  RaiseException
+           0  RtlPcToFileHeader
+           0  GetProcAddress
+           0  RtlUnwindEx
+           0  GetStartupInfoW
+           0  IsValidCodePage
+           0  SetUnhandledExceptionFilter
+           0  IsProcessorFeaturePresent
+           0  InitializeSListHead
+           0  LoadLibraryExA
+           0  DeleteCriticalSection
+           0  InitializeCriticalSectionEx
+           0  GetProcessHeap
+           0  HeapFree
+           0  HeapAlloc
+           0  FormatMessageW
+           0  Sleep
+           0  LeaveCriticalSection
+
+  lookup 03270748 time 00000000 fwd 00000000 name 03270de8 addr 01aa7298
+
+    DLL Name: api-ms-win-core-synch-l1-2-0.dll
+    Hint/Ord  Name
+           0  WaitOnAddress
+           0  WakeByAddressSingle
+           0  WakeByAddressAll
+
+  lookup 03270968 time 00000000 fwd 00000000 name 03270e0a addr 01aa74b8
+
+    DLL Name: opengl32.dll
+    Hint/Ord  Name
+           0  wglMakeCurrent
+           0  wglCreateContext
+           0  wglGetCurrentContext
+           0  wglDeleteContext
+           0  wglGetProcAddress
+
+  lookup 032709c0 time 00000000 fwd 00000000 name 03270e18 addr 01aa7510
+
+    DLL Name: user32.dll
+    Hint/Ord  Name
+           0  CreateWindowExA
+           0  MonitorFromWindow
+           0  DisplayConfigGetDeviceInfo
+           0  GetMonitorInfoW
+           0  DefWindowProcA
+           0  RegisterClassExA
+           0  GetClassInfoExA
+           0  GetClientRect
+           0  ReleaseDC
+           0  GetDC
+           0  GetDisplayConfigBufferSizes
+           0  QueryDisplayConfig
+           0  DestroyWindow
+
+  lookup 03270788 time 00000000 fwd 00000000 name 03270e24 addr 01aa72d8
+
+    DLL Name: gdi32.dll
+    Hint/Ord  Name
+           0  SwapBuffers
+           0  ChoosePixelFormat
+           0  GetPixelFormat
+           0  SetPixelFormat
+           0  DescribePixelFormat
+
+  lookup 03270998 time 00000000 fwd 00000000 name 03270e2e addr 01aa74e8
+
+    DLL Name: setupapi.dll
+    Hint/Ord  Name
+           0  SetupDiEnumDeviceInfo
+           0  SetupDiGetClassDevsW
+           0  SetupDiGetDeviceRegistryPropertyW
+           0  SetupDiDestroyDeviceInfoList
+
+  lookup 03270778 time 00000000 fwd 00000000 name 03270e3c addr 01aa72c8
+
+    DLL Name: dxgi.dll
+    Hint/Ord  Name
+           0  CreateDXGIFactory1
+
+  lookup 03270940 time 00000000 fwd 00000000 name 03270e46 addr 01aa7490
+
+    DLL Name: oleaut32.dll
+    Hint/Ord  Name
+           0  SysFreeString
+           0  SysStringLen
+           0  GetErrorInfo
+           0  SetErrorInfo
+
+  lookup 03270768 time 00000000 fwd 00000000 name 03270f1c addr 01aa72b8
+
+    DLL Name: bcryptprimitives.dll
+    Hint/Ord  Name
+           0  ProcessPrng
+
+  lookup 032704b0 time 00000000 fwd 00000000 name 032713ec addr 01aa7000
+
+    DLL Name: KERNEL32.dll
+    Hint/Ord  Name
+         610  GetEnvironmentStringsW
+         436  FindNextFileW
+        1427  SetStdHandle
+         809  GetTempPathW
+         901  HeapSize
+         634  GetFileType
+         454  FlsSetValue
+        1562  VirtualProtect
+         511  GetCommandLineA
+        1632  WriteFile
+         954  IsThreadAFiber
+         794  GetSystemTimeAsFileTime
+         677  GetModuleHandleW
+         450  FlsAlloc
+         451  FlsFree
+        1473  SetWaitableTimer
+         285  CreateWaitableTimerExW
+         553  GetConsoleOutputCP
+         549  GetConsoleMode
+        1631  WriteConsoleW
+        1059  MultiByteToWideChar
+        1190  ReadConsoleW
+        1370  SetEnvironmentVariableW
+         612  GetEnvironmentVariableW
+         310  DeleteFileW
+         636  GetFinalPathNameByHandleW
+        1254  ReleaseMutex
+         243  CreateMutexA
+        1574  WaitForSingleObjectEx
+        1612  WideCharToMultiByte
+        1491  SwitchToThread
+         788  GetSystemInfo
+         390  ExitProcess
+         413  FindClose
+         419  FindFirstFileExW
+        1678  lstrlenW
+         512  GetCommandLineW
+         570  GetCurrentDirectoryW
+         581  GetCurrentThread
+        1451  SetThreadStackGuarantee
+        1385  SetFilePointerEx
+         212  CreateDirectoryW
+        1496  TerminateProcess
+         627  GetFileInformationByHandleEx
+         626  GetFileInformationByHandle
+        1388  SetFileTime
+         795  GetSystemTimePreciseAsFileTime
+        1304  RtlVirtualUnwind
+        1297  RtlLookupFunctionEntry
+        1289  RtlCaptureContext
+         456  FlushFileBuffers
+        1037  LockFileEx
+         578  GetCurrentProcessId
+        1395  SetHandleInformation
+         271  CreateThread
+         899  HeapReAlloc
+         234  CreateHardLinkW
+         194  CopyFileExW
+         467  FreeEnvironmentStringsW
+        1400  SetLastError
+         645  GetFullPathNameW
+         582  GetCurrentThreadId
+        1052  MoveFileExW
+        1382  SetFileInformationByHandle
+         230  CreateFileW
+         771  GetStdHandle
+         577  GetCurrentProcess
+
+  lookup 03270920 time 00000000 fwd 00000000 name 0327142e addr 01aa7470
+
+    DLL Name: ntdll.dll
+    Hint/Ord  Name
+        1324  RtlNtStatusToDosError
+         536  NtReadFile
+         679  NtWriteFile
+
+  lookup 032706d0 time 00000000 fwd 00000000 name 0327147a addr 01aa7220
+
+    DLL Name: WS2_32.dll
+    Hint/Ord  Name
+          19
+          88  WSASocketW
+          39  WSADuplicateSocketW
+          16
+          10
+           7
+          21
+         115
+         111
+         166  getaddrinfo
+         165  freeaddrinfo
+          18
+           3
+           4
+

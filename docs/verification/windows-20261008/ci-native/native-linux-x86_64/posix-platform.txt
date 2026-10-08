@@ -1,0 +1,3 @@
+Linux runnervmmprz5 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
+glibc 2.39
+b008a5b86ca2a0a727714aa5d30ddcde59cd578ff0bfbda6bee76c7bf1507ab0  /home/runner/work/_temp/native-linux-x86_64/runtime/lightcraft/0.2.1/lightcraft-cli

@@ -1,0 +1,8 @@
+{
+  "hostArchitecture": "AMD64",
+  "signerSubject": "CN=Learning Machines Inc, O=Learning Machines Inc, L=Atlanta, S=Georgia, C=US",
+  "statusMessage": "Signature verified.",
+  "hostOS": "Microsoft Windows NT 10.0.20348.0",
+  "status": "Valid",
+  "binarySha256": "4dc3361a25594b417f7763eb56e8e2d56a029861f8a1574deb1070676cbdba74"
+}

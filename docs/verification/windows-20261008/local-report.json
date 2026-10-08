@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "sourceFingerprint": "79aef3b323b7fbbc203098cae61ebc6228d9eb61263d373dd8f9e60303859010",
+  "layers": {
+    "structure": {
+      "status": "PASS",
+      "evidence": [
+        "README.md"
+      ],
+      "scope": "package, strict OpenSpec, generated source or protected snapshot checks"
+    },
+    "mock": {
+      "status": "PASS",
+      "evidence": [
+        "unittest-python-3.12.log",
+        "unittest-python-3.13.log",
+        "node-tests.log"
+      ],
+      "testsPerPython": 106,
+      "executedPerPython": 103,
+      "windowsOnlySkippedPerPython": 3,
+      "nodeTests": 14
+    },
+    "native": {
+      "status": "PASS",
+      "evidence": [
+        "native-ci.json",
+        "ci-artifact-verification.json"
+      ],
+      "scope": "six CLI native target pipelines, 30 separate sessions and 36 decoded files, exact current 22 runtime resources"
+    },
+    "host": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "visual": {
+      "status": "NOT_RUN",
+      "evidence": []
+    },
+    "platform": {
+      "status": "PASS",
+      "evidence": [
+        "native-ci.json",
+        "ci-artifact-verification.json"
+      ],
+      "scope": "six fixed 0.2.1 CLI targets only; Windows x86 under AMD64 WOW64; not desktop, mobile, Windows ARM64 or arbitrary OS distributions"
+    },
+    "remoteCI": {
+      "status": "PASS",
+      "evidence": [
+        "offline-ci.json"
+      ],
+      "scope": "recorded code commit 4a670975; following docs-only changes do not change runtime/test/acceptance-driver bytes, exact final commit CI checked separately"
+    }
+  },
+  "completeAcceptance": false,
+  "scope": "current candidate; remaining extension and release gates stay open"
+}

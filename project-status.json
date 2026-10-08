@@ -1,28 +1,46 @@
 {
   "domain": "lightcraft",
-  "version": "0.1.0-dev.1",
-  "status": "LOCAL_IMPLEMENTATION_VERIFIED_ACCEPTANCE_OPEN",
+  "version": "0.1.0-dev.2",
+  "status": "CANDIDATE_ACCEPTANCE_OPEN",
   "gitRepository": "MAIN_PUSHED",
-  "specification": "OPEN_SPEC_CHANGE_IMPLEMENTED_LOCALLY_ACCEPTANCE_OPEN",
-  "specificationChange": "harden-lightcraft-skill-workflows",
-  "specificationPath": "openspec/changes/harden-lightcraft-skill-workflows/",
-  "nativeInstallation": "PASS_ISOLATED_LOCKED_021",
-  "hostDiscovery": "PASS_SIX_SKILLS",
-  "modelDispatch": "BLOCKED_HOST_COMPATIBILITY",
-  "creativeAcceptance": "PASS_SYNTHETIC_GRADIENT_ONLY",
+  "specification": "BASE_ARCHIVED_EXTENSIONS_OPEN",
+  "specificationChange": "three-independent-extensions",
+  "specificationPath": "openspec/changes/",
+  "nativeInstallation": "PASS_SIX_FIXED_CLI_TARGETS",
+  "hostDiscovery": "NOT_RUN_CURRENT_CANDIDATE",
+  "modelDispatch": "NOT_RUN_CURRENT_CANDIDATE",
+  "creativeAcceptance": "NOT_RUN_CURRENT_CANDIDATE",
   "published": false,
   "tasks": {
-    "complete": 27,
-    "total": 29,
+    "scope": "archived base plus three active extensions",
+    "complete": 33,
+    "total": 41,
     "remaining": [
-      "S-6.2",
-      "S-6.4"
+      "extend-lightcraft-connect-mcp:1.1",
+      "extend-lightcraft-connect-mcp:1.2",
+      "extend-lightcraft-connect-mcp:1.3",
+      "extend-lightcraft-connect-mcp:1.4",
+      "extend-lightcraft-expanded-photo-capabilities:1.3",
+      "extend-lightcraft-expanded-photo-capabilities:1.4",
+      "extend-lightcraft-portable-artcraft-delivery:1.3",
+      "extend-lightcraft-portable-artcraft-delivery:1.4"
     ]
   },
-  "evidence": "docs/verification/local-report.json",
+  "evidence": "docs/verification/windows-20261008/local-report.json",
   "remoteCI": "PASS_OFFLINE_PYTHON_311_312_313",
   "repository": "https://github.com/full-aigc-skills/lightcraft-skills",
   "branch": "main",
   "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
-  "remoteCIEvidence": "docs/verification/remote-ci.json"
+  "remoteCIEvidence": "docs/verification/windows-20261008/offline-ci.json",
+  "publicRelease": "v0.1.0-dev.1",
+  "baseTasks": {
+    "change": "harden-lightcraft-skill-workflows",
+    "complete": 29,
+    "total": 29,
+    "status": "ARCHIVED"
+  },
+  "extensionTasks": {
+    "complete": 4,
+    "total": 12
+  }
 }
