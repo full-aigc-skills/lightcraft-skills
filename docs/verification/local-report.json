@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-08T12:25:38.565605+00:00",
-  "sourceFingerprint": "53dba96c9775bb799979e0239712cb05b9d9d4c93e3f73c3cb1240bf536b6391",
+  "generatedAt": "2026-10-08T12:31:05.010760+00:00",
+  "sourceFingerprint": "f5653cf8c8cdbd9d9aafce5b0f6d52346284189bb25af93c388778eb592b67fc",
   "project": "lightcraft-skills",
   "developmentVersion": "0.1.0-dev.1",
   "pinnedNativeVersion": "0.2.1",
@@ -113,8 +113,8 @@
       "evidence": [
         "docs/verification/remote-ci.json"
       ],
-      "testedCommit": "d3faac86680dca77fa6757d3b303a47bd9623b40",
-      "scope": "macOS offline package validation and Python 3.11/3.12/3.13 contracts; no native/host/visual acceptance"
+      "testedCommit": "cb5d1eac9899fa357435e866cbc7f853b4c3164c",
+      "scope": "macOS offline package and Python 3.11/3.12/3.13 contracts; later only verification/third-party documentation updated"
     }
   },
   "python311": "NOT_RUN_UNAVAILABLE_LOCALLY",
