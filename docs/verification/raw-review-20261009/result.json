@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS_NEGATIVE_DELIVERY_GUARD",
+  "creativeAcceptance": "FAIL",
+  "checks": {
+    "actualNativeExecution": true,
+    "artifactTechnicalPass": true,
+    "actualVisualFailRecorded": true,
+    "deliveryRejected": true,
+    "stateUnchangedOnRejection": true,
+    "noDeliveryFile": true,
+    "originalUnchanged": true
+  },
+  "candidateSha256": "a2872ab657a6fce7eec9ce8ff9225fb9351aa9cfb9ab6b2efb309d42b322ab29",
+  "reviewBindingSha256": "a7bc8225c187256415d70d46b38171b0aa56a0b0b3ca7b33dc982bd0aec9ae25",
+  "sourceCommit": "a9660e6e1eb1afae65069056a419c17a905e90d4",
+  "scope": "actual current plugin controller + protected public skill snapshot; negative delivery proof only; no RAW color correction or creative pass"
+}

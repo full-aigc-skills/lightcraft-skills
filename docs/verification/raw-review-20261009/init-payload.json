@@ -1,0 +1,67 @@
+{
+  "goal": {
+    "request": "验证 Nikon D2H RAW 偏色候选在视觉 FAIL 后不可交付",
+    "sampleSha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914"
+  },
+  "plan": {
+    "domain": "lightcraft",
+    "steps": [
+      {
+        "command": "library.import",
+        "params": {
+          "paths": [
+            "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef"
+          ],
+          "mode": "add"
+        }
+      },
+      {
+        "command": "library.select",
+        "params": {
+          "ids": [
+            1
+          ],
+          "active": 1
+        }
+      },
+      {
+        "command": "develop.set",
+        "params": {
+          "control": "light.exposure",
+          "value": 0.25
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "app.export",
+        "params": {
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/exports/nikon-raw.png",
+          "format": "png",
+          "width": 256
+        }
+      },
+      {
+        "command": "catalog.query",
+        "params": {
+          "limit": 10
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 1
+        }
+      }
+    ]
+  },
+  "inputs": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef"
+  ],
+  "library": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/library",
+  "output_root": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/exports"
+}

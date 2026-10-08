@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "requestId": "9dcdf1cf-59a9-4047-8d59-c98f4a5ccefc",
+  "bindingSha256": "a7bc8225c187256415d70d46b38171b0aa56a0b0b3ca7b33dc982bd0aec9ae25",
+  "source": "host-model",
+  "reviewer": "Codex primary agent actual view_image inspection",
+  "verdict": "FAIL",
+  "observations": [
+    "Nikon D2H RAW 导出墙面、白色色块和高光有明显青绿色偏色；与同一 NEF 内嵌相机 JPEG 的较中性墙面/白块对照不通过。参考图仅为视觉参照，不声称色度真值或 deltaE。"
+  ]
+}

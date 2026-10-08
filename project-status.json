@@ -45,5 +45,7 @@
   },
   "mcpAcceptance": "PASS_MANUAL_HOST_HEADLESS_QUERY_DESKTOP_OPEN",
   "notSavedAcceptance": "PASS_NATIVE_HEADLESS_PERMISSION_FAULT_DESKTOP_OPEN",
-  "mcpEvidence": "docs/verification/current-mcp-20261009/README.md"
+  "mcpEvidence": "docs/verification/current-mcp-20261009/README.md",
+  "rawVisualDeliveryGuard": "PASS_REJECTED_ACTUAL_FAILED_CANDIDATE",
+  "rawVisualDeliveryEvidence": "docs/verification/raw-review-20261009/README.md"
 }

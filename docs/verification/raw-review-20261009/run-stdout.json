@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "taskId": "19239df2-816c-40dc-b774-fb72b1bdf0f3",
+  "status": "VERIFYING",
+  "goal": {
+    "request": "验证 Nikon D2H RAW 偏色候选在视觉 FAIL 后不可交付",
+    "sampleSha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914"
+  },
+  "goalSha256": "f55e61ad52be366d896880c44c456ca469ccc42aa2f7ae96dc7348483245df8e",
+  "plan": {
+    "domain": "lightcraft",
+    "steps": [
+      {
+        "command": "library.import",
+        "params": {
+          "paths": [
+            "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef"
+          ],
+          "mode": "add"
+        }
+      },
+      {
+        "command": "library.select",
+        "params": {
+          "ids": [
+            1
+          ],
+          "active": 1
+        }
+      },
+      {
+        "command": "develop.set",
+        "params": {
+          "control": "light.exposure",
+          "value": 0.25
+        }
+      },
+      {
+        "command": "develop.get",
+        "params": {
+          "id": 1
+        }
+      },
+      {
+        "command": "app.export",
+        "params": {
+          "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/exports/nikon-raw.png",
+          "format": "png",
+          "width": 256
+        }
+      },
+      {
+        "command": "catalog.query",
+        "params": {
+          "limit": 10
+        }
+      },
+      {
+        "command": "photo.inspect",
+        "params": {
+          "id": 1
+        }
+      }
+    ]
+  },
+  "planSha256": "fad539dd13ac94900d26564702c9b0a937d74c8124b7719058f2abe58d84d03c",
+  "originals": {
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914"
+  },
+  "inputRoots": [
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-20261008/samples/nikon-d2h-1.nef"
+  ],
+  "library": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/library",
+  "outputRoot": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/exports",
+  "revision": 0,
+  "maxRevisions": 3,
+  "history": [
+    {
+      "event": "created",
+      "at": "2026-10-08T16:05:13.193576+00:00",
+      "status": "PLANNED",
+      "revision": 0
+    },
+    {
+      "event": "native_requested",
+      "at": "2026-10-08T16:05:13.274236+00:00",
+      "status": "RUNNING",
+      "revision": 0
+    },
+    {
+      "event": "execution_recorded",
+      "at": "2026-10-08T16:05:13.852361+00:00",
+      "status": "VERIFYING",
+      "revision": 0
+    }
+  ],
+  "automaticReplay": false,
+  "createdAt": "2026-10-08T16:05:13.192462+00:00",
+  "acceptance": {
+    "execution": "NATIVE_EXIT_ZERO_REVIEW_REQUIRED",
+    "persistence": "NOT_RUN",
+    "artifacts": "NOT_RUN",
+    "reopen": "NOT_RUN",
+    "visual": "NOT_RUN"
+  },
+  "updatedAt": "2026-10-08T16:05:13.852361+00:00",
+  "receiptPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-raw-review-20261009/task/runs/252c5ef2-7618-454d-9fc2-c45015fe6e72/receipt.json",
+  "runId": "a52322d3-dbb0-4326-b3bb-0b08f2e1281b"
+}
