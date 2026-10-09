@@ -1,0 +1,389 @@
+[
+  {
+    "request": {
+      "id": 101,
+      "method": "engine.execute",
+      "params": {
+        "command": "library.import",
+        "params": {
+          "paths": [
+            "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-mobile-20261009/source-bundle/original.png"
+          ]
+        }
+      }
+    },
+    "reply": {
+      "id": 101,
+      "ok": true,
+      "result": {
+        "duplicates": [],
+        "failed": [],
+        "imported": [
+          1
+        ],
+        "scanned": 1,
+        "sidecars": 0
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 102,
+      "method": "engine.execute",
+      "params": {
+        "command": "catalog.query",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 102,
+      "ok": true,
+      "result": {
+        "photos": [
+          {
+            "camera": "",
+            "captured": null,
+            "copyName": null,
+            "copyOf": null,
+            "deleted": false,
+            "edited": false,
+            "fileName": "original.png",
+            "flag": "none",
+            "format": "PNG",
+            "height": 64,
+            "id": 1,
+            "keywords": [],
+            "kind": "image",
+            "label": null,
+            "previewOnly": null,
+            "rating": 0,
+            "title": "",
+            "width": 96
+          }
+        ],
+        "total": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 103,
+      "method": "engine.execute",
+      "params": {
+        "command": "library.select",
+        "params": {
+          "ids": [
+            1
+          ],
+          "active": 1
+        }
+      }
+    },
+    "reply": {
+      "id": 103,
+      "ok": true,
+      "result": {
+        "selected": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 104,
+      "method": "engine.execute",
+      "params": {
+        "command": "photo.rate",
+        "params": {
+          "rating": 1
+        }
+      }
+    },
+    "reply": {
+      "id": 104,
+      "ok": true,
+      "result": {
+        "changed": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 105,
+      "method": "engine.execute",
+      "params": {
+        "command": "photo.rate",
+        "params": {
+          "rating": 4
+        }
+      }
+    },
+    "reply": {
+      "id": 105,
+      "ok": true,
+      "result": {
+        "changed": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 106,
+      "method": "engine.execute",
+      "params": {
+        "command": "library.info",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 106,
+      "ok": true,
+      "result": {
+        "albums": 0,
+        "cache": {
+          "disk": {
+            "bytes": 45263,
+            "hits": 0,
+            "misses": 3,
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library/thumbs",
+            "writes": 3
+          },
+          "renderedBytes": 3664408,
+          "renderedInMemory": 3,
+          "sourceBytes": 74352,
+          "sourcesInMemory": 1
+        },
+        "forgotLocal": {
+          "forgotten": 0,
+          "keptInUse": 0,
+          "keptRecent": 0,
+          "keptTouched": 0,
+          "local": 0
+        },
+        "lastError": null,
+        "load": {
+          "created": true,
+          "damaged": null,
+          "replayed": 0,
+          "tornBytes": 0
+        },
+        "logBytes": 3634,
+        "logRecords": 3,
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library",
+        "persistence": {
+          "appends": 3,
+          "failedSnapshots": 0,
+          "lastAppendMs": 3.847791,
+          "lastSnapshot": {
+            "background": false,
+            "blockingMs": 0.0,
+            "bytes": 0,
+            "records": 0,
+            "resetMs": 0.0,
+            "serializeMs": 0.0,
+            "totalMs": 0.0,
+            "writeSyncMs": 0.0
+          },
+          "maxAppendMs": 9.356917,
+          "maxBlockingMs": 0.0,
+          "maxSnapshotMs": 0.0,
+          "snapshotRunning": false,
+          "snapshots": 0
+        },
+        "persistent": true,
+        "photos": 1,
+        "seq": 3,
+        "settingsWarnings": [],
+        "snapshotSeq": 0,
+        "unsavedError": null,
+        "unsavedOps": 0
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 107,
+      "method": "engine.execute",
+      "params": {
+        "command": "catalog.query",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 107,
+      "ok": true,
+      "result": {
+        "photos": [
+          {
+            "camera": "",
+            "captured": null,
+            "copyName": null,
+            "copyOf": null,
+            "deleted": false,
+            "edited": false,
+            "fileName": "original.png",
+            "flag": "none",
+            "format": "PNG",
+            "height": 64,
+            "id": 1,
+            "keywords": [],
+            "kind": "image",
+            "label": null,
+            "previewOnly": null,
+            "rating": 4,
+            "title": "",
+            "width": 96
+          }
+        ],
+        "total": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 108,
+      "method": "engine.execute",
+      "params": {
+        "command": "library.info",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 108,
+      "ok": true,
+      "result": {
+        "albums": 0,
+        "cache": {
+          "disk": {
+            "bytes": 45263,
+            "hits": 0,
+            "misses": 3,
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library/thumbs",
+            "writes": 3
+          },
+          "renderedBytes": 3664408,
+          "renderedInMemory": 3,
+          "sourceBytes": 74352,
+          "sourcesInMemory": 1
+        },
+        "forgotLocal": {
+          "forgotten": 0,
+          "keptInUse": 0,
+          "keptRecent": 0,
+          "keptTouched": 0,
+          "local": 0
+        },
+        "lastError": null,
+        "load": {
+          "created": true,
+          "damaged": null,
+          "replayed": 0,
+          "tornBytes": 0
+        },
+        "logBytes": 3634,
+        "logRecords": 3,
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library",
+        "persistence": {
+          "appends": 3,
+          "failedSnapshots": 0,
+          "lastAppendMs": 3.847791,
+          "lastSnapshot": {
+            "background": false,
+            "blockingMs": 0.0,
+            "bytes": 0,
+            "records": 0,
+            "resetMs": 0.0,
+            "serializeMs": 0.0,
+            "totalMs": 0.0,
+            "writeSyncMs": 0.0
+          },
+          "maxAppendMs": 9.356917,
+          "maxBlockingMs": 0.0,
+          "maxSnapshotMs": 0.0,
+          "snapshotRunning": false,
+          "snapshots": 0
+        },
+        "persistent": true,
+        "photos": 1,
+        "seq": 3,
+        "settingsWarnings": [],
+        "snapshotSeq": 0,
+        "unsavedError": null,
+        "unsavedOps": 0
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 109,
+      "method": "engine.execute",
+      "params": {
+        "command": "library.info",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 109,
+      "ok": true,
+      "result": {
+        "albums": 0,
+        "cache": {
+          "disk": {
+            "bytes": 45263,
+            "hits": 0,
+            "misses": 3,
+            "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library/thumbs",
+            "writes": 3
+          },
+          "renderedBytes": 3664408,
+          "renderedInMemory": 3,
+          "sourceBytes": 74352,
+          "sourcesInMemory": 1
+        },
+        "forgotLocal": {
+          "forgotten": 0,
+          "keptInUse": 0,
+          "keptRecent": 0,
+          "keptTouched": 0,
+          "local": 0
+        },
+        "lastError": null,
+        "load": {
+          "created": true,
+          "damaged": null,
+          "replayed": 0,
+          "tornBytes": 0
+        },
+        "logBytes": 3634,
+        "logRecords": 3,
+        "path": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/notsaved-immutable-test-library",
+        "persistence": {
+          "appends": 3,
+          "failedSnapshots": 0,
+          "lastAppendMs": 3.847791,
+          "lastSnapshot": {
+            "background": false,
+            "blockingMs": 0.0,
+            "bytes": 0,
+            "records": 0,
+            "resetMs": 0.0,
+            "serializeMs": 0.0,
+            "totalMs": 0.0,
+            "writeSyncMs": 0.0
+          },
+          "maxAppendMs": 9.356917,
+          "maxBlockingMs": 0.0,
+          "maxSnapshotMs": 0.0,
+          "snapshotRunning": false,
+          "snapshots": 0
+        },
+        "persistent": true,
+        "photos": 1,
+        "seq": 3,
+        "settingsWarnings": [],
+        "snapshotSeq": 0,
+        "unsavedError": null,
+        "unsavedOps": 0
+      }
+    }
+  }
+]

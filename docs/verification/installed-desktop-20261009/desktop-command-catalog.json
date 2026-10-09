@@ -1,0 +1,3535 @@
+[
+  {
+    "request": {
+      "id": 1,
+      "method": "engine.commands",
+      "params": {}
+    },
+    "reply": {
+      "id": 1,
+      "ok": true,
+      "result": [
+        {
+          "disabled_reason": "nothing to undo",
+          "enabled": false,
+          "id": "edit.undo",
+          "label": "Undo",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{}",
+          "shortcut": "Cmd+Z"
+        },
+        {
+          "disabled_reason": "nothing to redo",
+          "enabled": false,
+          "id": "edit.redo",
+          "label": "Redo",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{}",
+          "shortcut": "Cmd+Shift+Z"
+        },
+        {
+          "enabled": true,
+          "id": "library.source",
+          "label": "Show Source",
+          "menu": [],
+          "params": "{kind: all|recentlyAdded|album|recentlyDeleted|picks|missing, id?: albumId}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.filter",
+          "label": "Filter",
+          "menu": [],
+          "params": "partial Filter: {text?, rating?, ratingOp?: atLeast|exactly|atMost, flag?: pick|reject|none|null, label?, kind?, merged?: hdr|panorama|hdrPanorama|any, edited?, date?, keyword?, person?, camera?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.clearFilter",
+          "label": "Clear Filters",
+          "menu": [
+            "View"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.sort",
+          "label": "Sort",
+          "menu": [
+            "View",
+            "Sort"
+          ],
+          "params": "{key?: captureDate|importDate|editDate|fileName|rating|fileSize|random, ascending?: bool, group?: auto|none|day|month|year, seed?: u64 (the shuffle `random` gives)}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.shuffle",
+          "label": "Reshuffle",
+          "menu": [
+            "View",
+            "Sort"
+          ],
+          "params": "{seed?: 0..2^53-1} \u2014 sort at random; without `seed` a new shuffle each time",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.groups",
+          "label": "Date Groups",
+          "menu": [],
+          "params": "{by?: day|month|year (default: the sort's grouping; auto = day)} \u2192 [{key, label, start, count}] date headers of the grid",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.select",
+          "label": "Select Photos",
+          "menu": [],
+          "params": "{ids: [id], active?: id, mode?: replace|add|toggle|range}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.selectAll",
+          "label": "Select All",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{}",
+          "shortcut": "Cmd+A"
+        },
+        {
+          "enabled": true,
+          "id": "library.devices",
+          "label": "Cameras and Cards",
+          "menu": [],
+          "params": "{} \u2192 [{name, path (its DCIM folder), root}] \u2014 mounted volumes with a DCIM folder",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "photo.copyMetadata",
+          "label": "Copy Metadata",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{} \u2014 title, caption, copyright (notice, status, usage terms, info URL), creator, location and keywords of the active photo",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.pasteMetadata",
+          "label": "Paste Metadata",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?, fields?: [title|caption|copyright|copyrightStatus|usageTerms|copyrightUrl|creator|location|keywords] (default: all copied)}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.selectBy",
+          "label": "Select by Flag, Rating or Label",
+          "menu": [],
+          "params": "{flag?: pick|reject|none, rating?: 0..5, ratingOp?: gte|eq|lte (default gte), label?: red|\u2026|none, add?: bool (extend the selection)} \u2014 among the photos in view",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.selectNone",
+          "label": "Deselect All",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{}",
+          "shortcut": "Cmd+Shift+A"
+        },
+        {
+          "enabled": true,
+          "id": "library.next",
+          "label": "Next Photo",
+          "menu": [],
+          "params": "{}",
+          "shortcut": "Right"
+        },
+        {
+          "enabled": true,
+          "id": "library.previous",
+          "label": "Previous Photo",
+          "menu": [],
+          "params": "{}",
+          "shortcut": "Left"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.rate",
+          "label": "Set Rating",
+          "menu": [
+            "Photo",
+            "Set Rating"
+          ],
+          "params": "{rating: 0..5, ids?, advance?: bool}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.flag",
+          "label": "Set Flag",
+          "menu": [
+            "Photo",
+            "Set Flag"
+          ],
+          "params": "{flag: pick|reject|none, ids?, advance?: bool}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.pick",
+          "label": "Flag as Pick",
+          "menu": [
+            "Photo",
+            "Set Flag"
+          ],
+          "params": "{ids?}",
+          "shortcut": "P"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.reject",
+          "label": "Flag as Reject",
+          "menu": [
+            "Photo",
+            "Set Flag"
+          ],
+          "params": "{ids?}",
+          "shortcut": "X"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.unflag",
+          "label": "Unflag",
+          "menu": [
+            "Photo",
+            "Set Flag"
+          ],
+          "params": "{ids?}",
+          "shortcut": "U"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.label",
+          "label": "Set Color Label",
+          "menu": [
+            "Photo",
+            "Set Color Label"
+          ],
+          "params": "{label: red|yellow|green|blue|purple|none, ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.rotateLeft",
+          "label": "Rotate Left",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": "Cmd+["
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.rotateRight",
+          "label": "Rotate Right",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": "Cmd+]"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.flipHorizontal",
+          "label": "Flip Horizontal",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.flipVertical",
+          "label": "Flip Vertical",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.removeRegion",
+          "label": "Remove Face Box",
+          "menu": [],
+          "params": "{id?, index} \u2014 remove one face / pet region (by its position in the photo's regions) from the photo in the catalog; undoable. The XMP sidecar is never rewritten for this, even with auto-write on, so reading the metadata from the file brings the region back",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.setRegion",
+          "label": "Resize Face Box",
+          "menu": [],
+          "params": "{id?, index, rect: {x0, y0, x1, y1}} \u2014 set one face / pet region's box (normalized, in the photo's upright frame; clamped to the photo, at least 0.5 % each way) in the catalog; undoable. Like photo.removeRegion it never rewrites the XMP sidecar",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.delete",
+          "label": "Delete Photo",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 moves to Recently Deleted",
+          "shortcut": "Delete"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.restore",
+          "label": "Restore",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.deletePermanently",
+          "label": "Delete Permanently",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.setMeta",
+          "label": "Edit Info",
+          "menu": [],
+          "params": "{ids?, title?, caption?, altText?, extendedDescription?, copyright?, copyrightStatus?: unknown|copyrighted|publicDomain, usageTerms?, copyrightUrl?, creator?, location?, city?, state?, country?, gps?: \"lat, lon\" | [lat, lon] | null, keywords?: [..], addKeywords?: [..], removeKeywords?: [..]}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.create",
+          "label": "New Album",
+          "menu": [
+            "File"
+          ],
+          "params": "{name, parent?: folderId, folder?: bool, addSelected?: bool}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.createSmart",
+          "label": "New Smart Album\u2026",
+          "menu": [],
+          "params": "{name, rules?: partial Filter (rating, ratingOp, flag, label, kind, edited, keyword, camera, lens, dateFrom, dateTo, date, text, album, ruleSet: {match: all|any|none, rules: [{field, op, value} | {group: ruleSet}]} \u2014 see album.ruleFields), parent?: folderId} \u2014 without `rules`, saves the current view (source + filter)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.ruleFields",
+          "label": "Smart Album Rule Fields",
+          "menu": [],
+          "params": "{} \u2192 [{field, label, kind, ops: [{op, label}], choices?}] for ruleSet rules",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.setRules",
+          "label": "Edit Smart Album",
+          "menu": [],
+          "params": "{id, rules?: partial Filter merged onto the current rules (null clears a field), replace?: bool, fromView?: bool (use the current view)}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.rename",
+          "label": "Rename Album",
+          "menu": [],
+          "params": "{id, name}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.delete",
+          "label": "Delete Album",
+          "menu": [],
+          "params": "{id}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.move",
+          "label": "Move Album",
+          "menu": [],
+          "params": "{id, parent?: folderId|null}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "album.addPhotos",
+          "label": "Add to Album",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{id: albumId, ids?: [photoIds]} (default: selection)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "album.toggleTarget",
+          "label": "Add to Target Album",
+          "menu": [],
+          "params": "{ids?} \u2014 B: adds the photos to the target album (the Quick Collection unless one is set), or removes them when they're all in it \u2192 {album, added}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.setTarget",
+          "label": "Set as Target Album",
+          "menu": [],
+          "params": "{id: albumId | null} (null = the Quick Collection)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "album.clearQuick",
+          "label": "Clear Quick Collection",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.autoImport",
+          "label": "Auto Import Settings",
+          "menu": [],
+          "params": "{folder?: path | null (off), copy?: bool (copy into the library's Originals, else add in place), album?: name | null} \u2014 a watched folder whose new photos are added as they arrive (library.autoImportScan; the app scans every few seconds) \u2192 the settings",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.autoImportScan",
+          "label": "Auto Import Now",
+          "menu": [],
+          "params": "{listing?: [[path, size]] (the folder as listed by the caller, e.g. on a worker thread), start?: bool (false: return the `library.import` params as `import` instead of importing)} \u2014 add the watched folder's new photos (files the library doesn't have yet; partial / still-copying files wait for the next scan) \u2192 {imported, folder, import?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "album.removePhotos",
+          "label": "Remove from Album",
+          "menu": [],
+          "params": "{id: albumId, ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "album.setCover",
+          "label": "Set as Album Cover",
+          "menu": [],
+          "params": "{id: albumId, photo?: photoId}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.importPreview",
+          "label": "Review Import",
+          "menu": [],
+          "params": "{paths: [file or folder (recursive)]} \u2192 {candidates: [{path, name, format, kind, width, height, fileSize, captured, duplicate?: path|content, existing?, error?, previewOnly?: why a raw can only be shown from its embedded preview}], duplicates, scanned} \u2014 nothing is added",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.import",
+          "label": "Import Photos",
+          "menu": [
+            "File"
+          ],
+          "params": "{paths: [file or folder (recursive)], mode?: add|copy|move (add = reference the files in place; copy = into the library's Originals/YYYY/YYYY-MM-DD/; move = as copy, then each original and its XMP sidecars are removed from the source \u2014 only after the copy is verified (a hard link on the same volume, else copied, synced and compared byte for byte) and its catalog record is saved; failed, duplicate and unchecked files keep their sources; a taken name gets -1, -2\u2026; undo removes the photos from the library but leaves the files at the destination), destination?: folder for copies / moves, organize?: date (YYYY/YYYY-MM-DD) | month (YYYY/YYYY-MM) | flat | a folder template, e.g. `{date:%Y}/{date:%Y%m%d}` \u2192 2026/20260114 (the template's `/` make the folders, each level expanded with the rename tokens and made a safe folder name: never outside the destination; must be relative, no `..`; a level with missing metadata is `unknown`) \u2014 dated by capture time, else the import time, rename?: file-name template for copies, original extension added (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each; blank = keep names), renameStart?: 1, metadataPreset?: name, dng?: bool (copy raws as DNG; copy only), local?: bool (browsing: the photos stay out of the library, like library.browse; not with move), album?: albumId, albumName?: new album, preset?: presetId, keywords?: [..]} \u2192 {imported, duplicates, failed, moved?: [{from, to, sidecars?}], kept?: [{path, reason}] (move: sources left in place and why), album?}",
+          "shortcut": "Cmd+Shift+I"
+        },
+        {
+          "enabled": true,
+          "id": "library.info",
+          "label": "Library Info",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.compact",
+          "label": "Optimize Library",
+          "menu": [
+            "File"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.clearPreviews",
+          "label": "Clear Preview Cache",
+          "menu": [
+            "File"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.set",
+          "label": "Set Develop Values",
+          "menu": [],
+          "params": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} \u2014 see develop.controls",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.adjust",
+          "label": "Nudge Develop Value",
+          "menu": [],
+          "params": "{control, delta}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.merge",
+          "label": "Apply Settings JSON",
+          "menu": [],
+          "params": "{settings: partial DevelopSettings JSON, label?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "develop.reset",
+          "label": "Reset Edits",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?}",
+          "shortcut": "Cmd+Shift+R"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.resetSection",
+          "label": "Reset Section",
+          "menu": [],
+          "params": "{section: light|curve|color|mixer|grading|effects|vignette|grain|detail|optics|geometry}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.resetControl",
+          "label": "Reset Control",
+          "menu": [],
+          "params": "{control}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.sectionEnabled",
+          "label": "Toggle Section",
+          "menu": [],
+          "params": "{section: string, enabled: bool}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.autoBwMix",
+          "label": "Auto B&W Mix",
+          "menu": [],
+          "params": "{} \u2014 sets the black & white mix from the photo's colours (and switches to B&W)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.auto",
+          "label": "Auto Settings",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{}",
+          "shortcut": "Shift+A"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.wb",
+          "label": "White Balance",
+          "menu": [],
+          "params": "{mode: asShot|auto|daylight|cloudy|shade|tungsten|fluorescent|flash|custom, temp?, tint?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.wbPick",
+          "label": "White Balance Selector",
+          "menu": [],
+          "params": "{x, y} normalized image coords of a neutral point",
+          "shortcut": "W"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.treatment",
+          "label": "Black & White",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{bw?: bool} (toggles when omitted)",
+          "shortcut": "V"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.profile",
+          "label": "Set Profile",
+          "menu": [],
+          "params": "{id: profile id (see profiles.list), amount?: 0..200}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "profile.favorite",
+          "label": "Favorite Profile",
+          "menu": [],
+          "params": "{id, favorite?: bool} (toggles when omitted)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.curve",
+          "label": "Set Point Curve",
+          "menu": [],
+          "params": "{channel: master|red|green|blue, points: [[x,y],...] in 0..1}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.set",
+          "label": "Set Crop",
+          "menu": [],
+          "params": "{rect?: [x0,y0,x1,y1] normalized in the straightened frame, angle?: degrees}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.straighten",
+          "label": "Straighten",
+          "menu": [],
+          "params": "{angle: degrees -45..45} \u2014 keeps the largest crop of the current aspect",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.autoStraighten",
+          "label": "Auto Straighten",
+          "menu": [],
+          "params": "{} \u2014 level the horizon (or plumb lines) with the crop angle",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.aspect",
+          "label": "Crop Aspect",
+          "menu": [],
+          "params": "{aspect: \"original\"|\"free\"|\"current\" (lock the crop's present shape)|\"toggle\" (lock \u2194 free)|\"1x1\"|\"4x5\"|\"8.5x11\"|\"5x7\"|\"2x3\"|\"4x3\"|\"16x9\"|\"16x10\"|[w,h]}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.rotateAspect",
+          "label": "Rotate Crop Aspect",
+          "menu": [],
+          "params": "{}",
+          "shortcut": "X"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "crop.reset",
+          "label": "Reset Crop",
+          "menu": [],
+          "params": "{}",
+          "shortcut": "Cmd+Alt+R"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "geometry.upright",
+          "label": "Upright",
+          "menu": [],
+          "params": "{mode: off|auto|guided|level|vertical|full} \u2014 analyses the photo (line segments \u2192 vanishing points) and stores the correction; run again to update after lens changes",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "geometry.guides",
+          "label": "Guided Upright Guides",
+          "menu": [],
+          "params": "{guides: [[x0,y0,x1,y1], \u2026] (\u2264 4, normalized coords of the lens-corrected image), add?: bool (append one guide, dropping the oldest beyond 4)} \u2014 switches Upright to Guided",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.copy",
+          "label": "Copy Edit Settings",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{groups?: [settingsGroup]} (default: all but crop, masks, remove)",
+          "shortcut": "Cmd+C"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.pastePrevious",
+          "label": "Paste Settings from Previous",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{ids?, groups?: [settingsGroup] (default: the copy groups)} \u2014 from the photo that was active before this one",
+          "shortcut": "Cmd+Alt+V"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "develop.paste",
+          "label": "Paste Edit Settings",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{ids?, groups?: [settingsGroup] (paste only these of the copied groups)}",
+          "shortcut": "Cmd+V"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "develop.sync",
+          "label": "Sync Settings",
+          "menu": [],
+          "params": "{groups?} \u2014 copy the active photo's settings to all selected photos",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "develop.quickAdjust",
+          "label": "Quick Develop",
+          "menu": [],
+          "params": "{control: develop control id, delta, ids?} \u2014 add `delta` to the control on every target photo (each from its own value; Quick Develop) in one undo step \u2192 {changed}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "develop.matchExposure",
+          "label": "Match Total Exposures",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 set each selected photo's Exposure so its total exposure (shutter \u00d7 ISO \u00f7 aperture\u00b2, plus the slider) equals the active photo's; photos without exposure data are skipped \u2192 {changed, skipped}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "develop.autoSync",
+          "label": "Auto Sync",
+          "menu": [
+            "Edit"
+          ],
+          "params": "{on?: bool} (toggles when omitted) \u2014 edits to the active photo also change the other selected photos (only the settings that changed; not spot removal / red eye) \u2192 {on}",
+          "shortcut": "Cmd+Alt+Shift+A"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "preset.apply",
+          "label": "Apply Preset",
+          "menu": [],
+          "params": "{id: presetId, amount?: 0..200 (percent), ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "preset.create",
+          "label": "Create Preset",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{name, group?, groups?: [settingsGroup]}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.delete",
+          "label": "Delete Preset",
+          "menu": [],
+          "params": "{id}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.favorite",
+          "label": "Favorite Preset",
+          "menu": [],
+          "params": "{id, favorite?: bool}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.rename",
+          "label": "Rename Preset",
+          "menu": [],
+          "params": "{id, name}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.move",
+          "label": "Move Preset to Group",
+          "menu": [],
+          "params": "{id, group}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "preset.update",
+          "label": "Update Preset with Current Settings",
+          "menu": [],
+          "params": "{id, groups?: [settingsGroup] (default: the groups the preset already sets)} \u2014 from the active photo",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "version.create",
+          "label": "Create Version",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{name?}",
+          "shortcut": "Cmd+Shift+S"
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "version.restore",
+          "label": "Restore Version",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "version.delete",
+          "label": "Delete Version",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "version.rename",
+          "label": "Rename Version",
+          "menu": [],
+          "params": "{index, name}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "version.update",
+          "label": "Update Version with Current Settings",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "history.clear",
+          "label": "Clear History",
+          "menu": [],
+          "params": "{} \u2014 keeps the current settings as the only step",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "history.restore",
+          "label": "Go to History Step",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.beginInteraction",
+          "label": "Begin Interaction",
+          "menu": [],
+          "params": "{label}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "develop.endInteraction",
+          "label": "End Interaction",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "develop.cancelInteraction",
+          "label": "Cancel Interaction",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "pointColor.pick",
+          "label": "Add Point Color Sample",
+          "menu": [],
+          "params": "{x, y} normalized image coords \u2014 samples the colour there (max 8); returns {index, lum, chroma, hue}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "develop.targeted",
+          "label": "Targeted Adjustment",
+          "menu": [],
+          "params": "{target: curve|hue|sat|lum, x, y (normalized image coords), delta (slider units; point curves: output levels 0..255), channel?: parametric|master|red|green|blue (curve)} \u2014 adjusts the curve region / colour-mixer bands under the point; returns the changed controls",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "pointColor.delete",
+          "label": "Delete Point Color Sample",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "curve.reset",
+          "label": "Reset Tone Curve",
+          "menu": [],
+          "params": "{channel?: all|point|parametric|master|red|green|blue (default all)} \u2014 the active photo's tone curve (or one channel) back to linear",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "curve.presets",
+          "label": "Point Curve Presets",
+          "menu": [],
+          "params": "{} \u2192 {presets: [{name, master, red, green, blue: [[x,y],...], builtin?}], current: name of the preset the active photo's point curves match, or null}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "curve.applyPreset",
+          "label": "Apply Point Curve Preset",
+          "menu": [],
+          "params": "{name} \u2014 sets the active photo's point curves (all four channels; the parametric curve stays)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "curve.savePreset",
+          "label": "Save Point Curve Preset",
+          "menu": [],
+          "params": "{name} \u2014 the active photo's point curves under a name (replaces a user preset of that name; built-in names are reserved), saved with the library",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "curve.deletePreset",
+          "label": "Delete Point Curve Preset",
+          "menu": [],
+          "params": "{name} \u2014 a user preset (built-ins can't be deleted)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "curve.importPresets",
+          "label": "Import Point Curve Presets",
+          "menu": [],
+          "params": "{path | paths: [file]} \u2014 .lccurve JSON files ({format, version, presets: [...]}, an array of presets, or one preset); same-named user presets are replaced \u2192 {imported: [name], failed: [[file, error]]}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "curve.exportPresets",
+          "label": "Export Point Curve Presets",
+          "menu": [],
+          "params": "{path, names?: [name] (default: every user preset)} \u2014 writes a .lccurve JSON file \u2192 {path, count}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.add",
+          "label": "Create New Mask",
+          "menu": [],
+          "params": "{kind: brush|linear|radial|sky|subject|background|luminanceRange|colorRange|object|prompt, ...shape params (start/end, center/rx/ry/angle/feather, lo/hi\u2026; object: points/exclude [[x,y],\u2026]; prompt: text; object/prompt: seg? a stored segmentation, no model needed), name?} \u2014 AI kinds need the SAM 3 model; in the app a prompt returns {pending} and the mask appears when found",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.addComponent",
+          "label": "Add/Subtract/Intersect Mask",
+          "menu": [],
+          "params": "{id?: maskId, op: add|subtract|intersect, kind, ...shape params}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.brushStroke",
+          "label": "Brush Stroke",
+          "menu": [],
+          "params": "{id?: maskId, points: [[x,y],\u2026] normalized, size?: fraction of long edge (0.03), feather?, flow?, density?, erase?: bool, autoMask?: bool}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.update",
+          "label": "Update Mask Shape",
+          "menu": [],
+          "params": "{id?, component?: index (0), shape: MaskShape JSON}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.sampleColor",
+          "label": "Sample Mask Color",
+          "menu": [],
+          "params": "{x, y: normalized image point, add?: bool (\u21e7: add to the samples, max 5), id?, component?} \u2014 the colour range of the selected mask (its first colour-range component) samples the colour there \u2192 {samples}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.objectPoint",
+          "label": "Add Object Click",
+          "menu": [],
+          "params": "{x, y: normalized image point, exclude?: bool (\u2325-click: leave this part out), id?: maskId} \u2014 a click on the selected mask's Object selection (its last Object component); SAM 3 re-segments the object \u2192 {include, exclude}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.refineDetail",
+          "label": "Refine AI Mask Detail",
+          "menu": [],
+          "params": "{id?: maskId, component?} \u2014 a zoomed-in SAM 3 pass over an Object/Describe selection (default: the mask's last one): the photo around it is analyzed again at a higher resolution, in the background; the mask updates when it's done \u2192 {started}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "segment.prepare",
+          "label": "Prepare AI Masks",
+          "menu": [],
+          "params": "{} \u2014 load SAM 3 and analyze the active photo in the background, so Object clicks are instant \u2192 {busy}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "segment.model.status",
+          "label": "AI Mask Model Status",
+          "menu": [],
+          "params": "{} \u2014 whether this build has AI masks, whether the SAM 3 model is installed (and where), loaded, busy, and the download's progress \u2192 {available, installed, dir, loaded, busy, analyzing, sizeBytes, license, licenseUrl, mirrors, download: {running, done, total, file, error, finished}}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "segment.model.download",
+          "label": "Download AI Mask Model",
+          "menu": [],
+          "params": "{acknowledged: true} \u2014 download the SAM 3 model (about 3.4 GB, Meta's SAM License, not LightCraft's) in the background, from the configured mirrors; only after the user agreed to it. Watch segment.model.status; segment.model.cancel stops it (it resumes later) \u2192 {started, installed, downloading}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "segment.model.cancel",
+          "label": "Cancel AI Mask Model Download",
+          "menu": [],
+          "params": "{} \u2014 stop the SAM 3 download (what has arrived is kept, and a new download resumes from it) \u2192 {cancelled}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.refine",
+          "label": "Refine Mask Edges",
+          "menu": [],
+          "params": "{id?, value: 0..100} \u2014 the mask's edges snap to the photo's (guided filter; rendered on the CPU)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.adjust",
+          "label": "Set Mask Adjustments",
+          "menu": [],
+          "params": "{id?, values: {exposure, contrast, highlights, shadows, whites, blacks, temp, tint, texture, clarity, dehaze, hue, saturation, sharpness, noise, moire, defringe, color_hue, color_sat, amount}}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.select",
+          "label": "Select Mask",
+          "menu": [],
+          "params": "{id|null}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.delete",
+          "label": "Delete Mask",
+          "menu": [],
+          "params": "{id?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.deleteAll",
+          "label": "Delete All Masks",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.rename",
+          "label": "Rename Mask",
+          "menu": [],
+          "params": "{id?, name}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.invert",
+          "label": "Invert Mask",
+          "menu": [],
+          "params": "{id?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.visible",
+          "label": "Show/Hide Mask",
+          "menu": [],
+          "params": "{id?, visible?: bool}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.duplicate",
+          "label": "Duplicate Mask",
+          "menu": [],
+          "params": "{id?, invert?: bool (Duplicate and Invert)} \u2014 the copy goes right after the original and is selected",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.component",
+          "label": "Edit Mask Component",
+          "menu": [],
+          "params": "{id?, component: index, action: invert|duplicate|delete|rename|op, name? (rename; empty clears), op?: add|subtract|intersect} \u2014 one component of a mask (deleting the last one deletes the mask)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "mask.move",
+          "label": "Move Mask",
+          "menu": [],
+          "params": "{id?, to?: index (0 = top), delta?: \u00b1n} \u2014 reorder the masks list",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.findDust",
+          "label": "Find Dust Spots",
+          "menu": [],
+          "params": "{sensitivity?: 0..100 (50), add?: bool (true)} \u2014 find sensor-dust spots (small soft dark spots on smooth areas) and add a heal spot on each (one undo step) \u2192 {spots: [{x, y, size}], added}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.add",
+          "label": "Add Remove Spot",
+          "menu": [],
+          "params": "{mode?: remove|heal|clone, points: [[x,y],\u2026], size?: fraction of long edge, feather?, opacity?, source?: [dx,dy] (default: the best match nearby)} \u2014 selects the new spot; returns {index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.select",
+          "label": "Select Spot",
+          "menu": [],
+          "params": "{index|null}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.update",
+          "label": "Edit Spot",
+          "menu": [],
+          "params": "{index? (the selected spot), move?: [dx,dy] (the target, normalized), source?: [dx,dy] (offset from the target), moveSource?: [dx,dy], size?, feather?, opacity?, mode?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.refreshSource",
+          "label": "Refresh Source",
+          "menu": [],
+          "params": "{index? (the selected spot)} \u2014 picks the next-best source away from the current one",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "spot.delete",
+          "label": "Delete Spot",
+          "menu": [],
+          "params": "{index? (the selected spot)}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "redeye.add",
+          "label": "Add Red Eye Correction",
+          "menu": [],
+          "params": "{center: [x,y] normalized, rx, ry: radii as fractions of the long edge, pet?: bool, pupilSize?: 0..100, darken?: 0..100} \u2014 the pupil inside is found automatically; returns {index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "redeye.catchlight",
+          "label": "Pet Eye Catchlight",
+          "menu": [],
+          "params": "{index, on?: bool (default true), offset?: [dx, dy] from the pupil centre in pupil radii (default [-0.35, -0.35])}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "redeye.delete",
+          "label": "Delete Red Eye Correction",
+          "menu": [],
+          "params": "{index}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.virtualCopy",
+          "label": "Create Virtual Copy",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?, name?} \u2192 {ids: [new photo ids]} \u2014 a new catalog entry sharing the original file, with independent settings; stacked with its original and named `name` or \"Copy N\"",
+          "shortcut": "Cmd+'"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.group",
+          "label": "Group into Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{ids?, top?: photoId (default: the active photo), collapsed?: bool (default true)} \u2014 stacks the photos are already in are merged",
+          "shortcut": "Cmd+G"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.ungroup",
+          "label": "Ungroup Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{ids?}",
+          "shortcut": "Cmd+Shift+G"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.remove",
+          "label": "Remove from Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{ids?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.setTop",
+          "label": "Set as Top of Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{id?} (default: the active photo)",
+          "shortcut": "Shift+S"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.moveUp",
+          "label": "Move Up in Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{id?} \u2014 one place towards the top",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.moveDown",
+          "label": "Move Down in Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{id?} \u2014 one place away from the top",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.split",
+          "label": "Split Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{id?} \u2014 this photo and the ones after it become their own stack",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "stack.toggle",
+          "label": "Expand/Collapse Stack",
+          "menu": [
+            "Photo",
+            "Stack"
+          ],
+          "params": "{ids?, collapsed?: bool}",
+          "shortcut": "S"
+        },
+        {
+          "disabled_reason": "no stacks",
+          "enabled": false,
+          "id": "stack.expandAll",
+          "label": "Expand All Stacks",
+          "menu": [
+            "View",
+            "Stacks"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no stacks",
+          "enabled": false,
+          "id": "stack.collapseAll",
+          "label": "Collapse All Stacks",
+          "menu": [
+            "View",
+            "Stacks"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "stack.auto",
+          "label": "Auto-Stack by Capture Time",
+          "menu": [],
+          "params": "{gap?: seconds between consecutive captures (default 60), ids? (default: the selection if several photos, else the current view), preview?: bool} \u2192 {stacks, photos}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.sets",
+          "label": "Keyword Sets",
+          "menu": [],
+          "params": "{} \u2192 {sets: [{name, keywords}], current, keywords: the nine \u23251\u2013\u23259 apply}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.useSet",
+          "label": "Use Keyword Set",
+          "menu": [],
+          "params": "{name} (\"Recent Keywords\" = the recently added ones)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.saveSet",
+          "label": "Save Keyword Set",
+          "menu": [],
+          "params": "{name, keywords?: [up to 9] (default: the current nine)} \u2014 replaces a set of that name and makes it current",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.deleteSet",
+          "label": "Delete Keyword Set",
+          "menu": [],
+          "params": "{name}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "keyword.toggleFromSet",
+          "label": "Toggle Keyword from Set",
+          "menu": [],
+          "params": "{index: 1..9, ids?} \u2014 the set's keyword N: added to the target photos, or removed when they all have it",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.list",
+          "label": "Keywords",
+          "menu": [],
+          "params": "{} \u2192 [{name, path, count, children}] keyword tree (`a|b|c` keywords are hierarchical)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.suggest",
+          "label": "Keyword Suggestions",
+          "menu": [],
+          "params": "{prefix?: typed text, ids?, limit?: 12} \u2192 keywords to suggest for the photos (co-occurring / most used, or matching the prefix)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.rename",
+          "label": "Rename Keyword",
+          "menu": [],
+          "params": "{from, to} \u2014 on every photo, children included (`a` \u2192 `b` renames `a|x` to `b|x`); renaming onto an existing keyword merges them",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.delete",
+          "label": "Delete Keyword",
+          "menu": [],
+          "params": "{keyword} \u2014 removes it (and the keywords below it) from every photo",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "keyword.merge",
+          "label": "Merge Keywords",
+          "menu": [],
+          "params": "{from: [keyword], into: keyword} \u2014 replaces each `from` keyword (children included) with `into` on every photo",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.renameTokens",
+          "label": "Rename Template Tags",
+          "menu": [],
+          "params": "{} \u2192 {tokens: [{tag, aliases, meaning, example}], dateDirectives: [{directive, meaning}], notes: [..], sample} \u2014 the file-name template tags shared by photo.rename, library.import (rename) and app.export (naming); examples are for a sample photo",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.renamePreview",
+          "label": "Rename Preview",
+          "menu": [],
+          "params": "{template: e.g. `{date}_{name}`, `Trip-{seq:3}` (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each), start?: first sequence number (1), ids?} \u2014 renames the files on disk (sidecars too, never overwriting: collisions get -1, -2\u2026); undoable",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.rename",
+          "label": "Rename Photos",
+          "menu": [],
+          "params": "{template: e.g. `{date}_{name}`, `Trip-{seq:3}` (tokens: {name} {num} {seq} {seq:N} {date} {date:%Y%m%d} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext}; photo.renameTokens explains each), start?: first sequence number (1), ids?} \u2014 renames the files on disk (sidecars too, never overwriting: collisions get -1, -2\u2026); undoable",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.setCaptureTime",
+          "label": "Edit Capture Time",
+          "menu": [],
+          "params": "{ids?, time?: `2026-09-30T14:05:00` (the active photo gets it, the others shift by the same amount), each?: bool (every photo gets `time`), shift?: seconds, hours?: time-zone shift in hours} \u2192 {changed, captured: [..]}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.autoTagTracklog",
+          "label": "Auto-Tag Photos from Tracklog",
+          "menu": [],
+          "params": "{path?: GPX file | gpx?: GPX text, ids?, offset?: camera clock's UTC offset for photos whose capture time has no zone (`+02:00`, or hours; default UTC), maxGap?: seconds (600), replace?: bool (also photos that already have GPS), dryRun?: bool} \u2192 {tagged, interpolated, nearest, skipped: {noTime, outside, hasGps}, assumedUtc, points, start, end, photos: [{id, gps, match}]} \u2014 positions from the track log by capture time; one undo step",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.names",
+          "label": "Color Label Names",
+          "menu": [],
+          "params": "{} \u2192 [{label, name, custom}]",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.setNames",
+          "label": "Edit Color Label Names",
+          "menu": [],
+          "params": "{names: {red?: name|null, yellow?, green?, blue?, purple?}} \u2014 null or empty restores the colour's name",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.sets",
+          "label": "Color Label Sets",
+          "menu": [],
+          "params": "{} \u2192 {sets: [{name, names: [red, yellow, green, blue, purple], builtin}], current: name|null}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.applySet",
+          "label": "Apply Color Label Set",
+          "menu": [],
+          "params": "{name} \u2014 use a set's label names (undoable)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.saveSet",
+          "label": "Save Color Label Set",
+          "menu": [],
+          "params": "{name} \u2014 save the current label names as a set (replaces a user set of that name)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "label.deleteSet",
+          "label": "Delete Color Label Set",
+          "menu": [],
+          "params": "{name} \u2014 user sets only",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.smartPreviews",
+          "label": "Build Smart Previews",
+          "menu": [],
+          "params": "{ids?, discard?: bool, background?: bool} \u2014 build (or discard) the smart previews of the selected photos (else all in view): compact proxies in the library that keep photos editable and exportable (at proxy size) while their originals are offline; a damaged proxy (cut short) is rebuilt \u2192 {built, repaired, removed, failed}; with background (the app's menu) the files are read and written on a worker thread \u2192 {total, done, failed, repaired, running, what} like library.buildPreviews (progress: library.previewProgress, stop: library.cancelPreviews)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.smartPreviewsLocation",
+          "label": "Smart Previews Location",
+          "menu": [],
+          "params": "{path?: absolute folder, reset?: bool, existing?: move|leave|discard} \u2014 without path/reset: where this library keeps its smart previews \u2192 {path, default, custom, available, count, bytes}. With path (or reset = back to `Smart Previews` in the library): use that folder instead (must exist or have an existing parent, and accept writes; never falls back to another drive). Smart previews already in the old folder need `existing`: move them, leave them (build again), or discard them \u2192 also {handled, failed}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.smartPreview",
+          "label": "Smart Preview Status",
+          "menu": [],
+          "params": "{id?} \u2192 {smartPreview: bool, originalOnline: bool}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.buildPreviews",
+          "label": "Build Previews",
+          "menu": [],
+          "params": "{size?: standard (2048 px, or `edge`) | full (1:1), ids?, wait?: bool} \u2014 render the grid thumbnail and loupe view of the selected photos (else all in view) into the preview cache, in the background unless `wait` \u2192 {total, done, failed, running}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.previewProgress",
+          "label": "Preview Build Progress",
+          "menu": [],
+          "params": "{} \u2192 {total, done, failed, repaired, running, cancelled, what, error} | null",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.cancelPreviews",
+          "label": "Cancel Preview Build",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "profile.import",
+          "label": "Import Profiles",
+          "menu": [],
+          "params": "{paths: [.cube file, folder or .zip]} \u2014 3D LUTs become creative profiles (Amount 0\u2013200 %; rendered on the CPU) in the profile browser's groups (folder / zip name, else Imported) \u2192 {imported: [{id, name, group}], failed}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "profile.deleteImported",
+          "label": "Delete Imported Profile",
+          "menu": [],
+          "params": "{id: lut:\u2026}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.findSimilar",
+          "label": "Find Similar Photos",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{id?, similarity?: 0..1 (0.8), filter?: bool (true)} \u2014 photos that look like the active one (composition and tones), most similar first; filters the view to them (Clear Filters to go back) \u2192 {photos: [{id, similarity}]}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.analyze",
+          "label": "Assisted Culling",
+          "menu": [],
+          "params": "{ids?, rejectBelow?: sharpness 0..100, pickBest?: bool} \u2014 score the selected photos (else all in view) for focus (0..100) and clipping, group look-alike shots taken within 10 s and mark the sharpest of each; optionally reject blurry photos and pick each group's best; one undo step \u2192 {photos: [{id, sharpness, clipped, group, best}], groups, rejected, picked}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.convertToDng",
+          "label": "Convert to DNG",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 write each raw photo as a lossless DNG next to it (settings embedded) and relink the photo to it; originals are kept \u2192 {converted: [{id, path, original}], skipped}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.duplicate",
+          "label": "Duplicate",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 copy each photo's file next to it (`-copy`) and add it with the same settings, metadata and albums (a real file, unlike a virtual copy) \u2192 {ids}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.reload",
+          "label": "Reload from Disk",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 re-read photos whose files changed on disk (e.g. saved by an external editor), or raws shown from their embedded preview that can be decoded now; camera fields the catalog lacks are filled in \u2192 {reloaded}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "photo.editExternal",
+          "label": "Edit Copy for External Editor",
+          "menu": [],
+          "params": "{colorSpace?: adobeRgb (default) | proPhoto | displayP3 | srgb, dir?} \u2014 render the active photo with its edits as a 16-bit TIFF `<name>-Edit.tif` next to it, add it stacked on the original and select it \u2192 {path, id, original} (the app then opens it in the external editor)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "the library has fewer than 2 photos",
+          "enabled": false,
+          "id": "merge.hdr",
+          "label": "HDR Merge",
+          "menu": [],
+          "params": "{ids?, align=true, deghost=none|low|medium|high, autoSettings=true, stack=false, preview=false, showOverlay=false, previewPath?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "the library has fewer than 2 photos",
+          "enabled": false,
+          "id": "merge.panorama",
+          "label": "Panorama Merge",
+          "menu": [],
+          "params": "{ids?, projection=auto|spherical|cylindrical|perspective, boundaryWarp=0..100, autoCrop=false, fillEdges=false, autoSettings=true, stack=false, maxMegapixels=40, preview=false, previewPath?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "the library has fewer than 2 photos",
+          "enabled": false,
+          "id": "merge.hdrPanorama",
+          "label": "HDR Panorama Merge",
+          "menu": [],
+          "params": "{ids?, bracket=0 (auto from EXIF), align, deghost, projection, boundaryWarp, autoCrop, fillEdges, autoSettings, stack, preview, previewPath?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "catalog.query",
+          "label": "Query Photos",
+          "menu": [],
+          "params": "{filter?: Filter, sort?: Sort, offset?, limit?} \u2014 omit filter to list the current view",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "catalog.stats",
+          "label": "Catalog Statistics",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.state",
+          "label": "Library State",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.allMetadata",
+          "label": "All Metadata",
+          "menu": [],
+          "params": "{id?} \u2192 {exif: [{group, tag, name, value}], xmp: [{name, value}]} \u2014 every EXIF / TIFF / GPS tag of the file and its XMP properties",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "albums.list",
+          "label": "List Albums",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.inspect",
+          "label": "Inspect Photo",
+          "menu": [],
+          "params": "{id?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "develop.get",
+          "label": "Get Develop Settings",
+          "menu": [],
+          "params": "{id?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "develop.controls",
+          "label": "List Develop Controls",
+          "menu": [],
+          "params": "{section?} \u2014 every slider with range, default and current value",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "presets.list",
+          "label": "List Presets",
+          "menu": [],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "profiles.list",
+          "label": "List Profiles",
+          "menu": [],
+          "params": "{} \u2014 every profile with its group and favourite flag",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "profiles.menu",
+          "label": "Profile Menu",
+          "menu": [],
+          "params": "{} \u2014 favourites, recent (newest first) and groups",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "history.list",
+          "label": "List History",
+          "menu": [],
+          "params": "{id?}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "app.gpu",
+          "label": "GPU Rendering",
+          "menu": [],
+          "params": "{enabled?: bool} \u2014 allow/forbid GPU rendering (CPU fallback; LIGHTCRAFT_GPU=0 forbids it for the process); returns {enabled, available, adapter, reason (why the GPU is off), lastFallback (latest render redone on the CPU, and why)}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.memory",
+          "label": "Memory Usage",
+          "menu": [],
+          "params": "{} \u2014 bytes held by each cache (decoded sources, rendered previews, GPU buffers; heap when instrumented)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "app.memoryBudget",
+          "label": "Memory Budget",
+          "menu": [],
+          "params": "{mb?: number} \u2014 set the memory budget shared by the caches (default: a quarter of RAM, at most 1536 MB); returns the report",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "journal.list",
+          "label": "Command Journal",
+          "menu": [],
+          "params": "{limit?}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.saveMetadataToFile",
+          "label": "Save Metadata to File",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 writes each photo's XMP sidecar (metadata + develop settings) next to the original, merged into an existing one (other apps' data kept; an unreadable one is backed up first) \u2192 {written: [path], merged: [path], backups: [{path, backup}], failed}",
+          "shortcut": "Cmd+S"
+        },
+        {
+          "disabled_reason": "no photos selected",
+          "enabled": false,
+          "id": "photo.readMetadataFromFile",
+          "label": "Read Metadata from File",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 reads each photo's XMP sidecar (or a raw/DNG's embedded XMP): metadata and develop settings, one undo step \u2192 {read, failed}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.xmpPreferences",
+          "label": "XMP Sidecar Preferences",
+          "menu": [],
+          "params": "{autoWrite?: bool, naming?: stem (IMG_1.xmp, default) | full (IMG_1.CR3.xmp)} \u2192 current preferences (saved with the library)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.toggleAutoWriteXmp",
+          "label": "Automatically Write Changes into XMP",
+          "menu": [
+            "File"
+          ],
+          "params": "{} \u2192 {autoWrite}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.import",
+          "label": "Import Presets",
+          "menu": [],
+          "params": "{paths: [file or folder], group?, dryRun?} \u2014 .lcpreset, XMP presets, .lrtemplate, photos carrying edits (DNG/JPEG/TIFF \"DNG presets\"), Luminar looks (.lmp, .mplumpack collections) and .zip bundles of these; folders give their name as group; crs: fields mapped per docs/xmp-interop.md \u2192 {imported: [{id,name,group,file,unmapped}], skipped, failed}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "preset.export",
+          "label": "Export Presets",
+          "menu": [],
+          "params": "{path, ids?: [presetId], group?: name} (default: all user presets) \u2192 {path, count}; writes a .lcpreset JSON file",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.preferences",
+          "label": "Library Preferences",
+          "menu": [],
+          "params": "{import?: {rawPreset?: presetId|\"default\", otherPreset?: presetId|\"default\", perCamera?: bool, cameras?: [{camera: \"Make Model\", preset: presetId|null}], copyright?: text, creator?: text (given to imported photos without one)}, camera?: {camera, preset?, remove?: bool}, cacheMb?: n (0 = default), forgetLocalDays?: n (forget untouched Local photos of folders not browsed for n days; 0 = never)} \u2014 develop defaults applied on import (raws / other images / per camera) and the thumbnail cache size, saved with the library \u2192 {xmp, import, cacheMb, forgetLocalDays, persistent}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "export.presets",
+          "label": "Export Presets",
+          "menu": [],
+          "params": "{} \u2192 [{name, builtin, params}] (use with app.export {preset: name, \u2026overrides})",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "export.savePreset",
+          "label": "Save Export Preset",
+          "menu": [],
+          "params": "{name, params?: app.export params (default: the last export's)} \u2014 adds or replaces a user preset, saved with the library \u2192 presets",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "export.deletePreset",
+          "label": "Delete Export Preset",
+          "menu": [],
+          "params": "{name} \u2014 removes a user preset \u2192 presets",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "export.checkTarget",
+          "label": "Check Output Path",
+          "menu": [],
+          "params": "{path} \u2014 fails when writing `path` would replace a photo's original (or its XMP sidecar) in the library; front ends call it before saving a render or screenshot to a user-given path \u2192 {path}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "beforeAfter.setBefore",
+          "label": "Set Before",
+          "menu": [],
+          "params": "{source: import|current|history|version, index? (history step), name? (version)} \u2014 what the before side shows (this session)",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "beforeAfter.copyAfterToBefore",
+          "label": "Copy After's Settings to Before",
+          "menu": [
+            "View",
+            "Before/After Settings"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "beforeAfter.copyBeforeToAfter",
+          "label": "Copy Before's Settings to After",
+          "menu": [
+            "View",
+            "Before/After Settings"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "beforeAfter.swap",
+          "label": "Swap Before and After Settings",
+          "menu": [
+            "View",
+            "Before/After Settings"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "disabled_reason": "no photo selected",
+          "enabled": false,
+          "id": "beforeAfter.resetBefore",
+          "label": "Reset Before to Import State",
+          "menu": [
+            "View",
+            "Before/After Settings"
+          ],
+          "params": "{}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "folder.rename",
+          "label": "Rename Folder",
+          "menu": [],
+          "params": "{path, name} \u2014 rename a folder on disk (its files and sidecars go along) and relink the photos in it; one undo step (undo renames it back, refused if the old name is taken) \u2192 {path, relinked}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "folder.move",
+          "label": "Move Folder",
+          "menu": [],
+          "params": "{path, into: destination folder} \u2014 move a folder on disk into another and relink the photos in it; one undo step (undo moves it back, refused if the old place is taken) \u2192 {path, relinked}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.browse",
+          "label": "Browse Folder",
+          "menu": [],
+          "params": "{path, subfolders?: bool} \u2014 show a folder's photos without adding them to the library (they're read in place; edits go to XMP sidecars) \u2192 {path, photos, new}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.forgetLocal",
+          "label": "Forget Unchanged Local Photos",
+          "menu": [],
+          "params": "{dryRun?: bool, days?: n (default: the library preference, 0 = never)} \u2014 remove Local (browsed, not added) photos nobody changed, of folders not browsed for `days`, from the catalog; files and sidecars stay, browsing the folder again brings them back; not an undo step \u2192 {local, forgotten, keptRecent, keptTouched, keptInUse, foldersStamped, days, dryRun}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.addToLibrary",
+          "label": "Add to My Photos",
+          "menu": [
+            "Photo"
+          ],
+          "params": "{ids?} \u2014 browsed (Local) photos join the library",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.missing",
+          "label": "Missing Photos",
+          "menu": [],
+          "params": "{} \u2192 [{id, path}] \u2014 photos whose original file isn't where the library expects it",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "photo.relink",
+          "label": "Locate Photo",
+          "menu": [],
+          "params": "{id?, path} \u2014 point a photo at its file's new location (undo never moves files)",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "library.findMissing",
+          "label": "Find Missing Photos",
+          "menu": [],
+          "params": "{folder} \u2014 relink every missing photo whose file is somewhere in the folder: same name and size (and content, when the library knows its hash), or \u2014 renamed \u2014 same size and content; or {found, missing, ambiguous} \u2014 relink what a search already found (the app searches on a worker thread; photos relinked meanwhile and files now in use are skipped) \u2192 {found: [{id, from, to, by: name|content}], missing, ambiguous: [{id, from, candidates}] (several same-name candidates and no hash to tell them apart: skipped)}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "metadata.presets",
+          "label": "Metadata Presets",
+          "menu": [],
+          "params": "{} \u2192 [{name, fields}]",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "metadata.savePreset",
+          "label": "Save Metadata Preset",
+          "menu": [],
+          "params": "{name, fields?: {copyright?, copyrightStatus?: unknown|copyrighted|publicDomain, usageTerms?, copyrightUrl?, creator?, title?, caption?, location?, city?, state?, country?, keywords?: [..]}, only?: [field] (from the active photo when `fields` is absent; default the copyright fields, creator, place)} \u2014 adds or replaces",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "metadata.deletePreset",
+          "label": "Delete Metadata Preset",
+          "menu": [],
+          "params": "{name}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "metadata.applyPreset",
+          "label": "Apply Metadata Preset",
+          "menu": [],
+          "params": "{name, ids?} \u2014 text fields replace, keywords are added; one undo step",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "filter.presets",
+          "label": "Filter Presets",
+          "menu": [],
+          "params": "{} \u2192 [{name, filter}]",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "filter.savePreset",
+          "label": "Save Filter Preset",
+          "menu": [],
+          "params": "{name} \u2014 the current filter (library.filter), saved with the library",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "filter.applyPreset",
+          "label": "Apply Filter Preset",
+          "menu": [],
+          "params": "{name} \u2014 replaces the current filter \u2192 {photos}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "filter.deletePreset",
+          "label": "Delete Filter Preset",
+          "menu": [],
+          "params": "{name}",
+          "shortcut": null
+        },
+        {
+          "enabled": true,
+          "id": "app.language.english",
+          "label": "English",
+          "menu": [
+            "Edit>Language"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.language.simplifiedChinese",
+          "label": "\u7b80\u4f53\u4e2d\u6587",
+          "menu": [
+            "Edit>Language"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.language.traditionalChinese",
+          "label": "\u7e41\u9ad4\u4e2d\u6587\uff08\u53f0\u7063\uff09",
+          "menu": [
+            "Edit>Language"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.language.japanese",
+          "label": "\u65e5\u672c\u8a9e",
+          "menu": [
+            "Edit>Language"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.language.portuguese",
+          "label": "Portugu\u00eas (Brasil)",
+          "menu": [
+            "Edit>Language"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.photoGrid",
+          "label": "Photo Grid",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.squareGrid",
+          "label": "Square Grid",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.gridToggle",
+          "label": "Grid",
+          "menu": [
+            ""
+          ],
+          "shortcut": "G",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.guidedUpright",
+          "label": "Guided Upright",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "Shift+G",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.detail",
+          "label": "Detail",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "D",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "view.compare",
+          "label": "Compare",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Shift+C",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.survey",
+          "label": "Survey",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "N",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.people",
+          "label": "People",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.faceBoxes",
+          "label": "Face Boxes",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.reference",
+          "label": "Reference View",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Shift+R",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "photo.setReference",
+          "label": "Set as Reference Photo",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "compare.swap",
+          "label": "Swap Compare Photos",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "compare.makeSelect",
+          "label": "Make Candidate the Select",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.autoAdvance",
+          "label": "Auto Advance",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.filmstrip",
+          "label": "Filmstrip",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "/",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.leftPanel",
+          "label": "My Photos Panel",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+Shift+L",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.beforeAfter",
+          "label": "Compare Before and After",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Y",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.beforeAfterSplit",
+          "label": "Before/After Split",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Shift+Y",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.beforeAfterTopBottom",
+          "label": "Before/After Top/Bottom",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Alt+Y",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.beforeAfterSplitTopBottom",
+          "label": "Before/After Split Top/Bottom",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Alt+Shift+Y",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.showOriginal",
+          "label": "Show Original",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "\\",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.zoomFit",
+          "label": "Zoom to Fit",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+0",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.zoom100",
+          "label": "Zoom 100%",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+Alt+0",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.zoomToggle",
+          "label": "Toggle Zoom",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Z",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.clickZoom",
+          "label": "Click Zoom Ratio",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.zoomIn",
+          "label": "Zoom In",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+=",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.zoomOut",
+          "label": "Zoom Out",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+-",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.clipping",
+          "label": "Show Clipping",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "J",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.softProof",
+          "label": "Soft Proofing",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "S",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.histogram",
+          "label": "Histogram",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+Shift+H",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.maskOverlay",
+          "label": "Show Mask Overlay",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "O",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.maskOverlayMode",
+          "label": "Cycle Mask Overlay Mode",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.maskOverlayColor",
+          "label": "Cycle Mask Overlay Color",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.maskPins",
+          "label": "Show Mask Pins",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.visualizeSpots",
+          "label": "Visualize Spots",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "A",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.cropOverlay",
+          "label": "Cycle Crop Overlay",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Shift+O",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.cropOverlayOrientation",
+          "label": "Cycle Crop Overlay Orientation",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.back",
+          "label": "Back to Grid",
+          "menu": [
+            ""
+          ],
+          "shortcut": "Escape",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.done",
+          "label": "Done",
+          "menu": [
+            ""
+          ],
+          "shortcut": "Enter",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.filterBar",
+          "label": "Filter Bar",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Shift+F",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "local.addRoot",
+          "label": "Add Folder to Local",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "local.hide",
+          "label": "Remove from Local",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "local.restoreHidden",
+          "label": "Show Hidden Local Locations",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "view.fullScreenPreview",
+          "label": "Full Screen Preview",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "F",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.enterFullScreen",
+          "label": "Enter Full Screen",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+Shift+F",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "view.infoOverlay",
+          "label": "Cycle Info Overlay",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+I",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "view.navigator",
+          "label": "Navigator",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.edit",
+          "label": "Edit",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "E",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.profiles",
+          "label": "Profile Browser",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.crop",
+          "label": "Crop & Rotate",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "C",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.remove",
+          "label": "Remove",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "H",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.masking",
+          "label": "Masking",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "M",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.redeye",
+          "label": "Red Eye",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.presets",
+          "label": "Presets",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "Shift+P",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.info",
+          "label": "Info",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "I",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.keywords",
+          "label": "Keywords",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "K",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.versions",
+          "label": "Versions",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "Shift+V",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "panel.activity",
+          "label": "History",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "panel.close",
+          "label": "Close Panel",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "section.light",
+          "label": "Light",
+          "menu": [
+            "Window>Edit Sections"
+          ],
+          "shortcut": "Cmd+1",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "section.color",
+          "label": "Color",
+          "menu": [
+            "Window>Edit Sections"
+          ],
+          "shortcut": "Cmd+2",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "section.effects",
+          "label": "Effects",
+          "menu": [
+            "Window>Edit Sections"
+          ],
+          "shortcut": "Cmd+3",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "section.detail",
+          "label": "Detail",
+          "menu": [
+            "Window>Edit Sections"
+          ],
+          "shortcut": "Cmd+4",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "section.optics",
+          "label": "Optics",
+          "menu": [
+            "Window>Edit Sections"
+          ],
+          "shortcut": "Cmd+5",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.brush",
+          "label": "Brush",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "B",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.linear",
+          "label": "Linear Gradient",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "L",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.radial",
+          "label": "Radial Gradient",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "R",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.wbPicker",
+          "label": "White Balance Selector",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "W",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.none",
+          "label": "No Tool",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "brush.smaller",
+          "label": "Decrease Brush Size",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "[",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "brush.larger",
+          "label": "Increase Brush Size",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "]",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "brush.featherLess",
+          "label": "Decrease Brush Feather",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "Shift+[",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "brush.featherMore",
+          "label": "Increase Brush Feather",
+          "menu": [
+            "Window>Tools"
+          ],
+          "shortcut": "Shift+]",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.newAlbum",
+          "label": "New Album\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+N",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.newFolder",
+          "label": "New Folder\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+Shift+N",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.smartAlbum",
+          "label": "New Smart Album\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.photoCounts",
+          "label": "Show Photo Counts",
+          "menu": [
+            "View"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.slideshow",
+          "label": "Slideshow",
+          "menu": [
+            "View"
+          ],
+          "shortcut": "Cmd+Alt+Enter",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.secondWindow",
+          "label": "Second Window",
+          "menu": [
+            "Window"
+          ],
+          "shortcut": "Cmd+F11",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "tool.keywordPainter",
+          "label": "Keyword Painter",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.gridInfo",
+          "label": "Grid Info",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.allMetadata",
+          "label": "All Metadata\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.newSmartAlbum",
+          "label": "New Smart Album from Filter\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+Alt+N",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.createPreset",
+          "label": "Create Preset\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": "Cmd+Shift+P",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.autoStack",
+          "label": "Auto-Stack by Capture Time\u2026",
+          "menu": [
+            "Photo>Stack"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.copySettings",
+          "label": "Choose Edit Settings to Copy\u2026",
+          "menu": [
+            "Edit"
+          ],
+          "shortcut": "Cmd+Shift+C",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.pasteSettings",
+          "label": "Paste Selected Settings\u2026",
+          "menu": [
+            "Edit"
+          ],
+          "shortcut": "Cmd+Shift+V",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "view.focusSearch",
+          "label": "Find\u2026",
+          "menu": [
+            "Edit"
+          ],
+          "shortcut": "Cmd+F",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.export",
+          "label": "Export\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "photo.editInExternal",
+          "label": "Edit in External Editor",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": "Cmd+Shift+E",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.mergeHdr",
+          "label": "HDR\u2026",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": "Ctrl+H",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.mergePanorama",
+          "label": "Panorama\u2026",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": "Ctrl+M",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.mergeHdrPanorama",
+          "label": "HDR Panorama\u2026",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "merge.hdrLast",
+          "label": "HDR with Last Settings",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": "Ctrl+Shift+H",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "merge.panoramaLast",
+          "label": "Panorama with Last Settings",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": "Ctrl+Shift+M",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "merge.hdrPanoramaLast",
+          "label": "HDR Panorama with Last Settings",
+          "menu": [
+            "Photo>Photo Merge"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.addPhotos",
+          "label": "Import Photos\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+Shift+I",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.addFolder",
+          "label": "Import from Folder\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.addFromDevice",
+          "label": "Import from Device",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.findMissing",
+          "label": "Find Missing Photos\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "file.backupLibrary",
+          "label": "Back Up Library\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "file.restoreLibrary",
+          "label": "Restore Library from Backup\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "photo.locate",
+          "label": "Locate Missing File\u2026",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.saveMetadataPreset",
+          "label": "Save Metadata Preset\u2026",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.quit",
+          "label": "Quit LightCraft",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+Q",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.importPresets",
+          "label": "Import Profiles & Presets\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "file.exportPresets",
+          "label": "Export Presets\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "file.importCurvePresets",
+          "label": "Import Point Curve Presets\u2026",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "file.exportCurvePresets",
+          "label": "Export Point Curve Presets\u2026",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.settings",
+          "label": "Settings\u2026",
+          "menu": [
+            "Edit"
+          ],
+          "shortcut": "Cmd+,",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.openLibrary",
+          "label": "Open Library\u2026",
+          "menu": [
+            "File"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.about",
+          "label": "About LightCraft",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.systemInfo",
+          "label": "System Info\u2026",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.whatsNew",
+          "label": "What's New",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.cull",
+          "label": "Assisted Culling\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.help",
+          "label": "LightCraft Help",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": "F1",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.discord",
+          "label": "Join the ArtCraft Discord\u2026",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.feedback",
+          "label": "Send Feedback\u2026",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.website",
+          "label": "LightCraft Website",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.github",
+          "label": "LightCraft on GitHub",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.artcraft",
+          "label": "ArtCraft Website",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "app.shortcuts",
+          "label": "Keyboard Shortcuts",
+          "menu": [
+            "Help"
+          ],
+          "shortcut": "Cmd+/",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "app.export",
+          "label": "Export Now",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "app.showInFinder",
+          "label": "Show in Finder",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": "Cmd+R",
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.rename",
+          "label": "Rename Photos\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": "F2",
+          "ui": true
+        },
+        {
+          "enabled": true,
+          "id": "dialog.labelNames",
+          "label": "Edit Color Label Names\u2026",
+          "menu": [
+            ""
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "dialog.captureTime",
+          "label": "Edit Capture Time\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "photo.tagFromTracklog",
+          "label": "Auto-Tag from Tracklog\u2026",
+          "menu": [
+            "Photo"
+          ],
+          "shortcut": null,
+          "ui": true
+        },
+        {
+          "enabled": false,
+          "id": "app.exportPrevious",
+          "label": "Export with Previous",
+          "menu": [
+            "File"
+          ],
+          "shortcut": "Cmd+Alt+Shift+E",
+          "ui": true
+        }
+      ]
+    }
+  }
+]

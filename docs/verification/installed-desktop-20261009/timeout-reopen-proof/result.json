@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": {
+    "independentReopenRatingFour": true,
+    "timeoutUnknown": true,
+    "explicitRecoveryQueryPass": true,
+    "ratingUnchangedAfterRecovery": true
+  },
+  "desktopVersion": "0.4.0",
+  "clientVersion": "0.2.1",
+  "onlyOwnedPidSuspended": 28191,
+  "editReplay": false
+}

@@ -1,0 +1,30 @@
+{
+  "status": "FAIL",
+  "checks": {
+    "nativeNotSaved": false,
+    "unsavedOpsPositive": false,
+    "memoryRatingFour": true,
+    "diskUnchangedDuringFailure": false,
+    "saveRecovered": true,
+    "occupiedRejected": true,
+    "lockUnchanged": true,
+    "stoppedDesktopQueryNotPass": true,
+    "explicitReconnectQueryPass": true,
+    "independentDesktopReopenRatingFour": true,
+    "originalUnchanged": true,
+    "pluginObservesExplicitReconnect": false
+  },
+  "desktop": {
+    "pid": 70924,
+    "port": 61653,
+    "app": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/LightCraft.app",
+    "library": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library",
+    "binarySha256": "5145d26032800b810757d23c4f3726c3c6ec08cbcc7e53bb981bda4b9f7a58e7",
+    "version": "0.4.0",
+    "prefsDisabled": true
+  },
+  "clientVersion": "0.2.1",
+  "fixtureSha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+  "editingRequests": "photo.rate 1 then photo.rate 4 once; no replay across restart",
+  "scope": "desktop 0.4.0 with fixed CLI 0.2.1; dedicated synthetic library; actual NotSaved/occupied/restart; no GUI visual or automatic plugin MCP integration"
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "request": {
+      "id": 11,
+      "method": "engine.execute",
+      "params": {
+        "command": "catalog.query",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 11,
+      "ok": true,
+      "result": {
+        "photos": [
+          {
+            "camera": "",
+            "captured": null,
+            "copyName": null,
+            "copyOf": null,
+            "deleted": false,
+            "edited": false,
+            "fileName": "original.png",
+            "flag": "none",
+            "format": "PNG",
+            "height": 64,
+            "id": 1,
+            "keywords": [],
+            "kind": "image",
+            "label": null,
+            "previewOnly": null,
+            "rating": 4,
+            "title": "",
+            "width": 96
+          }
+        ],
+        "total": 1
+      }
+    }
+  },
+  {
+    "request": {
+      "id": 12,
+      "method": "engine.execute",
+      "params": {
+        "command": "catalog.query",
+        "params": {}
+      }
+    },
+    "reply": {
+      "id": 12,
+      "ok": true,
+      "result": {
+        "photos": [
+          {
+            "camera": "",
+            "captured": null,
+            "copyName": null,
+            "copyOf": null,
+            "deleted": false,
+            "edited": false,
+            "fileName": "original.png",
+            "flag": "none",
+            "format": "PNG",
+            "height": 64,
+            "id": 1,
+            "keywords": [],
+            "kind": "image",
+            "label": null,
+            "previewOnly": null,
+            "rating": 4,
+            "title": "",
+            "width": 96
+          }
+        ],
+        "total": 1
+      }
+    }
+  }
+]

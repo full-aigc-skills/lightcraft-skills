@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "mcp-readonly-probe",
+  "domain": "lightcraft",
+  "runId": "b5545126-3628-4a33-927d-f250de709717",
+  "status": "UNKNOWN",
+  "startedAt": "2026-10-09T02:58:12.953261+00:00",
+  "planSha256": "99aa9339567c6f265c4891a0ed8461410cea5c1bdd1517fa944a4cb42a132e51",
+  "requests": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2025-06-18",
+        "capabilities": {},
+        "clientInfo": {
+          "name": "lightcraft-readonly-probe",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "notifications/initialized",
+      "params": {}
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {}
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "resources/read",
+      "params": {
+        "uri": "lightcraft://library"
+      }
+    }
+  ],
+  "requestsSha256": "81275e2f194403dd014cd67e26f9f901d333f782bce9d9c775fee1d90bca8dd4",
+  "requestsPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/occupied-live/requests.jsonl",
+  "runtimeLockSha256": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "inputSha256": {},
+  "steps": [
+    {
+      "index": 0,
+      "command": "mcp:initialize",
+      "status": "UNKNOWN"
+    },
+    {
+      "index": 1,
+      "command": "mcp:tools/list",
+      "status": "UNKNOWN"
+    },
+    {
+      "index": 2,
+      "command": "mcp:resources/read",
+      "status": "UNKNOWN"
+    }
+  ],
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "readOnly": true,
+  "backendQuery": "NOT_CONFIRMED",
+  "backendSessionIdentity": "NOT_PROVIDED_BY_NATIVE_PROTOCOL",
+  "requestedMode": {
+    "mode": "Headless",
+    "transport": "stdio-mcp",
+    "connectAddress": null,
+    "readOnly": true,
+    "nativeMayRetryReads": false,
+    "scriptSha256": null
+  },
+  "libraryPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library",
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/cli.py",
+    "--require-installed",
+    "--supervised",
+    "--logs-dir",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/occupied-live/logs",
+    "--timeout",
+    "10.0",
+    "--requests",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/occupied-live/requests.jsonl",
+    "--runtime-home",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime",
+    "--",
+    "mcp",
+    "--compact",
+    "--library",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library"
+  ],
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-09T02:58:13.049800+00:00",
+    "argv": [
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mcp",
+      "--compact",
+      "--library",
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 95802,
+    "processStartedAt": "2026-10-09T02:58:13.052836+00:00",
+    "processIdentity": "Fri Oct  9 10:58:13 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli mcp --compact --library /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library",
+    "exitCode": 1,
+    "endedAt": "2026-10-09T02:58:13.060935+00:00",
+    "stdout": "",
+    "stderr": "lightcraft-cli: /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library: This library is already open in LightCraft 0.4.0 (process 70924). Close it there first.\nTo work with the library while the app has it open, start the app with `--control PORT` and use `lightcraft-cli mcp --connect 127.0.0.1:PORT`.\n",
+    "stdoutBytes": 0,
+    "stderrBytes": 365,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/occupied-live/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Headless",
+      "transport": "stdio-mcp",
+      "connectAddress": null,
+      "readOnly": true,
+      "nativeMayRetryReads": false,
+      "scriptSha256": null
+    },
+    "stdinSha256": "81275e2f194403dd014cd67e26f9f901d333f782bce9d9c775fee1d90bca8dd4"
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Headless",
+    "transport": "stdio-mcp",
+    "connectAddress": null,
+    "readOnly": true,
+    "nativeMayRetryReads": false,
+    "scriptSha256": null
+  },
+  "protocolErrors": [],
+  "protocolComplete": false,
+  "mcpReplies": [],
+  "endedAt": "2026-10-09T02:58:13.068466+00:00"
+}

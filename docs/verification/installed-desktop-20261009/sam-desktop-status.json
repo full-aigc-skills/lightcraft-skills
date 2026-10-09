@@ -1,0 +1,35 @@
+{
+  "request": {
+    "id": 2,
+    "method": "engine.execute",
+    "params": {
+      "command": "segment.model.status",
+      "params": {}
+    }
+  },
+  "reply": {
+    "id": 2,
+    "ok": true,
+    "result": {
+      "analyzing": false,
+      "available": true,
+      "busy": false,
+      "dir": "/Users/wandl/Library/Application Support/LightCraft/models/sam3",
+      "download": {
+        "done": 0,
+        "error": null,
+        "file": "",
+        "finished": false,
+        "running": false,
+        "total": 0
+      },
+      "installed": false,
+      "license": "SAM License (Meta)",
+      "licenseUrl": "https://github.com/facebookresearch/sam3/blob/main/LICENSE",
+      "loaded": false,
+      "mirrors": 0,
+      "sizeBytes": 3439938512
+    }
+  },
+  "scope": "desktop 0.4.0 only; no download, inference or acceptance"
+}

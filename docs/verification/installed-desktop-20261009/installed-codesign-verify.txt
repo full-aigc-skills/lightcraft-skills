@@ -1,0 +1,10 @@
+exitCode=1
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/OFL-biz-ud-mincho.txt
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/OFL-shippori-mincho.txt
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/LICENSE-APACHE
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/README.md
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/NOTICE
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/OFL-biz-ud-pgothic.txt
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/Licenses/LICENSE-MIT
+file with invalid attached data: Disallowed xattr com.apple.FinderInfo found on /Applications/LightCraft.app/Contents/Resources/LightCraft.icns
+/Applications/LightCraft.app: resource fork, Finder information, or similar detritus not allowed

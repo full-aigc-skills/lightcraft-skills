@@ -1,0 +1,9 @@
+{
+  "pid": 70924,
+  "port": 61653,
+  "app": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/LightCraft.app",
+  "library": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/test-library",
+  "binarySha256": "5145d26032800b810757d23c4f3726c3c6ec08cbcc7e53bb981bda4b9f7a58e7",
+  "version": "0.4.0",
+  "prefsDisabled": true
+}

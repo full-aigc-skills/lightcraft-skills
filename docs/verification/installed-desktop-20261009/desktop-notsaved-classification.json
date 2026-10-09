@@ -1,0 +1,17 @@
+{
+  "status": "PERSISTENCE_UNCONFIRMED",
+  "steps": [
+    {
+      "index": 0,
+      "command": "photo.rate",
+      "status": "APPLIED_NOT_SAVED",
+      "native": {
+        "command": "photo.rate",
+        "ok": false,
+        "error": "saved in memory but not written to disk: catalog storage: Permission denied (os error 13); LightCraft will retry"
+      }
+    }
+  ],
+  "protocolErrors": [],
+  "protocolComplete": true
+}

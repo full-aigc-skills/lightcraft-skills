@@ -1,0 +1,25 @@
+{
+  "version": "0.4.0",
+  "installedApplication": "/Applications/LightCraft.app",
+  "sameBytesAfterCopy": true,
+  "files": {
+    "Contents/CodeResources": "8dc735cefe01fe94e33c7fc43e36079c3ea4121f058d955007dbecc666058b86",
+    "Contents/Info.plist": "a279beb8ac1e753ce903e4122714a33651a94a2e536949943f18c3978f7cc02e",
+    "Contents/MacOS/LightCraft": "5145d26032800b810757d23c4f3726c3c6ec08cbcc7e53bb981bda4b9f7a58e7",
+    "Contents/PkgInfo": "82502191c9484b04d685374f9879a0066069c49b8acae7a04b01d38d07e8eca0",
+    "Contents/Resources/Licenses/LICENSE-APACHE": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "Contents/Resources/Licenses/LICENSE-MIT": "1470a5d44a88a9d385d9530763ea411ca199670d07f561a61d54256323972b92",
+    "Contents/Resources/Licenses/NOTICE": "ac787040f5e044f2e4c42f74d29305a7e40e9e72a889a1e0d1dedafbe0ccc218",
+    "Contents/Resources/Licenses/OFL-biz-ud-mincho.txt": "ef0ed524b3bd012f37015e986809eed6f67905456ebfc1ebd7fcc2765282ee01",
+    "Contents/Resources/Licenses/OFL-biz-ud-pgothic.txt": "e753d7155d53c747d037a445e584c8ecfca6dd79846db610417e282a736b28bc",
+    "Contents/Resources/Licenses/OFL-shippori-mincho.txt": "41fba056279be5f45ff9a99e44b7b53897b42732f5806d8e666e0ab49ac6bd38",
+    "Contents/Resources/Licenses/README.md": "fbb2f0aa4feb51f5617de8bbbc4dec473c80cabbf653bcea272ad131f0b04a78",
+    "Contents/Resources/LightCraft.icns": "73b594f33963d14ba8533cd9e5bf96fd8d37a1ac2a2cf78e81ba180235692f3b",
+    "Contents/_CodeSignature/CodeResources": "cd1333574e7f586769f9eea8461eca41b5a50816270e89d8fcdb8983ff8b2f32"
+  },
+  "removedFromCopyOnly": "com.apple.FinderInfo",
+  "resigned": false,
+  "quarantineRemoved": false,
+  "strictSignatureAfterCopy": "PASS",
+  "guiObservation": "NOT_RUN_CUA_FAILED_TO_CREATE_IMAGE_DESTINATION"
+}

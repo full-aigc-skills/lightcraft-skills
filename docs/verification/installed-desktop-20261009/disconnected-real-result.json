@@ -1,0 +1,1493 @@
+{
+  "schemaVersion": 1,
+  "receiptKind": "mcp-readonly-probe",
+  "domain": "lightcraft",
+  "runId": "e3d6f9f1-8c3b-49f2-9aa6-232893440ee9",
+  "status": "FAILED_OR_PARTIAL",
+  "startedAt": "2026-10-09T02:58:13.155365+00:00",
+  "planSha256": "99aa9339567c6f265c4891a0ed8461410cea5c1bdd1517fa944a4cb42a132e51",
+  "requests": [
+    {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2025-06-18",
+        "capabilities": {},
+        "clientInfo": {
+          "name": "lightcraft-readonly-probe",
+          "version": "1"
+        }
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "method": "notifications/initialized",
+      "params": {}
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {}
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "resources/read",
+      "params": {
+        "uri": "lightcraft://library"
+      }
+    }
+  ],
+  "requestsSha256": "81275e2f194403dd014cd67e26f9f901d333f782bce9d9c775fee1d90bca8dd4",
+  "requestsPath": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/disconnected-real/requests.jsonl",
+  "runtimeLockSha256": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+  "skillResourceSha256": {
+    "artifact.schema.json": "a6a5c89b5674096b2cad5f799d421d4f7bac5b37bb1a0e1830db69c53922a2ff",
+    "artifacts.py": "890f74f826d610418e04c88628ba576bdc775dbe316bbb089f780377664fdd6c",
+    "batch_scope.py": "d527682c254f74d4e90081e7355fe3bd45a77acfadb412eacc7ab7227c3f52a6",
+    "bootstrap.py": "04f4c6213df22e17dff2b7a18afea0a31b5672dc5e95bc8928701110276b5374",
+    "capability.schema.json": "78692de4fe2911eb64b5b3a29773a670bb1603392a7eb8b2bbd4ccaf150c5e42",
+    "cli.py": "62f6af1a51926f83f08af35dc47cea858ce373308500f815c3028c9a56d43e0b",
+    "command_gateway.py": "ba57f4ba85e049e8f7224878f10896ca5c6e83b6b710a03365e73d5b19f623bf",
+    "commands.py": "7e520b609ebf377745eae17db6856db5c03b0b48158b46d865428b722cfbbed5",
+    "coverage.py": "3492c584891d05390e15cde0d6cf21e87c9af6295eab1f1168a178635b996b2e",
+    "craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351",
+    "exchange-craft-artifact-v1.json": "c3385db540db71fccfdb049f79f05a9adba55ec008958579eab6fac46dd6ea5d",
+    "exchange-craft-task-v1.json": "4a153b1c9ec898807016dfb05ff81fcf5c7cffdb6777b6ab226e56aa2bcdf7ad",
+    "exchange-protocol.lock.json": "4241b9832730e0956446bfd06e5ec106fa16ac787ae63cc8bef787f8e22086da",
+    "execution-receipt.schema.json": "9b9060cc9a0bd40057e461b1a7b0f3e2cff055e02b64e37813a7466f9a8ae3e0",
+    "mode_contract.py": "73c179dc974d87a7ba12eb0cb3cca634dfe588649bc2a6fd154dd251c509bf64",
+    "native_process.py": "96fa4ea3676147005906e86df273f96203755f2b7fa99acfd22667dfb6eb94d0",
+    "package_checks.py": "3209f3dcc4de461cd7a75af22428338b1a2523900a7f7503c5c5c70ec0755535",
+    "photo_workflows.py": "9635460e2b886de66b1a12dc9ca83a71af83dbc34b4bf0573a335465f74af917",
+    "raw_contract.py": "1780c37c19cd9398a4889a250ba73e5372267d1d56af3bbc9e5673b15ecf4a7e",
+    "runtime.lock.json": "c850a017157dccdbefb67bf6066fb3a31ac3a19d21eb2f7dc77d6a083d2ea838",
+    "sam_contract.py": "b8525473a36f620c6f29c7a1e5e9006c0bebe25ac765813b228f5975ffc46d12",
+    "session_probe.py": "8757de4030a5e6cb382333844d8fb4cd8521b10696beff8399e3a1a27a2b147d"
+  },
+  "inputSha256": {},
+  "steps": [
+    {
+      "index": 0,
+      "command": "mcp:initialize",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "mcp:initialize",
+        "ok": true,
+        "result": {
+          "capabilities": {
+            "resources": {
+              "listChanged": false,
+              "subscribe": false
+            },
+            "tools": {
+              "listChanged": false
+            }
+          },
+          "instructions": "LightCraft is a non-destructive photo library and raw developer (a Lightroom alternative). Photos have integer ids; most editing acts on the *active* photo (tools that take `id` make that photo active first). Typical loop: query_photos \u2192 select_photos (or pass id) \u2192 list_controls \u2192 set_develop {values: {\"light.exposure\": 0.5}} \u2192 render_photo to look at the result \u2192 export. Positions (crop rects, mask points, brush strokes) are normalized image coordinates 0..1 with the origin at the top-left. Every action is a command: list_commands shows ids and parameter docs; run_command runs any of them. Edits are undoable (undo / redo). Backend: remote 127.0.0.1:61653.",
+          "protocolVersion": "2025-06-18",
+          "serverInfo": {
+            "name": "lightcraft",
+            "title": "LightCraft",
+            "version": "0.2.1"
+          }
+        }
+      }
+    },
+    {
+      "index": 1,
+      "command": "mcp:tools/list",
+      "status": "SUCCEEDED",
+      "native": {
+        "command": "mcp:tools/list",
+        "ok": true,
+        "result": {
+          "tools": [
+            {
+              "description": "Every command (engine + UI when connected) with id, label, menu, shortcut, parameter doc and whether it is enabled now. Each id is also callable as tool `cmd_<id with . replaced by _>` or via run_command.",
+              "inputSchema": {
+                "properties": {
+                  "filter": {
+                    "description": "Only commands whose id or label contains this text (case-insensitive)",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "list_commands",
+              "title": "List commands"
+            },
+            {
+              "description": "Run any LightCraft command by id with JSON params (see list_commands for ids and parameter docs), e.g. {command: \"photo.rate\", params: {rating: 4}}.",
+              "inputSchema": {
+                "properties": {
+                  "command": {
+                    "type": "string"
+                  },
+                  "params": {
+                    "additionalProperties": true,
+                    "description": "Command parameters",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "command"
+                ],
+                "type": "object"
+              },
+              "name": "run_command",
+              "title": "Run command"
+            },
+            {
+              "description": "Add image/raw files to the library. Folders are scanned recursively for photos; relative paths resolve against the server's working directory. The first imported photo becomes active. Returns the new photo ids.",
+              "inputSchema": {
+                "properties": {
+                  "album": {
+                    "description": "Also add to this album id",
+                    "type": "integer"
+                  },
+                  "destination": {
+                    "description": "Copy or move: destination folder",
+                    "type": "string"
+                  },
+                  "mode": {
+                    "description": "add (default) = reference the files in place; copy = copy them into `destination` (default: the library's Originals/); move = as copy, then each original and its XMP sidecars are removed from the source once the copy is verified and catalogued (duplicates and failures keep their sources; `kept` lists sources left in place and why; undo leaves the moved files at the destination)",
+                    "enum": [
+                      "add",
+                      "copy",
+                      "move"
+                    ],
+                    "type": "string"
+                  },
+                  "organize": {
+                    "description": "Copy or move: folders inside the destination \u2014 date (YYYY/YYYY-MM-DD, default), month (YYYY/YYYY-MM), flat, or a folder template such as {date:%Y}/{date:%Y%m%d} (\u2192 2026/20260114; the template's / make the levels, tokens as for rename; relative, no ..). Dated by capture time, else the import time",
+                    "type": "string"
+                  },
+                  "paths": {
+                    "description": "Files and/or folders",
+                    "items": {
+                      "type": "string"
+                    },
+                    "type": "array"
+                  },
+                  "rename": {
+                    "description": "Copy or move: file-name template, e.g. {date:%Y%m%d_%H%M%S}_{seq:3} (run_command photo.renameTokens lists the tags); the extension is kept",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "paths"
+                ],
+                "type": "object"
+              },
+              "name": "import",
+              "title": "Import photos"
+            },
+            {
+              "description": "List photos (id, file name, size, rating, flag, edited\u2026). Without filter/sort: the current library view.",
+              "inputSchema": {
+                "properties": {
+                  "filter": {
+                    "additionalProperties": true,
+                    "description": "Catalog Filter JSON (e.g. {\"minRating\": 3})",
+                    "type": "object"
+                  },
+                  "limit": {
+                    "description": "Default 200",
+                    "type": "integer"
+                  },
+                  "offset": {
+                    "type": "integer"
+                  },
+                  "sort": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "query_photos",
+              "title": "Query photos"
+            },
+            {
+              "description": "Set the selection; the active photo (the one develop tools edit) is `active` or the first id.",
+              "inputSchema": {
+                "properties": {
+                  "active": {
+                    "type": "integer"
+                  },
+                  "ids": {
+                    "description": "Photo ids",
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "mode": {
+                    "enum": [
+                      "replace",
+                      "add",
+                      "toggle",
+                      "range"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "ids"
+                ],
+                "type": "object"
+              },
+              "name": "select_photos",
+              "title": "Select photos"
+            },
+            {
+              "description": "Every develop slider (id like `light.exposure`, label, section, min, max, default, current value) for the active photo.",
+              "inputSchema": {
+                "properties": {
+                  "section": {
+                    "description": "Only this section (e.g. light, color, effects, detail)",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "list_controls",
+              "title": "List develop controls"
+            },
+            {
+              "description": "The full develop settings JSON of a photo (white balance, light, color, curves, mixer, grading, effects, crop, masks, spots\u2026).",
+              "inputSchema": {
+                "properties": {
+                  "id": {
+                    "description": "Photo id (default: the active photo). Makes that photo active first.",
+                    "type": "integer"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "get_develop",
+              "title": "Get develop settings"
+            },
+            {
+              "description": "Edit a photo (one undo step each for values and settings). `values` sets sliders by control id (see list_controls), e.g. {\"light.exposure\": 0.7, \"light.contrast\": 20}. `settings` deep-merges a partial develop-settings JSON (as returned by get_develop).",
+              "inputSchema": {
+                "properties": {
+                  "id": {
+                    "description": "Photo id (default: the active photo). Makes that photo active first.",
+                    "type": "integer"
+                  },
+                  "label": {
+                    "description": "History label for `settings`",
+                    "type": "string"
+                  },
+                  "settings": {
+                    "additionalProperties": true,
+                    "description": "Partial DevelopSettings JSON to merge",
+                    "type": "object"
+                  },
+                  "values": {
+                    "additionalProperties": {
+                      "type": "number"
+                    },
+                    "description": "controlId \u2192 value",
+                    "type": "object"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "set_develop",
+              "title": "Set develop settings"
+            },
+            {
+              "description": "Apply a develop preset (ids from cmd_presets_list) to the selection or `ids`, at `amount` percent (0..200, default 100).",
+              "inputSchema": {
+                "properties": {
+                  "amount": {
+                    "type": "number"
+                  },
+                  "ids": {
+                    "description": "Photo ids (default: selection)",
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "preset": {
+                    "description": "Preset id",
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "preset"
+                ],
+                "type": "object"
+              },
+              "name": "apply_preset",
+              "title": "Apply preset"
+            },
+            {
+              "description": "Set the crop of the active photo: `rect` [x0,y0,x1,y1] in normalized coordinates (0..1, origin top-left) of the straightened frame, `angle` in degrees. `reset: true` clears it. Give at least one of them.",
+              "inputSchema": {
+                "properties": {
+                  "angle": {
+                    "type": "number"
+                  },
+                  "id": {
+                    "description": "Photo id (default: the active photo). Makes that photo active first.",
+                    "type": "integer"
+                  },
+                  "rect": {
+                    "items": {
+                      "type": "number"
+                    },
+                    "maxItems": 4,
+                    "minItems": 4,
+                    "type": "array"
+                  },
+                  "reset": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "crop",
+              "title": "Crop / straighten"
+            },
+            {
+              "description": "Render a photo with its current develop settings (cropped) and return it as an image so you can look at the result.",
+              "inputSchema": {
+                "properties": {
+                  "format": {
+                    "description": "Image encoding (default png; jpeg is smaller)",
+                    "enum": [
+                      "png",
+                      "jpeg"
+                    ],
+                    "type": "string"
+                  },
+                  "id": {
+                    "description": "Photo id (default: the active photo). Makes that photo active first.",
+                    "type": "integer"
+                  },
+                  "path": {
+                    "description": "Also save the rendered file here",
+                    "type": "string"
+                  },
+                  "size": {
+                    "description": "Long edge in pixels (default 1024, max 4096)",
+                    "type": "integer"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "render_photo",
+              "title": "Render photo"
+            },
+            {
+              "description": "Render and write photos. Give `path` (one photo; format from the extension unless `format` is set) or `dir` (batch, file names from `naming`).",
+              "inputSchema": {
+                "properties": {
+                  "bitDepth": {
+                    "description": "Bits per channel: PNG 8|16 (default 8), TIFF 8|16|32 (default 16; 32 = linear float with a linear profile), AVIF 8|10; JPEG/WebP are 8-bit",
+                    "enum": [
+                      8,
+                      10,
+                      16,
+                      32
+                    ],
+                    "type": "integer"
+                  },
+                  "colorSpace": {
+                    "description": "Output colour space (default sRGB; AVIF is always sRGB). adobeRgb = Adobe RGB (1998) compatible; the embedded ICC profile is generated from the published primaries",
+                    "enum": [
+                      "srgb",
+                      "displayP3",
+                      "adobeRgb",
+                      "proPhoto",
+                      "rec2020"
+                    ],
+                    "type": "string"
+                  },
+                  "dir": {
+                    "type": "string"
+                  },
+                  "dontEnlarge": {
+                    "description": "Never upscale past the photo's own size (default true)",
+                    "type": "boolean"
+                  },
+                  "format": {
+                    "description": "original = the file as is + an XMP sidecar with the edits; dng = raw photos as DNG with the edits embedded",
+                    "enum": [
+                      "jpeg",
+                      "png",
+                      "tiff",
+                      "webp",
+                      "avif",
+                      "original",
+                      "dng"
+                    ],
+                    "type": "string"
+                  },
+                  "height": {
+                    "description": "Output height in px",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "description": "Photo id (default: the active photo). Makes that photo active first.",
+                    "type": "integer"
+                  },
+                  "ids": {
+                    "description": "Photos to export (default: the given/active photo)",
+                    "items": {
+                      "type": "integer"
+                    },
+                    "type": "array"
+                  },
+                  "limitKb": {
+                    "description": "JPEG: largest quality that fits this many KB",
+                    "type": "integer"
+                  },
+                  "longEdge": {
+                    "description": "Output long edge in px. When no size param is given: 3000; 0 = full size (cropped, native resolution)",
+                    "type": "integer"
+                  },
+                  "megapixels": {
+                    "description": "Output size in megapixels",
+                    "type": "number"
+                  },
+                  "metadata": {
+                    "enum": [
+                      "all",
+                      "allExceptCamera",
+                      "copyright",
+                      "none"
+                    ],
+                    "type": "string"
+                  },
+                  "naming": {
+                    "description": "File-name template, e.g. {name}-{seq} or {date:%Y-%m-%d}_{title}_{seq:2} (tokens: {name} {num} {seq} {seq:N} {date} {date:%\u2026} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext})",
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "percent": {
+                    "description": "Output size as a percentage of full size",
+                    "type": "number"
+                  },
+                  "ppi": {
+                    "description": "Print resolution written into the file (default 240)",
+                    "type": "integer"
+                  },
+                  "quality": {
+                    "description": "JPEG/AVIF quality 1..100",
+                    "type": "integer"
+                  },
+                  "removeLocation": {
+                    "type": "boolean"
+                  },
+                  "sharpen": {
+                    "enum": [
+                      "none",
+                      "screen",
+                      "matte",
+                      "glossy"
+                    ],
+                    "type": "string"
+                  },
+                  "sharpenAmount": {
+                    "enum": [
+                      "low",
+                      "standard",
+                      "high"
+                    ],
+                    "type": "string"
+                  },
+                  "shortEdge": {
+                    "description": "Output short edge in px",
+                    "type": "integer"
+                  },
+                  "startNumber": {
+                    "description": "First {seq} value (default 1)",
+                    "type": "integer"
+                  },
+                  "watermark": {
+                    "description": "Text, or {text, vertical (boolean; defaults to false), size (fraction of short edge), opacity, anchor (topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight), inset, color [r,g,b], shadow}"
+                  },
+                  "width": {
+                    "description": "Output width in px (with height: fit inside width \u00d7 height, either orientation)",
+                    "type": "integer"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "export",
+              "title": "Export photo"
+            },
+            {
+              "description": "Capture the LightCraft window (after pending renders finish) and return it as an image.",
+              "inputSchema": {
+                "properties": {
+                  "format": {
+                    "enum": [
+                      "png",
+                      "jpeg"
+                    ],
+                    "type": "string"
+                  },
+                  "maxSize": {
+                    "description": "Downscale so the long edge is at most this (default 1600)",
+                    "type": "integer"
+                  },
+                  "path": {
+                    "description": "Also save the screenshot here",
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "screenshot",
+              "title": "Screenshot"
+            },
+            {
+              "description": "UI state: view, open panel, window and image rects, active photo, selection, active mask, status.",
+              "inputSchema": {
+                "properties": {},
+                "required": [],
+                "type": "object"
+              },
+              "name": "inspect_ui",
+              "title": "Inspect UI"
+            },
+            {
+              "description": "Merge UI state, e.g. {\"view\": \"detail\"} (photoGrid|squareGrid|detail|compare) (see inspect_ui for fields).",
+              "inputSchema": {
+                "properties": {
+                  "state": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "state"
+                ],
+                "type": "object"
+              },
+              "name": "set_ui",
+              "title": "Set UI state"
+            },
+            {
+              "description": "On-screen widgets by automation id with rects [x, y, w, h] in screen points.",
+              "inputSchema": {
+                "properties": {
+                  "filter": {
+                    "type": "string"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "list_widgets",
+              "title": "List widgets"
+            },
+            {
+              "description": "Click a widget by automation id (`widget`, see list_widgets) or a screen point (`x`, `y`). `count: 2` double-clicks.",
+              "inputSchema": {
+                "properties": {
+                  "button": {
+                    "enum": [
+                      "left",
+                      "right"
+                    ],
+                    "type": "string"
+                  },
+                  "count": {
+                    "type": "integer"
+                  },
+                  "widget": {
+                    "type": "string"
+                  },
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  }
+                },
+                "required": [],
+                "type": "object"
+              },
+              "name": "click",
+              "title": "Click"
+            },
+            {
+              "description": "Press a key with optional modifiers (shortcuts), e.g. {key: \"Z\", cmd: true}. Names: A\u2013Z, 0\u20139, Enter, Escape, Delete, Left/Right/Up/Down, Space, Tab, F1\u2026 .",
+              "inputSchema": {
+                "properties": {
+                  "alt": {
+                    "type": "boolean"
+                  },
+                  "cmd": {
+                    "type": "boolean"
+                  },
+                  "ctrl": {
+                    "type": "boolean"
+                  },
+                  "key": {
+                    "type": "string"
+                  },
+                  "shift": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "key"
+                ],
+                "type": "object"
+              },
+              "name": "press_key",
+              "title": "Press key"
+            },
+            {
+              "description": "Type text into the focused field.",
+              "inputSchema": {
+                "properties": {
+                  "text": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "text"
+                ],
+                "type": "object"
+              },
+              "name": "type_text",
+              "title": "Type text"
+            },
+            {
+              "description": "Replay a pointer gesture on the photo in normalized image coordinates (0..1, origin top-left): brush strokes, gradient drags, crop handles, heal spots. Needs the Detail view.",
+              "inputSchema": {
+                "properties": {
+                  "alt": {
+                    "type": "boolean"
+                  },
+                  "cmd": {
+                    "type": "boolean"
+                  },
+                  "events": {
+                    "items": {
+                      "properties": {
+                        "kind": {
+                          "enum": [
+                            "down",
+                            "drag",
+                            "move",
+                            "up"
+                          ],
+                          "type": "string"
+                        },
+                        "x": {
+                          "type": "number"
+                        },
+                        "y": {
+                          "type": "number"
+                        }
+                      },
+                      "required": [
+                        "kind",
+                        "x",
+                        "y"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "shift": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "events"
+                ],
+                "type": "object"
+              },
+              "name": "pointer_gesture",
+              "title": "Pointer gesture"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "index": 2,
+      "command": "mcp:resources/read",
+      "status": "FAILED",
+      "native": {
+        "command": "mcp:resources/read",
+        "ok": false,
+        "error": "LightCraft app at 127.0.0.1:61653 is not reachable: Connection refused (os error 61) (start it with `lightcraft --control PORT`)"
+      }
+    }
+  ],
+  "automaticReplay": false,
+  "completeAcceptance": false,
+  "readOnly": true,
+  "backendQuery": "NOT_CONFIRMED",
+  "backendSessionIdentity": "NOT_PROVIDED_BY_NATIVE_PROTOCOL",
+  "requestedMode": {
+    "mode": "Connect",
+    "transport": "stdio-mcp",
+    "connectAddress": "127.0.0.1:61653",
+    "readOnly": true,
+    "nativeMayRetryReads": true,
+    "scriptSha256": null
+  },
+  "libraryPath": null,
+  "argv": [
+    "/Users/wandl/.local/bin/python3.12",
+    "-I",
+    "-B",
+    "/Users/wandl/workspaces/workspace-agent-skills/full-aigc-skills-repositories/lightcraft-skills/runtime/cli.py",
+    "--require-installed",
+    "--supervised",
+    "--logs-dir",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/disconnected-real/logs",
+    "--timeout",
+    "10.0",
+    "--requests",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/disconnected-real/requests.jsonl",
+    "--runtime-home",
+    "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime",
+    "--",
+    "mcp",
+    "--compact",
+    "--connect",
+    "127.0.0.1:61653"
+  ],
+  "process": {
+    "schemaVersion": 1,
+    "startedAt": "2026-10-09T02:58:13.245069+00:00",
+    "argv": [
+      "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mcp",
+      "--compact",
+      "--connect",
+      "127.0.0.1:61653"
+    ],
+    "status": "EXITED",
+    "automaticReplay": false,
+    "descendantsConfirmedStopped": false,
+    "pid": 95810,
+    "processStartedAt": "2026-10-09T02:58:13.248222+00:00",
+    "processIdentity": "Fri Oct  9 10:58:13 2026     /Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli mcp --compact --connect 127.0.0.1:61653",
+    "exitCode": 0,
+    "endedAt": "2026-10-09T02:58:13.254067+00:00",
+    "stdout": "{\"id\":1,\"jsonrpc\":\"2.0\",\"result\":{\"capabilities\":{\"resources\":{\"listChanged\":false,\"subscribe\":false},\"tools\":{\"listChanged\":false}},\"instructions\":\"LightCraft is a non-destructive photo library and raw developer (a Lightroom alternative). Photos have integer ids; most editing acts on the *active* photo (tools that take `id` make that photo active first). Typical loop: query_photos \u2192 select_photos (or pass id) \u2192 list_controls \u2192 set_develop {values: {\\\"light.exposure\\\": 0.5}} \u2192 render_photo to look at the result \u2192 export. Positions (crop rects, mask points, brush strokes) are normalized image coordinates 0..1 with the origin at the top-left. Every action is a command: list_commands shows ids and parameter docs; run_command runs any of them. Edits are undoable (undo / redo). Backend: remote 127.0.0.1:61653.\",\"protocolVersion\":\"2025-06-18\",\"serverInfo\":{\"name\":\"lightcraft\",\"title\":\"LightCraft\",\"version\":\"0.2.1\"}}}\n{\"id\":2,\"jsonrpc\":\"2.0\",\"result\":{\"tools\":[{\"description\":\"Every command (engine + UI when connected) with id, label, menu, shortcut, parameter doc and whether it is enabled now. Each id is also callable as tool `cmd_<id with . replaced by _>` or via run_command.\",\"inputSchema\":{\"properties\":{\"filter\":{\"description\":\"Only commands whose id or label contains this text (case-insensitive)\",\"type\":\"string\"}},\"required\":[],\"type\":\"object\"},\"name\":\"list_commands\",\"title\":\"List commands\"},{\"description\":\"Run any LightCraft command by id with JSON params (see list_commands for ids and parameter docs), e.g. {command: \\\"photo.rate\\\", params: {rating: 4}}.\",\"inputSchema\":{\"properties\":{\"command\":{\"type\":\"string\"},\"params\":{\"additionalProperties\":true,\"description\":\"Command parameters\",\"type\":\"object\"}},\"required\":[\"command\"],\"type\":\"object\"},\"name\":\"run_command\",\"title\":\"Run command\"},{\"description\":\"Add image/raw files to the library. Folders are scanned recursively for photos; relative paths resolve against the server's working directory. The first imported photo becomes active. Returns the new photo ids.\",\"inputSchema\":{\"properties\":{\"album\":{\"description\":\"Also add to this album id\",\"type\":\"integer\"},\"destination\":{\"description\":\"Copy or move: destination folder\",\"type\":\"string\"},\"mode\":{\"description\":\"add (default) = reference the files in place; copy = copy them into `destination` (default: the library's Originals/); move = as copy, then each original and its XMP sidecars are removed from the source once the copy is verified and catalogued (duplicates and failures keep their sources; `kept` lists sources left in place and why; undo leaves the moved files at the destination)\",\"enum\":[\"add\",\"copy\",\"move\"],\"type\":\"string\"},\"organize\":{\"description\":\"Copy or move: folders inside the destination \u2014 date (YYYY/YYYY-MM-DD, default), month (YYYY/YYYY-MM), flat, or a folder template such as {date:%Y}/{date:%Y%m%d} (\u2192 2026/20260114; the template's / make the levels, tokens as for rename; relative, no ..). Dated by capture time, else the import time\",\"type\":\"string\"},\"paths\":{\"description\":\"Files and/or folders\",\"items\":{\"type\":\"string\"},\"type\":\"array\"},\"rename\":{\"description\":\"Copy or move: file-name template, e.g. {date:%Y%m%d_%H%M%S}_{seq:3} (run_command photo.renameTokens lists the tags); the extension is kept\",\"type\":\"string\"}},\"required\":[\"paths\"],\"type\":\"object\"},\"name\":\"import\",\"title\":\"Import photos\"},{\"description\":\"List photos (id, file name, size, rating, flag, edited\u2026). Without filter/sort: the current library view.\",\"inputSchema\":{\"properties\":{\"filter\":{\"additionalProperties\":true,\"description\":\"Catalog Filter JSON (e.g. {\\\"minRating\\\": 3})\",\"type\":\"object\"},\"limit\":{\"description\":\"Default 200\",\"type\":\"integer\"},\"offset\":{\"type\":\"integer\"},\"sort\":{\"additionalProperties\":true,\"type\":\"object\"}},\"required\":[],\"type\":\"object\"},\"name\":\"query_photos\",\"title\":\"Query photos\"},{\"description\":\"Set the selection; the active photo (the one develop tools edit) is `active` or the first id.\",\"inputSchema\":{\"properties\":{\"active\":{\"type\":\"integer\"},\"ids\":{\"description\":\"Photo ids\",\"items\":{\"type\":\"integer\"},\"type\":\"array\"},\"mode\":{\"enum\":[\"replace\",\"add\",\"toggle\",\"range\"],\"type\":\"string\"}},\"required\":[\"ids\"],\"type\":\"object\"},\"name\":\"select_photos\",\"title\":\"Select photos\"},{\"description\":\"Every develop slider (id like `light.exposure`, label, section, min, max, default, current value) for the active photo.\",\"inputSchema\":{\"properties\":{\"section\":{\"description\":\"Only this section (e.g. light, color, effects, detail)\",\"type\":\"string\"}},\"required\":[],\"type\":\"object\"},\"name\":\"list_controls\",\"title\":\"List develop controls\"},{\"description\":\"The full develop settings JSON of a photo (white balance, light, color, curves, mixer, grading, effects, crop, masks, spots\u2026).\",\"inputSchema\":{\"properties\":{\"id\":{\"description\":\"Photo id (default: the active photo). Makes that photo active first.\",\"type\":\"integer\"}},\"required\":[],\"type\":\"object\"},\"name\":\"get_develop\",\"title\":\"Get develop settings\"},{\"description\":\"Edit a photo (one undo step each for values and settings). `values` sets sliders by control id (see list_controls), e.g. {\\\"light.exposure\\\": 0.7, \\\"light.contrast\\\": 20}. `settings` deep-merges a partial develop-settings JSON (as returned by get_develop).\",\"inputSchema\":{\"properties\":{\"id\":{\"description\":\"Photo id (default: the active photo). Makes that photo active first.\",\"type\":\"integer\"},\"label\":{\"description\":\"History label for `settings`\",\"type\":\"string\"},\"settings\":{\"additionalProperties\":true,\"description\":\"Partial DevelopSettings JSON to merge\",\"type\":\"object\"},\"values\":{\"additionalProperties\":{\"type\":\"number\"},\"description\":\"controlId \u2192 value\",\"type\":\"object\"}},\"required\":[],\"type\":\"object\"},\"name\":\"set_develop\",\"title\":\"Set develop settings\"},{\"description\":\"Apply a develop preset (ids from cmd_presets_list) to the selection or `ids`, at `amount` percent (0..200, default 100).\",\"inputSchema\":{\"properties\":{\"amount\":{\"type\":\"number\"},\"ids\":{\"description\":\"Photo ids (default: selection)\",\"items\":{\"type\":\"integer\"},\"type\":\"array\"},\"preset\":{\"description\":\"Preset id\",\"type\":\"string\"}},\"required\":[\"preset\"],\"type\":\"object\"},\"name\":\"apply_preset\",\"title\":\"Apply preset\"},{\"description\":\"Set the crop of the active photo: `rect` [x0,y0,x1,y1] in normalized coordinates (0..1, origin top-left) of the straightened frame, `angle` in degrees. `reset: true` clears it. Give at least one of them.\",\"inputSchema\":{\"properties\":{\"angle\":{\"type\":\"number\"},\"id\":{\"description\":\"Photo id (default: the active photo). Makes that photo active first.\",\"type\":\"integer\"},\"rect\":{\"items\":{\"type\":\"number\"},\"maxItems\":4,\"minItems\":4,\"type\":\"array\"},\"reset\":{\"type\":\"boolean\"}},\"required\":[],\"type\":\"object\"},\"name\":\"crop\",\"title\":\"Crop / straighten\"},{\"description\":\"Render a photo with its current develop settings (cropped) and return it as an image so you can look at the result.\",\"inputSchema\":{\"properties\":{\"format\":{\"description\":\"Image encoding (default png; jpeg is smaller)\",\"enum\":[\"png\",\"jpeg\"],\"type\":\"string\"},\"id\":{\"description\":\"Photo id (default: the active photo). Makes that photo active first.\",\"type\":\"integer\"},\"path\":{\"description\":\"Also save the rendered file here\",\"type\":\"string\"},\"size\":{\"description\":\"Long edge in pixels (default 1024, max 4096)\",\"type\":\"integer\"}},\"required\":[],\"type\":\"object\"},\"name\":\"render_photo\",\"title\":\"Render photo\"},{\"description\":\"Render and write photos. Give `path` (one photo; format from the extension unless `format` is set) or `dir` (batch, file names from `naming`).\",\"inputSchema\":{\"properties\":{\"bitDepth\":{\"description\":\"Bits per channel: PNG 8|16 (default 8), TIFF 8|16|32 (default 16; 32 = linear float with a linear profile), AVIF 8|10; JPEG/WebP are 8-bit\",\"enum\":[8,10,16,32],\"type\":\"integer\"},\"colorSpace\":{\"description\":\"Output colour space (default sRGB; AVIF is always sRGB). adobeRgb = Adobe RGB (1998) compatible; the embedded ICC profile is generated from the published primaries\",\"enum\":[\"srgb\",\"displayP3\",\"adobeRgb\",\"proPhoto\",\"rec2020\"],\"type\":\"string\"},\"dir\":{\"type\":\"string\"},\"dontEnlarge\":{\"description\":\"Never upscale past the photo's own size (default true)\",\"type\":\"boolean\"},\"format\":{\"description\":\"original = the file as is + an XMP sidecar with the edits; dng = raw photos as DNG with the edits embedded\",\"enum\":[\"jpeg\",\"png\",\"tiff\",\"webp\",\"avif\",\"original\",\"dng\"],\"type\":\"string\"},\"height\":{\"description\":\"Output height in px\",\"type\":\"integer\"},\"id\":{\"description\":\"Photo id (default: the active photo). Makes that photo active first.\",\"type\":\"integer\"},\"ids\":{\"description\":\"Photos to export (default: the given/active photo)\",\"items\":{\"type\":\"integer\"},\"type\":\"array\"},\"limitKb\":{\"description\":\"JPEG: largest quality that fits this many KB\",\"type\":\"integer\"},\"longEdge\":{\"description\":\"Output long edge in px. When no size param is given: 3000; 0 = full size (cropped, native resolution)\",\"type\":\"integer\"},\"megapixels\":{\"description\":\"Output size in megapixels\",\"type\":\"number\"},\"metadata\":{\"enum\":[\"all\",\"allExceptCamera\",\"copyright\",\"none\"],\"type\":\"string\"},\"naming\":{\"description\":\"File-name template, e.g. {name}-{seq} or {date:%Y-%m-%d}_{title}_{seq:2} (tokens: {name} {num} {seq} {seq:N} {date} {date:%\u2026} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext})\",\"type\":\"string\"},\"path\":{\"type\":\"string\"},\"percent\":{\"description\":\"Output size as a percentage of full size\",\"type\":\"number\"},\"ppi\":{\"description\":\"Print resolution written into the file (default 240)\",\"type\":\"integer\"},\"quality\":{\"description\":\"JPEG/AVIF quality 1..100\",\"type\":\"integer\"},\"removeLocation\":{\"type\":\"boolean\"},\"sharpen\":{\"enum\":[\"none\",\"screen\",\"matte\",\"glossy\"],\"type\":\"string\"},\"sharpenAmount\":{\"enum\":[\"low\",\"standard\",\"high\"],\"type\":\"string\"},\"shortEdge\":{\"description\":\"Output short edge in px\",\"type\":\"integer\"},\"startNumber\":{\"description\":\"First {seq} value (default 1)\",\"type\":\"integer\"},\"watermark\":{\"description\":\"Text, or {text, vertical (boolean; defaults to false), size (fraction of short edge), opacity, anchor (topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight), inset, color [r,g,b], shadow}\"},\"width\":{\"description\":\"Output width in px (with height: fit inside width \u00d7 height, either orientation)\",\"type\":\"integer\"}},\"required\":[],\"type\":\"object\"},\"name\":\"export\",\"title\":\"Export photo\"},{\"description\":\"Capture the LightCraft window (after pending renders finish) and return it as an image.\",\"inputSchema\":{\"properties\":{\"format\":{\"enum\":[\"png\",\"jpeg\"],\"type\":\"string\"},\"maxSize\":{\"description\":\"Downscale so the long edge is at most this (default 1600)\",\"type\":\"integer\"},\"path\":{\"description\":\"Also save the screenshot here\",\"type\":\"string\"}},\"required\":[],\"type\":\"object\"},\"name\":\"screenshot\",\"title\":\"Screenshot\"},{\"description\":\"UI state: view, open panel, window and image rects, active photo, selection, active mask, status.\",\"inputSchema\":{\"properties\":{},\"required\":[],\"type\":\"object\"},\"name\":\"inspect_ui\",\"title\":\"Inspect UI\"},{\"description\":\"Merge UI state, e.g. {\\\"view\\\": \\\"detail\\\"} (photoGrid|squareGrid|detail|compare) (see inspect_ui for fields).\",\"inputSchema\":{\"properties\":{\"state\":{\"additionalProperties\":true,\"type\":\"object\"}},\"required\":[\"state\"],\"type\":\"object\"},\"name\":\"set_ui\",\"title\":\"Set UI state\"},{\"description\":\"On-screen widgets by automation id with rects [x, y, w, h] in screen points.\",\"inputSchema\":{\"properties\":{\"filter\":{\"type\":\"string\"}},\"required\":[],\"type\":\"object\"},\"name\":\"list_widgets\",\"title\":\"List widgets\"},{\"description\":\"Click a widget by automation id (`widget`, see list_widgets) or a screen point (`x`, `y`). `count: 2` double-clicks.\",\"inputSchema\":{\"properties\":{\"button\":{\"enum\":[\"left\",\"right\"],\"type\":\"string\"},\"count\":{\"type\":\"integer\"},\"widget\":{\"type\":\"string\"},\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"}},\"required\":[],\"type\":\"object\"},\"name\":\"click\",\"title\":\"Click\"},{\"description\":\"Press a key with optional modifiers (shortcuts), e.g. {key: \\\"Z\\\", cmd: true}. Names: A\u2013Z, 0\u20139, Enter, Escape, Delete, Left/Right/Up/Down, Space, Tab, F1\u2026 .\",\"inputSchema\":{\"properties\":{\"alt\":{\"type\":\"boolean\"},\"cmd\":{\"type\":\"boolean\"},\"ctrl\":{\"type\":\"boolean\"},\"key\":{\"type\":\"string\"},\"shift\":{\"type\":\"boolean\"}},\"required\":[\"key\"],\"type\":\"object\"},\"name\":\"press_key\",\"title\":\"Press key\"},{\"description\":\"Type text into the focused field.\",\"inputSchema\":{\"properties\":{\"text\":{\"type\":\"string\"}},\"required\":[\"text\"],\"type\":\"object\"},\"name\":\"type_text\",\"title\":\"Type text\"},{\"description\":\"Replay a pointer gesture on the photo in normalized image coordinates (0..1, origin top-left): brush strokes, gradient drags, crop handles, heal spots. Needs the Detail view.\",\"inputSchema\":{\"properties\":{\"alt\":{\"type\":\"boolean\"},\"cmd\":{\"type\":\"boolean\"},\"events\":{\"items\":{\"properties\":{\"kind\":{\"enum\":[\"down\",\"drag\",\"move\",\"up\"],\"type\":\"string\"},\"x\":{\"type\":\"number\"},\"y\":{\"type\":\"number\"}},\"required\":[\"kind\",\"x\",\"y\"],\"type\":\"object\"},\"type\":\"array\"},\"shift\":{\"type\":\"boolean\"}},\"required\":[\"events\"],\"type\":\"object\"},\"name\":\"pointer_gesture\",\"title\":\"Pointer gesture\"}]}}\n{\"error\":{\"code\":-32603,\"message\":\"LightCraft app at 127.0.0.1:61653 is not reachable: Connection refused (os error 61) (start it with `lightcraft --control PORT`)\"},\"id\":3,\"jsonrpc\":\"2.0\"}\n",
+    "stderr": "lightcraft-cli mcp: LightCraft is not reachable at 127.0.0.1:61653 yet (Connection refused (os error 61)); will retry on each call\nlightcraft-cli mcp: serving MCP on stdio (remote 127.0.0.1:61653)\n",
+    "stdoutBytes": 13245,
+    "stderrBytes": 197,
+    "stdoutTruncated": false,
+    "stderrTruncated": false,
+    "logDirectory": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/disconnected-real/logs",
+    "logComplete": true,
+    "runtimeIdentity": {
+      "version": "0.2.1",
+      "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+      "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+      "mode": "Connect",
+      "transport": "stdio-mcp",
+      "connectAddress": "127.0.0.1:61653",
+      "readOnly": true,
+      "nativeMayRetryReads": true,
+      "scriptSha256": null
+    },
+    "stdinSha256": "81275e2f194403dd014cd67e26f9f901d333f782bce9d9c775fee1d90bca8dd4"
+  },
+  "runtimeIdentity": {
+    "version": "0.2.1",
+    "binarySha256": "45d6f10c7d15c9cf051d23629ab14d0e8ca4c3bb9e3192393f726a918ab1c8da",
+    "executable": "/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-connect-20261008/runtime/lightcraft/0.2.1/lightcraft-cli",
+    "mode": "Connect",
+    "transport": "stdio-mcp",
+    "connectAddress": "127.0.0.1:61653",
+    "readOnly": true,
+    "nativeMayRetryReads": true,
+    "scriptSha256": null
+  },
+  "protocolErrors": [],
+  "protocolComplete": true,
+  "mcpReplies": [
+    {
+      "id": 1,
+      "jsonrpc": "2.0",
+      "result": {
+        "capabilities": {
+          "resources": {
+            "listChanged": false,
+            "subscribe": false
+          },
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "instructions": "LightCraft is a non-destructive photo library and raw developer (a Lightroom alternative). Photos have integer ids; most editing acts on the *active* photo (tools that take `id` make that photo active first). Typical loop: query_photos \u2192 select_photos (or pass id) \u2192 list_controls \u2192 set_develop {values: {\"light.exposure\": 0.5}} \u2192 render_photo to look at the result \u2192 export. Positions (crop rects, mask points, brush strokes) are normalized image coordinates 0..1 with the origin at the top-left. Every action is a command: list_commands shows ids and parameter docs; run_command runs any of them. Edits are undoable (undo / redo). Backend: remote 127.0.0.1:61653.",
+        "protocolVersion": "2025-06-18",
+        "serverInfo": {
+          "name": "lightcraft",
+          "title": "LightCraft",
+          "version": "0.2.1"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "jsonrpc": "2.0",
+      "result": {
+        "tools": [
+          {
+            "description": "Every command (engine + UI when connected) with id, label, menu, shortcut, parameter doc and whether it is enabled now. Each id is also callable as tool `cmd_<id with . replaced by _>` or via run_command.",
+            "inputSchema": {
+              "properties": {
+                "filter": {
+                  "description": "Only commands whose id or label contains this text (case-insensitive)",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "list_commands",
+            "title": "List commands"
+          },
+          {
+            "description": "Run any LightCraft command by id with JSON params (see list_commands for ids and parameter docs), e.g. {command: \"photo.rate\", params: {rating: 4}}.",
+            "inputSchema": {
+              "properties": {
+                "command": {
+                  "type": "string"
+                },
+                "params": {
+                  "additionalProperties": true,
+                  "description": "Command parameters",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "command"
+              ],
+              "type": "object"
+            },
+            "name": "run_command",
+            "title": "Run command"
+          },
+          {
+            "description": "Add image/raw files to the library. Folders are scanned recursively for photos; relative paths resolve against the server's working directory. The first imported photo becomes active. Returns the new photo ids.",
+            "inputSchema": {
+              "properties": {
+                "album": {
+                  "description": "Also add to this album id",
+                  "type": "integer"
+                },
+                "destination": {
+                  "description": "Copy or move: destination folder",
+                  "type": "string"
+                },
+                "mode": {
+                  "description": "add (default) = reference the files in place; copy = copy them into `destination` (default: the library's Originals/); move = as copy, then each original and its XMP sidecars are removed from the source once the copy is verified and catalogued (duplicates and failures keep their sources; `kept` lists sources left in place and why; undo leaves the moved files at the destination)",
+                  "enum": [
+                    "add",
+                    "copy",
+                    "move"
+                  ],
+                  "type": "string"
+                },
+                "organize": {
+                  "description": "Copy or move: folders inside the destination \u2014 date (YYYY/YYYY-MM-DD, default), month (YYYY/YYYY-MM), flat, or a folder template such as {date:%Y}/{date:%Y%m%d} (\u2192 2026/20260114; the template's / make the levels, tokens as for rename; relative, no ..). Dated by capture time, else the import time",
+                  "type": "string"
+                },
+                "paths": {
+                  "description": "Files and/or folders",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "rename": {
+                  "description": "Copy or move: file-name template, e.g. {date:%Y%m%d_%H%M%S}_{seq:3} (run_command photo.renameTokens lists the tags); the extension is kept",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "paths"
+              ],
+              "type": "object"
+            },
+            "name": "import",
+            "title": "Import photos"
+          },
+          {
+            "description": "List photos (id, file name, size, rating, flag, edited\u2026). Without filter/sort: the current library view.",
+            "inputSchema": {
+              "properties": {
+                "filter": {
+                  "additionalProperties": true,
+                  "description": "Catalog Filter JSON (e.g. {\"minRating\": 3})",
+                  "type": "object"
+                },
+                "limit": {
+                  "description": "Default 200",
+                  "type": "integer"
+                },
+                "offset": {
+                  "type": "integer"
+                },
+                "sort": {
+                  "additionalProperties": true,
+                  "type": "object"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "query_photos",
+            "title": "Query photos"
+          },
+          {
+            "description": "Set the selection; the active photo (the one develop tools edit) is `active` or the first id.",
+            "inputSchema": {
+              "properties": {
+                "active": {
+                  "type": "integer"
+                },
+                "ids": {
+                  "description": "Photo ids",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "mode": {
+                  "enum": [
+                    "replace",
+                    "add",
+                    "toggle",
+                    "range"
+                  ],
+                  "type": "string"
+                }
+              },
+              "required": [
+                "ids"
+              ],
+              "type": "object"
+            },
+            "name": "select_photos",
+            "title": "Select photos"
+          },
+          {
+            "description": "Every develop slider (id like `light.exposure`, label, section, min, max, default, current value) for the active photo.",
+            "inputSchema": {
+              "properties": {
+                "section": {
+                  "description": "Only this section (e.g. light, color, effects, detail)",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "list_controls",
+            "title": "List develop controls"
+          },
+          {
+            "description": "The full develop settings JSON of a photo (white balance, light, color, curves, mixer, grading, effects, crop, masks, spots\u2026).",
+            "inputSchema": {
+              "properties": {
+                "id": {
+                  "description": "Photo id (default: the active photo). Makes that photo active first.",
+                  "type": "integer"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "get_develop",
+            "title": "Get develop settings"
+          },
+          {
+            "description": "Edit a photo (one undo step each for values and settings). `values` sets sliders by control id (see list_controls), e.g. {\"light.exposure\": 0.7, \"light.contrast\": 20}. `settings` deep-merges a partial develop-settings JSON (as returned by get_develop).",
+            "inputSchema": {
+              "properties": {
+                "id": {
+                  "description": "Photo id (default: the active photo). Makes that photo active first.",
+                  "type": "integer"
+                },
+                "label": {
+                  "description": "History label for `settings`",
+                  "type": "string"
+                },
+                "settings": {
+                  "additionalProperties": true,
+                  "description": "Partial DevelopSettings JSON to merge",
+                  "type": "object"
+                },
+                "values": {
+                  "additionalProperties": {
+                    "type": "number"
+                  },
+                  "description": "controlId \u2192 value",
+                  "type": "object"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "set_develop",
+            "title": "Set develop settings"
+          },
+          {
+            "description": "Apply a develop preset (ids from cmd_presets_list) to the selection or `ids`, at `amount` percent (0..200, default 100).",
+            "inputSchema": {
+              "properties": {
+                "amount": {
+                  "type": "number"
+                },
+                "ids": {
+                  "description": "Photo ids (default: selection)",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "preset": {
+                  "description": "Preset id",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "preset"
+              ],
+              "type": "object"
+            },
+            "name": "apply_preset",
+            "title": "Apply preset"
+          },
+          {
+            "description": "Set the crop of the active photo: `rect` [x0,y0,x1,y1] in normalized coordinates (0..1, origin top-left) of the straightened frame, `angle` in degrees. `reset: true` clears it. Give at least one of them.",
+            "inputSchema": {
+              "properties": {
+                "angle": {
+                  "type": "number"
+                },
+                "id": {
+                  "description": "Photo id (default: the active photo). Makes that photo active first.",
+                  "type": "integer"
+                },
+                "rect": {
+                  "items": {
+                    "type": "number"
+                  },
+                  "maxItems": 4,
+                  "minItems": 4,
+                  "type": "array"
+                },
+                "reset": {
+                  "type": "boolean"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "crop",
+            "title": "Crop / straighten"
+          },
+          {
+            "description": "Render a photo with its current develop settings (cropped) and return it as an image so you can look at the result.",
+            "inputSchema": {
+              "properties": {
+                "format": {
+                  "description": "Image encoding (default png; jpeg is smaller)",
+                  "enum": [
+                    "png",
+                    "jpeg"
+                  ],
+                  "type": "string"
+                },
+                "id": {
+                  "description": "Photo id (default: the active photo). Makes that photo active first.",
+                  "type": "integer"
+                },
+                "path": {
+                  "description": "Also save the rendered file here",
+                  "type": "string"
+                },
+                "size": {
+                  "description": "Long edge in pixels (default 1024, max 4096)",
+                  "type": "integer"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "render_photo",
+            "title": "Render photo"
+          },
+          {
+            "description": "Render and write photos. Give `path` (one photo; format from the extension unless `format` is set) or `dir` (batch, file names from `naming`).",
+            "inputSchema": {
+              "properties": {
+                "bitDepth": {
+                  "description": "Bits per channel: PNG 8|16 (default 8), TIFF 8|16|32 (default 16; 32 = linear float with a linear profile), AVIF 8|10; JPEG/WebP are 8-bit",
+                  "enum": [
+                    8,
+                    10,
+                    16,
+                    32
+                  ],
+                  "type": "integer"
+                },
+                "colorSpace": {
+                  "description": "Output colour space (default sRGB; AVIF is always sRGB). adobeRgb = Adobe RGB (1998) compatible; the embedded ICC profile is generated from the published primaries",
+                  "enum": [
+                    "srgb",
+                    "displayP3",
+                    "adobeRgb",
+                    "proPhoto",
+                    "rec2020"
+                  ],
+                  "type": "string"
+                },
+                "dir": {
+                  "type": "string"
+                },
+                "dontEnlarge": {
+                  "description": "Never upscale past the photo's own size (default true)",
+                  "type": "boolean"
+                },
+                "format": {
+                  "description": "original = the file as is + an XMP sidecar with the edits; dng = raw photos as DNG with the edits embedded",
+                  "enum": [
+                    "jpeg",
+                    "png",
+                    "tiff",
+                    "webp",
+                    "avif",
+                    "original",
+                    "dng"
+                  ],
+                  "type": "string"
+                },
+                "height": {
+                  "description": "Output height in px",
+                  "type": "integer"
+                },
+                "id": {
+                  "description": "Photo id (default: the active photo). Makes that photo active first.",
+                  "type": "integer"
+                },
+                "ids": {
+                  "description": "Photos to export (default: the given/active photo)",
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                "limitKb": {
+                  "description": "JPEG: largest quality that fits this many KB",
+                  "type": "integer"
+                },
+                "longEdge": {
+                  "description": "Output long edge in px. When no size param is given: 3000; 0 = full size (cropped, native resolution)",
+                  "type": "integer"
+                },
+                "megapixels": {
+                  "description": "Output size in megapixels",
+                  "type": "number"
+                },
+                "metadata": {
+                  "enum": [
+                    "all",
+                    "allExceptCamera",
+                    "copyright",
+                    "none"
+                  ],
+                  "type": "string"
+                },
+                "naming": {
+                  "description": "File-name template, e.g. {name}-{seq} or {date:%Y-%m-%d}_{title}_{seq:2} (tokens: {name} {num} {seq} {seq:N} {date} {date:%\u2026} {folder} {camera} {lens} {iso} {rating} {title} {creator} {ext})",
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "percent": {
+                  "description": "Output size as a percentage of full size",
+                  "type": "number"
+                },
+                "ppi": {
+                  "description": "Print resolution written into the file (default 240)",
+                  "type": "integer"
+                },
+                "quality": {
+                  "description": "JPEG/AVIF quality 1..100",
+                  "type": "integer"
+                },
+                "removeLocation": {
+                  "type": "boolean"
+                },
+                "sharpen": {
+                  "enum": [
+                    "none",
+                    "screen",
+                    "matte",
+                    "glossy"
+                  ],
+                  "type": "string"
+                },
+                "sharpenAmount": {
+                  "enum": [
+                    "low",
+                    "standard",
+                    "high"
+                  ],
+                  "type": "string"
+                },
+                "shortEdge": {
+                  "description": "Output short edge in px",
+                  "type": "integer"
+                },
+                "startNumber": {
+                  "description": "First {seq} value (default 1)",
+                  "type": "integer"
+                },
+                "watermark": {
+                  "description": "Text, or {text, vertical (boolean; defaults to false), size (fraction of short edge), opacity, anchor (topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight), inset, color [r,g,b], shadow}"
+                },
+                "width": {
+                  "description": "Output width in px (with height: fit inside width \u00d7 height, either orientation)",
+                  "type": "integer"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "export",
+            "title": "Export photo"
+          },
+          {
+            "description": "Capture the LightCraft window (after pending renders finish) and return it as an image.",
+            "inputSchema": {
+              "properties": {
+                "format": {
+                  "enum": [
+                    "png",
+                    "jpeg"
+                  ],
+                  "type": "string"
+                },
+                "maxSize": {
+                  "description": "Downscale so the long edge is at most this (default 1600)",
+                  "type": "integer"
+                },
+                "path": {
+                  "description": "Also save the screenshot here",
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "screenshot",
+            "title": "Screenshot"
+          },
+          {
+            "description": "UI state: view, open panel, window and image rects, active photo, selection, active mask, status.",
+            "inputSchema": {
+              "properties": {},
+              "required": [],
+              "type": "object"
+            },
+            "name": "inspect_ui",
+            "title": "Inspect UI"
+          },
+          {
+            "description": "Merge UI state, e.g. {\"view\": \"detail\"} (photoGrid|squareGrid|detail|compare) (see inspect_ui for fields).",
+            "inputSchema": {
+              "properties": {
+                "state": {
+                  "additionalProperties": true,
+                  "type": "object"
+                }
+              },
+              "required": [
+                "state"
+              ],
+              "type": "object"
+            },
+            "name": "set_ui",
+            "title": "Set UI state"
+          },
+          {
+            "description": "On-screen widgets by automation id with rects [x, y, w, h] in screen points.",
+            "inputSchema": {
+              "properties": {
+                "filter": {
+                  "type": "string"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "list_widgets",
+            "title": "List widgets"
+          },
+          {
+            "description": "Click a widget by automation id (`widget`, see list_widgets) or a screen point (`x`, `y`). `count: 2` double-clicks.",
+            "inputSchema": {
+              "properties": {
+                "button": {
+                  "enum": [
+                    "left",
+                    "right"
+                  ],
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                },
+                "widget": {
+                  "type": "string"
+                },
+                "x": {
+                  "type": "number"
+                },
+                "y": {
+                  "type": "number"
+                }
+              },
+              "required": [],
+              "type": "object"
+            },
+            "name": "click",
+            "title": "Click"
+          },
+          {
+            "description": "Press a key with optional modifiers (shortcuts), e.g. {key: \"Z\", cmd: true}. Names: A\u2013Z, 0\u20139, Enter, Escape, Delete, Left/Right/Up/Down, Space, Tab, F1\u2026 .",
+            "inputSchema": {
+              "properties": {
+                "alt": {
+                  "type": "boolean"
+                },
+                "cmd": {
+                  "type": "boolean"
+                },
+                "ctrl": {
+                  "type": "boolean"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "shift": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "key"
+              ],
+              "type": "object"
+            },
+            "name": "press_key",
+            "title": "Press key"
+          },
+          {
+            "description": "Type text into the focused field.",
+            "inputSchema": {
+              "properties": {
+                "text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "text"
+              ],
+              "type": "object"
+            },
+            "name": "type_text",
+            "title": "Type text"
+          },
+          {
+            "description": "Replay a pointer gesture on the photo in normalized image coordinates (0..1, origin top-left): brush strokes, gradient drags, crop handles, heal spots. Needs the Detail view.",
+            "inputSchema": {
+              "properties": {
+                "alt": {
+                  "type": "boolean"
+                },
+                "cmd": {
+                  "type": "boolean"
+                },
+                "events": {
+                  "items": {
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "down",
+                          "drag",
+                          "move",
+                          "up"
+                        ],
+                        "type": "string"
+                      },
+                      "x": {
+                        "type": "number"
+                      },
+                      "y": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "x",
+                      "y"
+                    ],
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "shift": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "events"
+              ],
+              "type": "object"
+            },
+            "name": "pointer_gesture",
+            "title": "Pointer gesture"
+          }
+        ]
+      }
+    },
+    {
+      "error": {
+        "code": -32603,
+        "message": "LightCraft app at 127.0.0.1:61653 is not reachable: Connection refused (os error 61) (start it with `lightcraft --control PORT`)"
+      },
+      "id": 3,
+      "jsonrpc": "2.0"
+    }
+  ],
+  "endedAt": "2026-10-09T02:58:13.262377+00:00"
+}

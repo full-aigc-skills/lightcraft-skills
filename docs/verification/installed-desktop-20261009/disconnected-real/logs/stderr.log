@@ -1,0 +1,2 @@
+lightcraft-cli mcp: LightCraft is not reachable at 127.0.0.1:61653 yet (Connection refused (os error 61)); will retry on each call
+lightcraft-cli mcp: serving MCP on stdio (remote 127.0.0.1:61653)

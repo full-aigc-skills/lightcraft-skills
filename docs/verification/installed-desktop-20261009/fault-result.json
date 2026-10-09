@@ -1,0 +1,13 @@
+{
+  "status": "FAIL",
+  "checks": {
+    "nativeNotSaved": false,
+    "unsavedOpsPositive": false,
+    "memoryRatingFour": true,
+    "diskUnchangedDuringFailure": false,
+    "saveRecovered": true
+  },
+  "method": "user immutable flag on dedicated test journal; restored in finally; original permission-only attempt preserved FAIL",
+  "rpc": "fault-rpc.json",
+  "replay": false
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "checks": {
+    "nativeNotSaved": true,
+    "unsavedOpsPositive": true,
+    "memoryRatingFour": true,
+    "diskUnchangedDuringFailure": true,
+    "saveRecovered": true
+  },
+  "method": "readonly journal before desktop first append; restored in finally; earlier attempts retained FAIL",
+  "rpc": "fault-rpc.json",
+  "replay": false
+}

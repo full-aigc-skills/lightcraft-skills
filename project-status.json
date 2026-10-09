@@ -13,12 +13,9 @@
   "published": false,
   "tasks": {
     "scope": "archived base plus three active extensions",
-    "complete": 33,
+    "complete": 36,
     "total": 41,
     "remaining": [
-      "extend-lightcraft-connect-mcp:1.1",
-      "extend-lightcraft-connect-mcp:1.2",
-      "extend-lightcraft-connect-mcp:1.3",
       "extend-lightcraft-connect-mcp:1.4",
       "extend-lightcraft-expanded-photo-capabilities:1.3",
       "extend-lightcraft-expanded-photo-capabilities:1.4",
@@ -40,7 +37,7 @@
     "status": "ARCHIVED"
   },
   "extensionTasks": {
-    "complete": 4,
+    "complete": 7,
     "total": 12
   },
   "mcpAcceptance": "PASS_MANUAL_HOST_HEADLESS_QUERY_DESKTOP_OPEN",
@@ -49,5 +46,8 @@
   "rawVisualDeliveryGuard": "PASS_REJECTED_ACTUAL_FAILED_CANDIDATE",
   "rawVisualDeliveryEvidence": "docs/verification/raw-review-20261009/README.md",
   "mobileAcceptance": "PASS_ANDROID_PHONE_FILE_IDENTITY_PNG_PDF_TABLET_OPEN",
-  "mobileEvidence": "docs/verification/mobile-20261009/README.md"
+  "mobileEvidence": "docs/verification/mobile-20261009/README.md",
+  "desktopAcceptance": "PASS_SOURCE_CLI_021_DESKTOP_040_GUI_NOT_RUN",
+  "desktopEvidence": "docs/verification/installed-desktop-20261009/README.md",
+  "samDesktopStatus": "AVAILABLE_MODEL_NOT_INSTALLED_NO_INFERENCE"
 }

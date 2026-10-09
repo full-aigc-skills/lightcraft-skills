@@ -1,0 +1,32 @@
+exitCode=0
+Executable=/Users/wandl/workspaces/workspace-agent-skills/evaluation-results/lightcraft-installed-desktop-20261009/LightCraft.app/Contents/MacOS/LightCraft
+Identifier=ai.storyteller.lightcraft
+Format=app bundle with Mach-O universal (x86_64 arm64)
+CodeDirectory v=20500 size=585157 flags=0x10000(runtime) hashes=18275+7 location=embedded
+VersionPlatform=1
+VersionMin=720896
+VersionSDK=984320
+Hash type=sha256 size=32
+CandidateCDHash sha256=dff293467b58943b9408f6d7c48f16917e6db5a8
+CandidateCDHashFull sha256=dff293467b58943b9408f6d7c48f16917e6db5a89a37856bb55de7e8b33a06f3
+Hash choices=sha256
+CMSDigest=dff293467b58943b9408f6d7c48f16917e6db5a89a37856bb55de7e8b33a06f3
+CMSDigestType=2
+Executable Segment base=0
+Executable Segment limit=59359232
+Executable Segment flags=0x1
+Page size=4096
+CDHash=dff293467b58943b9408f6d7c48f16917e6db5a8
+Signature size=9062
+Authority=Developer ID Application: Learning Machines LLC (DJ6XS33FX8)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=Oct 8, 2026 at 22:05:57
+Notarization Ticket=stapled
+Info.plist entries=21
+TeamIdentifier=DJ6XS33FX8
+Runtime Version=15.5.0
+Sealed Resources version=2 rules=13 files=8
+Internal requirements count=1 size=188
+Total signatures=1
+Chosen signature=1
