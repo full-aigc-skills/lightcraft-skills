@@ -27,11 +27,11 @@
     ]
   },
   "evidence": "docs/verification/current-host-20261008/local-report.json",
-  "remoteCI": "PASS_OFFLINE_PYTHON_311_312_313",
+  "remoteCI": "PASS_OFFLINE_PYTHON_311_312_313_NODE24",
   "repository": "https://github.com/full-aigc-skills/lightcraft-skills",
   "branch": "main",
   "releaseStatus": "DEVELOPMENT_DRAFT_AWAITING_ACCEPTANCE",
-  "remoteCIEvidence": "docs/verification/windows-20261008/offline-ci.json",
+  "remoteCIEvidence": "docs/verification/mobile-20261009/offline-ci.json",
   "publicRelease": "v0.1.0-dev.1",
   "baseTasks": {
     "change": "harden-lightcraft-skill-workflows",
