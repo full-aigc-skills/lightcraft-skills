@@ -47,5 +47,7 @@
   "notSavedAcceptance": "PASS_NATIVE_HEADLESS_PERMISSION_FAULT_DESKTOP_OPEN",
   "mcpEvidence": "docs/verification/current-mcp-20261009/README.md",
   "rawVisualDeliveryGuard": "PASS_REJECTED_ACTUAL_FAILED_CANDIDATE",
-  "rawVisualDeliveryEvidence": "docs/verification/raw-review-20261009/README.md"
+  "rawVisualDeliveryEvidence": "docs/verification/raw-review-20261009/README.md",
+  "mobileAcceptance": "PASS_ANDROID_PHONE_FILE_IDENTITY_PNG_PDF_TABLET_OPEN",
+  "mobileEvidence": "docs/verification/mobile-20261009/README.md"
 }

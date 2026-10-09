@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "deviceTransferReceiptSha256": "c61c6ee9dfcb59b00c41310fecd74c5ff67a80655913ee9c55059b88aa5e767a",
+  "reviews": [
+    {
+      "delivery": "source",
+      "media": "PNG",
+      "member": "photo.png",
+      "viewer": "com.miui.gallery",
+      "screenshot": "source-image-screen.png",
+      "screenshotSha256": "96045ad4fc285e5ddd833bb2f8b4aafd4f7b8765e35726136c86a9eba4f6e58b",
+      "status": "PASS",
+      "method": "host-model view_image on actual settled device screenshot",
+      "scope": "synthetic gradient geometry and visible complete content; no colorimetric or RAW acceptance"
+    },
+    {
+      "delivery": "source",
+      "media": "PDF",
+      "member": "delivery.pdf",
+      "viewer": "cn.wps.moffice_eng.xiaomi.lite",
+      "screenshot": "source-pdf-screen-document.png",
+      "screenshotSha256": "b265d6a44459992efe95dd2980d53edc2cb622e454294d328fdc2894d4c644d8",
+      "status": "PASS",
+      "method": "host-model view_image on actual settled device screenshot",
+      "scope": "synthetic gradient geometry and visible complete content; no colorimetric or RAW acceptance"
+    },
+    {
+      "delivery": "plugin",
+      "media": "PNG",
+      "member": "photo.png",
+      "viewer": "com.miui.gallery",
+      "screenshot": "plugin-image-screen-stable.png",
+      "screenshotSha256": "317af1386e5c8e13a897ddc654e40d116714f45769964e0750d8fffcf1b1e4b5",
+      "status": "PASS",
+      "method": "host-model view_image on actual settled device screenshot",
+      "scope": "synthetic gradient geometry and visible complete content; no colorimetric or RAW acceptance"
+    },
+    {
+      "delivery": "plugin",
+      "media": "PDF",
+      "member": "delivery.pdf",
+      "viewer": "cn.wps.moffice_eng.xiaomi.lite",
+      "screenshot": "plugin-pdf-screen-document.png",
+      "screenshotSha256": "97938ddcbb17b5af7c015a6bda565440df14daaf2b32b279c6d6bb6dd3e8f7de",
+      "status": "PASS",
+      "method": "host-model view_image on actual settled device screenshot",
+      "scope": "synthetic gradient geometry and visible complete content; no colorimetric or RAW acceptance"
+    }
+  ],
+  "visual": "PASS_SCOPED_SYNTHETIC_PNG_PDF_ANDROID_PHONE",
+  "rawColorAcceptance": "FAIL_PREVIOUS_NIKON",
+  "tablet": "NOT_RUN",
+  "ios": "NOT_RUN",
+  "nativeProjectMobileEditing": "NOT_RUN",
+  "automaticReplay": false
+}

@@ -1,0 +1,7 @@
+Starting: Intent { act=android.intent.action.VIEW dat=file:///sdcard/Download/lightcraft-acceptance-20261009-527e7873/source/delivery.pdf typ=application/pdf flg=0x8080001 cmp=cn.wps.moffice_eng.xiaomi.lite/cn.wps.moffice.plugin.app.entrance.PDFEntranceActivity }
+Warning: Activity not started, its current task has been brought to the front
+Status: ok
+LaunchState: UNKNOWN (0)
+TotalTime: 0
+WaitTime: 55
+Complete

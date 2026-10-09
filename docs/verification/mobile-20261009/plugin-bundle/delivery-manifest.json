@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "kind": "lightcraft-mobile-files/v1",
+  "sourceReportSha256": "fef798ace2e21b5dca01824af11059d21db50607b8f7bda798579d286b984f72",
+  "artifacts": [
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "original-photo",
+      "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "bytes": 12703,
+      "mediaType": "image/png",
+      "producerTaskId": "fixture",
+      "sourceRefs": [],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "original.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "developed-photo",
+      "version": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de",
+      "sha256": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de",
+      "bytes": 4050,
+      "mediaType": "image/png",
+      "producerTaskId": "photo",
+      "sourceRefs": [
+        {
+          "assetId": "original-photo",
+          "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "photo.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "layout-pdf",
+      "version": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102",
+      "sha256": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102",
+      "bytes": 12458,
+      "mediaType": "application/pdf",
+      "producerTaskId": "layout",
+      "sourceRefs": [
+        {
+          "assetId": "developed-photo",
+          "version": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de",
+          "sha256": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "layout-native",
+        "version": "5648f4096dd2264aae2f9e44f1a7117234c7e33c2a7bb59bfcf365bab5999160",
+        "sha256": "5648f4096dd2264aae2f9e44f1a7117234c7e33c2a7bb59bfcf365bab5999160",
+        "location": "page.designcraft"
+      },
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "layout.pdf"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "delivery-pdf",
+      "version": "6a34d09798e35a3016ab85d4dcb50942c72279add71239b0145d4c268d1fb71a",
+      "sha256": "6a34d09798e35a3016ab85d4dcb50942c72279add71239b0145d4c268d1fb71a",
+      "bytes": 12366,
+      "mediaType": "application/pdf",
+      "producerTaskId": "pdf",
+      "sourceRefs": [
+        {
+          "assetId": "layout-pdf",
+          "version": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102",
+          "sha256": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "delivery.pdf"
+    }
+  ],
+  "members": [
+    {
+      "location": "delivery.pdf",
+      "bytes": 12366,
+      "sha256": "6a34d09798e35a3016ab85d4dcb50942c72279add71239b0145d4c268d1fb71a"
+    },
+    {
+      "location": "evidence/native-exchange-report.json",
+      "bytes": 33032,
+      "sha256": "fef798ace2e21b5dca01824af11059d21db50607b8f7bda798579d286b984f72"
+    },
+    {
+      "location": "layout.pdf",
+      "bytes": 12458,
+      "sha256": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102"
+    },
+    {
+      "location": "original.png",
+      "bytes": 12703,
+      "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+    },
+    {
+      "location": "page.designcraft",
+      "bytes": 7116,
+      "sha256": "5648f4096dd2264aae2f9e44f1a7117234c7e33c2a7bb59bfcf365bab5999160"
+    },
+    {
+      "location": "photo.png",
+      "bytes": 4050,
+      "sha256": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de"
+    }
+  ]
+}

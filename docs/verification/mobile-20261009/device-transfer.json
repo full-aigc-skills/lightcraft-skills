@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "device": {
+    "deviceIdSha256": "bb607c60aa896ac85784e6c41e5ea344dd41d8be89446cec1ac3d25e70987a63",
+    "model": "MI 9",
+    "android": "11",
+    "api": "30",
+    "screen": "Physical size: 1080x2340",
+    "density": "Physical density: 440",
+    "remoteRoot": "/sdcard/Download/lightcraft-acceptance-20261009-527e7873"
+  },
+  "deliveries": [
+    {
+      "name": "source",
+      "packagingIdentity": "PASS",
+      "deviceTransferIdentity": "PASS",
+      "members": [
+        {
+          "location": "delivery.pdf",
+          "bytes": 12370,
+          "sha256": "6ecc2674bd46a597a19d5d69220263c6a1947a18930b21f2b125cd6182795516",
+          "deviceSha256": "6ecc2674bd46a597a19d5d69220263c6a1947a18930b21f2b125cd6182795516"
+        },
+        {
+          "location": "evidence/native-exchange-report.json",
+          "bytes": 33028,
+          "sha256": "863e2a4d6fe152a7bd6ca2de855d88ddd2cae2d95a8cd0092bfe675ef1e6ca70",
+          "deviceSha256": "863e2a4d6fe152a7bd6ca2de855d88ddd2cae2d95a8cd0092bfe675ef1e6ca70"
+        },
+        {
+          "location": "layout.pdf",
+          "bytes": 12458,
+          "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+          "deviceSha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f"
+        },
+        {
+          "location": "original.png",
+          "bytes": 12703,
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "deviceSha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        },
+        {
+          "location": "page.designcraft",
+          "bytes": 7116,
+          "sha256": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982",
+          "deviceSha256": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982"
+        },
+        {
+          "location": "photo.png",
+          "bytes": 4051,
+          "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+          "deviceSha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526"
+        },
+        {
+          "location": "delivery-manifest.json",
+          "bytes": 4408,
+          "sha256": "e60f3f7753a23eb36a9b1e01d87f0bb1fe8841f8e3c17926213979cfc8a9aecd",
+          "deviceSha256": "e60f3f7753a23eb36a9b1e01d87f0bb1fe8841f8e3c17926213979cfc8a9aecd"
+        }
+      ],
+      "manifestSha256": "e60f3f7753a23eb36a9b1e01d87f0bb1fe8841f8e3c17926213979cfc8a9aecd",
+      "sourceReportSha256": "863e2a4d6fe152a7bd6ca2de855d88ddd2cae2d95a8cd0092bfe675ef1e6ca70",
+      "sourceTreeUnchanged": true,
+      "remoteRoot": "/sdcard/Download/lightcraft-acceptance-20261009-527e7873/source",
+      "visual": "NOT_RUN",
+      "nativeProjectDeviceEditing": "NOT_RUN"
+    },
+    {
+      "name": "plugin",
+      "packagingIdentity": "PASS",
+      "deviceTransferIdentity": "PASS",
+      "members": [
+        {
+          "location": "delivery.pdf",
+          "bytes": 12366,
+          "sha256": "6a34d09798e35a3016ab85d4dcb50942c72279add71239b0145d4c268d1fb71a",
+          "deviceSha256": "6a34d09798e35a3016ab85d4dcb50942c72279add71239b0145d4c268d1fb71a"
+        },
+        {
+          "location": "evidence/native-exchange-report.json",
+          "bytes": 33032,
+          "sha256": "fef798ace2e21b5dca01824af11059d21db50607b8f7bda798579d286b984f72",
+          "deviceSha256": "fef798ace2e21b5dca01824af11059d21db50607b8f7bda798579d286b984f72"
+        },
+        {
+          "location": "layout.pdf",
+          "bytes": 12458,
+          "sha256": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102",
+          "deviceSha256": "53c56b845f6d30354dbf6e90d3c6640dca86eb7cc827b0d8011cc2e88eadd102"
+        },
+        {
+          "location": "original.png",
+          "bytes": 12703,
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "deviceSha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        },
+        {
+          "location": "page.designcraft",
+          "bytes": 7116,
+          "sha256": "5648f4096dd2264aae2f9e44f1a7117234c7e33c2a7bb59bfcf365bab5999160",
+          "deviceSha256": "5648f4096dd2264aae2f9e44f1a7117234c7e33c2a7bb59bfcf365bab5999160"
+        },
+        {
+          "location": "photo.png",
+          "bytes": 4050,
+          "sha256": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de",
+          "deviceSha256": "4cdffb9cf840946ae021c64b83481ca64fa745508058c13c5ddc0976d42ea9de"
+        },
+        {
+          "location": "delivery-manifest.json",
+          "bytes": 4408,
+          "sha256": "49b391b40758bc06e8431197be3d2ad24edbefbbba88c38212ddbcb5bcfcbdcd",
+          "deviceSha256": "49b391b40758bc06e8431197be3d2ad24edbefbbba88c38212ddbcb5bcfcbdcd"
+        }
+      ],
+      "manifestSha256": "49b391b40758bc06e8431197be3d2ad24edbefbbba88c38212ddbcb5bcfcbdcd",
+      "sourceReportSha256": "fef798ace2e21b5dca01824af11059d21db50607b8f7bda798579d286b984f72",
+      "sourceTreeUnchanged": true,
+      "remoteRoot": "/sdcard/Download/lightcraft-acceptance-20261009-527e7873/plugin",
+      "visual": "NOT_RUN",
+      "nativeProjectDeviceEditing": "NOT_RUN"
+    }
+  ],
+  "scope": "Android file delivery; no application installation, device native project editing or tablet evidence",
+  "automaticReplay": false
+}

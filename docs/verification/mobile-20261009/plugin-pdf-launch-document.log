@@ -1,0 +1,7 @@
+Starting: Intent { act=android.intent.action.VIEW dat=file:///sdcard/Download/lightcraft-acceptance-20261009-527e7873/plugin/delivery.pdf typ=application/pdf flg=0x8080001 cmp=cn.wps.moffice_eng.xiaomi.lite/cn.wps.moffice.plugin.app.entrance.PDFEntranceActivity }
+Status: ok
+LaunchState: WARM
+Activity: cn.wps.moffice_eng.xiaomi.lite/cn.wps.moffice.plugin.app.multiactivity.pdf.PDFActivity2
+TotalTime: 439
+WaitTime: 460
+Complete

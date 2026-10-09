@@ -1,0 +1,134 @@
+{
+  "identity": "PASS",
+  "manifestSha256": "e60f3f7753a23eb36a9b1e01d87f0bb1fe8841f8e3c17926213979cfc8a9aecd",
+  "members": [
+    {
+      "location": "delivery.pdf",
+      "bytes": 12370,
+      "sha256": "6ecc2674bd46a597a19d5d69220263c6a1947a18930b21f2b125cd6182795516"
+    },
+    {
+      "location": "evidence/native-exchange-report.json",
+      "bytes": 33028,
+      "sha256": "863e2a4d6fe152a7bd6ca2de855d88ddd2cae2d95a8cd0092bfe675ef1e6ca70"
+    },
+    {
+      "location": "layout.pdf",
+      "bytes": 12458,
+      "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f"
+    },
+    {
+      "location": "original.png",
+      "bytes": 12703,
+      "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+    },
+    {
+      "location": "page.designcraft",
+      "bytes": 7116,
+      "sha256": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982"
+    },
+    {
+      "location": "photo.png",
+      "bytes": 4051,
+      "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526"
+    }
+  ],
+  "artifacts": [
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "original-photo",
+      "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+      "bytes": 12703,
+      "mediaType": "image/png",
+      "producerTaskId": "fixture",
+      "sourceRefs": [],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "original.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "developed-photo",
+      "version": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+      "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+      "bytes": 4051,
+      "mediaType": "image/png",
+      "producerTaskId": "photo",
+      "sourceRefs": [
+        {
+          "assetId": "original-photo",
+          "version": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f",
+          "sha256": "5612321bb2a2d8a9739a9318884b3dc2cafa05d2d105a136509db9e896d32b8f"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "photo.png"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "layout-pdf",
+      "version": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+      "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+      "bytes": 12458,
+      "mediaType": "application/pdf",
+      "producerTaskId": "layout",
+      "sourceRefs": [
+        {
+          "assetId": "developed-photo",
+          "version": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526",
+          "sha256": "92fa36073ad9296142ab961c3ca0ef1ab76536902f8037903ea228bab79ff526"
+        }
+      ],
+      "nativeProjectRef": {
+        "assetId": "layout-native",
+        "version": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982",
+        "sha256": "f2de9204ad47a0f80197eefbbf92aa83f4c2babddfd5d5b4fad380a9ae359982",
+        "location": "page.designcraft"
+      },
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "layout.pdf"
+    },
+    {
+      "protocolVersion": "craft-artifact/v1",
+      "assetId": "delivery-pdf",
+      "version": "6ecc2674bd46a597a19d5d69220263c6a1947a18930b21f2b125cd6182795516",
+      "sha256": "6ecc2674bd46a597a19d5d69220263c6a1947a18930b21f2b125cd6182795516",
+      "bytes": 12370,
+      "mediaType": "application/pdf",
+      "producerTaskId": "pdf",
+      "sourceRefs": [
+        {
+          "assetId": "layout-pdf",
+          "version": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f",
+          "sha256": "f1f431d4065d922111a10e56bdd60e30513b765d91df6884cc19c39469be456f"
+        }
+      ],
+      "nativeProjectRef": null,
+      "renditions": [],
+      "dependencies": [],
+      "technicalMetadata": {},
+      "lossReportRef": null,
+      "evidenceRefs": [],
+      "location": "delivery.pdf"
+    }
+  ],
+  "deviceAcceptance": "NOT_RUN",
+  "visual": "NOT_RUN",
+  "nativeProjectMobileReopen": "NOT_RUN",
+  "automaticReplay": false,
+  "executionAllowed": false
+}

@@ -1,0 +1,8 @@
+{
+  "scripts/mobile_delivery.py": "f8eb707ade71bd9109acc56ad8328d99326867971df114c6995b98bf8f47d5ba",
+  "scripts/controller.py": "a9cf070f6d679e82983418dd1cc0eb2bb36b4a5078c8e1dc387d9f568f885d0b",
+  "tests/test_mobile_delivery.py": "67f94aaa4b55019ad8f3e4163b84f07d324c4fe6a49ae79d3f7a997e4f177bb3",
+  "local-components.json": "f4bb0376810791bf6cc9a2dad0aa4da309269b6b25445ba376372da9691065b8",
+  ".github/workflows/offline-contracts.yml": "4ca6f0a5e66bf018a6b3033cdc5aa49c334d0243b7238cffcddca6baf197ce22",
+  "scripts/craft_exchange.ts": "ea87c30275ae57a0baf5880375abcb6f2012b344839318dc6c8f997eb74cd351"
+}
