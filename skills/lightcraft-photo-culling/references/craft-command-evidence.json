@@ -1,0 +1,50 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "57f3e65fccd33abf2f37d67532662ca55235287f5b41e5bb9bc057da4485caa9",
+    "executable": "lightcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "library.info": {
+      "enabled": true,
+      "id": "library.info",
+      "label": "Library Info",
+      "menu": [],
+      "params": "{}",
+      "shortcut": null
+    },
+    "photo.rate": {
+      "enabled": true,
+      "id": "photo.rate",
+      "label": "Set Rating",
+      "menu": [
+        "Photo",
+        "Set Rating"
+      ],
+      "params": "{rating: 0..5, ids?, advance?: bool}",
+      "shortcut": null
+    },
+    "photo.flag": {
+      "enabled": true,
+      "id": "photo.flag",
+      "label": "Set Flag",
+      "menu": [
+        "Photo",
+        "Set Flag"
+      ],
+      "params": "{flag: pick|reject|none, ids?, advance?: bool}",
+      "shortcut": null
+    },
+    "export.contactSheet": {
+      "enabled": true,
+      "id": "export.contactSheet",
+      "label": "Export Contact Sheet PDF",
+      "menu": [],
+      "params": "{path, ids?: photo ids (default selection), paper?: a4|letter, landscape?: bool, columns?: 1..8, rows?: 1..10, captions?: bool} → {path, pages, photos, bytes}; replaces an existing output, never an original",
+      "shortcut": null
+    }
+  },
+  "sceneAcceptance": "NOT_RUN"
+}

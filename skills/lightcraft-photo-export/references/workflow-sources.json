@@ -1,0 +1,29 @@
+{
+  "policy": "只借鉴工作流事实，场景正文与命令例子原创编写，不复制外部代码、正文或素材。许可不明的来源仅作为参考。",
+  "sources": [
+    {
+      "repository": "dpnkrpl/awesome-lightroom-presets",
+      "commit": "c9671b6857acc6dd660e85fe2c29d05188df7ffe",
+      "license": {
+        "key": "unlicense",
+        "name": "The Unlicense",
+        "spdx_id": "Unlicense",
+        "url": "https://api.github.com/licenses/unlicense",
+        "node_id": "MDc6TGljZW5zZTE1"
+      },
+      "readFiles": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/README.md",
+          "bytes": 228
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/LICENSE",
+          "bytes": 1211
+        }
+      ],
+      "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    }
+  ]
+}

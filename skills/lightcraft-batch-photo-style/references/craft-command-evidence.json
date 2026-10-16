@@ -1,0 +1,70 @@
+{
+  "runtime": {
+    "version": "v0.8.0",
+    "url": "https://github.com/storytold/lightcraft/releases/download/v0.8.0/lightcraft-0.8.0-windows-x64-portable.zip",
+    "sha256": "57f3e65fccd33abf2f37d67532662ca55235287f5b41e5bb9bc057da4485caa9",
+    "executable": "lightcraft-cli.exe"
+  },
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "observedCommands": {
+    "catalog.query": {
+      "enabled": true,
+      "id": "catalog.query",
+      "label": "Query Photos",
+      "menu": [],
+      "params": "{filter?: Filter, sort?: Sort, offset?, limit?} — omit filter to list the current view",
+      "shortcut": null
+    },
+    "presets.list": {
+      "enabled": true,
+      "id": "presets.list",
+      "label": "List Presets",
+      "menu": [],
+      "params": "{}",
+      "shortcut": null
+    },
+    "library.select": {
+      "enabled": true,
+      "id": "library.select",
+      "label": "Select Photos",
+      "menu": [],
+      "params": "{ids: [id], active?: id, mode?: replace|add|toggle|range} — every id must be a photo of the library",
+      "shortcut": null
+    },
+    "develop.get": {
+      "enabled": true,
+      "id": "develop.get",
+      "label": "Get Develop Settings",
+      "menu": [],
+      "params": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)",
+      "shortcut": null
+    },
+    "develop.set": {
+      "enabled": true,
+      "id": "develop.set",
+      "label": "Set Develop Values",
+      "menu": [],
+      "params": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} — see develop.controls; `crop.angle` turns the crop as crop.straighten does (kept if it still fits, else the largest of its aspect inside the photo)",
+      "shortcut": null
+    },
+    "preset.create": {
+      "enabled": true,
+      "id": "preset.create",
+      "label": "Create Preset",
+      "menu": [
+        "Photo"
+      ],
+      "params": "{name, group?, groups?: [settingsGroup]}",
+      "shortcut": null
+    },
+    "preset.apply": {
+      "enabled": true,
+      "id": "preset.apply",
+      "label": "Apply Preset",
+      "menu": [],
+      "params": "{id: presetId, amount?: 0..200 (percent), ids?}",
+      "shortcut": null
+    }
+  },
+  "sceneAcceptance": "NOT_RUN"
+}

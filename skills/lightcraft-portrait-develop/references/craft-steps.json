@@ -1,0 +1,40 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "portrait-develop",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "读取当前显影设置与控制范围",
+      "command": "develop.controls",
+      "params": {}
+    },
+    {
+      "purpose": "适度提升脸部整体曝光起点",
+      "command": "develop.set",
+      "params": {
+        "control": "light.exposure",
+        "value": 0.15
+      }
+    },
+    {
+      "purpose": "核对保存的参数",
+      "command": "develop.get",
+      "params": {}
+    },
+    {
+      "purpose": "输出自然人像参考",
+      "command": "app.export",
+      "params": {
+        "path": "output/portrait-proof.jpg",
+        "longEdge": 1600,
+        "dontEnlarge": true,
+        "colorSpace": "srgb"
+      }
+    }
+  ],
+  "check": "肤色、头颈和背景关系自然，100%检查噪声与皮肤纹理。",
+  "boundary": "整体曝光不等于局部脸部蒙版；需要局部精修时交PhotoCraft并保留原库。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+}

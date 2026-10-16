@@ -1,0 +1,40 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "raw-develop",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "读取滑块范围与默认值",
+      "command": "develop.controls",
+      "params": {}
+    },
+    {
+      "purpose": "小幅校正曝光",
+      "command": "develop.set",
+      "params": {
+        "control": "light.exposure",
+        "value": 0.25
+      }
+    },
+    {
+      "purpose": "核对当前参数",
+      "command": "develop.get",
+      "params": {}
+    },
+    {
+      "purpose": "导出色彩参考",
+      "command": "app.export",
+      "params": {
+        "path": "output/raw-proof.jpg",
+        "width": 1600,
+        "dontEnlarge": true,
+        "colorSpace": "srgb"
+      }
+    }
+  ],
+  "check": "对照实际RAW解码肤色、中性色与高光；色彩异常先停止。",
+  "boundary": "没有正确相机解码不能靠拉滑块掩盖；控制ID先由当前develop.controls确认。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+}

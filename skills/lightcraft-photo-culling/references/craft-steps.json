@@ -1,0 +1,41 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "photo-culling",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "检查图库状态和导入数量",
+      "command": "library.info",
+      "params": {}
+    },
+    {
+      "purpose": "给已确认精选照片评级",
+      "command": "photo.rate",
+      "params": {
+        "rating": 4
+      }
+    },
+    {
+      "purpose": "标记精选而非删除原片",
+      "command": "photo.flag",
+      "params": {
+        "flag": "pick"
+      }
+    },
+    {
+      "purpose": "导出联系表进行整体核对",
+      "command": "export.contactSheet",
+      "params": {
+        "path": "output/selects.pdf",
+        "columns": 4,
+        "rows": 5,
+        "captions": true
+      }
+    }
+  ],
+  "check": "精选数量与联系表一致，检查失焦、闭眼、重复，保留筛选理由。",
+  "boundary": "rating/flag默认作用于当前选择；不要未选照片便批量执行，不删除原片。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+}
