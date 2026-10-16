@@ -17,3 +17,7 @@ python3 -I -B -m unittest discover -s tests -v
 [任务与规格](openspec/README.md) · [当前证据及差距](docs/verification/implementation-evidence.md) · [分层报告](docs/verification/local-report.json) · [架构](docs/architecture.md) · [运行回执](docs/task-receipts.zh-CN.md)
 
 本轮候选状态与实际证据以 [六目标验收记录](docs/verification/windows-20261008/README.md) 为准，历史版本通过记录不能代替当前候选验收。
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。

@@ -29,3 +29,7 @@ SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam
 六目标平台任务已完成，当前扩展任务 4/12 完成、8 项 OPEN，见 [固定 CLI 平台证据](docs/verification/windows-20261008/README.md)。当前宿主、视觉和插件来源配套门禁仍未关闭，候选版本未公开发布。
 
 当前候选隔离宿主五类场景通过；Nikon RAW 视觉复核发现明显偏色，公开发布门禁保持开放，见 [当前宿主及视觉证据](docs/verification/current-host-20261008/README.md)。宿主 MCP 与桌面验收尚未完成。
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
