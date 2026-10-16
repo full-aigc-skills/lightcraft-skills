@@ -21,3 +21,7 @@ python3 -I -B -m unittest discover -s tests -v
 ## 场景技能开发候选
 
 已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
+
+## 场景操作手册
+
+新增8条带具体命令、参数和效果检查的流程，见 [lightcraft-scenario-playbooks](skills/lightcraft-scenario-playbooks/SKILL.md)。输入坐标与时长须现场重算，原生技术验证与真实素材效果状态独立记录。
