@@ -23,3 +23,7 @@ CLI：`lightcraft-cli run --library <专用库> --import input.png --script step
 ## 技能商店场景经验
 
 遇到按照明分组的白平衡校正、技术纠正先于风格、以联系表筛出批量例外时，读取[商店工作流适配](references/market-workflows.md)，使用对应的Craft方法和实际结果检查。上游技能不作为运行依赖。
+
+## main开发候选
+
+需要联系印样PDF、蒙版效果模板或幻灯片导出时，先读[main工作流与完整参数入口](references/main-workflows.md)。Web没有实时目录时按需读取固定main参数；不能据原生目录推断前端全部可用。

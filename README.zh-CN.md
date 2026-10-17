@@ -25,3 +25,7 @@ python3 -I -B -m unittest discover -s tests -v
 ## 场景操作手册
 
 新增8条带具体命令、参数和效果检查的流程，见 [lightcraft-scenario-playbooks](skills/lightcraft-scenario-playbooks/SKILL.md)。输入坐标与时长须现场重算，原生技术验证与真实素材效果状态独立记录。
+
+## main新流程候选
+
+新增[联系印样、局部蒙版模板与幻灯片导出指导](skills/lightcraft-scenario-playbooks/references/main-workflows.md)，并提供固定main完整参数入口，覆盖新增58个方法。新流程尚未业务验收，Web能力逐项检查，不据目录推断通过。
