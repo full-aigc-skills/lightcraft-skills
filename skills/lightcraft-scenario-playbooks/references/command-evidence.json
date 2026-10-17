@@ -1,0 +1,239 @@
+{
+  "runtime": "lightcraft-cli 0.8.0 Windows x64",
+  "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38921194883",
+  "sceneAcceptance": "TECHNICAL_PASS_CREATIVE_NOT_RUN",
+  "observedCommands": {
+    "app.export": {
+      "enabled": true,
+      "id": "app.export",
+      "label": "Export Now",
+      "menu": [],
+      "params": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default",
+      "shortcut": null
+    },
+    "crop.aspect": {
+      "enabled": true,
+      "id": "crop.aspect",
+      "label": "Crop Aspect",
+      "menu": [],
+      "params": "{aspect: \"original\"|\"free\"|\"current\" (lock the crop's present shape)|\"toggle\" (lock ↔ free)|\"1x1\"|\"4x5\"|\"8.5x11\"|\"5x7\"|\"2x3\"|\"4x3\"|\"16x9\"|\"16x10\"|[w,h]}",
+      "shortcut": null
+    },
+    "crop.set": {
+      "enabled": true,
+      "id": "crop.set",
+      "label": "Set Crop",
+      "menu": [],
+      "params": "{rect?: [x0,y0,x1,y1] normalized in the straightened frame, angle?: degrees}",
+      "shortcut": null
+    },
+    "develop.autoBwMix": {
+      "enabled": true,
+      "id": "develop.autoBwMix",
+      "label": "Auto B&W Mix",
+      "menu": [],
+      "params": "{} — sets the black & white mix from the photo's colours (and switches to B&W)",
+      "shortcut": null
+    },
+    "develop.controls": {
+      "enabled": true,
+      "id": "develop.controls",
+      "label": "List Develop Controls",
+      "menu": [],
+      "params": "{section?} — every slider with range, default and current value",
+      "shortcut": null
+    },
+    "develop.get": {
+      "enabled": true,
+      "id": "develop.get",
+      "label": "Get Develop Settings",
+      "menu": [],
+      "params": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)",
+      "shortcut": null
+    },
+    "develop.resetSection": {
+      "enabled": true,
+      "id": "develop.resetSection",
+      "label": "Reset Section",
+      "menu": [],
+      "params": "{section: light|curve|color|mixer|grading|effects|vignette|grain|detail|optics|geometry}",
+      "shortcut": null
+    },
+    "develop.set": {
+      "enabled": true,
+      "id": "develop.set",
+      "label": "Set Develop Values",
+      "menu": [],
+      "params": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} — see develop.controls; `crop.angle` turns the crop as crop.straighten does (kept if it still fits, else the largest of its aspect inside the photo)",
+      "shortcut": null
+    },
+    "develop.treatment": {
+      "enabled": true,
+      "id": "develop.treatment",
+      "label": "Black & White",
+      "menu": [
+        "Photo"
+      ],
+      "params": "{bw?: bool} (toggles when omitted)",
+      "shortcut": "V"
+    },
+    "develop.wbPick": {
+      "enabled": true,
+      "id": "develop.wbPick",
+      "label": "White Balance Selector",
+      "menu": [],
+      "params": "{x, y} normalized image coords of a neutral point",
+      "shortcut": "W"
+    },
+    "export.contactSheet": {
+      "enabled": true,
+      "id": "export.contactSheet",
+      "label": "Export Contact Sheet PDF",
+      "menu": [],
+      "params": "{path, ids?: photo ids (default selection), paper?: a4|letter, landscape?: bool, columns?: 1..8, rows?: 1..10, captions?: bool} → {path, pages, photos, bytes}; replaces an existing output, never an original",
+      "shortcut": null
+    },
+    "library.selectAll": {
+      "enabled": true,
+      "id": "library.selectAll",
+      "label": "Select All",
+      "menu": [
+        "Edit"
+      ],
+      "params": "{}",
+      "shortcut": "Cmd+A"
+    }
+  },
+  "archiveSha256": "57f3e65fccd33abf2f37d67532662ca55235287f5b41e5bb9bc057da4485caa9",
+  "executableSha256": "8a50fa52c0e264e4826aeb1e0e6f4f6af8baeab27d6931f9463130f7058af952",
+  "technicalRoundtrip": {
+    "ciRun": "https://github.com/partme-ai/full-aigc-plugins/actions/runs/38931238554",
+    "sourceCommit": "00ef2d690c3a9cf652679e3e910d250b1d476932",
+    "input": "deterministic 64x48 RGB PNG with warm neutral-reference patch",
+    "recipes": [
+      "highlight-tone-proof",
+      "monochrome-editable-proof",
+      "square-product-crop",
+      "neutral-reference-balance",
+      "watermarked-review",
+      "screen-print-dual-export",
+      "review-contact-sheet",
+      "reset-light-preserve-color"
+    ],
+    "stepHashes": {
+      "highlight-tone-proof": "742826558dadf2daccf01469aa7807dd43bcaf521fc5810cdaff189ab8d11b92",
+      "monochrome-editable-proof": "39ccdf89f5166527c23c0654348bdfb6873b2a828e7aa337c2efd0c34086f0b1",
+      "square-product-crop": "a77a6e6976dbd65afd1a357750e0eebd9034089b0fd45ce88d7dc31fc2a99dd5",
+      "neutral-reference-balance": "dbb97fc4ac75f02dfe1323e01c4ea928377bdc9ce611aac7101d0f6d1009c72d",
+      "watermarked-review": "88bfd7c156262b7de352cbe89fc3e43ef6278e5c408a8ee5f916573a1359825c",
+      "screen-print-dual-export": "9a280e4281e2b4341ef9870e3752f7bc440126d22545d5b97aa416498934fb00",
+      "review-contact-sheet": "29527a75395c4d072ada231c5b026999024f69a611d8229eea6b395d1a8cf204",
+      "reset-light-preserve-color": "3241375e1346f7d047dbc75f0b5531877b8cd3b71a2972b9099358d52828dc74"
+    },
+    "checks": [
+      "saved develop settings",
+      "grayscale output",
+      "48x48 crop",
+      "gray-card channel imbalance reduction",
+      "watermark pixel change",
+      "16-bit TIFF output",
+      "two-photo contact sheet",
+      "save-reopen-rerender pixel equality",
+      "input PNG unchanged"
+    ],
+    "creativeAcceptance": "NOT_TESTED",
+    "manualOutputInspection": {
+      "tiffEmbeddedIccBytes": 584,
+      "tiffSha256": "ec23bf9a34b995f72aa779a08a0d649d8cac7c9f795854ea467c36c8fa239014",
+      "scope": "ICC tag presence verified on downloaded final output; not a print-device soft proof"
+    }
+  },
+  "observedControls": {
+    "wb.temp": {
+      "decimals": 0,
+      "default": 6500.0,
+      "id": "wb.temp",
+      "label": "Temp",
+      "max": 50000.0,
+      "min": 2000.0,
+      "section": "color",
+      "step": 50.0,
+      "track": {
+        "kind": "temp"
+      },
+      "value": 6500.0
+    },
+    "wb.tint": {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "wb.tint",
+      "label": "Tint",
+      "max": 150.0,
+      "min": -150.0,
+      "section": "color",
+      "step": 1.0,
+      "track": {
+        "kind": "tint"
+      },
+      "value": 0.0
+    },
+    "light.exposure": {
+      "decimals": 2,
+      "default": 0.0,
+      "id": "light.exposure",
+      "label": "Exposure",
+      "max": 5.0,
+      "min": -5.0,
+      "section": "light",
+      "step": 0.01,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    "light.highlights": {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.highlights",
+      "label": "Highlights",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    "light.shadows": {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "light.shadows",
+      "label": "Shadows",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "light",
+      "step": 1.0,
+      "track": {
+        "kind": "centered"
+      },
+      "value": 0.0
+    },
+    "color.saturation": {
+      "decimals": 0,
+      "default": 0.0,
+      "id": "color.saturation",
+      "label": "Saturation",
+      "max": 100.0,
+      "min": -100.0,
+      "section": "color",
+      "step": 1.0,
+      "track": {
+        "from": "#7a7a7a",
+        "kind": "gradient",
+        "to": "#e04a3a"
+      },
+      "value": 0.0
+    }
+  }
+}

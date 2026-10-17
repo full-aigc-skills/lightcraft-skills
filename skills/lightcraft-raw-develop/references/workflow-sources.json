@@ -1,0 +1,99 @@
+{
+  "policy": "只借鉴工作流事实，场景正文与命令例子原创编写，不复制外部代码、正文或素材。许可不明的来源仅作为参考。",
+  "sources": [
+    {
+      "repository": "dpnkrpl/awesome-lightroom-presets",
+      "commit": "c9671b6857acc6dd660e85fe2c29d05188df7ffe",
+      "license": {
+        "key": "unlicense",
+        "name": "The Unlicense",
+        "spdx_id": "Unlicense",
+        "url": "https://api.github.com/licenses/unlicense",
+        "node_id": "MDc6TGljZW5zZTE1"
+      },
+      "readFiles": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/README.md",
+          "bytes": 228
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/LICENSE",
+          "bytes": 1211
+        }
+      ],
+      "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    },
+    {
+      "repository": "darktable-org/dtdocs",
+      "commit": "2a1742f76f256b96a2e0ff9827240afd0b9a804a",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "readFiles": [
+        {
+          "path": "content/lighttable/digital-asset-management/metadata-tagging.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/lighttable/digital-asset-management/metadata-tagging.md",
+          "bytes": 839,
+          "sha256": "7192a43bd03fb030b60dceb5b805b3e4fdce63c3ac8228b7cff31fc51f4e6e47"
+        },
+        {
+          "path": "content/module-reference/utility-modules/shared/styles.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/utility-modules/shared/styles.md",
+          "bytes": 4696,
+          "sha256": "3176291f6284ee43e6598cb785677801c8859a224fd17176643b21f75f52cc39"
+        },
+        {
+          "path": "content/module-reference/utility-modules/shared/export.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/utility-modules/shared/export.md",
+          "bytes": 13696,
+          "sha256": "f31930c6047a2dedfd746c225251bcbd6c4459632ba828ae13aed3cdf126c150"
+        }
+      ],
+      "reuse": "Workflow facts only, original Craft adaptation; no upstream text/code/assets copied"
+    },
+    {
+      "repository": "storytold/lightcraft",
+      "commit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+      "readFiles": [
+        {
+          "path": "crates/engine/src/cmd/query.rs",
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/crates/engine/src/cmd/query.rs",
+          "sha256": "d331e21ec3ad4e8f7f1b2d6f0a08c0091164c28148ce6da8636c8d4eaf9c42ac",
+          "bytes": 15060
+        },
+        {
+          "path": "crates/engine/src/cmd/library.rs",
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/crates/engine/src/cmd/library.rs",
+          "sha256": "67bbe971a3f7ad3314ffae583f321261f24e6e579cb607afa6185febe8c2c6f8",
+          "bytes": 93364
+        },
+        {
+          "path": "crates/engine/src/cmd/develop.rs",
+          "url": "https://github.com/storytold/lightcraft/blob/f34c7a8a89e0d1bade0a6889185f40acecc84a9f/crates/engine/src/cmd/develop.rs",
+          "sha256": "0b3fe4c27510c080a2cadcae5295b4c34c85986339fcdb436fe90df0dcba0961",
+          "bytes": 60648
+        }
+      ],
+      "reuse": "Observed command, photo metadata and settings-group semantics; no source code copied"
+    }
+  ],
+  "fixedNativeTestFixture": {
+    "make": "Nikon",
+    "model": "D2H",
+    "variant": "12bit 12bit compressed (Lossy (type 1)) (3:2)",
+    "sha256": "155edb938f884ea7372ce98d4ff5f965c3e413b43b95bc9923da6e92082cf914",
+    "bytes": 3236017,
+    "sourceUrl": "https://raw.pixls.us/getfile.php/5227/nice/Nikon - D2H - 12bit 12bit compressed (Lossy (type 1)) (3:2).NEF",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "catalogUrl": "https://raw.pixls.us/json/getrepository.php?set=all",
+    "sampleId": "nikon-d2h-1",
+    "catalogEntrySha256": "949ab6a9ca48267b51c6daac86c717513f65e60de9e14bc52fd74d263b404499"
+  }
+}

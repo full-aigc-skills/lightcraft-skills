@@ -17,3 +17,19 @@ python3 -I -B -m unittest discover -s tests -v
 [任务与规格](openspec/README.md) · [当前证据及差距](docs/verification/implementation-evidence.md) · [分层报告](docs/verification/local-report.json) · [架构](docs/architecture.md) · [运行回执](docs/task-receipts.zh-CN.md)
 
 本轮候选状态与实际证据以 [六目标验收记录](docs/verification/windows-20261008/README.md) 为准，历史版本通过记录不能代替当前候选验收。
+
+## 场景技能开发候选
+
+已增加 6 个领域场景技能及 1 个内嵌编辑器入口。详见 [场景目录](docs/scene-skills.md)。本地未发布候选，不代表全部场景的创作质量已验收。
+
+## 场景操作手册
+
+新增8条带具体命令、参数和效果检查的流程，见 [lightcraft-scenario-playbooks](skills/lightcraft-scenario-playbooks/SKILL.md)。输入坐标与时长须现场重算，原生技术验证与真实素材效果状态独立记录。
+
+## main新流程候选
+
+新增[联系印样、局部蒙版模板与幻灯片导出指导](skills/lightcraft-scenario-playbooks/references/main-workflows.md)，并提供固定main完整参数入口，覆盖新增58个方法。新流程尚未业务验收，Web能力逐项检查，不据目录推断通过。
+
+## 六项核心显影场景回归
+
+选片、批量风格、人像整体曝光、风景拉直、照片交付、RAW基础显影六项指导已明确照片ID、选择与设置组边界；原8条手册加6条核心，共14条通过Windows限定技术回归。固定Nikon D2H NEF的运行时报告为完整RAW，导出与嵌入预览已查看；不推广到其他相机/变体，也不构成独立解码或色彩校准。EXIF GPS移除有保留对照，同名交付保护已验证。此处绑定官方0.8/main，不替代以上旧CLI 0.2.1、旧发行或宿主资格；创作效果与宿主同步仍开放。

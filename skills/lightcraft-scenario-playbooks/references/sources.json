@@ -1,0 +1,73 @@
+{
+  "policy": "只借鉴工作流事实，场景正文与命令例子原创编写，不复制外部代码、正文或素材。许可不明的来源仅作为参考。",
+  "sources": [
+    {
+      "repository": "dpnkrpl/awesome-lightroom-presets",
+      "commit": "c9671b6857acc6dd660e85fe2c29d05188df7ffe",
+      "license": {
+        "key": "unlicense",
+        "name": "The Unlicense",
+        "spdx_id": "Unlicense",
+        "url": "https://api.github.com/licenses/unlicense",
+        "node_id": "MDc6TGljZW5zZTE1"
+      },
+      "readFiles": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/README.md",
+          "bytes": 228
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/dpnkrpl/awesome-lightroom-presets/blob/c9671b6857acc6dd660e85fe2c29d05188df7ffe/LICENSE",
+          "bytes": 1211
+        }
+      ],
+      "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    },
+    {
+      "repository": "darktable-org/dtdocs",
+      "commit": "2a1742f76f256b96a2e0ff9827240afd0b9a804a",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "readFiles": [
+        {
+          "path": "content/module-reference/processing-modules/exposure.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/processing-modules/exposure.md",
+          "bytes": 8398
+        },
+        {
+          "path": "content/module-reference/processing-modules/crop.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/processing-modules/crop.md",
+          "bytes": 4488
+        },
+        {
+          "path": "content/module-reference/processing-modules/white-balance.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/processing-modules/white-balance.md",
+          "bytes": 6612
+        },
+        {
+          "path": "content/module-reference/processing-modules/watermark.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/processing-modules/watermark.md",
+          "bytes": 4659
+        },
+        {
+          "path": "content/overview/workflow/export.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/overview/workflow/export.md",
+          "bytes": 1693
+        },
+        {
+          "path": "content/guides-tutorials/monochrome.md",
+          "url": "https://github.com/darktable-org/dtdocs/blob/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/guides-tutorials/monochrome.md",
+          "bytes": 6630
+        }
+      ],
+      "reuse": "workflow facts and original adaptation only; no upstream text, code or assets copied"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "batch-photo-style",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "列出当前库照片，按光线分组并保留目标ID清单",
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      },
+      "capture": "photos"
+    },
+    {
+      "purpose": "读取已有预设",
+      "command": "presets.list",
+      "params": {}
+    },
+    {
+      "purpose": "明确把样张设为唯一选择和active，避免从错误照片创建预设",
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "active": "$sample.id",
+        "mode": "replace"
+      },
+      "bind": "sample.id从当前catalog.query实际照片中选择；ids整字段示例[12]，active示例12，必须为同一照片"
+    },
+    {
+      "purpose": "读取当前active样张设置后再修改",
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "bind": "id换成上一步active的真实样张ID"
+    },
+    {
+      "purpose": "在样张确定曝光起点",
+      "command": "develop.set",
+      "params": {
+        "control": "light.exposure",
+        "value": 0.25,
+        "ids": [
+          "$sample.id"
+        ]
+      },
+      "bind": "ids只含样张真实ID，与library.select.active相同"
+    },
+    {
+      "purpose": "只把适合共享的参数保存为预设",
+      "command": "preset.create",
+      "params": {
+        "name": "Session baseline",
+        "groups": [
+          "light"
+        ]
+      },
+      "capture": "preset"
+    },
+    {
+      "purpose": "对本组目标照片实际应用样张预设",
+      "command": "preset.apply",
+      "params": {
+        "id": "$preset.id",
+        "amount": 100,
+        "ids": "$group.photoIds"
+      },
+      "bind": "id = 创建的真实预设ID；ids整字段替换为目标数字数组，例如[12,13]。调用前断言非空、每项为整数且没有嵌套数组。不能传入[\"$group.photoIds\"]或[[12,13]]。"
+    },
+    {
+      "purpose": "逐张回读目标照片参数并核对共享项与单张曝光",
+      "command": "develop.get",
+      "params": {
+        "id": "$photo.id"
+      },
+      "bind": "对组内每个真实photo ID分别执行；导出联系表比较结果"
+    },
+    {
+      "purpose": "只对组内已确认目标导出JPEG试样，保留原片",
+      "command": "app.export",
+      "params": {
+        "ids": "$group.photoIds",
+        "dir": "output/batch",
+        "format": "jpeg",
+        "longEdge": 1600,
+        "dontEnlarge": true,
+        "metadata": "none",
+        "conflict": "unique"
+      }
+    },
+    {
+      "purpose": "以同一明确ID集合导出联系表用于整组审阅",
+      "command": "export.contactSheet",
+      "params": {
+        "ids": "$group.photoIds",
+        "path": "output/group-proof.pdf",
+        "columns": 2,
+        "rows": 2,
+        "captions": true
+      }
+    }
+  ],
+  "check": "按光线分组逐张核对，不同光照不强套同一曝光或白平衡。",
+  "boundary": "只从本库实际catalog ID选择样张和非空扁平目标数组，不能跨库复用。groups:[light]复制整个light组，含曝光/对比/高光等，不能声称只复制曝光或保留目标原有light参数；不共享的color/crop等需前后核对。按光线分组先试样，再实际preset.apply和逐张回读；创建预设不等于批量完成。预设创建依赖active样张，CLI中select/develop/create应放同一次run，捕获创建的真实字符串ID后再apply。",
+  "templateOnly": true,
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。",
+  "limitedTechnicalValidation": {
+    "mainRun": 39013647220,
+    "stableMatrixRun": 39013640352,
+    "nativeMainCommit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+    "targetPhotoAndUnselectedProtection": "PASS",
+    "nativeReopen": "PASS",
+    "creativeVisualAcceptance": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
+}

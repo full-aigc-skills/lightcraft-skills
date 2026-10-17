@@ -1,0 +1,153 @@
+{
+  "baselineCount": 313,
+  "mainCount": 371,
+  "added": [
+    "faces.gpu",
+    "faces.renamePerson",
+    "focus.pump",
+    "library.holdView",
+    "library.recheckPreviewOnly",
+    "library.refresh",
+    "library.retrySidecars",
+    "mask.applyEffect",
+    "mask.deleteEffect",
+    "mask.duplicateEffect",
+    "mask.effects",
+    "mask.exportEffects",
+    "mask.favoriteEffect",
+    "mask.importEffects",
+    "mask.renameEffect",
+    "mask.renameEffectGroup",
+    "mask.saveEffect",
+    "mask.setEffectGroup",
+    "mask.toolEffect",
+    "mask.updateEffect",
+    "merge.hdrBatch",
+    "photo.cycleFlag",
+    "photo.decreaseFlag",
+    "photo.increaseFlag",
+    "photo.readFocusPoints",
+    "print.cell.add",
+    "print.cell.delete",
+    "print.cell.move",
+    "print.cell.page",
+    "print.cell.photo",
+    "print.cell.resize",
+    "print.cell.stack",
+    "print.exportPdf",
+    "print.get",
+    "print.layout.autoLayout",
+    "print.layout.clear",
+    "print.layout.newPage",
+    "print.reset",
+    "print.set",
+    "print.template.apply",
+    "print.template.delete",
+    "print.template.list",
+    "print.template.save",
+    "slideshow.export",
+    "slideshow.exportStatus",
+    "slideshow.layout",
+    "slideshow.overlays",
+    "slideshow.playback",
+    "slideshow.preview",
+    "slideshow.templates.apply",
+    "slideshow.templates.delete",
+    "slideshow.templates.export",
+    "slideshow.templates.import",
+    "slideshow.templates.list",
+    "slideshow.templates.rename",
+    "slideshow.templates.save",
+    "slideshow.templates.update",
+    "slideshow.titles"
+  ],
+  "removed": [],
+  "contractsChanged": [
+    {
+      "id": "album.removePhotos",
+      "baseline": {
+        "params": "{id: albumId, ids?}"
+      },
+      "main": {
+        "params": "{id?: albumId (default: the album on screen), ids?} — takes the photos out of the album only: they stay in the library and in their folders (issue #1805; photo.delete removes them from the library) → {removed, album: name}"
+      }
+    },
+    {
+      "id": "app.export",
+      "baseline": {
+        "params": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+      },
+      "main": {
+        "params": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, destinationMode?: specificFolder|sameAsOriginal (sameAsOriginal = each photo into its original's folder; `dir` unused), subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+      }
+    },
+    {
+      "id": "crop.straighten",
+      "baseline": {
+        "params": "{angle: degrees -45..45} — keeps the largest crop of the current aspect"
+      },
+      "main": {
+        "params": "{angle: degrees -45..45} — keeps the crop if it still fits, else shrinks it about its centre (the largest crop of its aspect stays the largest)"
+      }
+    },
+    {
+      "id": "library.preferences",
+      "baseline": {
+        "params": "{import?: {rawPreset?: presetId|\"default\", otherPreset?: presetId|\"default\", perCamera?: bool, cameras?: [{camera: \"Make Model\", preset: presetId|null}], copyright?: text, creator?: text (given to imported photos without one)}, camera?: {camera, preset?, remove?: bool}, cacheMb?: n (0 = default), forgetLocalDays?: n (forget untouched Local photos of folders not browsed for n days; 0 = never)} — develop defaults applied on import (raws / other images / per camera) and the thumbnail cache size, saved with the library → {xmp, import, cacheMb, forgetLocalDays, persistent}"
+      },
+      "main": {
+        "params": "{import?: {rawPreset?: presetId|\"default\", otherPreset?: presetId|\"default\", perCamera?: bool, cameras?: [{camera: \"Make Model\", preset: presetId|null}], copyright?: text, creator?: text (given to imported photos without one), showOnCard?: bool (open the import review when a camera or card is connected)}, camera?: {camera, preset?, remove?: bool}, cacheMb?: n (0 = default), forgetLocalDays?: n (forget untouched Local photos of folders not browsed for n days; 0 = never)} — develop defaults applied on import (raws / other images / per camera) and the thumbnail cache size, saved with the library → {xmp, import, cacheMb, forgetLocalDays, persistent}"
+      }
+    },
+    {
+      "id": "mask.brushStroke",
+      "baseline": {
+        "params": "{id?: maskId, points: [[x,y],…] normalized, size?: fraction of long edge (0.03), feather?, flow?, density?, erase?: bool, autoMask?: bool}"
+      },
+      "main": {
+        "params": "{id?: maskId, points: [[x,y],…] normalized, size?: fraction of long edge (0.03), feather?, flow?, density?, erase?: bool, autoMask?: bool, pressure?: [p,…] pen pressure 0..1 per point (scales each dab's size and flow; omitted: full), connect?: bool — start from the last point of the mask's last stroke (⇧-click), size / feather / flow tapering from that stroke's to these} → {activeMask, connected}"
+      }
+    },
+    {
+      "id": "merge.panorama",
+      "baseline": {
+        "params": "{ids?, projection=auto|spherical|cylindrical|perspective, boundaryWarp=0..100, autoCrop=false, fillEdges=false, autoSettings=true, stack=false, maxMegapixels=40, preview=false, previewPath?}"
+      },
+      "main": {
+        "params": "{ids?, projection=auto|spherical|cylindrical|perspective, boundaryWarp=0..100, autoCrop=false, fillEdges=false, autoSettings=true, stack=false, maxMegapixels=full size (≤ 512, held to memory), preview=false, previewPath?}"
+      }
+    },
+    {
+      "id": "preset.import",
+      "baseline": {
+        "params": "{paths: [file or folder], group?, dryRun?} — .lcpreset, XMP presets, .lrtemplate, photos carrying edits (DNG/JPEG/TIFF \"DNG presets\"), Luminar looks (.lmp, .mplumpack collections) and .zip bundles of these; folders give their name as group; crs: fields mapped per docs/xmp-interop.md → {imported: [{id,name,group,file,unmapped}], skipped, failed}"
+      },
+      "main": {
+        "params": "{paths: [file or folder], group?, dryRun?} — .lcpreset, XMP presets, .lrtemplate, photos carrying edits (DNG/JPEG/TIFF \"DNG presets\"), Luminar looks (.lmp, .mplumpack collections) and .zip bundles of these; folders give their name as group; crs: fields mapped per docs/xmp-interop.md; local adjustment presets (Lightroom .lrtemplate, Camera Raw local .xmp, .lceffect) become mask effects (`mask.effects`; divider presets become their groups); a profile the preset names applies when it was imported with profile.import (before or after) → {imported: [{id,name,group,file,unmapped,profile: {name, id}|null}], skipped, failed, effects: [{name,group,file,unmapped}], effectDividers: [{name,group,file}]}"
+      }
+    }
+  ],
+  "app": "lightcraft",
+  "run": 39007949879,
+  "sourceCommit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+  "baselineSha256": "bfcf7cd51dfe06073e7826477623349339fe81af3813b1f1fa24aa3599cce0f3",
+  "mainSha256": "f590f8ccf5803a50d282f0d82b05b17399eec4dc87e76f460a0c5abdbec01072",
+  "baselineScope": "observed stable native CLI catalog; not old embedded engine",
+  "catalogKind": "native-engine-commands",
+  "calls": 28,
+  "records": 8,
+  "verifiedOutputs": 60,
+  "mainCapabilities": null,
+  "upstreamCapabilities": null,
+  "runtimeValidation": "existing workflows passed; new print/mask/template scenarios NOT_TESTED",
+  "newPrintWorkflow": {
+    "run": 39010884426,
+    "status": "PASS_NATIVE_WINDOWS",
+    "templateSaveApply": "PASS",
+    "restoredGridAndResolution": "PASS",
+    "twoPhotosOnePagePdf": "PASS",
+    "originalPhotosUnchanged": "PASS",
+    "thumbnailVisualReview": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
+}
