@@ -36,3 +36,7 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
 
 变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。
+
+## 限定技术回归
+
+Windows main [39013647220](https://github.com/partme-ai/full-aigc-plugins/actions/runs/39013647220)与稳定CLI 13应用矩阵 [39013640352](https://github.com/partme-ai/full-aigc-plugins/actions/runs/39013640352)通过：明确照片范围、参数/产物回读、非目标与原片保护。RAW只验证固定CC0 Nikon D2H样本的运行时完整解码报告、显影和重开，并查看该输出；不是独立解码器或色彩准确度证明。导出隐私验证使用合成EXIF GPS及保留对照，不代表所有隐私元数据格式认证。真实创作效果与宿主画面同步仍未验收；不替代旧CLI 0.2.1固定资格。

@@ -106,5 +106,14 @@
   "check": "按光线分组逐张核对，不同光照不强套同一曝光或白平衡。",
   "boundary": "只从本库实际catalog ID选择样张和非空扁平目标数组，不能跨库复用。groups:[light]复制整个light组，含曝光/对比/高光等，不能声称只复制曝光或保留目标原有light参数；不共享的color/crop等需前后核对。按光线分组先试样，再实际preset.apply和逐张回读；创建预设不等于批量完成。预设创建依赖active样张，CLI中select/develop/create应放同一次run，捕获创建的真实字符串ID后再apply。",
   "templateOnly": true,
-  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。",
+  "limitedTechnicalValidation": {
+    "mainRun": 39013647220,
+    "stableMatrixRun": 39013640352,
+    "nativeMainCommit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+    "targetPhotoAndUnselectedProtection": "PASS",
+    "nativeReopen": "PASS",
+    "creativeVisualAcceptance": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
 }
