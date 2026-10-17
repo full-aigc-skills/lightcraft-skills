@@ -1,0 +1,506 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "templateOnly": true,
+  "argumentPolicy": "示例为4秒48kHz音频或64×48图像；按输入重新测量时长、坐标和对象选择。新建动作仅执行一次，不覆盖原工程。",
+  "recipes": [
+    {
+      "id": "highlight-tone-proof",
+      "title": "有纹理亮部的影调整理",
+      "category": "develop",
+      "inputs": "亮部仍有纹理，已确认RAW或渲染图颜色正常。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "仅小幅压曝光与高光，保留暗部细节",
+          "command": "develop.set",
+          "params": {
+            "values": {
+              "light.exposure": -0.2,
+              "light.highlights": -25,
+              "light.shadows": 10
+            }
+          },
+          "parameterReference": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} — see develop.controls; `crop.angle` turns the crop as crop.straighten does (kept if it still fits, else the largest of its aspect inside the photo)"
+        },
+        {
+          "purpose": "读取实际保存的调整设置",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "高光层次可见且暗部未糊成灰",
+        "曝光-0.2与高光-25重新打开后仍存在",
+        "原片文件不变"
+      ],
+      "limits": "纯白剪切不可恢复；相机RAW解码或色彩异常必须先处理，不能靠滑块掩盖。",
+      "assertions": {
+        "settings": {
+          "light.exposure": -0.2,
+          "light.highlights": -25
+        },
+        "pixelChange": true
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "monochrome-editable-proof",
+      "title": "可继续调整的黑白照片版本",
+      "category": "develop",
+      "inputs": "用户要求黑白版本；彩色原片应保留。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "显式切换黑白处理而非不确定地toggle",
+          "command": "develop.treatment",
+          "params": {
+            "bw": true
+          },
+          "parameterReference": "{bw?: bool} (toggles when omitted)"
+        },
+        {
+          "purpose": "根据图像颜色建立初始黑白混合",
+          "command": "develop.autoBwMix",
+          "params": {},
+          "parameterReference": "{} — sets the black & white mix from the photo's colours (and switches to B&W)"
+        },
+        {
+          "purpose": "核对处理模式与当前参数",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "导出RGB三个通道相等或近似",
+        "彩色原片仍保留",
+        "肤色与背景仍有灰阶区分"
+      ],
+      "limits": "自动黑白混合只是起点，不等于特定胶片模拟；主体层次需实际审阅。",
+      "assertions": {
+        "grayscale": true
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "square-product-crop",
+      "title": "商品正方形构图交付",
+      "category": "geometry",
+      "inputs": "商品位于画面中心，确认四边可裁；示例原图4:3。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "以归一化坐标裁去左右边缘，示例64×48变48×48",
+          "command": "crop.set",
+          "params": {
+            "rect": [
+              0.125,
+              0,
+              0.875,
+              1
+            ],
+            "angle": 0
+          },
+          "parameterReference": "{rect?: [x0,y0,x1,y1] normalized in the straightened frame, angle?: degrees}"
+        },
+        {
+          "purpose": "锁定当前裁切比例，便于后续拖动",
+          "command": "crop.aspect",
+          "params": {
+            "aspect": "1x1"
+          },
+          "parameterReference": "{aspect: \"original\"|\"free\"|\"current\" (lock the crop's present shape)|\"toggle\" (lock ↔ free)|\"1x1\"|\"4x5\"|\"8.5x11\"|\"5x7\"|\"2x3\"|\"4x3\"|\"16x9\"|\"16x10\"|[w,h]}"
+        },
+        {
+          "purpose": "核对裁切设置",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "示例输出48×48",
+        "主体没有被裁断",
+        "库中保留可重置裁切的原片"
+      ],
+      "limits": "真实图片先重算裁切框；1x1约束不是自动主体识别。",
+      "assertions": {
+        "dimensions": [
+          48,
+          48
+        ]
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "neutral-reference-balance",
+      "title": "灰卡参考白平衡校正",
+      "category": "develop",
+      "inputs": "方向校正后的完整源图中有已确认中性灰/白参考点；在裁切之前取样。坐标不是当前裁切预览坐标。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "在方向校正后的完整源图取中性点，归一化坐标不套当前crop",
+          "command": "develop.wbPick",
+          "params": {
+            "x": 0.25,
+            "y": 0.5
+          },
+          "parameterReference": "{x, y} normalized image coords of a neutral point"
+        },
+        {
+          "purpose": "记录实际色温色调与模式",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "参考点的RGB差距减小或原已中性",
+        "肤色没有异常偏绿/洋红",
+        "白平衡设置保存于照片库"
+      ],
+      "limits": "JPEG参考白平衡与RAW相机色温模型不同；没有中性参考不能任意取背景当灰卡。 若从无旋转裁切预览定位，应先按crop框映射回完整源图；有旋转/拉直时使用真实几何映射，不直接套线性例子。",
+      "assertions": {
+        "neutralPoint": [
+          16,
+          24
+        ]
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "watermarked-review",
+      "title": "带署名的照片审稿版",
+      "category": "delivery",
+      "inputs": "文字署名和图片使用权来自任务输入；保留无水印母版。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "watermark": {
+              "text": "REVIEW",
+              "size": 0.12,
+              "opacity": 0.7,
+              "anchor": "bottomRight",
+              "color": [
+                1,
+                1,
+                1
+              ],
+              "shadow": true
+            },
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "署名可读且不遮挡主体",
+        "审稿版与母版分开命名",
+        "成片像素存在实际水印变化"
+      ],
+      "limits": "水印仅用于署名或审稿标记，不能代替权限控制；实际字号按成片尺寸复核。",
+      "assertions": {
+        "pixelChange": true
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "screen-print-dual-export",
+      "title": "同一编辑的屏幕版与印刷中间稿",
+      "category": "delivery",
+      "inputs": "已确认输出用途、目标色彩空间与像素要求，打印方接受TIFF。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "输出屏幕sRGB PNG，不放大原图",
+          "command": "app.export",
+          "params": {
+            "path": "screen.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "sharpen": "screen",
+            "sharpenAmount": "low",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        },
+        {
+          "purpose": "另存16位TIFF供后续印前流程",
+          "command": "app.export",
+          "params": {
+            "path": "print.tif",
+            "format": "tiff",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "adobeRgb",
+            "bitDepth": 16,
+            "ppi": 300,
+            "tiffCompression": "zip",
+            "metadata": "copyright"
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "PNG与16位TIFF都可解码",
+        "两者基于同一组编辑设置",
+        "TIFF保留色彩配置且未把ppi当像素放大"
+      ],
+      "limits": "这是中间稿交付，不是印厂软打样或CMYK转换；ICC与纸张流程须按实际要求确认。",
+      "assertions": {
+        "dualExport": true
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "review-contact-sheet",
+      "title": "多照片联系表供选片",
+      "category": "review",
+      "inputs": "已导入同一任务的两张照片；任务允许生成缩略图联系表。",
+      "steps": [
+        {
+          "purpose": "选择该专用库的全部照片，真实库应改用明确ID集合",
+          "command": "library.selectAll",
+          "params": {},
+          "parameterReference": "{}"
+        },
+        {
+          "purpose": "导出带说明的A4联系表",
+          "command": "export.contactSheet",
+          "params": {
+            "path": "contact.pdf",
+            "paper": "a4",
+            "columns": 2,
+            "rows": 2,
+            "captions": true
+          },
+          "parameterReference": "{path, ids?: photo ids (default selection), paper?: a4|letter, landscape?: bool, columns?: 1..8, rows?: 1..10, captions?: bool} → {path, pages, photos, bytes}; replaces an existing output, never an original"
+        }
+      ],
+      "checks": [
+        "联系表含2张照片且1页",
+        "文件不替换原片",
+        "缩略图与文件名对应"
+      ],
+      "limits": "在共享库不能无条件selectAll；先用catalog.query取得任务照片ID再library.select，避免输出其他照片。",
+      "assertions": {
+        "inputFiles": [
+          "input.png",
+          "second.png"
+        ],
+        "contactPhotos": 2,
+        "contactPages": 1
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    },
+    {
+      "id": "reset-light-preserve-color",
+      "title": "仅回退曝光区并保留色彩编辑",
+      "category": "editing",
+      "inputs": "在当前照片副本中需要回退光照区，保留已确认的色彩设置。",
+      "steps": [
+        {
+          "purpose": "读取当前滑块与取值范围，不凭UI标签猜controlId",
+          "command": "develop.controls",
+          "params": {},
+          "parameterReference": "{section?} — every slider with range, default and current value"
+        },
+        {
+          "purpose": "记录当前照片设置与处理版本",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "示例建立可区分的曝光与饱和度设置",
+          "command": "develop.set",
+          "params": {
+            "values": {
+              "light.exposure": 0.8,
+              "color.saturation": -20
+            }
+          },
+          "parameterReference": "{control?: controlId, value?: number, values?: {controlId: number}, ids?: [photo]} — see develop.controls; `crop.angle` turns the crop as crop.straighten does (kept if it still fits, else the largest of its aspect inside the photo)"
+        },
+        {
+          "purpose": "仅重置Light区，不执行全局reset",
+          "command": "develop.resetSection",
+          "params": {
+            "section": "light"
+          },
+          "parameterReference": "{section: light|curve|color|mixer|grading|effects|vignette|grain|detail|optics|geometry}"
+        },
+        {
+          "purpose": "核对曝光归零且色彩设置仍在",
+          "command": "develop.get",
+          "params": {},
+          "parameterReference": "{id?} → the photo's develop settings; `process` is the rendering process they are interpreted by (see develop.updateProcess)"
+        },
+        {
+          "purpose": "导出新成片文件，与原片路径分开",
+          "command": "app.export",
+          "params": {
+            "path": "result.png",
+            "format": "png",
+            "longEdge": 0,
+            "dontEnlarge": true,
+            "colorSpace": "srgb",
+            "metadata": "none",
+            "bitDepth": 8
+          },
+          "parameterReference": "{path?: output file (.jpg/.png/.tif/.webp/.avif/.jxl/.psd/.dng) | dir?, ids?, preset?, format?: jpeg|png|tiff|webp|avif|jxl|psd|dng|original, longEdge?|shortEdge?|width?|height?|megapixels?|percent? (default longEdge 3000; longEdge 0 = full size), dontEnlarge?, ppi?, quality?: 1..100, jxlLossless?, jxlEffort?: fast|normal, jxlProgressive?, limitKb?, colorSpace?: srgb|displayP3|adobeRgb|proPhoto|rec2020, bitDepth?: 8|10|16|32, hdr? (HDR output for HDR edits: gain map JPEG, PQ AVIF / PNG / JPEG XL, float TIFF), sharpen?: none|screen|matte|glossy, sharpenAmount?: low|standard|high, metadata?: all|allExceptCamera|copyright|none, removeLocation?, naming?, startNumber?, subfolder?, conflict?: unique|overwrite|skip, tiffCompression?: none|lzw|zip, dngCompression?: lossless|deflate|uncompressed, addToPhotos?: bool (macOS: then add the files written to Apple Photos; outcome in `applePhotos`), photosAlbum?: top-level album name (made when missing), watermark?: text | {text?, vertical? (upright columns, right to left), size? (text height, 0.005..0.5 of the short edge; default 0.035), opacity? (0..1; 0.7), anchor?: topLeft|top|topRight|left|center|right|bottomLeft|bottom|bottomRight, insetX? (margin from the left/right edge, 0..0.4 of the short edge; 0.025), insetY? (from the top/bottom edge; 0.025), inset? (sets both), rotation?: 0|90|180|270 (degrees clockwise; 0), color? [r,g,b] sRGB, shadow?, image? (graphic drawn instead of the text), imageWidth? (0.01..1 of the photo's width; 0.2)}} — an unknown parameter, an out-of-range watermark size or a value of the wrong kind is an error, not a default"
+        }
+      ],
+      "checks": [
+        "light.exposure=0",
+        "color.saturation=-20仍保留",
+        "其他已确认编辑没有被全局清空"
+      ],
+      "limits": "示例set用于新建演示；真实回退任务先读取现有设置并跳过该示例set，不覆盖用户已有色彩值。",
+      "assertions": {
+        "settings": {
+          "light.exposure": 0,
+          "color.saturation": -20
+        }
+      },
+      "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED"
+    }
+  ]
+}

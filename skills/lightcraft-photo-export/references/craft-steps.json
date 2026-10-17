@@ -1,0 +1,55 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "photo-export",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏",
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      }
+    },
+    {
+      "purpose": "核对库状态和本次交付ID清单",
+      "command": "library.info",
+      "params": {}
+    },
+    {
+      "purpose": "查看后端真实导出预设，不猜预设名",
+      "command": "export.presets",
+      "params": {}
+    },
+    {
+      "purpose": "只导出明确目标，保留其他元数据时单独去GPS且避免覆盖已有交付",
+      "command": "app.export",
+      "params": {
+        "ids": "$targets.photoIds",
+        "dir": "output/web",
+        "longEdge": 2000,
+        "dontEnlarge": true,
+        "format": "jpeg",
+        "quality": 90,
+        "colorSpace": "srgb",
+        "metadata": "all",
+        "removeLocation": true,
+        "conflict": "unique"
+      }
+    }
+  ],
+  "check": "数量、文件名、尺寸、颜色、锐化和可解码性一致，抽查元数据。",
+  "boundary": "ids必须为本库真实非空整数数组，输出数量按该清单核对。metadata:all配合removeLocation只去位置，不能据此保证所有隐私字段都清除；需要更严格政策时改metadata:none并检查实际文件。conflict:unique保留已存在交付，dontEnlarge不放大小图。必须有含GPS原件与保留GPS的对照导出，才能验证移除效果；不能从原本没有GPS的图片推断参数有效。Web库与原生库不同，磁盘导出/备份以当前宿主实际能力为准。",
+  "templateOnly": true,
+  "argumentPolicy": "先从catalog.query选择当前库真实ID；$target.id/$sample.id替换为整数，$targets.photoIds整字段替换为非空扁平整数数组。路径与数值为示例，不能未绑定直接执行。",
+  "limitedTechnicalValidation": {
+    "mainRun": 39013647220,
+    "stableMatrixRun": 39013640352,
+    "nativeMainCommit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+    "targetPhotoAndUnselectedProtection": "PASS",
+    "nativeReopen": "PASS",
+    "creativeVisualAcceptance": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED",
+    "gpsScope": "Synthetic EXIF GPS input, retention control, removal output; not all metadata privacy certification"
+  }
+}

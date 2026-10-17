@@ -1,0 +1,66 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "photo-culling",
+  "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
+  "steps": [
+    {
+      "purpose": "列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏",
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      }
+    },
+    {
+      "purpose": "确认本次两张精选的实际ID清单并替换整个数组",
+      "command": "library.select",
+      "params": {
+        "ids": "$targets.photoIds",
+        "active": "$sample.id",
+        "mode": "replace"
+      }
+    },
+    {
+      "purpose": "只给确认的精选评级，不按临时选择猜测范围",
+      "command": "photo.rate",
+      "params": {
+        "rating": 4,
+        "ids": "$targets.photoIds",
+        "advance": false
+      }
+    },
+    {
+      "purpose": "只标记同一精选清单，不删除任何原片",
+      "command": "photo.flag",
+      "params": {
+        "flag": "pick",
+        "ids": "$targets.photoIds",
+        "advance": false
+      }
+    },
+    {
+      "purpose": "仅把明确精选导出联系表，保留其他拒绝片",
+      "command": "export.contactSheet",
+      "params": {
+        "path": "output/selects.pdf",
+        "ids": "$targets.photoIds",
+        "columns": 4,
+        "rows": 5,
+        "captions": true
+      }
+    }
+  ],
+  "check": "精选数量与联系表一致，检查失焦、闭眼、重复，保留筛选理由。",
+  "boundary": "先枚举真实照片并核对非空、扁平整数ID数组。评级与pick只表示已完成选片决策的元数据写入，不自动判断美感、焦点或重复照片；advance:false避免改变active后误操作。联系表仍需检查缩略图与文件名对应，不删除拒绝片或原片。",
+  "templateOnly": true,
+  "argumentPolicy": "先从catalog.query选择当前库真实ID；$target.id/$sample.id替换为整数，$targets.photoIds整字段替换为非空扁平整数数组。路径与数值为示例，不能未绑定直接执行。",
+  "limitedTechnicalValidation": {
+    "mainRun": 39013647220,
+    "stableMatrixRun": 39013640352,
+    "nativeMainCommit": "f34c7a8a89e0d1bade0a6889185f40acecc84a9f",
+    "targetPhotoAndUnselectedProtection": "PASS",
+    "nativeReopen": "PASS",
+    "creativeVisualAcceptance": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
+}
