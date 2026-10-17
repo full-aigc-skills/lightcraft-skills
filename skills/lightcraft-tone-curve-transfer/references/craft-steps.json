@@ -3,7 +3,7 @@
   "application": "lightcraft",
   "id": "tone-curve-transfer",
   "templateOnly": true,
-  "execution": "LIMITED_NATIVE_SYNTHETIC_PASS_HOST_PENDING",
+  "execution": "LIMITED_NATIVE_AND_CODEX_SYNTHETIC_PASS",
   "argumentPolicy": "$sample.id/$target.id/$copy.id为当前目录返回的整数；$targets.photoIds整字段替换为非空扁平整数数组；$version.index从history.list的versions按唯一名称查询。示例路径须新建，示例曝光不是自动推荐值。",
   "steps": [
     {

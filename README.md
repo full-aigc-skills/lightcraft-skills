@@ -48,4 +48,4 @@ SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam
 
 ## 独立副本、版本恢复与曲线迁移开发候选
 
-新增`lightcraft-virtual-copy-review`、`lightcraft-named-version-restore`、`lightcraft-tone-curve-transfer`，固定darktable手册GitHub提交并原创映射实际命令参数。官方0.8.0 macOS三场景27次CLI调用通过：副本独立编辑、命名版本恢复后的设置和像素一致、仅toneCurve组迁移且目标曝光/色彩/裁切保持，源文件与排除照片不变，新进程重开可继续。当前未发布；Windows、真实媒体质量与宿主同步未验收。
+新增`lightcraft-virtual-copy-review`、`lightcraft-named-version-restore`、`lightcraft-tone-curve-transfer`，固定darktable手册GitHub提交并原创映射实际命令参数。官方0.8.0 macOS三场景27次CLI调用通过：副本独立编辑、命名版本恢复后的设置和像素一致、仅toneCurve组迁移且目标曝光/色彩/裁切保持，源文件与排除照片不变，新进程重开可继续。当前未发布新市场版本；Windows完整17场景116次CLI及输出摘要通过，真实Codex MCP/IAB的副本、恢复、曲线与页面重载验证通过。真实媒体质量、备份恢复UI和其他宿主仍未验收。

@@ -20,6 +20,20 @@
         }
       ],
       "adaptation": "独立副本、比较恢复或选择性迁移的工作流事实；不宣称底层状态模型相同。"
+    },
+    {
+      "repository": "storytold/lightcraft",
+      "commit": "16dbb90499d3c63a6582fcbba1b2550a6e2da032",
+      "license": "MIT OR Apache-2.0 upstream; workflow/API facts only",
+      "readFiles": [
+        {
+          "path": "docs/web.md",
+          "url": "https://github.com/storytold/lightcraft/blob/16dbb90499d3c63a6582fcbba1b2550a6e2da032/docs/web.md",
+          "sha256": "736d4a053aacd23ee5dd9d7cc0a7c72c6cb0a440b218ff78b5656528cf03577c",
+          "bytes": 12596
+        }
+      ],
+      "adaptation": "Web完整图库备份与新目录恢复边界；不把Web专用命令写入原生CLI步骤。"
     }
   ]
 }
