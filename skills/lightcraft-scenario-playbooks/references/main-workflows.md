@@ -1,6 +1,6 @@
 # LightCraft main参数模板与新流程
 
-固定main `f34c7a8a89e0d1bade0a6889185f40acecc84a9f`，实际原生目录371条，相对稳定版313条新增58个标识、7处契约变化。[完整参数目录](main-command-catalog.json)可在Web没有实时command_list时按需读取；[差异](main-command-delta.json)单独记录新增方法。目录仅证明原生main定义，不保证当前Web前端、GPU或宿主支持全部方法；新增流程尚未业务验收，不计入原8条手册通过数。
+固定main `f34c7a8a89e0d1bade0a6889185f40acecc84a9f`，实际原生目录371条，相对稳定版313条新增58个标识、7处契约变化。[完整参数目录](main-command-catalog.json)可在Web没有实时command_list时按需读取；[差异](main-command-delta.json)单独记录新增方法。目录仅证明原生main定义，不保证当前Web前端、GPU或宿主支持全部方法；联系印样模板流程已专项执行；新增结果不计入原8条手册通过数，其余新增流程未验收。
 
 当前Web插件通过`command_run {"id":"方法名","params":{参数}}`执行同会话方法。先`editor_status`确认ready，再`inspect`/`library.info`确认库和选择；不要把其他库的照片ID带来。旧版不支持的新命令应返回缺口，不能另起CLI并声称当前画面已同步。
 
@@ -15,7 +15,7 @@
 5. 后续选片时`print.template.apply {"name":"Contact proof 3x3 150ppi"}`，重新核对当前照片选择和`print.get`，不能假设模板恢复了上次的照片。
 6. `print.exportPdf {"path":"output/contact-proof.pdf"}`，使用全新输出路径；原生接口可能替换已有输出，宿主的工作区/覆盖规则仍优先。检查返回photos/pages、实际PDF页数、所选照片数量、照片顺序和缩略图清晰度，再重开抽查。
 
-此流程目前是固定main方法和参数的适配，尚未执行本流程的PDF交付与真实宿主画面验收。
+此流程通过Windows原生main专项CI [39010884426](https://github.com/partme-ai/full-aigc-plugins/actions/runs/39010884426)：专用库显式选择两张图片，保存模板，临时改为1×1/300ppi后再应用，实际恢复3×3/150ppi；PDF实际包含2张照片、1页，源图摘要不变。缩略图视觉审查和真实宿主画面同步尚未执行；不由此推断蒙版或幻灯片新增流程通过。
 
 ## 将一次局部修饰做成蒙版效果模板
 

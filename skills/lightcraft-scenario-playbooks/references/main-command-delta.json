@@ -139,5 +139,15 @@
   "verifiedOutputs": 60,
   "mainCapabilities": null,
   "upstreamCapabilities": null,
-  "runtimeValidation": "existing workflows passed; new print/mask/template scenarios NOT_TESTED"
+  "runtimeValidation": "existing workflows passed; new print/mask/template scenarios NOT_TESTED",
+  "newPrintWorkflow": {
+    "run": 39010884426,
+    "status": "PASS_NATIVE_WINDOWS",
+    "templateSaveApply": "PASS",
+    "restoredGridAndResolution": "PASS",
+    "twoPhotosOnePagePdf": "PASS",
+    "originalPhotosUnchanged": "PASS",
+    "thumbnailVisualReview": "NOT_TESTED",
+    "installedHostSync": "NOT_TESTED"
+  }
 }
