@@ -2,12 +2,13 @@
 
 先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
 
-| 顺序与目的 | 实际方法 | 参数例子 |
+| 顺序与目的 | 实际方法 | 参数例子与绑定 |
 | --- | --- | --- |
-| 1. 检查图库状态和导入数量 | `library.info` | `{}` |
-| 2. 给已确认精选照片评级 | `photo.rate` | `{"rating":4}` |
-| 3. 标记精选而非删除原片 | `photo.flag` | `{"flag":"pick"}` |
-| 4. 导出联系表进行整体核对 | `export.contactSheet` | `{"path":"output/selects.pdf","columns":4,"rows":5,"captions":true}` |
+| 1. 列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏 | `catalog.query` | `{"filter":{}}` |
+| 2. 确认本次两张精选的实际ID清单并替换整个数组 | `library.select` | `{"ids":"$targets.photoIds","active":"$sample.id","mode":"replace"}` |
+| 3. 只给确认的精选评级，不按临时选择猜测范围 | `photo.rate` | `{"rating":4,"ids":"$targets.photoIds","advance":false}` |
+| 4. 只标记同一精选清单，不删除任何原片 | `photo.flag` | `{"flag":"pick","ids":"$targets.photoIds","advance":false}` |
+| 5. 仅把明确精选导出联系表，保留其他拒绝片 | `export.contactSheet` | `{"path":"output/selects.pdf","ids":"$targets.photoIds","columns":4,"rows":5,"captions":true}` |
 
 ## 如何调用
 
@@ -27,8 +28,10 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 
 精选数量与联系表一致，检查失焦、闭眼、重复，保留筛选理由。
 
-边界：rating/flag默认作用于当前选择；不要未选照片便批量执行，不删除原片。
+边界：先枚举真实照片并核对非空、扁平整数ID数组。评级与pick只表示已完成选片决策的元数据写入，不自动判断美感、焦点或重复照片；advance:false避免改变active后误操作。联系表仍需检查缩略图与文件名对应，不删除拒绝片或原片。
 
 保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
 
 工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
+
+变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。

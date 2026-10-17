@@ -2,16 +2,18 @@
 
 先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
 
-| 顺序与目的 | 实际方法 | 参数例子与返回值绑定 |
+| 顺序与目的 | 实际方法 | 参数例子与绑定 |
 | --- | --- | --- |
-| 1. 列出当前库照片，按光线分组并保留目标ID清单 | `catalog.query` | `{}` |
+| 1. 列出当前库照片，按光线分组并保留目标ID清单 | `catalog.query` | `{"filter":{}}` |
 | 2. 读取已有预设 | `presets.list` | `{}` |
-| 3. 明确把样张设为唯一选择和active，避免从错误照片创建预设 | `library.select` | `{"ids":["$sample.id"],"active":"$sample.id","mode":"replace"}；绑定：sample.id从当前catalog.query实际照片中选择；ids整字段示例[12]，active示例12，必须为同一照片` |
-| 4. 读取当前active样张设置后再修改 | `develop.get` | `{"id":"$sample.id"}；绑定：id换成上一步active的真实样张ID` |
-| 5. 在样张确定曝光起点 | `develop.set` | `{"control":"light.exposure","value":0.25,"ids":["$sample.id"]}；绑定：ids只含样张真实ID，与library.select.active相同` |
+| 3. 明确把样张设为唯一选择和active，避免从错误照片创建预设 | `library.select` | `{"ids":["$sample.id"],"active":"$sample.id","mode":"replace"}` |
+| 4. 读取当前active样张设置后再修改 | `develop.get` | `{"id":"$sample.id"}` |
+| 5. 在样张确定曝光起点 | `develop.set` | `{"control":"light.exposure","value":0.25,"ids":["$sample.id"]}` |
 | 6. 只把适合共享的参数保存为预设 | `preset.create` | `{"name":"Session baseline","groups":["light"]}` |
-| 7. 对本组目标照片实际应用样张预设 | `preset.apply` | `{"id":"$preset.id","amount":100,"ids":"$group.photoIds"}；绑定：id = 创建的真实预设ID；ids整字段替换为目标数字数组，例如[12,13]。调用前断言非空、每项为整数且没有嵌套数组。不能传入["$group.photoIds"]或[[12,13]]。` |
-| 8. 逐张回读目标照片参数并核对共享项与单张曝光 | `develop.get` | `{"id":"$photo.id"}；绑定：对组内每个真实photo ID分别执行；导出联系表比较结果` |
+| 7. 对本组目标照片实际应用样张预设 | `preset.apply` | `{"id":"$preset.id","amount":100,"ids":"$group.photoIds"}` |
+| 8. 逐张回读目标照片参数并核对共享项与单张曝光 | `develop.get` | `{"id":"$photo.id"}` |
+| 9. 只对组内已确认目标导出JPEG试样，保留原片 | `app.export` | `{"ids":"$group.photoIds","dir":"output/batch","format":"jpeg","longEdge":1600,"dontEnlarge":true,"metadata":"none","conflict":"unique"}` |
+| 10. 以同一明确ID集合导出联系表用于整组审阅 | `export.contactSheet` | `{"ids":"$group.photoIds","path":"output/group-proof.pdf","columns":2,"rows":2,"captions":true}` |
 
 ## 如何调用
 
@@ -31,7 +33,7 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 
 按光线分组逐张核对，不同光照不强套同一曝光或白平衡。
 
-边界：预设groups需当前schema确认；当前样张的所有值不应不加判断复制到整组。
+边界：只从本库实际catalog ID选择样张和非空扁平目标数组，不能跨库复用。groups:[light]复制整个light组，含曝光/对比/高光等，不能声称只复制曝光或保留目标原有light参数；不共享的color/crop等需前后核对。按光线分组先试样，再实际preset.apply和逐张回读；创建预设不等于批量完成。预设创建依赖active样张，CLI中select/develop/create应放同一次run，捕获创建的真实字符串ID后再apply。
 
 保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
 
@@ -40,3 +42,5 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 返回值绑定说明：表中的 `$...` 是待解析参数，不是发送给引擎的字符串。逐步取得真实返回ID后替换，再调用下一步。若实际返回结构不同，先检查结果，不猜ID。
 
 返回值绑定说明：表中的 `$...` 是待解析参数，不是发送给引擎的字符串。逐步取得真实返回ID后替换，再调用下一步。若实际返回结构不同，先检查结果，不猜ID。
+
+变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。

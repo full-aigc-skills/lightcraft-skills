@@ -2,12 +2,14 @@
 
 先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
 
-| 顺序与目的 | 实际方法 | 参数例子 |
+| 顺序与目的 | 实际方法 | 参数例子与绑定 |
 | --- | --- | --- |
-| 1. 先检查当前设置 | `develop.get` | `{}` |
-| 2. 校正地平线并保留最大可用裁切 | `crop.straighten` | `{"angle":1}` |
-| 3. 小幅平衡整体曝光 | `develop.set` | `{"control":"light.exposure","value":0.2}` |
-| 4. 输出检查层次 | `app.export` | `{"path":"output/landscape-proof.jpg","longEdge":1600,"dontEnlarge":true,"colorSpace":"srgb"}` |
+| 1. 列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏 | `catalog.query` | `{"filter":{}}` |
+| 2. 将实际目标设为唯一选择和active，后续无ids方法才作用正确 | `library.select` | `{"ids":["$target.id"],"active":"$target.id","mode":"replace"}` |
+| 3. 读取目标原有显影设置 | `develop.get` | `{"id":"$target.id"}` |
+| 4. 按已测水平参考校正当前明确选择的目标 | `crop.straighten` | `{"angle":1}` |
+| 5. 仅平衡目标曝光 | `develop.set` | `{"control":"light.exposure","value":0.2,"ids":["$target.id"]}` |
+| 6. 只输出该目标的风景试样 | `app.export` | `{"ids":["$target.id"],"path":"output/landscape-proof.jpg","longEdge":1600,"dontEnlarge":true,"colorSpace":"srgb"}` |
 
 ## 如何调用
 
@@ -27,8 +29,10 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 
 山脊与建筑无光晕，天空无色带，地平线与裁切正确。
 
-边界：角度需由实际水平参考测量；天空局部调整另查当前mask能力，不假定自动天空选择。
+边界：角度1度须由真实水平参考测量后替换；crop.straighten依赖当前选择，因此必须先把目标设为唯一选择/active。裁切会损失边缘，先检查主体与最大可用区域；天空局部调整另查mask，不假定自动选天。
 
 保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
 
 工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
+
+变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。

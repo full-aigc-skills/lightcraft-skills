@@ -2,11 +2,12 @@
 
 先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
 
-| 顺序与目的 | 实际方法 | 参数例子 |
+| 顺序与目的 | 实际方法 | 参数例子与绑定 |
 | --- | --- | --- |
-| 1. 核对选片与图库状态 | `library.info` | `{}` |
-| 2. 查看实际导出预设 | `export.presets` | `{}` |
-| 3. 输出网页交付版并移除位置元数据 | `app.export` | `{"dir":"output/web","longEdge":2000,"dontEnlarge":true,"format":"jpeg","quality":90,"colorSpace":"srgb","removeLocation":true,"conflict":"unique"}` |
+| 1. 列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏 | `catalog.query` | `{"filter":{}}` |
+| 2. 核对库状态和本次交付ID清单 | `library.info` | `{}` |
+| 3. 查看后端真实导出预设，不猜预设名 | `export.presets` | `{}` |
+| 4. 只导出明确目标，保留其他元数据时单独去GPS且避免覆盖已有交付 | `app.export` | `{"ids":"$targets.photoIds","dir":"output/web","longEdge":2000,"dontEnlarge":true,"format":"jpeg","quality":90,"colorSpace":"srgb","metadata":"all","removeLocation":true,"conflict":"unique"}` |
 
 ## 如何调用
 
@@ -26,8 +27,10 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 
 数量、文件名、尺寸、颜色、锐化和可解码性一致，抽查元数据。
 
-边界：当前选择与导出范围先核对；Web库需另外备份，JPEG交付不等于图库工程已保存到workspace。
+边界：ids必须为本库真实非空整数数组，输出数量按该清单核对。metadata:all配合removeLocation只去位置，不能据此保证所有隐私字段都清除；需要更严格政策时改metadata:none并检查实际文件。conflict:unique保留已存在交付，dontEnlarge不放大小图。必须有含GPS原件与保留GPS的对照导出，才能验证移除效果；不能从原本没有GPS的图片推断参数有效。Web库与原生库不同，磁盘导出/备份以当前宿主实际能力为准。
 
 保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
 
 工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
+
+变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。

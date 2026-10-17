@@ -5,32 +5,41 @@
   "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
   "steps": [
     {
-      "purpose": "核对选片与图库状态",
+      "purpose": "列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏",
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      }
+    },
+    {
+      "purpose": "核对库状态和本次交付ID清单",
       "command": "library.info",
       "params": {}
     },
     {
-      "purpose": "查看实际导出预设",
+      "purpose": "查看后端真实导出预设，不猜预设名",
       "command": "export.presets",
       "params": {}
     },
     {
-      "purpose": "输出网页交付版并移除位置元数据",
+      "purpose": "只导出明确目标，保留其他元数据时单独去GPS且避免覆盖已有交付",
       "command": "app.export",
       "params": {
+        "ids": "$targets.photoIds",
         "dir": "output/web",
         "longEdge": 2000,
         "dontEnlarge": true,
         "format": "jpeg",
         "quality": 90,
         "colorSpace": "srgb",
+        "metadata": "all",
         "removeLocation": true,
         "conflict": "unique"
       }
     }
   ],
   "check": "数量、文件名、尺寸、颜色、锐化和可解码性一致，抽查元数据。",
-  "boundary": "当前选择与导出范围先核对；Web库需另外备份，JPEG交付不等于图库工程已保存到workspace。",
+  "boundary": "ids必须为本库真实非空整数数组，输出数量按该清单核对。metadata:all配合removeLocation只去位置，不能据此保证所有隐私字段都清除；需要更严格政策时改metadata:none并检查实际文件。conflict:unique保留已存在交付，dontEnlarge不放大小图。必须有含GPS原件与保留GPS的对照导出，才能验证移除效果；不能从原本没有GPS的图片推断参数有效。Web库与原生库不同，磁盘导出/备份以当前宿主实际能力为准。",
   "templateOnly": true,
-  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+  "argumentPolicy": "先从catalog.query选择当前库真实ID；$target.id/$sample.id替换为整数，$targets.photoIds整字段替换为非空扁平整数数组。路径与数值为示例，不能未绑定直接执行。"
 }

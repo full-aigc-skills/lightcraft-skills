@@ -5,27 +5,53 @@
   "execution": "COMMAND_MAPPED_NOT_SCENE_ACCEPTED",
   "steps": [
     {
-      "purpose": "读取滑块范围与默认值",
+      "purpose": "列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏",
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      }
+    },
+    {
+      "purpose": "将实际目标设为唯一选择和active，后续无ids方法才作用正确",
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$target.id"
+        ],
+        "active": "$target.id",
+        "mode": "replace"
+      }
+    },
+    {
+      "purpose": "核对控制范围；先按catalog相机和previewOnly判断完整RAW或预览回退",
       "command": "develop.controls",
       "params": {}
     },
     {
-      "purpose": "小幅校正曝光",
+      "purpose": "仅对确认的RAW目标小幅校正曝光",
       "command": "develop.set",
       "params": {
         "control": "light.exposure",
-        "value": 0.25
+        "value": 0.25,
+        "ids": [
+          "$target.id"
+        ]
       }
     },
     {
-      "purpose": "核对当前参数",
+      "purpose": "回读该目标设置",
       "command": "develop.get",
-      "params": {}
+      "params": {
+        "id": "$target.id"
+      }
     },
     {
-      "purpose": "导出色彩参考",
+      "purpose": "只导出该目标的色彩参考",
       "command": "app.export",
       "params": {
+        "ids": [
+          "$target.id"
+        ],
         "path": "output/raw-proof.jpg",
         "width": 1600,
         "dontEnlarge": true,
@@ -34,7 +60,7 @@
     }
   ],
   "check": "对照实际RAW解码肤色、中性色与高光；色彩异常先停止。",
-  "boundary": "没有正确相机解码不能靠拉滑块掩盖；控制ID先由当前develop.controls确认。",
+  "boundary": "先从catalog.query读取具体相机、RAW变体与previewOnly；出现回退原因只能声明预览显影，不能当完整RAW。无回退标记也是运行时报告，不是独立解码器差分证明。已有固定Nikon D2H NEF可作单一样本验证，但不推广到其他相机、压缩变体或所有RAW。色彩异常时停止，不能靠曝光掩盖解码问题。",
   "templateOnly": true,
-  "argumentPolicy": "示例参数必须按当前输入、选择和实际返回ID替换；$变量先解析，数组变量整字段替换，不能将本文件直接当原生CLI脚本执行。"
+  "argumentPolicy": "先从catalog.query选择当前库真实ID；$target.id/$sample.id替换为整数，$targets.photoIds整字段替换为非空扁平整数数组。路径与数值为示例，不能未绑定直接执行。"
 }

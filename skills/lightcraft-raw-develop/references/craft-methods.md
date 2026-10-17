@@ -2,12 +2,14 @@
 
 先读取输入与当前选择。数值、路径、名称和对象编号仅为格式示例；用当前输入、实际返回ID和目标尺寸替换后执行。
 
-| 顺序与目的 | 实际方法 | 参数例子 |
+| 顺序与目的 | 实际方法 | 参数例子与绑定 |
 | --- | --- | --- |
-| 1. 读取滑块范围与默认值 | `develop.controls` | `{}` |
-| 2. 小幅校正曝光 | `develop.set` | `{"control":"light.exposure","value":0.25}` |
-| 3. 核对当前参数 | `develop.get` | `{}` |
-| 4. 导出色彩参考 | `app.export` | `{"path":"output/raw-proof.jpg","width":1600,"dontEnlarge":true,"colorSpace":"srgb"}` |
+| 1. 列出本库真实照片ID、相机与previewOnly，避免受当前视图过滤遗漏 | `catalog.query` | `{"filter":{}}` |
+| 2. 将实际目标设为唯一选择和active，后续无ids方法才作用正确 | `library.select` | `{"ids":["$target.id"],"active":"$target.id","mode":"replace"}` |
+| 3. 核对控制范围；先按catalog相机和previewOnly判断完整RAW或预览回退 | `develop.controls` | `{}` |
+| 4. 仅对确认的RAW目标小幅校正曝光 | `develop.set` | `{"control":"light.exposure","value":0.25,"ids":["$target.id"]}` |
+| 5. 回读该目标设置 | `develop.get` | `{"id":"$target.id"}` |
+| 6. 只导出该目标的色彩参考 | `app.export` | `{"ids":["$target.id"],"path":"output/raw-proof.jpg","width":1600,"dontEnlarge":true,"colorSpace":"srgb"}` |
 
 ## 如何调用
 
@@ -27,8 +29,10 @@ lightcraft-cli run --library LIBRARY --import input.png develop.set control=ligh
 
 对照实际RAW解码肤色、中性色与高光；色彩异常先停止。
 
-边界：没有正确相机解码不能靠拉滑块掩盖；控制ID先由当前develop.controls确认。
+边界：先从catalog.query读取具体相机、RAW变体与previewOnly；出现回退原因只能声明预览显影，不能当完整RAW。无回退标记也是运行时报告，不是独立解码器差分证明。已有固定Nikon D2H NEF可作单一样本验证，但不推广到其他相机、压缩变体或所有RAW。色彩异常时停止，不能靠曝光掩盖解码问题。
 
 保存可编辑工程后由新进程或重新打开的同一宿主会话核对；导出格式单独解码/查看。方法存在和零退出不代表本场景已经完成。
 
 工作流来源与许可见 [workflow-sources.json](workflow-sources.json)。仅借鉴事实与方法，本文与参数例子原创编写。
+
+变量必须绑定当前库真实返回值：单张id为整数，ids为非空扁平整数数组。CLI用`run --library LIB --script steps.jsonl`，每行`{"command":"实际ID","params":{…}}`，同一批的选择和依赖active的操作保持同一次run。捕获动态返回值后再构造下一批，不把$记号直接发给引擎。
