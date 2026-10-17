@@ -27,3 +27,7 @@ CLI：`lightcraft-cli run --library <专用库> --import input.png --script step
 ## main开发候选
 
 需要联系印样PDF、蒙版效果模板或幻灯片导出时，先读[main工作流与完整参数入口](references/main-workflows.md)。Web没有实时目录时按需读取固定main参数；不能据原生目录推断前端全部可用。
+
+## 编辑分支与曲线迁移
+
+新增独立技能：**lightcraft-virtual-copy-review**（共享原片的独立副本审稿）、**lightcraft-named-version-restore**（命名基线试调恢复）、**lightcraft-tone-curve-transfer**（仅toneCurve组迁移，保留曝光与裁切）。独立安装：`npx skills add full-aigc-skills/lightcraft-skills --skill 对应技能名`。本批为开发候选，尚未随新市场版本发行；CLI验证不代表Web与宿主同步支持。

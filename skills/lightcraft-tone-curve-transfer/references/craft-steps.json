@@ -1,0 +1,86 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "tone-curve-transfer",
+  "templateOnly": true,
+  "execution": "LIMITED_NATIVE_SYNTHETIC_PASS_HOST_PENDING",
+  "argumentPolicy": "$sample.id/$target.id/$copy.id为当前目录返回的整数；$targets.photoIds整字段替换为非空扁平整数数组；$version.index从history.list的versions按唯一名称查询。示例路径须新建，示例曝光不是自动推荐值。",
+  "steps": [
+    {
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      },
+      "purpose": "核对样片、目标与排除照片；替换为非空整数ID数组"
+    },
+    {
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "active": "$sample.id",
+        "mode": "replace"
+      },
+      "purpose": "显式选择唯一操作照片；不依赖上一次选择"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "读取样片完整曲线组；样片已按用户目标审定，本技能不强加S曲线"
+    },
+    {
+      "command": "develop.copy",
+      "params": {
+        "groups": [
+          "toneCurve"
+        ]
+      },
+      "purpose": "只复制完整toneCurve设置组，实际枚举不是curve"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$target.id"
+      },
+      "purpose": "记录目标所有非曲线设置，剪贴板需在同一CLI进程/MCP会话保留"
+    },
+    {
+      "command": "develop.paste",
+      "params": {
+        "ids": "$targets.photoIds",
+        "groups": [
+          "toneCurve"
+        ]
+      },
+      "purpose": "只粘贴到明确目标；整个曲线组含点曲线/通道及参数曲线，不能称仅master"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$target.id"
+      },
+      "purpose": "比较目标curve与样片一致、所有非curve组与目标先前一致"
+    },
+    {
+      "command": "app.export",
+      "params": {
+        "ids": [
+          "$target.id"
+        ],
+        "path": "curve-proof.png",
+        "format": "png",
+        "longEdge": 0,
+        "dontEnlarge": true,
+        "bitDepth": 8,
+        "colorSpace": "srgb",
+        "metadata": "none"
+      },
+      "purpose": "导出新路径的审稿图，不覆盖原片；调用前确认文件不存在"
+    }
+  ],
+  "checks": "目标curve完整组等于样片，曝光/色彩/白平衡/裁切等非curve组不变；源与排除照片不变，目标渲染实际改变并可重开。",
+  "limits": "曲线并非普适风格，需逐张审核曝光/肤色/剪裁。不是复制全部编辑，也不宣称与darktable历史模块一一对应。develop.copy的内存剪贴板不能跨独立CLI进程；多目标逐张回读与导出，不能只检查第一张。"
+}

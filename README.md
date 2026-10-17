@@ -45,3 +45,7 @@ SAM 当前只读评估与未完成门禁见 [验收记录](docs/verification/sam
 ## 六项核心显影场景回归
 
 选片、批量风格、人像整体曝光、风景拉直、照片交付、RAW基础显影六项指导已明确照片ID、选择与设置组边界；原8条手册加6条核心，共14条通过Windows限定技术回归。固定Nikon D2H NEF的运行时报告为完整RAW，导出与嵌入预览已查看；不推广到其他相机/变体，也不构成独立解码或色彩校准。EXIF GPS移除有保留对照，同名交付保护已验证。此处绑定官方0.8/main，不替代以上旧CLI 0.2.1、旧发行或宿主资格；创作效果与宿主同步仍开放。
+
+## 独立副本、版本恢复与曲线迁移开发候选
+
+新增`lightcraft-virtual-copy-review`、`lightcraft-named-version-restore`、`lightcraft-tone-curve-transfer`，固定darktable手册GitHub提交并原创映射实际命令参数。官方0.8.0 macOS三场景27次CLI调用通过：副本独立编辑、命名版本恢复后的设置和像素一致、仅toneCurve组迁移且目标曝光/色彩/裁切保持，源文件与排除照片不变，新进程重开可继续。当前未发布；Windows、真实媒体质量与宿主同步未验收。

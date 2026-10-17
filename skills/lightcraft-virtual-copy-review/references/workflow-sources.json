@@ -1,0 +1,25 @@
+{
+  "policy": "仅借鉴工作流事实，中文步骤与Craft命令示例原创，不复制上游文字、代码或图片。",
+  "sources": [
+    {
+      "repository": "darktable-org/dtdocs",
+      "commit": "2a1742f76f256b96a2e0ff9827240afd0b9a804a",
+      "license": "GPL-3.0 repository LICENSE; no text/code/assets reused",
+      "readFiles": [
+        {
+          "path": "content/module-reference/utility-modules/darkroom/duplicate-manager.md",
+          "url": "https://raw.githubusercontent.com/darktable-org/dtdocs/2a1742f76f256b96a2e0ff9827240afd0b9a804a/content/module-reference/utility-modules/darkroom/duplicate-manager.md",
+          "sha256": "193b2e3ebdc55aba1d363e45e26db44f79a952010dc3165e9cc70347038fb21f",
+          "bytes": 1453
+        },
+        {
+          "path": "LICENSE",
+          "url": "https://raw.githubusercontent.com/darktable-org/dtdocs/2a1742f76f256b96a2e0ff9827240afd0b9a804a/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+          "bytes": 35147
+        }
+      ],
+      "adaptation": "独立副本、比较恢复或选择性迁移的工作流事实；不宣称底层状态模型相同。"
+    }
+  ]
+}

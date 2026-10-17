@@ -1,0 +1,123 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "virtual-copy-review",
+  "templateOnly": true,
+  "execution": "LIMITED_NATIVE_SYNTHETIC_PASS_HOST_PENDING",
+  "argumentPolicy": "$sample.id/$target.id/$copy.id为当前目录返回的整数；$targets.photoIds整字段替换为非空扁平整数数组；$version.index从history.list的versions按唯一名称查询。示例路径须新建，示例曝光不是自动推荐值。",
+  "steps": [
+    {
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      },
+      "purpose": "从图库匹配源路径与照片ID，并排除非目标原片"
+    },
+    {
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "active": "$sample.id",
+        "mode": "replace"
+      },
+      "purpose": "显式选择唯一操作照片；不依赖上一次选择"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "记录原照片全部设置以检查不变"
+    },
+    {
+      "command": "photo.virtualCopy",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "name": "Review alternate"
+      },
+      "purpose": "只创建一个共享原文件但独立编辑的目录副本，绑定回执ids唯一值",
+      "capture": "copy"
+    },
+    {
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$copy.id"
+        ],
+        "active": "$copy.id",
+        "mode": "replace"
+      },
+      "purpose": "显式选择唯一操作照片；不依赖上一次选择"
+    },
+    {
+      "command": "develop.set",
+      "params": {
+        "ids": [
+          "$copy.id"
+        ],
+        "control": "light.exposure",
+        "value": 0.7
+      },
+      "purpose": "示例曝光绝对值0.7EV，仅作用于副本；按实际照片与用户目标调整"
+    },
+    {
+      "command": "app.export",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "path": "original.png",
+        "format": "png",
+        "longEdge": 0,
+        "dontEnlarge": true,
+        "bitDepth": 8,
+        "colorSpace": "srgb",
+        "metadata": "none"
+      },
+      "purpose": "导出新路径的审稿图，不覆盖原片；调用前确认文件不存在"
+    },
+    {
+      "command": "app.export",
+      "params": {
+        "ids": [
+          "$copy.id"
+        ],
+        "path": "alternate.png",
+        "format": "png",
+        "longEdge": 0,
+        "dontEnlarge": true,
+        "bitDepth": 8,
+        "colorSpace": "srgb",
+        "metadata": "none"
+      },
+      "purpose": "导出新路径的审稿图，不覆盖原片；调用前确认文件不存在"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "回读原照片设置，必须与创建前一致"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$copy.id"
+      },
+      "purpose": "回读副本独立曝光设置"
+    },
+    {
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      },
+      "purpose": "确认唯一新目录项、copyOf与名称"
+    }
+  ],
+  "checks": "原片及非目标设置不变，副本copyOf指向源ID，实际导出像素发生变化且新进程重开一致。",
+  "limits": "这是共享原文件的独立目录项，不是物理备份。不能把暗片提亮预设当成自动修复；不删除原片或副本。创建不是幂等操作，超时先查询copyOf和名称，避免重复创建。"
+}

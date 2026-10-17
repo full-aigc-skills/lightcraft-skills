@@ -1,0 +1,134 @@
+{
+  "schema": "craft-scenario-playbooks/v1",
+  "application": "lightcraft",
+  "id": "named-version-restore",
+  "templateOnly": true,
+  "execution": "LIMITED_NATIVE_SYNTHETIC_PASS_HOST_PENDING",
+  "argumentPolicy": "$sample.id/$target.id/$copy.id为当前目录返回的整数；$targets.photoIds整字段替换为非空扁平整数数组；$version.index从history.list的versions按唯一名称查询。示例路径须新建，示例曝光不是自动推荐值。",
+  "steps": [
+    {
+      "command": "catalog.query",
+      "params": {
+        "filter": {}
+      },
+      "purpose": "从实际库中绑定照片ID"
+    },
+    {
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "active": "$sample.id",
+        "mode": "replace"
+      },
+      "purpose": "显式选择唯一操作照片；不依赖上一次选择"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "记录试调前设置"
+    },
+    {
+      "command": "history.list",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "检查已有版本；示例名称已存在则换唯一名称并同步后续索引查询"
+    },
+    {
+      "command": "version.create",
+      "params": {
+        "name": "Review baseline"
+      },
+      "purpose": "保存当前设置的命名基线，回执为null，不能拿回执当索引"
+    },
+    {
+      "command": "history.list",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "在versions数组中以唯一名称定位真实零基索引；重名或缺失须停止",
+      "capture": "baselineVersion"
+    },
+    {
+      "command": "develop.set",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "control": "light.exposure",
+        "value": 0.7
+      },
+      "purpose": "在已保存基线上试调曝光，保留返回结果"
+    },
+    {
+      "command": "app.export",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "path": "alternate.png",
+        "format": "png",
+        "longEdge": 0,
+        "dontEnlarge": true,
+        "bitDepth": 8,
+        "colorSpace": "srgb",
+        "metadata": "none"
+      },
+      "purpose": "导出新路径的审稿图，不覆盖原片；调用前确认文件不存在"
+    },
+    {
+      "command": "library.select",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "active": "$sample.id",
+        "mode": "replace"
+      },
+      "purpose": "显式选择唯一操作照片；不依赖上一次选择"
+    },
+    {
+      "command": "version.restore",
+      "params": {
+        "index": "$version.index"
+      },
+      "purpose": "只对已重新选中的目标恢复刚查询的版本索引；共享会话版本列表变化时先重查"
+    },
+    {
+      "command": "develop.get",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "与基线全部设置比对"
+    },
+    {
+      "command": "app.export",
+      "params": {
+        "ids": [
+          "$sample.id"
+        ],
+        "path": "restored.png",
+        "format": "png",
+        "longEdge": 0,
+        "dontEnlarge": true,
+        "bitDepth": 8,
+        "colorSpace": "srgb",
+        "metadata": "none"
+      },
+      "purpose": "导出新路径的审稿图，不覆盖原片；调用前确认文件不存在"
+    },
+    {
+      "command": "history.list",
+      "params": {
+        "id": "$sample.id"
+      },
+      "purpose": "保留可查的命名版本与当前历史，不清除历史"
+    }
+  ],
+  "checks": "试调图与基线像素不同，恢复后全部设置和渲染回到基线；版本名在新进程中仍可检索，非目标照片不变。",
+  "limits": "命名版本保存当前编辑设置，不是副本，也不等同darktable会话快照；不宣称其分屏UI。version.restore没有id参数，必须绑定active。不要猜index为0，不删除/覆盖既有版本。"
+}
